@@ -133,16 +133,17 @@
 	// http://redalert.sveder.com/api/latest
 	var sveder = [{"when": 1353251109, "area_center_long": 34.604946, "area_center_lat": 31.676731, "area_name_english": "Hof Ashkelon"}, {"when": 1353248266, "area_center_long": 34.604946, "area_center_lat": 31.676731, "area_name_english": "Hof Ashkelon"}, {"when": 1353246352, "area_center_long": 34.604946, "area_center_lat": 31.676731, "area_name_english": "Hof Ashkelon"}, {"when": 1353246314, "area_center_long": 34.604946, "area_center_lat": 31.676731, "area_name_english": "Hof Ashkelon"}, {"when": 1353189590, "area_center_long": 34.630337, "area_center_lat": 31.507726, "area_name_english": "Shaar Hanegev"}, {"when": 1353185369, "area_center_long": 34.431501, "area_center_lat": 31.303121, "area_name_english": "Eshkol"}, {"when": 1353181336, "area_center_long": 34.591612815856934, "area_center_lat": 31.433606583901508, "area_name_english": "Sdot Negev"}, {"when": 1353178989, "area_center_long": 34.431501, "area_center_lat": 31.303121, "area_name_english": "Eshkol"}, {"when": 1353178904, "area_center_long": 34.622824, "area_center_lat": 31.311337, "area_name_english": "Ofakim"}, {"when": 1353178861, "area_center_long": 34.591612815856934, "area_center_lat": 31.433606583901508, "area_name_english": "Sdot Negev"}];
 
-	init(sveder_to_locations(sveder));
-/*
+//	init(sveder_to_locations(sveder));
+
 	$.ajax({
-		url: 'http://redalert.sveder.com/api/latest',
-		dataType: 'html', // cross-site
+		// url: 'http://redalert.sveder.com/api/latest',  cross-domain fail
+		url: 'sveder.php',
+		dataType: 'json',
 		success: function(data) {
-			console.log(data);
+			init(sveder_to_locations(data));
 		}
 	});
-*/
+
       </script>
 </body>
 </html>

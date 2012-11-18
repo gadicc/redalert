@@ -98,7 +98,7 @@ var_dump($result);
 	
 	//var_dump($values);
 
-	if (!isset($values['alerts_html'])) return;
+	if (!isset($values['new_alert'])) return;
 	$pattern = '#^<b style="color:red">(.*)</b>(.*)$#m';
 	preg_match_all($pattern, $values['alerts_html'], $matches, PREG_SET_ORDER);
 	foreach($matches as $match) {
