@@ -34,8 +34,11 @@
 		value = value.split(';');
 		var from = value[0], to = value[1];
 
-		for(var i=0; i < locations.length; i++)
+		for(var i=0; i < locations.length; i++) {
+			//console.log(from + ' ' + locations[i].time + ' ' + to + ' '
+			//	+ (locations[i].time > from && locations[i].time < to));
 			locations[i].marker.setVisible(locations[i].time > from && locations[i].time < to);
+		}
 		markerCluster.repaint();
 	}
 
@@ -125,6 +128,16 @@
 			locations.push({ desc: sveder[i].area_name_english + '<br>'
 				+ new Date(sveder[i].when).toString(),
 				lat:sveder[i].area_center_lat, long:sveder[i].area_center_long, time:sveder[i].when});
+console.log(locations);
+		return locations;
+	}
+
+	function alerts_to_locations(alerts) {
+		var locations = [];
+		for (var i=0; i < alerts.length; i++)
+			locations.push({ desc: alerts[i].area_name + '<br>'
+				+ new Date(alerts[i].time*1000).toString(),
+				lat:alerts[i].area_lat, long:alerts[i].area_long, time:alerts[i].time});
 		return locations;
 	}
 
@@ -135,6 +148,7 @@
 
 //	init(sveder_to_locations(sveder));
 
+/*
 	$.ajax({
 		// url: 'http://redalert.sveder.com/api/latest',  cross-domain fail
 		url: 'sveder.php',
@@ -143,7 +157,14 @@
 			init(sveder_to_locations(data));
 		}
 	});
-
+*/
+	$.ajax({
+		url: 'alerts.php',
+		dataType: 'json',
+		success: function(data) {
+			init(alerts_to_locations(data));
+		}
+	});
       </script>
 </body>
 </html>

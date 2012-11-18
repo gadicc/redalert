@@ -122,7 +122,7 @@ var_dump($result);
 }
 
 // unfortunately we can't go back in time, they just return an empty request
-$lastcheck = time();
+$lastcheck = time()-60;
 get_arutz2($lastcheck);
 
 /*
