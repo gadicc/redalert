@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<title>alerts API</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<h1>alerts API</h1>
+
+<form id="options">
+
+<p>
+<b>Sources:</b><br /><br />
+<label><input type="checkbox" name="source" checked value="iosapp"> RedColor iOS app</label> (?source=iosapp)
+- Feed from the iOS "צבע אדום" app <a href="http://redcolor.co.il/iphonestatuslist.php">here<a/>.<br />
+<label><input type="checkbox" name="source" value="arutz2"> Arutz2</label> (?source=arutz2)
+- Feed from ערוץ 2 <a href="http://isra-media.tk/2/%D7%A2%D7%A8%D7%95%D7%A6%D7%99%D7%9D-%D7%9E%D7%99%D7%A9%D7%A8%D7%90%D7%9C/%D7%A2%D7%A8%D7%95%D7%A5-2-%D7%A9%D7%99%D7%93%D7%95%D7%A8-%D7%97%D7%99">here</a><br />
+</p>
+
+<p>
+<b>Filters:</b>
+<ul>
+<li>Limit to <input type="text" name="limit" size=2 /> most recent entries (default: &limit=10, "*" for all)<br />
+<li>Show entries after ID <input type="text" name="lastId" size=2 /> - (&lastId=58)<br />
+</ul>
+</p>
+
+<p>
+<b>Output Format:</b><br /><br />
+<label><input type="radio" name="output" value="html" disabled> HTML</label> (?fmt=html)<br />
+<label><input type="radio" name="output" value="json" checked> JSON</label> (?fmt=json) - only this works for now<br />
+<label><input type="radio" name="output" value="jsonp" disabled> JSONP</label> (?fmt=jsonp)<br />
+<label><input type="radio" name="output" value="rss" disabled> RSS</label> (?fmt=rss)<br />
+</p>
+
+</form>
+
+<form onsubmit="window.location.href=$('[name=url]').val(); return false;" />
+URL: <input type="text" name="url" size=60/>
+<input type="submit" value="Go">
+
+<script type="text/javascript">
+function build_url() {
+	var url = [location.protocol, '//', location.host, location.pathname].join('');
+	url = url.replace(/html$/, 'php?');
+
+	var sources = [];
+	$('input[name=source]:checked').each(function() {
+		sources.push( $(this).val() );
+	});
+	if (sources.length > 0)
+		url += 'source=' + sources.join(',');
+
+	if ($('input[name=limit]').val())
+		url += 'limit=' + $('input[name=limit]').val();
+
+	$('input[name=url]').val(url);
+}
+build_url();
+$('#options').change(function() { build_url(); } );
+</script>
+
+</body>
+</html>
+

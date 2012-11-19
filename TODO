@@ -1,0 +1,16 @@
+* store google maps geo full json + english name
+* duplicate collision detection for alertStore()?
+* recent list on main page
+* feed options
+* alerts with re-usable code
+
+
+* db: should each alert be for a city or include all the cities in the alert?
+
+
+CACHING
+=======
+
+* Caching policy for ISPs to cache page for 1 second
+* Memcache gzip'd copy of results for 1 second (for same arguments)
+* Install APC too
