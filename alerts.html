@@ -11,28 +11,34 @@
 
 <form id="options">
 
+<p><b>Sources:</b> (default: all)</p>
+
+<p style="font-size: 0.8em;">These sources are aggregated here and served directly from this server.  For now they are scraped only once every 60s (!), as we are still developing...</p>
+
 <p>
-<b>Sources:</b><br /><br />
-<label><input type="checkbox" name="source" checked value="iosapp"> RedColor iOS app</label> (?source=iosapp)
+<label><input type="checkbox" name="source" value="iosapp"> RedColor iOS app</label> (?source=iosapp)
 - Feed from the iOS "צבע אדום" app <a href="http://redcolor.co.il/iphonestatuslist.php">here<a/>.<br />
 <label><input type="checkbox" name="source" value="arutz2"> Arutz2</label> (?source=arutz2)
 - Feed from ערוץ 2 <a href="http://isra-media.tk/2/%D7%A2%D7%A8%D7%95%D7%A6%D7%99%D7%9D-%D7%9E%D7%99%D7%A9%D7%A8%D7%90%D7%9C/%D7%A2%D7%A8%D7%95%D7%A5-2-%D7%A9%D7%99%D7%93%D7%95%D7%A8-%D7%97%D7%99">here</a><br />
+<br />
+- Coming soon, "<a href="http://www.facebook.com/MivzakLive">צבא אדום</a>" FB feed, parsed by Michael Sveder's red_color_map: <a href="http://redalert.sveder.com/">site</a> | <a href="https://github.com/Sveder/red_color_map">project</a> | <a href="http://redalert.sveder.com/api/latest">feed</a><br />
+- Coming soon, hopefully official Pikud Haoref alerts, maybe/somehow.<br />
 </p>
 
 <p>
 <b>Filters:</b>
 <ul>
-<li>Limit to <input type="text" name="limit" size=2 /> most recent entries (default: &limit=10, "*" for all)<br />
+<li>Limit to <input type="text" name="limit" size=2 /> most recent entries (&limit=, blank for all)<br />
 <li>Show entries after ID <input type="text" name="lastId" size=2 /> - (&lastId=58)<br />
 </ul>
 </p>
 
 <p>
 <b>Output Format:</b><br /><br />
-<label><input type="radio" name="output" value="html" disabled> HTML</label> (?fmt=html)<br />
-<label><input type="radio" name="output" value="json" checked> JSON</label> (?fmt=json) - only this works for now<br />
-<label><input type="radio" name="output" value="jsonp" disabled> JSONP</label> (?fmt=jsonp)<br />
-<label><input type="radio" name="output" value="rss" disabled> RSS</label> (?fmt=rss)<br />
+<label><input type="radio" name="output" value="html"> HTML</label> (?fmt=html) - only basic for now<br />
+<label><input type="radio" name="output" value="json" checked> JSON</label> (?fmt=json)<br />
+<label><input type="radio" name="output" value="jsonp" disabled> JSONP</label> (?fmt=jsonp) - coming soon<br />
+<label><input type="radio" name="output" value="rss" disabled> RSS</label> (?fmt=rss) - anyone need this?<br />
 </p>
 
 </form>
@@ -40,6 +46,15 @@
 <form onsubmit="window.location.href=$('[name=url]').val(); return false;" />
 URL: <input type="text" name="url" size=60/>
 <input type="submit" value="Go">
+
+<p>There is code at <a href="alerts.js">alerts.js</a> to scrape tzeva-adom.com and load callback function on updates - its currently polls the server every 1s.  There are no optimizations on the server yet, we are still getting off the ground.  More details in the github page (find it in the group, I don't want it public yet...).</p>
+
+<p>Future:<br />
+<ul>
+<li>Possible option to group all city alerts with same timestamp into same alert.
+<li>Possible option to choose which info to get back
+</ul>
+</p>
 
 <script type="text/javascript">
 function build_url() {
