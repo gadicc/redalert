@@ -54,7 +54,8 @@ $result = '<?xml version="1.0" encoding="utf-8" ?><ajax-response><value id="aler
 &lt;/tr&gt;</value><value id="new_alert">1</value><value id="time">1353242220</value><value id="next_check">60</value></ajax-response>';
 
 function get_arutz2_req($lastcheck) {
-	$url = 'http://isra-media.tk/ajax.php';
+	// $url = 'http://isra-media.tk/ajax.php';  
+	$url = 'www.isramedia.net/ajax.php'; // since 20nov12 17h50
 	$fields = array(
 		'do' => 'check-alerts',
 		'lastcheck' => $lastcheck,
