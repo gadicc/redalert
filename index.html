@@ -13,14 +13,24 @@
 	<link rel="stylesheet" href="jslider/bin/jquery.slider.min.css" type="text/css">
 	<script type="text/javascript" src="jslider/bin/jquery.slider.min.js"></script>
 
+	<script type="text/javascript" src="Areas.js"></script>
+	<script type="text/javascript" src="sound.js"></script>
+
 	<style type="text/css">
 		ins { text-align: center; }
 		#sidebar { position: absolute; right: 10px; top: 5px; direction: rtl; margin-left: 815px; }
+		#nofind { position: absolute; top: 5px; width: 95%; z-Index: 5; display: none;
+			border: 1px solid black; background: #ffffaa; padding: 5px; }
+		.affects_me { color: red; }
 	</style>
 </head>
 
 
 <body>
+	<div id="nofind">
+	We couldn't automatically figure out your current location.<br />
+	Enter your city's name in the box to hear the siren for your area.
+	</div>
 	<div id="map" style="width: 800px; height: 500px;"></div>
 	<div style="width: 800px;">
 	        <input id="time_slider" name="time_slider" type="slider" value="1353178861;1353251109" />
@@ -43,6 +53,8 @@
 	</div>
 
 	<script type="text/javascript">
+	var siren = preloadSound("tzeva-adom.ogg");
+
 
 	// :(
 	function groupAlerts() {
@@ -65,16 +77,18 @@
 		var peg = $('#recentAlerts');
 		var alerts = groupAlerts();
 		var area_name, time, oldtime = 0, locs;
-		var p = '';
+		var p = ''; var affects_me = false;
 		for (var i=0; i < alerts.length; i++) {
-			console.log(alerts[i]);
 			locs = alerts[i].locs;
 			time = new Date(alerts[i].time*1000);
 			time = pad(time.getHours()) + ':' + pad(time.getMinutes());
 //				+ ' ' + pad(time.getDate()) + '.' + pad(time.getMonth());
 			p += '<span class="time">'+time+'</span> - ';
-			for (var j=0; j < locs.length; j++)
-				p += '<span class="loc">' + locs[j].area_name + '</span>, ';
+			for (var j=0; j < locs.length; j++) {
+				affects_me = user_loc && areas.byName(locs[j].area_name).containsGeo(user_loc);
+				p += '<span class="loc' + (affects_me ? ' affects_me' : '') + '">'
+					+ locs[j].area_name + '</span>, ';
+			}
 			p = p.replace(/, $/, '<br>');
 		}
 		peg.html(p);
@@ -215,22 +229,48 @@ console.log(locations);
 		}
 	});
 */
+
+
+	var user_loc = null;
+	function geo_success(position) {
+		user_loc = position;
+		recentAlerts();
+	}
+	function geo_error() {
+	}
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(geo_success, geo_error);
+	} else {
+		geo_error('not supported');
+	}
+
+
+	// fetch initial data (all previous warnings)
+	$.ajax({
+		url: 'alerts.php', dataType: 'json',
+		success: function(data) {
+			alerts.getAfter(alerts.findMaxId(data));
+			init(alerts_to_locations(data));
+		}
+	});
+
+	// code for new alerts (updated since the above)
 	var alerts = new Alerts();
 	alerts.callback(function(data) { console.log(data); } );
 	alerts.callback(function(data) {
 		var newlocs = alerts_to_locations(data);
 		locations = locations.concat(newlocs);
 		recentAlerts();
+
+		if (user_loc)
+			for (var i=0; i < data.length; i++) {
+				if (areas.byName(newlocs[i].area_name).containsGeo(user_loc)) {
+					// new alert for user's location!
+					siren.play();
+				}
+			}
 	});
 
-	$.ajax({
-		url: 'alerts.php',
-		dataType: 'json',
-		success: function(data) {
-			alerts.getAfter(alerts.findMaxId(data));
-			init(alerts_to_locations(data));
-		}
-	});
       </script>
 </body>
 </html>
