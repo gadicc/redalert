@@ -55,18 +55,19 @@ $result = '<?xml version="1.0" encoding="utf-8" ?><ajax-response><value id="aler
 
 function get_arutz2_req($lastcheck) {
 	// $url = 'http://isra-media.tk/ajax.php';  
-	$url = 'www.isramedia.net/ajax.php'; // since 20nov12 17h50
+	$url = 'http://www.isramedia.net/ajax.php'; // since 20nov12 17h50
 	$fields = array(
 		'do' => 'check-alerts',
 		'lastcheck' => $lastcheck,
-//		'r' => '0.36503668734803796',
+//		'r' => '0.1773201092146337',
 	);
 	$fields_string = '';
 	foreach($fields as $key=>$value) { $fields_string .= $key.'='.$value.'&'; }
 	rtrim($fields_string, '&');
 
 	$headers = array(
-		'Referer: http://isra-media.tk/2/%D7%A2%D7%A8%D7%95%D7%A6%D7%99%D7%9D-%D7%9E%D7%99%D7%A9%D7%A8%D7%90%D7%9C/%D7%A2%D7%A8%D7%95%D7%A5-2-%D7%A9%D7%99%D7%93%D7%95%D7%A8-%D7%97%D7%99',
+//		'Referer: http://isra-media.tk/2/%D7%A2%D7%A8%D7%95%D7%A6%D7%99%D7%9D-%D7%9E%D7%99%D7%A9%D7%A8%D7%90%D7%9C/%D7%A2%D7%A8%D7%95%D7%A5-2-%D7%A9%D7%99%D7%93%D7%95%D7%A8-%D7%97%D7%99',
+		'Referer: http://www.isramedia.net/',
 	);
 
 	$ch = curl_init();
