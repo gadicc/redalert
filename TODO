@@ -8,9 +8,14 @@
 * db: should each alert be for a city or include all the cities in the alert?
 
 
-CACHING
-=======
+CACHING/OPTIMIZATION
+====================
 
 * Caching policy for ISPs to cache page for 1 second
 * Memcache gzip'd copy of results for 1 second (for same arguments)
+
 * Install APC too
+* Switch to lighthttpd
+
+* Generate a unique short url for each combination of arguments (except for lastId)
+

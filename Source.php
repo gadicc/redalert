@@ -36,8 +36,8 @@ function area2id($area_name) {
 		$lat = 0; $long = 0;
 	}
 
-	$SQL = 'INSERT INTO area (area_name, area_lat, area_long) VALUES (?, ?, ?)';
-	$dbh->query($SQL, array($area_name, $lat, $long));
+	$SQL = 'INSERT INTO area (area_name, area_lat, area_long, json) VALUES (?, ?, ?, ?)';
+	$dbh->query($SQL, array($area_name, $lat, $long, json_encode($geo)));
 
 	$SQL = 'SELECT LAST_INSERT_ID()';
 	$area_id = $dbh->getOne($SQL);
