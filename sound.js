@@ -8,9 +8,10 @@ function preloadSound(src) {
     } else {
         sound = document.createElement("bgsound");
         sound.volume = -10000;
+	src = src.replace(/ogg$/, 'mp3');
 	sound.play = function() {
 		this.volume = 0;
-		this.src = src.replace(/ogg$/, 'mp3');
+		this.src = src;
 	}
     }
     sound.src = src;
