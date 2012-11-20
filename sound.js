@@ -1,5 +1,5 @@
 // based on http://stackoverflow.com/questions/8436633/preload-mp3-file-before-using-the-play-button
-// thanks gilly3
+// thanks gilly3, misc mods by gadi
 
 function preloadSound(src) {
     var sound = document.createElement("audio");
@@ -8,9 +8,9 @@ function preloadSound(src) {
     } else {
         sound = document.createElement("bgsound");
         sound.volume = -10000;
-	sound.prototype.play = function() {
+	sound.play = function() {
 		this.volume = 0;
-		this.src = src;
+		this.src = src.replace(/ogg$/, 'mp3');
 	}
     }
     sound.src = src;

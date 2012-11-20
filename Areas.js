@@ -5,7 +5,7 @@
 function Area(id, name, data) {
 	this.id = id;
 	this.name = name;
-	this.data = JSON.parse(data);
+	this.data = jQuery.parseJSON(data);
 }
 
 Area.prototype.contains = function(lat, long) {
