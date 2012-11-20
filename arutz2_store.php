@@ -1,6 +1,7 @@
 <?php
 
 include('gadi_db.php');
+date_default_timezone_set('Asia/Jerusalem');
 
 /*
 do:check-alerts
