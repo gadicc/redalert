@@ -64,15 +64,16 @@ X-Powered-By: RedAlert
 	echo "OK.\n\n";
 }
 
-//$SQL = 'SELECT MAX(alert_id) FROM alerts';
-//$max_id = $dbh->getOne($SQL);
-$max_id = 999;
+//$max_id = 999;
+$SQL = 'SELECT MAX(alert_id) FROM alerts';
+$max_id = $dbh->getOne($SQL);
 
 while (1) {
 	$SQL = 'SELECT alert_id,area_id,UNIX_TIMESTAMP(time) AS time FROM alerts WHERE alert_id > ?';
 	$alerts = $dbh->getAll($SQL, $max_id);
 
 	if ($alerts) {
+		echo "Found " . sizeof($alerts) . " updates...\n";
 
 		foreach ($alerts as $alert)
 			$area_ids[] = $alert['alert_id'];
