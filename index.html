@@ -144,7 +144,9 @@
 			return a.time - b.time;
 		});
 		var ceasefire = Math.round(new Date("November 21, 2012 21:00:00 GMT+2").getTime() / 1000);
-		$('#time_slider').val(ceasefire+';'+locations[locations.length-1].time);
+		var now = Math.round(new Date().getTime() / 1000);
+		//$('#time_slider').val(locations[0].time+';'+locations[locations.length-1].time);
+		$('#time_slider').val(ceasefire+';'+now);
 
 		// http://stackoverflow.com/questions/3059044/google-maps-js-api-v3-simple-multiple-marker-example
 		// Awesome code from Daniel Vassallo
