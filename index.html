@@ -39,6 +39,7 @@
 	        <input id="time_slider" name="time_slider" type="slider" value="1353178861;1353251109" />
 	</div>
 
+	<div style="width: 800px;">
 	<br /><br />
 	<div style="font-size: 0.8em;">
 	<p>
@@ -48,6 +49,7 @@
 	<p>Note: This are the city centers, we are showing TZEVA ADOM warnings, not actual rocket impact
 	sites.  This is to prevent such information being used by terrorists to help improve their aim.
 	</p>
+	</div>
 	</div>
 
 	<div id="sidebar">
@@ -141,7 +143,8 @@
 		locations.sort(function(a,b) {
 			return a.time - b.time;
 		});
-		$('#time_slider').val(locations[0].time+';'+locations[locations.length-1].time);
+		var ceasefire = Math.round(new Date("November 21, 2012 21:00:00 GMT+2").getTime() / 1000);
+		$('#time_slider').val(ceasefire+';'+locations[locations.length-1].time);
 
 		// http://stackoverflow.com/questions/3059044/google-maps-js-api-v3-simple-multiple-marker-example
 		// Awesome code from Daniel Vassallo
