@@ -8,7 +8,19 @@ function Area(id, name, data) {
 	this.data = jQuery.parseJSON(data);
 }
 
+Area.prototype.getLat = function() {
+	return this.data.Placemark[0].Point.coordinates[1];
+}
+Area.prototype.getLong = function() {
+	return this.data.Placemark[0].Point.coordinates[0];
+}
+
 Area.prototype.contains = function(lat, long) {
+	if (!this.data || !this.data.Placemark) {
+		console.log(this.name + '(' + this.id + ') is missing data');
+		console.log(this.data);
+		return;
+	}
 	var box = this.data.Placemark[0].ExtendedData.LatLonBox;
 	return lat > box.south && lat < box.north && long > box.west && long < box.east;
 }
@@ -30,7 +42,7 @@ Areas.prototype.byName = function(name) {
 	return null;
 }
 
-Areas.prototype.byId = function(name) {
+Areas.prototype.byId = function(id) {
 	for (var i=0; i < this.all.length; i++)
 		if (this.all[i].id == id)
 			return this.all[i];

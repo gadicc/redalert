@@ -200,6 +200,17 @@
 
         var infowindow = new google.maps.InfoWindow();
 
+
+	function sveder_to_locations(sveder) {
+		var locations = [];
+		for (var i=0; i < sveder.length; i++)
+			locations.push({ desc: sveder[i].area_name_english + '<br>'
+				+ new Date(sveder[i].when).toString(),
+				lat:sveder[i].area_center_lat, long:sveder[i].area_center_long, time:sveder[i].when});
+console.log(locations);
+		return locations;
+	}
+
 	function alerts_to_locations(alerts) {
 		var locations = [];
 		for (var i=0; i < alerts.length; i++)
@@ -210,20 +221,24 @@
 		return locations;
 	}
 
+	// https://github.com/Sveder/red_color_map, http://redalert.sveder.com/
 
-	function alerts2_to_locations(data) {
-		var locations = [];
-		for (var i=0; i < data.areas.length; i++)
-			areas.add(data.areas[i]); 
-		for (var i=0; i < data.alerts.length; i++) {
-			var area = areas.byId(data.alerts[i].area_id);
-			locations.push({ desc: area.name + '<br>'
-				+ new Date(data.alerts[i].time*1000).toString(),
-				lat:area.getLat(), long:area.getLong(), time:data.alerts[i].time,
-				area_name: area.name, area_id: area.id });
+	// http://redalert.sveder.com/api/latest
+	var sveder = [{"when": 1353251109, "area_center_long": 34.604946, "area_center_lat": 31.676731, "area_name_english": "Hof Ashkelon"}, {"when": 1353248266, "area_center_long": 34.604946, "area_center_lat": 31.676731, "area_name_english": "Hof Ashkelon"}, {"when": 1353246352, "area_center_long": 34.604946, "area_center_lat": 31.676731, "area_name_english": "Hof Ashkelon"}, {"when": 1353246314, "area_center_long": 34.604946, "area_center_lat": 31.676731, "area_name_english": "Hof Ashkelon"}, {"when": 1353189590, "area_center_long": 34.630337, "area_center_lat": 31.507726, "area_name_english": "Shaar Hanegev"}, {"when": 1353185369, "area_center_long": 34.431501, "area_center_lat": 31.303121, "area_name_english": "Eshkol"}, {"when": 1353181336, "area_center_long": 34.591612815856934, "area_center_lat": 31.433606583901508, "area_name_english": "Sdot Negev"}, {"when": 1353178989, "area_center_long": 34.431501, "area_center_lat": 31.303121, "area_name_english": "Eshkol"}, {"when": 1353178904, "area_center_long": 34.622824, "area_center_lat": 31.311337, "area_name_english": "Ofakim"}, {"when": 1353178861, "area_center_long": 34.591612815856934, "area_center_lat": 31.433606583901508, "area_name_english": "Sdot Negev"}];
+
+//	init(sveder_to_locations(sveder));
+
+/*
+	$.ajax({
+		// url: 'http://redalert.sveder.com/api/latest',  cross-domain fail
+		url: 'sveder.php',
+		dataType: 'json',
+		success: function(data) {
+			init(sveder_to_locations(data));
 		}
-		return locations;
-	}
+	});
+*/
+
 
 	var user_loc = null;
 	function geo_success(position) {
@@ -243,7 +258,7 @@
 	$.ajax({
 		url: 'alerts.php', dataType: 'json',
 		success: function(data) {
-			alerts.poll();
+			alerts.getAfter(alerts.findMaxId(data));
 			init(alerts_to_locations(data));
 		}
 	});
@@ -252,14 +267,13 @@
 	var alerts = new Alerts();
 	alerts.callback(function(data) { console.log(data); } );
 	alerts.callback(function(data) {
-		var newlocs = alerts2_to_locations(data);
-		console.log(newlocs);
+		var newlocs = alerts_to_locations(data);
 		locations = locations.concat(newlocs);
 		recentAlerts();
 
 		if (user_loc)
-			for (var i=0; i < data.alerts.length; i++) {
-				if (areas.byId(data.alerts[i].area_id).containsGeo(user_loc)) {
+			for (var i=0; i < data.length; i++) {
+				if (areas.byName(newlocs[i].area_name).containsGeo(user_loc)) {
 					// new alert for user's location!
 					siren.play();
 				}
