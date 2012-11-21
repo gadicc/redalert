@@ -85,6 +85,7 @@
 		var alerts = groupAlerts();
 		var area_name, time, oldtime = 0, locs;
 		var p = ''; var affects_me = false;
+		var area;
 		for (var i=0; i < alerts.length; i++) {
 			locs = alerts[i].locs;
 			time = new Date(alerts[i].time*1000);
@@ -92,7 +93,8 @@
 //				+ ' ' + pad(time.getDate()) + '.' + pad(time.getMonth());
 			p += '<span class="time">'+time+'</span> - ';
 			for (var j=0; j < locs.length; j++) {
-				affects_me = user_loc && areas.byName(locs[j].area_name).containsGeo(user_loc);
+				area = areas.byName(locs[j].area_name); // null on first run
+				affects_me = user_loc && area && area.containsGeo(user_loc);
 				p += '<span class="loc' + (affects_me ? ' affects_me' : '') + '">'
 					+ locs[j].area_name + '</span>, ';
 			}
