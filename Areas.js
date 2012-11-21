@@ -8,7 +8,7 @@ function Area(id, name, data) {
 	this.data = jQuery.parseJSON(data);
 }
 
-Area.prototype.contains = function(lat, long);
+Area.prototype.contains = function(lat, long) {
 	var box = this.data.Placemark[0].ExtendedData.LatLonBox;
 	return lat > box.south && lat < box.north && long > box.west && long < box.east;
 }
