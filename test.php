@@ -28,7 +28,7 @@ if (isset($_REQUEST['action']) && $_REQUEST['action']=="submit") {
 
 <select name="area_id">
 <?php
-$SQL = 'SELECT * from area';
+$SQL = 'SELECT * from area ORDER BY area_name';
 $areas = $dbh->getAll($SQL);
 
 foreach($areas as $area)
