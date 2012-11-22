@@ -246,7 +246,7 @@
 
 	// fetch initial data (all previous warnings)
 	$.ajax({
-		url: 'alerts.php', dataType: 'json',
+		url: 'alerts.php?nocache=' + new Date().getTime(), dataType: 'json',
 		success: function(data) {
 			alerts.poll();
 			init(alerts_to_locations(data));
