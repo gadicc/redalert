@@ -48,6 +48,7 @@ foreach($areas as $area)
 <li><a href="index.html">index.html</a> - live display on map IF YOU CHECK "ENABLE TEST ALERTS"
 <li><a href="example.php">example.php</a> - live update of tests
 <li><a href="alerts.php?fmt=html&source=test">alerts.php?fmt=html&source=test</a> - previous tests
+(see <a href="alerts.html">API</a>)
 </ul>
 
 <h2>API</h2>
