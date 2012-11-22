@@ -56,7 +56,7 @@ function htmlpage($inside) {
 function htmlize($data) {
 	$out = '';
 	foreach($data as $row) {
-		$out .= date('j.m H:m', $row['time']).' '.$row['area_name'].'<br>'."\n";
+		$out .= date('j.m H:i', $row['time']).' '.$row['area_name'].'<br>'."\n";
 	}
 	return $out;
 }
