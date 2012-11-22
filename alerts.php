@@ -6,13 +6,17 @@ $limit = isset($_GET['limit']) ? intval($_GET['limit']) : null;
 $lastId = isset($_GET['lastId']) ? intval($_GET['lastId']) : 0;
 $source = isset($_GET['source']) ? explode(",",$_GET['source']) : null;
 $fmt = isset($_GET['fmt']) ? $_GET['fmt'] : 'json';
+if ($fmt == 'jsonp')
+	$callback = isset($_GET['callback']) ? $_GET['callback'] : 'redalert';
 
 // BOO :(   Get last 10 alerts
 if ($limit) {
 	$SQL = 'SELECT MAX(alert_id) AS alert_ids
-		FROM alerts';
-		if ($source)
-			$SQL .= ' WHERE source IN ("'.implode('","', $source).'")';
+		FROM alerts WHERE 1';
+	if ($source)
+		$SQL .= ' AND source IN ("'.implode('","', $source).'")';
+	if (!$source || !in_array('test', $source))
+		$SQL .= ' AND source != "test"';
 	$SQL .=	'GROUP BY time
 		ORDER BY alert_id DESC LIMIT '.$limit.',1';
 	$lastId = $dbh->getOne($SQL);
@@ -24,6 +28,8 @@ $SQL = 'SELECT alert_id,area_lat,area_long,area_name,
 	WHERE alert_id > ?';
 if ($source)
 	$SQL .= ' AND source IN ("'.implode('","', $source).'")';
+if (!$source || !in_array('test', $source))
+	$SQL .= ' AND source != "test"';
 $SQL .=	' ORDER BY time DESC';
 $data = $dbh->getAll($SQL, array($lastId));
 
@@ -62,13 +68,17 @@ function htmlize($data) {
 }
 
 if ($data) {
-	if ($fmt == "json")
+	if ($fmt == 'json')
 		echo json_encode(correctTypes($data));
-	elseif ($fmt == "html")
+	elseif ($fmt == 'jsonp')
+		echo $callback . '(' . json_encode(correctTypes($data)) . ');';
+	elseif ($fmt == 'html')
 		echo htmlpage(htmlize($data));	
 } else {
-	if ($fmt == "json")
+	if ($fmt == 'json')
 		echo '[]';
-	elseif ($fmt == "html")
-		echo htmlpage("<p>No updates</p>");
+	elseif ($fmt == 'json')
+		echo "$callback();";
+	elseif ($fmt == 'html')
+		echo htmlpage('<p>No updates</p>');
 }

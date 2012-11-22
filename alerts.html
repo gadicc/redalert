@@ -11,7 +11,7 @@
 
 <form id="options">
 
-<p><b>Sources:</b> (default: all)</p>
+<p><b>Sources:</b> (default: all, except 'test')</p>
 
 <p style="font-size: 0.8em;">These sources are aggregated here and served directly from this server.  For now they are scraped only once every 60s (!), as we are still developing...</p>
 
@@ -20,6 +20,9 @@
 - Feed from the iOS "צבע אדום" app <a href="http://redcolor.co.il/iphonestatuslist.php">here<a/>.<br />
 <label><input type="checkbox" name="source" value="arutz2"> Arutz2</label> (?source=arutz2)
 - Feed from ערוץ 2 <a href="http://isra-media.tk/2/%D7%A2%D7%A8%D7%95%D7%A6%D7%99%D7%9D-%D7%9E%D7%99%D7%A9%D7%A8%D7%90%D7%9C/%D7%A2%D7%A8%D7%95%D7%A5-2-%D7%A9%D7%99%D7%93%D7%95%D7%A8-%D7%97%D7%99">here</a><br />
+<label><input type="checkbox" name="source" value="test"> Test feed</label> (?source=test)
+- Create them <a href="test.php">here</a>, excluded by default<br />
+
 <br />
 - Coming soon, "<a href="http://www.facebook.com/MivzakLive">צבא אדום</a>" FB feed, parsed by Michael Sveder's red_color_map: <a href="http://redalert.sveder.com/">site</a> | <a href="https://github.com/Sveder/red_color_map">project</a> | <a href="http://redalert.sveder.com/api/latest">feed</a><br />
 - Coming soon, hopefully official Pikud Haoref alerts, maybe/somehow.<br />
@@ -49,7 +52,7 @@
 URL: <input type="text" name="url" size=60/>
 <input type="submit" value="Go">
 
-<p>There is code at <a href="alerts.js">alerts.js</a> that gets updates from a live feed through long polling (reverse ajax) -- connecting to a custom server for this purpose to handle massive high load.  Updates are instant, but see the notes above the scraping delay above.</p>
+<p><b>Developers:</b>, see <a href="/docs">/docs</a>.  In brief, there is code at <a href="Alerts.js">Alerts.js</a> that gets updates from a live feed through long polling (reverse ajax) -- connecting to a custom server for this purpose to handle the massive high load.  Updates are instant, but see the notes above the scraping delay above.</p>
 
 <p style="text-decoration: line-through;">Deprecated: There is code at <a href="alerts_old.js">alerts_old.js</a> to scrape tzeva-adom.com and load callback function on updates - its currently polls the server every 1s.  There are no optimizations on the server yet, we are still getting off the ground.  More details in the github page (find it in the group, I don't want it public yet...).</p>
 

@@ -10,7 +10,7 @@
 	<script type="text/javascript" src="markerclusterer_packed.js"></script>	
 
 	<script type="text/javascript" src="jslider/js/jquery-1.7.1.js"></script>
-	<script type="text/javascript" src="alerts.js"></script>
+	<script type="text/javascript" src="Alerts.js"></script>
 
 	<!-- http://egorkhmelev.github.com/jslider/ -->
 	<link rel="stylesheet" href="jslider/bin/jquery.slider.min.css" type="text/css">
@@ -56,7 +56,8 @@
 	<p>אזעקות אחרונות:</p>
 		<div id="recentAlerts"></div>
 		<p>If your location is available, and you're in a new alert area, the area name will show in red and a tzeva adom siren will sound on your PC.  <button onclick="siren.play();">Siren Test</button></p>
-		<p>Developers, see <a href="alerts.html">alerts.html</a>.</p>
+		<p>Developers, see <a href="alerts.html">alerts.html</a> and <a href="docs">/docs</a>.
+		<label><input id="showtests" type="checkbox" />Show Test Alerts</label></p>
 	</div>
 
 
@@ -221,6 +222,8 @@
 		for (var i=0; i < data.areas.length; i++)
 			areas.add(data.areas[i]); 
 		for (var i=0; i < data.alerts.length; i++) {
+			if (!$('#showtests').is(':checked') && data.alerts[i].source == "test")
+				continue;
 			var area = areas.byId(data.alerts[i].area_id);
 			locations.push({ desc: area.name + '<br>'
 				+ new Date(data.alerts[i].time*1000).toString(),

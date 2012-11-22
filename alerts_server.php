@@ -69,7 +69,7 @@ $SQL = 'SELECT MAX(alert_id) FROM alerts';
 $max_id = $dbh->getOne($SQL);
 
 while (1) {
-	$SQL = 'SELECT alert_id,area_id,UNIX_TIMESTAMP(time) AS time FROM alerts WHERE alert_id > ?';
+	$SQL = 'SELECT alert_id,area_id,source,UNIX_TIMESTAMP(time) AS time FROM alerts WHERE alert_id > ?';
 	$alerts = $dbh->getAll($SQL, $max_id);
 
 	if ($alerts) {
