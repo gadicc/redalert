@@ -18,6 +18,10 @@ An example of how all this can be used is on the front page of [tzeva-adom.com](
 Example Code
 ============
 
+Use [/test.php](../test.php) to test and don't miss working example [/example.html](../example.html).
+
+**Example 1: Basic usage**
+
 Load the supporting javascript classes from your header:
 We require jQuery.parseJSON() as the only dependency.
 
@@ -46,8 +50,6 @@ And place the following elsewhere in your code:
 
 	// After your callbacks are declared, start the polling process
 	alerts.poll();
-
-See [/test.php](/test.php)
 
 **Example 2: Sound a siren if the user is in a new alert area**
 
