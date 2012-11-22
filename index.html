@@ -270,6 +270,8 @@
 
 		if (user_loc)
 			for (var i=0; i < data.alerts.length; i++) {
+				if (!$('#showtests').is(':checked') && data.alerts[i].source == "test")
+					continue;
 				if (areas.byId(data.alerts[i].area_id).containsGeo(user_loc)) {
 					// new alert for user's location!
 					siren.play();
