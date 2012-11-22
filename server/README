@@ -1,3 +1,25 @@
+RedAlert (c) Gadi Cohen nov12.  Please contact me to use this.
+
+Ultra-thin relay server for Tzeva Adom
+
+Usage:
+------
+
+$ gcc -o redalert redalert.c
+$ ./redalert 8080 8081
+
+Will accept client connects on port 8080 and keep them open.
+Any data received on port 8081 will be relayed to all open clients, which are then disconnected.
+(This is useful for long polling, a technique for reverse ajax).
+
+alerts_server.php, whenever there is data to push, prepares it as an HTTP reply, gzip's it, and
+sends it to the redalert server.
+
+note: it's possible that an alert could be issued after a client disconnects and before it reconnects,
+if the alert is very soon after or there are network delays.  the next version will compensate, and
+maybe be a bit more flexible.  it will use slightly more resources, but will still be considerably
+cheaper than any alternative.  benchmarks coming soon I hope.
+
 TODO:
 -----
 
