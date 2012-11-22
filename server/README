@@ -1,0 +1,6 @@
+TODO:
+-----
+
+* catch up facility by giving each message an ID
+* OS level DOS protection by firewalling multiple connections from single IP (disable for testing)
+* finish javascript to check for timeouts, missing stuff, etc, etc

@@ -37,10 +37,10 @@
 
 <p>
 <b>Output Format:</b><br /><br />
-<label><input type="radio" name="output" value="html"> HTML</label> (?fmt=html) - only basic for now<br />
-<label><input type="radio" name="output" value="json" checked> JSON</label> (?fmt=json)<br />
-<label><input type="radio" name="output" value="jsonp" disabled> JSONP</label> (?fmt=jsonp) - coming soon<br />
-<label><input type="radio" name="output" value="rss" disabled> RSS</label> (?fmt=rss) - anyone need this?<br />
+<label><input type="radio" name="fmt" value="html"> HTML</label> (?fmt=html) - only basic for now<br />
+<label><input type="radio" name="fmt" value="json" checked> JSON</label> (?fmt=json)<br />
+<label><input type="radio" name="fmt" value="jsonp" disabled> JSONP</label> (?fmt=jsonp) - coming soon<br />
+<label><input type="radio" name="fmt" value="rss" disabled> RSS</label> (?fmt=rss) - anyone need this?<br />
 </p>
 
 </form>
@@ -65,15 +65,19 @@ function build_url() {
 	var url = [location.protocol, '//', location.host, location.pathname].join('');
 	url = url.replace(/html$/, 'php?');
 
+	var fmt = $('input[name=fmt]:checked').val();
+	if (fmt && fmt != 'json')
+		url += 'fmt=' + fmt;
+
 	var sources = [];
 	$('input[name=source]:checked').each(function() {
 		sources.push( $(this).val() );
 	});
 	if (sources.length > 0)
-		url += 'source=' + sources.join(',');
+		url += '&source=' + sources.join(',');
 
 	if ($('input[name=limit]').val())
-		url += 'limit=' + $('input[name=limit]').val();
+		url += '&limit=' + $('input[name=limit]').val();
 
 	$('input[name=url]').val(url);
 }
