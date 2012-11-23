@@ -29,7 +29,7 @@ We require jQuery.parseJSON() as the only dependency.
 
 And place the following elsewhere in your code:
 
-	// Initiate an Alerts object to begin polling
+	// Initiate an Alerts object, with the URL to poll
 	var alerts = new Alerts('http://tzeva-adom.com:8080/redalert');
 
 	// Log any new data received to the console
