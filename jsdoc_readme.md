@@ -1,9 +1,8 @@
 Tzeva Adom API
 --------------
 
-NOTE: At present, feeds are scraped every 60 seconds.  There is no guarantee that we will be able to get a reliable
-feed from Pikud Ha'oref or Beeper, it's very possible we won't.  But in case we do, this code can be used to access
-it from your app / project.  I don't expect the API to change (much :)).
+NOTE: Although our API is *instant*, currently, external feeds are only scraped every 60 seconds.  There is no guarantee that we will be able to get a reliable feed from Pikud Ha'oref or Beeper, it's very possible we won't.
+But in case we do, this code can be used to access it from your app / project (instantly).  I don't expect the API to change (much :)).
 
 The Tzeva Adom project aggregates various alert sources and provides them to other developers in a consistent
 format.  Past data can be retrieved via [alerts.html](../alerts.html) through various methods.  Thesse
