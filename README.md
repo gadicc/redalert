@@ -1,26 +1,31 @@
-redalert
-========
+# redalert
 
-Hackathon related stuff, mostly Tzeva Adom related
+This project has two parts:
 
-Largely inspired by Michael Sverdlin's work at https://github.com/Sveder/red_color_map
-Live on http://redalert.sveder.com/ and last 10 alerts at http://redalert.sveder.com/api/latest
+## Part 1: Tzeva Adom API for other developers
 
-What's happening here:
+* Aggregates various data sources (since 2014-07-11, just from pikud ha'oref)
+* Provides a JS library that calls a callback on each new alert (via long
+polling, aka reverse ajax).  Location data and bounds checking ("am I in
+range?") is included.
+* Includes it's own custom built server which should handle over 100,000
+simultaneous connections (untested; but this is the reason we didn't go for
+a pub/sub system).  The server is freely accessible by other devs for use
+in their projects.
 
-1) Better front-end for the data, including a dual-slider to filter the sirens, group multiple alerts together
-2) Code to retrieve alert data from arutz2: isra-media.tk/2/ערוצים-מישראל/ערוץ-2-שידור-חי
+See:
 
-Upcoming
-========
+* [Documentation for JS API](http://tzeva-adom.com/docs/)
+* [JSON feed](http://tzeva-adom.com/alerts.html) for manual parsing/scraping
+* [Create a test alert](http://tzeva-adom.com/test.php) to test your code
 
-1) DB of past warnings with API to retrieve them (see note below to use arutz2 code in the meantime)
-2) Same kind of ideas that Michael Sverdlin lists on his page
-3) Turn the whole thing into a PhoneGap app
+## Part 2: Visualization of Alerts with Google Maps
 
-Note
-====
+* Show alerts on the map.  Sound tzeva adom recording if you're in range.
+* Dual-slider to choose start-end range of alerts, for visualization purposes
 
-For the hackathon, you can use the arutz2 code to get new warnings, just run in a loop like in the arutz2.sh script.
-If values['new_alert'] is present (see code), there's a new warning... that's how their web page knows to update
-the page and play the siren.
+## Credits
+
+* Largely inspired by Michael Sverdlin's work at https://github.com/Sveder/red_color_map, live on http://redalert.sveder.com/ and last 10 alerts at http://redalert.sveder.com/api/latest.
+
+* 2012 Hackathon team
