@@ -87,10 +87,13 @@ class Source {
 	 * @param $aboveRows - fetch rows above this id (default: $this->last_record)
 	 * @return           - array of associative array of row straight from db
 	 */
-	function getRows($aboveRow = null) {
+	function getRows($aboveRow = null, $time = false) {
 		global $dbh;
 		if (!$aboveRow) $aboveRow = $this->getLastRecordId();
-		$SQL = 'SELECT * FROM `'.$this->source_id.'` WHERE `'.$this->dbSourceId.'` > ?';
+		$SQL = 'SELECT *';
+		if ($time)
+			$SQL .= ',UNIX_TIMESTAMP(`time`) as `time`';
+		$SQL .=' FROM `'.$this->source_id.'` WHERE `'.$this->dbSourceId.'` > ?';
 		return $dbh->getAll($SQL, $aboveRow);
 	}
 

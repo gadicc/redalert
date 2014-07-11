@@ -1,0 +1,27 @@
+SERVERS
+-------
+
+Two server types:
+1) Master control server (CONTROL)
+2) Multiple relay servers which the clients connect to (RELAYS)
+
+When CONTROL sends data to a RELAY, the relay should respond with the number of open connections, and possibly the last messaging rate (messages per second) from the previous message sent.
+
+CONTROL should keep track of of this info, and send this data to clients for load balancing purposes.
+
+CONTROL should also send via the relays a ping if no data sent within 30 seconds.
+
+approaches?
+* take fd out of epoll queue after first read?  we won't need more data than this and it might prevent a DOS attack with lots of connections sending a lot of data.
+
+
+CLIENTS
+-------
+
+* If no data received in 45 seconds, something is wrong.  Remove server from pool and try again.
+
+FIREWALL
+--------
+
+* Only allow 5 simultaneous connections per IP.
+
