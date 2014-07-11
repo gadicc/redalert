@@ -4,8 +4,12 @@
 
 function geolookup($q) {
 	$q .= ', ישראל';
-	$url = 'http://maps.google.com/maps/geo?q=' . urlencode($q);
+	echo "$q\n";
+	//$url = 'http://maps.google.com/maps/geo?q=' . urlencode($q);
+	$url = 'http://maps.googleapis.com/maps/api/geocode/json?address=' . urlencode($q);
+	echo $url;
 	$data = file_get_contents($url);
+	echo $data;
 	sleep(1);
 	return json_decode($data);
 }
@@ -29,21 +33,33 @@ function area2id($area_name) {
 	// not in db, first find location data
 	echo "Looking up for first-time: $area_name<br>";
 	$geo = geolookup($area_name);
-	if (isset($geo->Placemark[0]->Point->coordinates)) {
-		$coords = ($geo->Placemark[0]->Point->coordinates);
-		$long = $coords[0]; $lat = $coords[1];
+	$result = $geo->results[0];
+
+	if (isset($result->geometry->location)) {
+		$long = $result->geometry->location->lng;
+		$lat = $result->geometry->location->lat;
 	} else {
 		$lat = 0; $long = 0;
 	}
 
-	$SQL = 'INSERT INTO area (area_name, area_lat, area_long, area_json) VALUES (?, ?, ?, ?)';
-	$dbh->query($SQL, array($area_name, $lat, $long, json_encode($geo)));
+	$SQL = 'INSERT INTO area (area_name, area_lat, area_long, area_json, api) VALUES (?, ?, ?, ?, ?)';
+	/*
+	echo $SQL;
+	var_dump(array($area_name, $lat, $long, json_encode($geo), 3));
+	return;
+	*/
+	$dbh->query($SQL, array($area_name, $lat, $long, json_encode($geo), 3));
 
 	$SQL = 'SELECT LAST_INSERT_ID()';
 	$area_id = $dbh->getOne($SQL);
 	$areas[$area_name] = $area_id;
 	return $area_id;
 }
+
+/*
+include('gadi_db.php');
+var_dump(area2id('מטולה'));
+*/
 
 class Source {
 
