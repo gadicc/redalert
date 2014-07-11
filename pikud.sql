@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 11, 2014 at 10:35 AM
+-- Generation Time: Jul 11, 2014 at 10:46 AM
 -- Server version: 5.5.33-1
 -- PHP Version: 5.5.6-1
 
@@ -17,15 +17,20 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `alerts`
+-- Table structure for table `pikud`
 --
 
-CREATE TABLE IF NOT EXISTS `alerts` (
-  `alert_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `pikud` (
+  `pikud_id` int(11) NOT NULL,
   `time` datetime NOT NULL,
-  `area_id` int(11) NOT NULL,
-  `source` varchar(15) NOT NULL,
-  `source_id` int(11) NOT NULL,
-  PRIMARY KEY (`alert_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=974 ;
+  `location` varchar(255) CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`pikud_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `pikud`
+--
+
+INSERT INTO `pikud` (`pikud_id`, `time`, `location`) VALUES
+(275, '2014-07-11 10:15:25', 'אשדוד'),
+(276, '2014-07-11 10:15:25', 'אשדוד');

@@ -32,8 +32,8 @@ $result = file_get_contents('alerts_example.json');
 function get_pikud() {
 	global $dbh;
 
-	$result = $GLOBALS['result'];
-//	$result = get_arutz2_req($lastcheck);
+//	$result = $GLOBALS['result'];
+	$result = get_pikud_req();
 	$result = json_decode($result);
 //var_dump($result);
 
