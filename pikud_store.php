@@ -37,13 +37,34 @@ function get_pikud() {
 	$result = json_decode($raw_result);
 //var_dump($result);
 
-	foreach($result->data as $alert) {
-		preg_match('/^(.*) ([0-9]+)$/', $alert, $matches);
-		$location = trim($matches[1]);
-		$alert_id = intval($matches[2]);
-//		echo "#$alert_id: $location\n";
-		$SQL = 'INSERT IGNORE INTO pikud (pikud_id, time, location, response) VALUES (?, NOW(), ?, ?)';
-		$dbh->query($SQL, array($alert_id, $location, $raw_result));
+	if (sizeof($result->data) > 0) {
+		$max_id = $dbh->getOne('SELECT MAX(pikud2_id) FROM pikud2');
+		if (!$max_id) $max_id = 0;
+		if ($result->id <= $max_id)
+			return;
+
+		echo "$raw_result\n";
+		$SQL = 'INSERT INTO pikud2 (pikud2_id, time, response) VALUES (?, NOW(), ?)';
+		$dbh->query($SQL, array($result->id, $raw_result));	
+	}
+
+	$loc_cache = array();
+	foreach($result->data as $alerts_str) {
+		$alerts = split(',', $alerts_str);
+		foreach($alerts as $alert) {
+			$alert = trim($alert);
+			preg_match('/^(.*) ([0-9]+)$/', $alert, $matches);
+			$location = trim($matches[1]);
+			$alert_id = intval($matches[2]);
+			echo "#$alert_id: $location\n";
+
+			// avoid dupes in same response
+			if (!in_array($location, $loc_cache)) {
+				$loc_cache[] = $location;
+				$SQL = 'INSERT IGNORE INTO pikud (time, location, pikud_data_id) VALUES (NOW(), ?, ?)';
+				$dbh->query($SQL, array($location, $result->id));
+			}
+		}
 	}
 }
 
