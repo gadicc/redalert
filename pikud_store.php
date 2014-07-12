@@ -1,6 +1,7 @@
 <?php
 
 include('gadi_db.php');
+$pikud_areas = unserialize(file_get_contents('pikud_areas.dat'));
 date_default_timezone_set('Asia/Jerusalem');
 
 /*
@@ -32,7 +33,7 @@ $result = file_get_contents('alerts_example.json');
 function get_pikud() {
 	global $dbh;
 
-	//$raw_result = $GLOBALS['result'];
+	// $raw_result = $GLOBALS['result'];
 	$raw_result = get_pikud_req();
 	$result = json_decode($raw_result);
 //var_dump($result);
@@ -54,15 +55,17 @@ function get_pikud() {
 		foreach($alerts as $alert) {
 			$alert = trim($alert);
 			preg_match('/^(.*) ([0-9]+)$/', $alert, $matches);
-			$location = trim($matches[1]);
-			$alert_id = intval($matches[2]);
-			echo "#$alert_id: $location\n";
-
-			// avoid dupes in same response
-			if (!in_array($location, $loc_cache)) {
-				$loc_cache[] = $location;
-				$SQL = 'INSERT IGNORE INTO pikud (time, location, pikud_data_id) VALUES (NOW(), ?, ?)';
-				$dbh->query($SQL, array($location, $result->id));
+			$area_name = trim($matches[1]);
+			$area_id = intval($matches[2]);
+			foreach($GLOBALS['pikud_areas'][$area_id] as $location) {
+				// avoid dupes in same response
+				$location = preg_replace("/''/", '"', $location);
+				if (!in_array($location, $loc_cache)) {
+					$loc_cache[] = $location;
+					echo "$location\n";
+					$SQL = 'INSERT IGNORE INTO pikud (time, location, pikud_data_id) VALUES (NOW(), ?, ?)';
+					$dbh->query($SQL, array($location, $result->id));
+				}
 			}
 		}
 	}
