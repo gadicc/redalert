@@ -75,10 +75,11 @@ while (1) {
 	if ($alerts) {
 		echo "Found " . sizeof($alerts) . " updates...\n";
 
-		foreach ($alerts as $alert)
-			$area_ids[] = $alert['alert_id'];
-		rsort($area_ids, SORT_NUMERIC);
-		$max_id = $area_ids[0];
+		foreach ($alerts as $alert) {
+			if ($alert['alert_id'] > $max_id)
+				$max_id = $alert['alert_id'];
+			$area_ids[] = $alert['area_id'];
+		}
 
 		$SQL = 'SELECT * FROM area WHERE area_id IN (' . implode(',', $area_ids) . ')';
 		$areas = $dbh->getAll($SQL);
@@ -88,7 +89,7 @@ while (1) {
 		redalert_send($payload);
 	}
 
-	usleep(333);
+	usleep(333000);
 }
 
 ?>

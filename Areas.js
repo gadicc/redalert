@@ -18,6 +18,7 @@ function Area(id, name, data) {
 	this.id = id;
 	this.name = name;
 	this.data = jQuery.parseJSON(data);
+  this.api = this.data && this.data.Placemark ? 2 : 3;
 }
 
 /**
