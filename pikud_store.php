@@ -32,9 +32,9 @@ $result = file_get_contents('alerts_example.json');
 function get_pikud() {
 	global $dbh;
 
-//	$result = $GLOBALS['result'];
-	$result = get_pikud_req();
-	$result = json_decode($result);
+	$raw_result = $GLOBALS['result'];
+	//$raw_result = get_pikud_req();
+	$result = json_decode($raw_result);
 //var_dump($result);
 
 	foreach($result->data as $alert) {
@@ -42,8 +42,8 @@ function get_pikud() {
 		$location = trim($matches[1]);
 		$alert_id = intval($matches[2]);
 //		echo "#$alert_id: $location\n";
-		$SQL = 'INSERT IGNORE INTO pikud (pikud_id, time, location) VALUES (?, NOW(), ?)';
-		$dbh->query($SQL, array($alert_id, $location));
+		$SQL = 'INSERT IGNORE INTO pikud (pikud_id, time, location, response) VALUES (?, NOW(), ?, ?)';
+		$dbh->query($SQL, array($alert_id, $location, $raw_result));
 	}
 }
 

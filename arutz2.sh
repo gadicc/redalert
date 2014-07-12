@@ -1,6 +1,7 @@
 #!/bin/sh
 while `true`; do
-   date
+#   date
+	echo -n .
 #   php arutz2_store.php
 #   php arutz2_process.php
 #   php iosapp.php
