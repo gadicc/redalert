@@ -33,7 +33,7 @@ function area2id($area_name) {
 	// not in db, first find location data
 	echo "Looking up for first-time: $area_name<br>";
 	$geo = geolookup($area_name);
-	$result = $geo->results[0];
+	$result = $geo->results[0]; // since gmaps api v3
 
 	if (isset($result->geometry->location)) {
 		$long = $result->geometry->location->lng;

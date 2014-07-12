@@ -24,13 +24,17 @@ function Area(id, name, data) {
   * Returns the areas lattitude
   */
 Area.prototype.getLat = function() {
-	return this.data.Placemark[0].Point.coordinates[1];
+	if (this.api == 2)
+		return this.data.Placemark[0].Point.coordinates[1];
+	return this.data.results[0].geometry.location.lat;
 }
 /**
   * Returns the areas longitude
   */
 Area.prototype.getLong = function() {
-	return this.data.Placemark[0].Point.coordinates[0];
+	if (this.api == 2)
+		return this.data.Placemark[0].Point.coordinates[0];
+	return this.data.results[0].geometry.location.lng;
 }
 
 /**
@@ -44,13 +48,22 @@ Area.prototype.getLong = function() {
   *          false  if the location is definitely out of the city
   */
 Area.prototype.contains = function(lat, long) {
-	if (!this.data || !this.data.Placemark) {
+	if (!this.data || (!this.data.Placemark && !this.data.results)) {
 		console.log(this.name + '(' + this.id + ') is missing data');
 		console.log(this.data);
 		return;
 	}
-	var box = this.data.Placemark[0].ExtendedData.LatLonBox;
-	return lat > box.south && lat < box.north && long > box.west && long < box.east;
+
+	if (this.api == 2) {
+		var box = this.data.Placemark[0].ExtendedData.LatLonBox;
+		return lat > box.south && lat < box.north && long > box.west && long < box.east;
+	}
+
+	var bounds = this.data.results[0].geometry.bounds;
+	return lat > bounds.southwest.lat
+		  && lat < bounds.northeast.lat
+		  && long > bounds.southwest.lng
+		  && long < bounds.northeast.lng;
 }
 
 /**
