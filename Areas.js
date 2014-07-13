@@ -61,6 +61,9 @@ Area.prototype.contains = function(lat, long) {
 	}
 
 	var bounds = this.data.results[0].geometry.bounds;
+	if (!bounds)
+		return false;
+	
 	return lat > bounds.southwest.lat
 		  && lat < bounds.northeast.lat
 		  && long > bounds.southwest.lng
