@@ -252,7 +252,7 @@
 
 	// fetch initial data (all previous warnings)
 	$.ajax({
-		url: 'alerts.php?latsId=2090&nocache=' + new Date().getTime(), dataType: 'json',
+		url: 'alerts.php?lastId=2090&nocache=' + new Date().getTime(), dataType: 'json',
 		success: function(data) {
 			//alerts.poll();
 			init(alerts_to_locations(data));
