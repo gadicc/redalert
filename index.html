@@ -147,7 +147,8 @@
 		locations.sort(function(a,b) {
 			return a.time - b.time;
 		});
-		var ceasefire = Math.round(new Date("November 21, 2012 21:00:00 GMT+0200").getTime() / 1000);
+		//var ceasefire = Math.round(new Date("November 21, 2012 21:00:00 GMT+0200").getTime() / 1000);
+		var start = Math.round(new Date("July 12, 2014 15:00:00 GMT+0200").getTime() / 1000);
 		var now = Math.round(new Date().getTime() / 1000);
 		//$('#time_slider').val(locations[0].time+';'+locations[locations.length-1].time);
 		$('#time_slider').val(ceasefire+';'+now);
