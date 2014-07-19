@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+al<?xml version="1.0" encoding="utf-8"?>
 <html>
 
 <head>
@@ -249,17 +249,16 @@
 		geo_error('not supported');
 	}
 
-
 	// fetch initial data (all previous warnings)
 	$.ajax({
-		url: 'alerts.php?nocache=' + new Date().getTime(), dataType: 'json',
+		url: 'alerts.php?latsId=2090&nocache=' + new Date().getTime(), dataType: 'json',
 		success: function(data) {
-			alerts.poll();
+			//alerts.poll();
 			init(alerts_to_locations(data));
 		}
 	});
 
-	// code for new alerts (updated since the above)
+	// code to poll for future alerts
 	var alerts = new Alerts();
 	alerts.callback(function(data) { console.log(data); } );
 	alerts.callback(function(data) {
@@ -278,6 +277,7 @@
 				}
 			}
 	});
+	alerts.poll();
 
       </script>
 </body>
