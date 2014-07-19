@@ -27,7 +27,9 @@ function Area(id, name, data) {
 Area.prototype.getLat = function() {
 	if (this.api == 2)
 		return this.data.Placemark[0].Point.coordinates[1];
-	return this.data.results[0].geometry.location.lat;
+	if (this.data && this.data.results && this.data.results.length)
+		return this.data.results[0].geometry.location.lat;
+	return null;
 }
 /**
   * Returns the areas longitude
@@ -35,7 +37,9 @@ Area.prototype.getLat = function() {
 Area.prototype.getLong = function() {
 	if (this.api == 2)
 		return this.data.Placemark[0].Point.coordinates[0];
-	return this.data.results[0].geometry.location.lng;
+	if (this.data && this.data.results && this.data.results.length)
+		return this.data.results[0].geometry.location.lng;
+	return null;
 }
 
 /**
@@ -59,6 +63,9 @@ Area.prototype.contains = function(lat, long) {
 		var box = this.data.Placemark[0].ExtendedData.LatLonBox;
 		return lat > box.south && lat < box.north && long > box.west && long < box.east;
 	}
+
+	if (!(this.data && this.data.results && this.data.results.length))
+		return false;
 
 	var bounds = this.data.results[0].geometry.bounds;
 	if (!bounds)
