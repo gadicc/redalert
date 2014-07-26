@@ -11,6 +11,7 @@ foreach ($lines as $line) {
 	} else {
 		$areas[$code] = array($area);
 	}
+	echo $code . ',"' . $area . ', ישראל"' . "\n";
 }
 
 file_put_contents('pikud_areas.dat', serialize($areas));
