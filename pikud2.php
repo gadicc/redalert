@@ -26,10 +26,12 @@ $out = json_encode($out);
 echo $out;
 */
 
-$out = "data = [\n";
+$out = "[\n";
 foreach($results as $row) {
-	$out .= $row['response'] . ', ';
+	$data = json_decode($row['response']);
+	$data->time = intval($row['time']) * 1000;
+	$out .= json_encode($data) . ', ';
 }
-$out = substr($out, 0, -2) . "\n];\n";
+$out = substr($out, 0, -2) . "\n]\n";
 
 echo $out;
