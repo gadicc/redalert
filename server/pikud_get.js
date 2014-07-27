@@ -29,10 +29,19 @@ var inc = function(i) {
 function pikud_get() {
 	var fiber = Fiber.current;
 	request({
-		uri: 'http://www.oref.org.il/WarningMessages/alerts.json',
+		//uri: 'http://www.oref.org.il/WarningMessages/alerts.json',
+		uri: 'http://friends.wastelands.net:5050/WarningMessages/alerts.json',
+		headers: {
+			host: "www.oref.org.il"
+		},
 		method: 'GET',
 		encoding: 'binary'
-	 }, function(err, resp, body){
+	 }, function(err, res, body){
+//	 	console.log('get');
+	 	if (res.statusCode == 403) {
+	 		console.log('Access Denied to oref server :(');
+	 		return;
+	 	}
 	  body = iconv.decode(new Buffer(body, 'binary'), 'utf-16');
 	  fiber.run(JSON.parse(body));
 	});
@@ -122,7 +131,6 @@ var sendHistory = function(data) {
 
 	if (lastId == 0) {
 		for (var i=0; i < data.length; i++) {
-			console.log(i);
 			sendToServer(data[i], fiber);
 			Fiber.yield();
 		}
