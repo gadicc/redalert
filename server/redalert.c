@@ -139,22 +139,21 @@ static void clientFds(client *client_list) {
 static void closeClient(client **client_list, int *client_count, client *eventClient) {
 	client *client_cur;
 
-  close (eventClient->fd);
-  printf ("Closed connection on descriptor %d\n", eventClient->fd);
   /* Closing the descriptor will make epoll remove it
      from the set of descriptors which are monitored. */
+  close (eventClient->fd);
+  printf ("Closed connection on descriptor %d\n", eventClient->fd);
 
   if (eventClient->type == CLIENT) {
 	  if (eventClient->prev) {
 	  	eventClient->prev->next = eventClient->next;
 	  } else {
-	  	eventClient->next->prev = NULL;
-	  	*client_list = eventClient->next;
+	  	*client_list = NULL;
 	  }
 	  if (eventClient->next) {
 	    eventClient->next->prev = eventClient->prev;
 	  }
-		*client_count--;
+		(*client_count)--;
 	  free(eventClient);
 	}
 }
@@ -205,6 +204,7 @@ int main (int argc, char *argv[]) {
   client relay, relayListen, clientListen, *eventClient;
 
   int message_count = 0;
+  int lastId = 0;
   message *message_list = NULL, *message_cur = NULL, *message_tmp = NULL;
 
   relay.type = RELAY;
@@ -381,6 +381,12 @@ int main (int argc, char *argv[]) {
             abort ();
           }
 
+          if (eventClient->fd == sfd2) {
+						char str[11];
+						sprintf(str, "%d\n", lastId);
+						write(infd, str, strlen(str));          	
+          }
+
         } /* while(1) */
 
       	continue;
@@ -426,14 +432,21 @@ int main (int argc, char *argv[]) {
 	    			char *toSend;
 
 		    		*(buf+count) = 0;
+		    		printf("<< %s\n", buf);
+
 						msg = (message *)malloc(sizeof(message));
 						msg->id = atoi(strtok(buf, " "));
 	   				type = strtok(NULL, " ");
 	   				if (strcmp(type,"alert"))
 	   					msg->type = MSG_ALERT;
+
+	   				printf("1\n");
 	   				data = strtok(NULL, " ");
+	   				printf("2\n");
 	   				*(data + strlen(data) - 2) = 0; // strip newline
-	   				msg->data = (char *)malloc(strlen(data));
+	   				printf("3\n");
+	   				msg->data = (char *)malloc(strlen(data)+1);
+	   				printf("4\n");
 	   				strcpy(msg->data, data);
 
 	   				toSend = msgToText(msg);
@@ -441,6 +454,8 @@ int main (int argc, char *argv[]) {
 
 	   				msg->next = message_list;
 	   				message_list = msg;
+	   				if (msg->id > lastId)
+	   					lastId = msg->id;
 
 		   	    clock_start = clock();
 				    time(&time_start);

@@ -8,7 +8,9 @@ var Server = require("mongo-sync").Server;
 
 var MONGO_HOST = '127.0.0.1:3001';
 var RELAY_HOST = '127.0.0.1';
-var RELAY_PORT = 3333;
+var RELAY_PORT = 8081;
+
+var JSON_DUMP = './history.json';
 
 /*
 var MongoClient = require('mongodb').MongoClient;
@@ -98,12 +100,33 @@ function sleep(ms) {
   Fiber.yield();
 }
 
-var sendToServer = function(data) {
+var sendToServer = function(data, fiber) {
 	var str = data._id + ' alert ' + JSON.stringify(data);
+	console.log(str);
 	var client = net.connect({ host: RELAY_HOST, port: RELAY_PORT },
 		function() {
-			client.end(str + "\n");
+			if (fiber)
+				client.on('close', function() {
+					fiber.run();
+				})
+			client.end(str + "\r\n");
 		});
+};
+
+var sendHistory = function(data) {
+	var client = net.connect({ host: RELAY_HOST, port: RELAY_PORT });
+	var fiber = Fiber.current;
+	client.on('data', function(data) { fiber.run(data); });
+	var chunk = Fiber.yield();
+	var lastId = parseInt(chunk.toString());
+
+	if (lastId == 0) {
+		for (var i=0; i < data.length; i++) {
+			console.log(i);
+			sendToServer(data[i], fiber);
+			Fiber.yield();
+		}
+	}
 };
 
 var db;
@@ -114,14 +137,21 @@ Fiber(function() {
 	db.counters = db.getCollection('counters');
 	db.redalert = db.getCollection('redalert');
 
-	// Import old data
-	/*
-	var data = require('./x.json');
-	for (var i=0; i < data.length; i++)
-		raInsert(process(data[i]));
-	*/
+	// Load historical data
+	var data = db.redalert.find();
+	if (data.count() == 0) {
+		console.log("Database is empty, populating from " + JSON_DUMP);
+		data = require(JSON_DUMP);
+		for (var i=0; i < data.length; i++)
+			raInsert(process(data[i]));
+	} else
+		data = data.toArray();
+	console.log(data.length + ' messages imported');
 
-	/*
+	// Upload historical data to server if needed
+	sendHistory(data);
+
+	// pikud_get loop
 	var res;
 	while(1) {
 		res = pikud_get();
@@ -130,13 +160,10 @@ Fiber(function() {
 			var data = process(res);
 			console.log(data);
 			raInsert(data);
-		} else console.log('no data');
+			sendToServer(data);
+		}
 		sleep(1000);
 	}
-	*/
-
-	var data = require('./x.json');
-	sendToServer(raInsert(process(data[0])));
 
 	server.close();
 }).run();

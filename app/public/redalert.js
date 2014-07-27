@@ -84,7 +84,7 @@ jQuery(document).ready(function() {
 	RedAlert.iframe = $('<iframe>').css({display: 'none'});
 	$('body').append(RedAlert.iframe);
 
-  if (typeof localStorage === 'object') {
+  if (0 && typeof localStorage === 'object') {
     RedAlert.lastId = parseInt(localStorage.getItem('ra_lastId'));
     RedAlert.messages = JSON.parse(localStorage.getItem('ra_messages'));
   }
