@@ -6,7 +6,14 @@ var request = require('request');
 var Fiber = require('fibers');
 var Server = require("mongo-sync").Server;
 
-var MONGO_HOST = '127.0.0.1:3001';
+//var MONGO_HOST = '127.0.0.1:3001';
+
+//mongo -u meteor -p yGgCiKsc8o4jRj3Fw 188.226.253.94:6009/meteor 
+var MONGO_HOST = "188.226.253.94:6009";
+var MONGO_DB = "meteor";
+var MONGO_USER = "meteor";
+var MONGO_PASSWORD = "yGgCiKsc8o4jRj3Fw";
+
 var RELAY_HOST = '127.0.0.1';
 var RELAY_PORT = 8081;
 
@@ -133,6 +140,7 @@ var db;
 Fiber(function() {
 	var server = new Server(MONGO_HOST);
 	db = server.db('meteor');
+	db.auth(MONGO_USER, MONGO_PASSWORD);
 
 	db.counters = db.getCollection('counters');
 	db.redalert = db.getCollection('redalert');
