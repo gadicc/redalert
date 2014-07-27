@@ -142,7 +142,7 @@ static void closeClient(client **client_list, int *client_count, client *eventCl
   /* Closing the descriptor will make epoll remove it
      from the set of descriptors which are monitored. */
   close (eventClient->fd);
-  printf ("Closed connection on descriptor %d\n", eventClient->fd);
+//  printf ("Closed connection on descriptor %d\n", eventClient->fd);
 
   if (eventClient->type == CLIENT) {
 	  if (eventClient->prev) {
@@ -180,7 +180,7 @@ static void sendPastMessages(client *c, message *message_list, int lastId) {
 	for (msg = message_list; msg != NULL; msg = msg->next) {
 		if (msg->id > lastId) {
 			buf = msgToText(msg);
-			printf("%s\n", buf);
+			//printf("%s\n", buf);
 			write(c->fd, buf, strlen(buf));
 		}
 	}
@@ -363,8 +363,8 @@ int main (int argc, char *argv[]) {
           	sbuf, sizeof sbuf, NI_NUMERICHOST | NI_NUMERICSERV);
 
           if (s == 0) {
-            printf("Accepted connection on descriptor %d "
-                   "(host=%s, port=%s)\n", infd, hbuf, sbuf);
+//            printf("Accepted connection on descriptor %d "
+//                   "(host=%s, port=%s)\n", infd, hbuf, sbuf);
           }
 
           /* Make the incoming socket non-blocking and add it to the
@@ -432,7 +432,7 @@ int main (int argc, char *argv[]) {
 	    			char *toSend;
 
 		    		*(buf+count) = 0;
-		    		printf("<< %s\n", buf);
+		    		// printf("<< %s\n", buf);
 
 						msg = (message *)malloc(sizeof(message));
 						msg->id = atoi(strtok(buf, " "));
@@ -440,17 +440,13 @@ int main (int argc, char *argv[]) {
 	   				if (strcmp(type,"alert"))
 	   					msg->type = MSG_ALERT;
 
-	   				printf("1\n");
 	   				data = strtok(NULL, " ");
-	   				printf("2\n");
 	   				*(data + strlen(data) - 2) = 0; // strip newline
-	   				printf("3\n");
 	   				msg->data = (char *)malloc(strlen(data)+1);
-	   				printf("4\n");
 	   				strcpy(msg->data, data);
 
 	   				toSend = msgToText(msg);
-	   				printf("%s\n", toSend);
+	   				// printf("%s\n", toSend);
 
 	   				msg->next = message_list;
 	   				message_list = msg;

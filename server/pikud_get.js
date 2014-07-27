@@ -7,8 +7,6 @@ var Fiber = require('fibers');
 var Server = require("mongo-sync").Server;
 
 //var MONGO_HOST = '127.0.0.1:3001';
-
-//mongo -u meteor -p yGgCiKsc8o4jRj3Fw 188.226.253.94:6009/meteor 
 var MONGO_HOST = "188.226.253.94:6009";
 var MONGO_DB = "meteor";
 var MONGO_USER = "meteor";
@@ -18,11 +16,6 @@ var RELAY_HOST = '127.0.0.1';
 var RELAY_PORT = 8081;
 
 var JSON_DUMP = './history.json';
-
-/*
-var MongoClient = require('mongodb').MongoClient;
-var MONGO_URL="mongodb://127.0.0.1:3001/meteor";
-*/
 
 var inc = function(i) {
   var fiber = Fiber.current;
@@ -140,7 +133,8 @@ var db;
 Fiber(function() {
 	var server = new Server(MONGO_HOST);
 	db = server.db('meteor');
-	db.auth(MONGO_USER, MONGO_PASSWORD);
+	if (typeof MONGO_USER !== 'undefined')
+		db.auth(MONGO_USER, MONGO_PASSWORD);
 
 	db.counters = db.getCollection('counters');
 	db.redalert = db.getCollection('redalert');
@@ -149,11 +143,13 @@ Fiber(function() {
 	var data = db.redalert.find();
 	if (data.count() == 0) {
 		console.log("Database is empty, populating from " + JSON_DUMP);
-		data = require(JSON_DUMP);
-		for (var i=0; i < data.length; i++)
-			raInsert(process(data[i]));
+		var history = require(JSON_DUMP);
+		data = [];
+		for (var i=0; i < history.length; i++)
+			data.push(raInsert(process(history[i])));
 	} else
 		data = data.toArray();
+
 	console.log(data.length + ' messages imported');
 
 	// Upload historical data to server if needed
