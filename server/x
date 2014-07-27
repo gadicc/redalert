@@ -1,0 +1,4600 @@
+{ time: Sat Jul 12 2014 14:17:40 GMT+0300 (IDT),
+  pid: 1405174660929,
+  areas: [ 234, 234 ] }
+{ time: Sat Jul 12 2014 14:32:25 GMT+0300 (IDT),
+  pid: 1405175544880,
+  areas: [ 250 ] }
+{ time: Sat Jul 12 2014 14:55:56 GMT+0300 (IDT),
+  pid: 1405176957312,
+  areas: [ 224 ] }
+{ time: Sat Jul 12 2014 14:57:42 GMT+0300 (IDT),
+  pid: 1405177060208,
+  areas: [ 234, 234 ] }
+{ time: Sat Jul 12 2014 15:06:53 GMT+0300 (IDT),
+  pid: 1405177613222,
+  areas: [ 232 ] }
+{ time: Sat Jul 12 2014 15:15:39 GMT+0300 (IDT),
+  pid: 1405178139328,
+  areas: [ 218 ] }
+{ time: Sat Jul 12 2014 15:15:51 GMT+0300 (IDT),
+  pid: 1405178150625,
+  areas: [ 218, 219 ] }
+{ time: Sat Jul 12 2014 15:15:56 GMT+0300 (IDT),
+  pid: 1405178156407,
+  areas: [ 219 ] }
+{ time: Sat Jul 12 2014 15:24:23 GMT+0300 (IDT),
+  pid: 1405178661730,
+  areas: [ 236 ] }
+{ time: Sat Jul 12 2014 15:24:44 GMT+0300 (IDT),
+  pid: 1405178682169,
+  areas: [ 238, 238 ] }
+{ time: Sat Jul 12 2014 15:41:32 GMT+0300 (IDT),
+  pid: 1405179690917,
+  areas: [ 220 ] }
+{ time: Sat Jul 12 2014 15:41:44 GMT+0300 (IDT),
+  pid: 1405179702604,
+  areas: [ 220, 221 ] }
+{ time: Sat Jul 12 2014 15:41:50 GMT+0300 (IDT),
+  pid: 1405179708261,
+  areas: [ 221 ] }
+{ time: Sat Jul 12 2014 15:54:38 GMT+0300 (IDT),
+  pid: 1405180475516,
+  areas: [ 292, 289 ] }
+{ time: Sat Jul 12 2014 15:55:17 GMT+0300 (IDT),
+  pid: 1405180517768,
+  areas: [ 292 ] }
+{ time: Sat Jul 12 2014 15:55:32 GMT+0300 (IDT),
+  pid: 1405180532050,
+  areas: [ 292, 289 ] }
+{ time: Sat Jul 12 2014 15:55:43 GMT+0300 (IDT),
+  pid: 1405180543004,
+  areas: [ 289 ] }
+{ time: Sat Jul 12 2014 15:57:17 GMT+0300 (IDT),
+  pid: 1405180634477,
+  areas: [ 236 ] }
+{ time: Sat Jul 12 2014 15:58:02 GMT+0300 (IDT),
+  pid: 1405180681214,
+  areas: [ 217 ] }
+{ time: Sat Jul 12 2014 15:58:28 GMT+0300 (IDT),
+  pid: 1405180706747,
+  areas: [ 217 ] }
+{ time: Sat Jul 12 2014 15:59:07 GMT+0300 (IDT),
+  pid: 1405180746233,
+  areas: [ 291 ] }
+{ time: Sat Jul 12 2014 16:38:18 GMT+0300 (IDT),
+  pid: 1405183095672,
+  areas: [ 255 ] }
+{ time: Sat Jul 12 2014 16:53:13 GMT+0300 (IDT),
+  pid: 1405183993564,
+  areas: [ 231 ] }
+{ time: Sat Jul 12 2014 17:12:32 GMT+0300 (IDT),
+  pid: 1405185149515,
+  areas: [ 218 ] }
+{ time: Sat Jul 12 2014 17:26:28 GMT+0300 (IDT),
+  pid: 1405185986605,
+  areas: [ 217, 247 ] }
+{ time: Sat Jul 12 2014 17:26:33 GMT+0300 (IDT),
+  pid: 1405185993418,
+  areas: [ 217, 218, 247 ] }
+{ time: Sat Jul 12 2014 17:26:44 GMT+0300 (IDT),
+  pid: 1405186003684,
+  areas: [ 218, 247 ] }
+{ time: Sat Jul 12 2014 17:26:52 GMT+0300 (IDT),
+  pid: 1405186010591,
+  areas: [ 247 ] }
+{ time: Sat Jul 12 2014 18:07:13 GMT+0300 (IDT),
+  pid: 1405188433042,
+  areas: [ 271, 267 ] }
+{ time: Sat Jul 12 2014 18:07:30 GMT+0300 (IDT),
+  pid: 1405188437901,
+  areas: [ 271, 175, 182, 266, 178, 183, 179, 267 ] }
+{ time: Sat Jul 12 2014 18:08:08 GMT+0300 (IDT),
+  pid: 1405188477825,
+  areas: [ 175, 182, 266, 178, 183, 179, 267, 273, 224, 272 ] }
+{ time: Sat Jul 12 2014 18:08:19 GMT+0300 (IDT),
+  pid: 1405188495607,
+  areas: [ 175, 182, 178, 183, 179, 273, 272 ] }
+{ time: Sat Jul 12 2014 18:08:22 GMT+0300 (IDT),
+  pid: 1405188497217,
+  areas: [ 175, 182, 271, 178, 183, 179, 273, 267, 272 ] }
+{ time: Sat Jul 12 2014 18:08:41 GMT+0300 (IDT),
+  pid: 1405188519937,
+  areas: [ 175, 182, 271, 178, 183, 179, 273, 267 ] }
+{ time: Sat Jul 12 2014 18:08:47 GMT+0300 (IDT),
+  pid: 1405188525109,
+  areas: [ 271, 273, 267 ] }
+{ time: Sat Jul 12 2014 18:08:56 GMT+0300 (IDT),
+  pid: 1405188535172,
+  areas: [ 271, 267 ] }
+{ time: Sat Jul 12 2014 18:08:59 GMT+0300 (IDT),
+  pid: 1405188539578,
+  areas: [ 267 ] }
+{ time: Sat Jul 12 2014 18:36:14 GMT+0300 (IDT),
+  pid: 1405190173596,
+  areas: [ 237 ] }
+{ time: Sat Jul 12 2014 18:39:32 GMT+0300 (IDT),
+  pid: 1405190371699,
+  areas: [ 237 ] }
+{ time: Sat Jul 12 2014 18:39:44 GMT+0300 (IDT),
+  pid: 1405190380793,
+  areas: [ 237, 236, 238, 238 ] }
+{ time: Sat Jul 12 2014 18:39:49 GMT+0300 (IDT),
+  pid: 1405190388825,
+  areas: [ 236, 238, 238 ] }
+{ time: Sat Jul 12 2014 18:39:58 GMT+0300 (IDT),
+  pid: 1405190397966,
+  areas: [ 238, 238 ] }
+{ time: Sat Jul 12 2014 18:57:27 GMT+0300 (IDT),
+  pid: 1405191446767,
+  areas: [ 278 ] }
+{ time: Sat Jul 12 2014 18:57:42 GMT+0300 (IDT),
+  pid: 1405191458064,
+  areas: [ 194, 200, 200, 206, 278, 191 ] }
+{ time: Sat Jul 12 2014 19:18:07 GMT+0300 (IDT),
+  pid: 1405192686279,
+  areas: [ 234, 234 ] }
+{ time: Sat Jul 12 2014 19:21:44 GMT+0300 (IDT),
+  pid: 1405192904492,
+  areas: [ 224 ] }
+{ time: Sat Jul 12 2014 19:37:54 GMT+0300 (IDT),
+  pid: 1405193871459,
+  areas: [ 230 ] }
+{ time: Sat Jul 12 2014 19:56:26 GMT+0300 (IDT),
+  pid: 1405194982308,
+  areas: [ 217, 247 ] }
+{ time: Sat Jul 12 2014 19:56:39 GMT+0300 (IDT),
+  pid: 1405194999371,
+  areas: [ 247 ] }
+{ time: Sat Jul 12 2014 20:00:21 GMT+0300 (IDT),
+  pid: 1405195220100,
+  areas: [ 217, 247 ] }
+{ time: Sat Jul 12 2014 20:00:40 GMT+0300 (IDT),
+  pid: 1405195237210,
+  areas: [ 247 ] }
+{ time: Sat Jul 12 2014 20:07:10 GMT+0300 (IDT),
+  pid: 1405195630619,
+  areas: [ 224 ] }
+{ time: Sat Jul 12 2014 20:41:05 GMT+0300 (IDT),
+  pid: 1405197666211,
+  areas: [ 218, 217 ] }
+{ time: Sat Jul 12 2014 20:41:45 GMT+0300 (IDT),
+  pid: 1405197705776,
+  areas: [ 271 ] }
+{ time: Sat Jul 12 2014 20:41:48 GMT+0300 (IDT),
+  pid: 1405197708229,
+  areas: [ 271, 245 ] }
+{ time: Sat Jul 12 2014 20:42:28 GMT+0300 (IDT),
+  pid: 1405197747528,
+  areas: [ 245 ] }
+{ time: Sat Jul 12 2014 21:06:55 GMT+0300 (IDT),
+  pid: 1405199213172,
+  areas: [ 157, 155, 217, 247 ] }
+{ time: Sat Jul 12 2014 21:07:12 GMT+0300 (IDT),
+  pid: 1405199230344,
+  areas: [ 157, 155, 247 ] }
+{ time: Sat Jul 12 2014 21:07:21 GMT+0300 (IDT),
+  pid: 1405199240579,
+  areas: [ 157, 155 ] }
+{ time: Sat Jul 12 2014 21:11:43 GMT+0300 (IDT),
+  pid: 1405199500404,
+  areas: [ 245 ] }
+{ time: Sat Jul 12 2014 21:11:52 GMT+0300 (IDT),
+  pid: 1405199512030,
+  areas: [ 271, 175, 160, 168, 246, 245 ] }
+{ time: Sat Jul 12 2014 21:12:19 GMT+0300 (IDT),
+  pid: 1405199536781,
+  areas: [ 271, 175, 160, 168, 245 ] }
+{ time: Sat Jul 12 2014 21:12:24 GMT+0300 (IDT),
+  pid: 1405199543297,
+  areas: [ 271, 175, 160, 168 ] }
+{ time: Sat Jul 12 2014 21:12:35 GMT+0300 (IDT),
+  pid: 1405199554532,
+  areas: [ 175, 160, 168 ] }
+{ time: Sat Jul 12 2014 21:13:23 GMT+0300 (IDT),
+  pid: 1405199602331,
+  areas: [ 157, 161 ] }
+{ time: Sat Jul 12 2014 21:14:46 GMT+0300 (IDT),
+  pid: 1405199683694,
+  areas: [ 157, 161, 228 ] }
+{ time: Sat Jul 12 2014 21:14:52 GMT+0300 (IDT),
+  pid: 1405199690006,
+  areas: [ 228 ] }
+{ time: Sat Jul 12 2014 21:15:06 GMT+0300 (IDT),
+  pid: 1405199704554,
+  areas: [ 278 ] }
+{ time: Sat Jul 12 2014 21:15:11 GMT+0300 (IDT),
+  pid: 1405199706960,
+  areas: [ 188, 188, 278 ] }
+{ time: Sat Jul 12 2014 21:16:15 GMT+0300 (IDT),
+  pid: 1405199761869,
+  areas: [ 181, 188, 188, 178, 179, 173, 174, 126 ] }
+{ time: Sat Jul 12 2014 22:00:37 GMT+0300 (IDT),
+  pid: 1405202437118,
+  areas: [ 275, 268, 273, 278 ] }
+{ time: Sat Jul 12 2014 22:00:58 GMT+0300 (IDT),
+  pid: 1405202450853,
+  areas: [ 292, 181, 275, 268, 188, 188, 273, 184, 276, 289, 278 ] }
+{ time: Sat Jul 12 2014 22:01:36 GMT+0300 (IDT),
+  pid: 1405202494074,
+  areas: [ 292, 181, 275, 188, 188, 184, 280 ] }
+{ time: Sat Jul 12 2014 22:01:48 GMT+0300 (IDT),
+  pid: 1405202508231,
+  areas: [ 181, 275, 188, 188, 184, 280 ] }
+{ time: Sat Jul 12 2014 22:22:04 GMT+0300 (IDT),
+  pid: 1405203722021,
+  areas: [ 237 ] }
+{ time: Sat Jul 12 2014 22:42:37 GMT+0300 (IDT),
+  pid: 1405204954984,
+  areas: [ 14, 30 ] }
+{ time: Sat Jul 12 2014 22:42:49 GMT+0300 (IDT),
+  pid: 1405204960015,
+  areas: [ 29, 14, 30, 15, 31 ] }
+{ time: Sat Jul 12 2014 22:55:11 GMT+0300 (IDT),
+  pid: 1405205711145,
+  areas: [ 227 ] }
+{ time: Sun Jul 13 2014 10:10:11 GMT+0300 (IDT),
+  pid: 1405246206037,
+  areas: [ 228 ] }
+{ time: Sun Jul 13 2014 10:24:36 GMT+0300 (IDT),
+  pid: 1405246223051,
+  areas: [] }
+{ time: Sun Jul 13 2014 10:39:51 GMT+0300 (IDT),
+  pid: 1405247989732,
+  areas: [ 292, 291 ] }
+{ time: Sun Jul 13 2014 10:45:37 GMT+0300 (IDT),
+  pid: 1405248337439,
+  areas: [ 255 ] }
+{ time: Sun Jul 13 2014 10:45:40 GMT+0300 (IDT),
+  pid: 1405248339955,
+  areas: [ 255, 253 ] }
+{ time: Sun Jul 13 2014 10:46:06 GMT+0300 (IDT),
+  pid: 1405248364956,
+  areas: [ 253 ] }
+{ time: Sun Jul 13 2014 10:46:15 GMT+0300 (IDT),
+  pid: 1405248376129,
+  areas: [ 255 ] }
+{ time: Sun Jul 13 2014 11:10:45 GMT+0300 (IDT),
+  pid: 1405249843239,
+  areas: [ 218 ] }
+{ time: Sun Jul 13 2014 11:35:24 GMT+0300 (IDT),
+  pid: 1405251322502,
+  areas: [ 246, 245 ] }
+{ time: Sun Jul 13 2014 11:35:26 GMT+0300 (IDT),
+  pid: 1405251325174,
+  areas: [ 246, 217, 218, 245 ] }
+{ time: Sun Jul 13 2014 11:35:43 GMT+0300 (IDT),
+  pid: 1405251342190,
+  areas: [ 246, 245 ] }
+{ time: Sun Jul 13 2014 11:35:45 GMT+0300 (IDT),
+  pid: 1405251346003,
+  areas: [ 246, 245, 247 ] }
+{ time: Sun Jul 13 2014 11:35:51 GMT+0300 (IDT),
+  pid: 1405251351003,
+  areas: [ 245, 247 ] }
+{ time: Sun Jul 13 2014 11:36:06 GMT+0300 (IDT),
+  pid: 1405251364879,
+  areas: [ 247 ] }
+{ time: Sun Jul 13 2014 12:08:47 GMT+0300 (IDT),
+  pid: 1405253328772,
+  areas: [ 246, 247 ] }
+{ time: Sun Jul 13 2014 12:08:55 GMT+0300 (IDT),
+  pid: 1405253335913,
+  areas: [ 246, 247, 250 ] }
+{ time: Sun Jul 13 2014 12:09:17 GMT+0300 (IDT),
+  pid: 1405253355804,
+  areas: [ 250 ] }
+{ time: Sun Jul 13 2014 12:29:14 GMT+0300 (IDT),
+  pid: 1405254553438,
+  areas: [ 236, 238, 238 ] }
+{ time: Sun Jul 13 2014 12:29:32 GMT+0300 (IDT),
+  pid: 1405254570564,
+  areas: [ 238, 238 ] }
+{ time: Sun Jul 13 2014 12:45:55 GMT+0300 (IDT),
+  pid: 1405255554981,
+  areas: [ 291 ] }
+{ time: Sun Jul 13 2014 13:08:30 GMT+0300 (IDT),
+  pid: 1405256909931,
+  areas: [ 237 ] }
+{ time: Sun Jul 13 2014 13:34:10 GMT+0300 (IDT),
+  pid: 1405258449779,
+  areas: [ 227 ] }
+{ time: Sun Jul 13 2014 13:35:41 GMT+0300 (IDT),
+  pid: 1405258539126,
+  areas: [ 237 ] }
+{ time: Sun Jul 13 2014 13:54:24 GMT+0300 (IDT),
+  pid: 1405259662082,
+  areas: [ 280 ] }
+{ time: Sun Jul 13 2014 13:56:25 GMT+0300 (IDT),
+  pid: 1405259782556,
+  areas: [ 218 ] }
+{ time: Sun Jul 13 2014 14:18:45 GMT+0300 (IDT),
+  pid: 1405261124881,
+  areas: [ 217, 247 ] }
+{ time: Sun Jul 13 2014 14:19:03 GMT+0300 (IDT),
+  pid: 1405261143147,
+  areas: [ 246, 247 ] }
+{ time: Sun Jul 13 2014 14:19:12 GMT+0300 (IDT),
+  pid: 1405261152054,
+  areas: [ 246 ] }
+{ time: Sun Jul 13 2014 14:19:15 GMT+0300 (IDT),
+  pid: 1405261156773,
+  areas: [ 271, 246, 245 ] }
+{ time: Sun Jul 13 2014 14:19:33 GMT+0300 (IDT),
+  pid: 1405261170102,
+  areas: [ 271, 245 ] }
+{ time: Sun Jul 13 2014 14:30:49 GMT+0300 (IDT),
+  pid: 1405261848054,
+  areas: [ 271, 273, 267 ] }
+{ time: Sun Jul 13 2014 14:31:03 GMT+0300 (IDT),
+  pid: 1405261863055,
+  areas: [ 271, 266, 273, 267 ] }
+{ time: Sun Jul 13 2014 14:31:17 GMT+0300 (IDT),
+  pid: 1405261876665,
+  areas: [ 271, 266, 273, 267, 245 ] }
+{ time: Sun Jul 13 2014 14:31:31 GMT+0300 (IDT),
+  pid: 1405261890103,
+  areas: [ 266, 273, 267, 245 ] }
+{ time: Sun Jul 13 2014 14:31:41 GMT+0300 (IDT),
+  pid: 1405261899666,
+  areas: [ 271, 266, 273, 267, 245 ] }
+{ time: Sun Jul 13 2014 14:31:44 GMT+0300 (IDT),
+  pid: 1405261902525,
+  areas: [ 271, 266, 273, 267, 273, 245 ] }
+{ time: Sun Jul 13 2014 14:31:48 GMT+0300 (IDT),
+  pid: 1405261909010,
+  areas: [ 271, 266, 273, 245 ] }
+{ time: Sun Jul 13 2014 14:31:58 GMT+0300 (IDT),
+  pid: 1405261919042,
+  areas: [ 271, 266, 273 ] }
+{ time: Sun Jul 13 2014 14:32:02 GMT+0300 (IDT),
+  pid: 1405261920386,
+  areas: [ 271, 273 ] }
+{ time: Sun Jul 13 2014 14:32:21 GMT+0300 (IDT),
+  pid: 1405261941558,
+  areas: [ 273 ] }
+{ time: Sun Jul 13 2014 14:47:33 GMT+0300 (IDT),
+  pid: 1405262851881,
+  areas: [ 231 ] }
+{ time: Sun Jul 13 2014 15:39:35 GMT+0300 (IDT),
+  pid: 1405265973788,
+  areas: [ 218 ] }
+{ time: Sun Jul 13 2014 15:40:00 GMT+0300 (IDT),
+  pid: 1405265999555,
+  areas: [ 218 ] }
+{ time: Sun Jul 13 2014 15:47:14 GMT+0300 (IDT),
+  pid: 1405266432605,
+  areas: [ 246 ] }
+{ time: Sun Jul 13 2014 15:47:17 GMT+0300 (IDT),
+  pid: 1405266435074,
+  areas: [ 246, 248 ] }
+{ time: Sun Jul 13 2014 15:47:21 GMT+0300 (IDT),
+  pid: 1405266437590,
+  areas: [ 246, 248, 247, 250 ] }
+{ time: Sun Jul 13 2014 15:47:40 GMT+0300 (IDT),
+  pid: 1405266459653,
+  areas: [ 248, 247, 250 ] }
+{ time: Sun Jul 13 2014 15:47:42 GMT+0300 (IDT),
+  pid: 1405266462169,
+  areas: [ 247, 250 ] }
+{ time: Sun Jul 13 2014 15:48:10 GMT+0300 (IDT),
+  pid: 1405266487311,
+  areas: [ 234, 234 ] }
+{ time: Sun Jul 13 2014 15:52:31 GMT+0300 (IDT),
+  pid: 1405266751809,
+  areas: [ 230 ] }
+{ time: Sun Jul 13 2014 15:52:35 GMT+0300 (IDT),
+  pid: 1405266754231,
+  areas: [ 230, 231 ] }
+{ time: Sun Jul 13 2014 15:52:48 GMT+0300 (IDT),
+  pid: 1405266768904,
+  areas: [ 231 ] }
+{ time: Sun Jul 13 2014 16:30:02 GMT+0300 (IDT),
+  pid: 1405269002905,
+  areas: [ 157, 162 ] }
+{ time: Sun Jul 13 2014 16:30:06 GMT+0300 (IDT),
+  pid: 1405269005749,
+  areas: [ 157, 162, 155, 160 ] }
+{ time: Sun Jul 13 2014 16:31:19 GMT+0300 (IDT),
+  pid: 1405269078144,
+  areas: [ 175 ] }
+{ time: Sun Jul 13 2014 16:31:41 GMT+0300 (IDT),
+  pid: 1405269100567,
+  areas: [ 175, 138, 107, 149, 150, 137, 137 ] }
+{ time: Sun Jul 13 2014 16:33:05 GMT+0300 (IDT),
+  pid: 1405269169398,
+  areas: 
+   [ 157,
+     138,
+     162,
+     155,
+     160,
+     140,
+     168,
+     107,
+     139,
+     143,
+     141,
+     149,
+     142,
+     150,
+     137,
+     137,
+     108 ] }
+{ time: Sun Jul 13 2014 16:41:42 GMT+0300 (IDT),
+  pid: 1405269702877,
+  areas: [ 247 ] }
+{ time: Sun Jul 13 2014 16:41:49 GMT+0300 (IDT),
+  pid: 1405269708299,
+  areas: [ 218, 217, 247 ] }
+{ time: Sun Jul 13 2014 16:42:07 GMT+0300 (IDT),
+  pid: 1405269725378,
+  areas: [ 247 ] }
+{ time: Sun Jul 13 2014 16:53:15 GMT+0300 (IDT),
+  pid: 1405270394911,
+  areas: [ 218, 217 ] }
+{ time: Sun Jul 13 2014 16:53:39 GMT+0300 (IDT),
+  pid: 1405270417709,
+  areas: [ 218 ] }
+{ time: Sun Jul 13 2014 17:27:21 GMT+0300 (IDT),
+  pid: 1405272439905,
+  areas: [ 220 ] }
+{ time: Sun Jul 13 2014 17:33:22 GMT+0300 (IDT),
+  pid: 1405272801205,
+  areas: [ 224 ] }
+{ time: Sun Jul 13 2014 17:55:54 GMT+0300 (IDT),
+  pid: 1405274150729,
+  areas: [ 238, 238, 236, 238, 238 ] }
+{ time: Sun Jul 13 2014 17:55:59 GMT+0300 (IDT),
+  pid: 1405274156010,
+  areas: [ 236, 238, 238 ] }
+{ time: Sun Jul 13 2014 18:10:32 GMT+0300 (IDT),
+  pid: 1405275016945,
+  areas: [ 273, 267 ] }
+{ time: Sun Jul 13 2014 18:10:40 GMT+0300 (IDT),
+  pid: 1405275033931,
+  areas: [ 268, 273, 267 ] }
+{ time: Sun Jul 13 2014 18:10:56 GMT+0300 (IDT),
+  pid: 1405275054932,
+  areas: [ 268, 273, 267, 273 ] }
+{ time: Sun Jul 13 2014 18:11:02 GMT+0300 (IDT),
+  pid: 1405275063010,
+  areas: [ 268, 267, 273 ] }
+{ time: Sun Jul 13 2014 18:11:16 GMT+0300 (IDT),
+  pid: 1405275074261,
+  areas: [ 268, 273 ] }
+{ time: Sun Jul 13 2014 18:11:32 GMT+0300 (IDT),
+  pid: 1405275091231,
+  areas: [ 273 ] }
+{ time: Sun Jul 13 2014 19:00:56 GMT+0300 (IDT),
+  pid: 1405278055868,
+  areas: [ 224 ] }
+{ time: Sun Jul 13 2014 19:01:17 GMT+0300 (IDT),
+  pid: 1405278076775,
+  areas: [ 255 ] }
+{ time: Sun Jul 13 2014 19:01:23 GMT+0300 (IDT),
+  pid: 1405278079306,
+  areas: [ 254, 255 ] }
+{ time: Sun Jul 13 2014 19:01:45 GMT+0300 (IDT),
+  pid: 1405278103605,
+  areas: [ 254 ] }
+{ time: Sun Jul 13 2014 19:17:15 GMT+0300 (IDT),
+  pid: 1405279032137,
+  areas: [ 220 ] }
+{ time: Sun Jul 13 2014 19:27:11 GMT+0300 (IDT),
+  pid: 1405279629839,
+  areas: [ 217 ] }
+{ time: Sun Jul 13 2014 19:40:28 GMT+0300 (IDT),
+  pid: 1405280426989,
+  areas: [ 231 ] }
+{ time: Sun Jul 13 2014 19:59:57 GMT+0300 (IDT),
+  pid: 1405281595143,
+  areas: [ 234, 234 ] }
+{ time: Sun Jul 13 2014 20:02:54 GMT+0300 (IDT),
+  pid: 1405281773433,
+  areas: [ 217, 247 ] }
+{ time: Sun Jul 13 2014 20:03:11 GMT+0300 (IDT),
+  pid: 1405281790622,
+  areas: [ 247 ] }
+{ time: Sun Jul 13 2014 20:04:03 GMT+0300 (IDT),
+  pid: 1405281840718,
+  areas: [ 271, 275, 268, 267, 248 ] }
+{ time: Sun Jul 13 2014 20:04:28 GMT+0300 (IDT),
+  pid: 1405281867876,
+  areas: [ 271, 275, 268, 267 ] }
+{ time: Sun Jul 13 2014 20:04:44 GMT+0300 (IDT),
+  pid: 1405281882986,
+  areas: [ 268, 267 ] }
+{ time: Sun Jul 13 2014 20:08:23 GMT+0300 (IDT),
+  pid: 1405282104575,
+  areas: [ 272 ] }
+{ time: Sun Jul 13 2014 20:08:36 GMT+0300 (IDT),
+  pid: 1405282116513,
+  areas: [ 271, 275, 272, 245 ] }
+{ time: Sun Jul 13 2014 20:09:06 GMT+0300 (IDT),
+  pid: 1405282146562,
+  areas: [ 271, 275, 245 ] }
+{ time: Sun Jul 13 2014 20:10:29 GMT+0300 (IDT),
+  pid: 1405282227847,
+  areas: [ 275, 273, 272 ] }
+{ time: Sun Jul 13 2014 20:10:57 GMT+0300 (IDT),
+  pid: 1405282255817,
+  areas: [ 275, 273, 272, 276 ] }
+{ time: Sun Jul 13 2014 20:11:08 GMT+0300 (IDT),
+  pid: 1405282269912,
+  areas: [ 273, 276 ] }
+{ time: Sun Jul 13 2014 20:11:27 GMT+0300 (IDT),
+  pid: 1405282285225,
+  areas: [ 276 ] }
+{ time: Sun Jul 13 2014 20:16:00 GMT+0300 (IDT),
+  pid: 1405282559505,
+  areas: [ 275 ] }
+{ time: Sun Jul 13 2014 20:16:04 GMT+0300 (IDT),
+  pid: 1405282562161,
+  areas: [ 271, 275, 268, 273, 276, 280, 272, 278 ] }
+{ time: Sun Jul 13 2014 20:16:16 GMT+0300 (IDT),
+  pid: 1405282576396,
+  areas: [ 271, 275, 268, 273, 267, 276, 280, 272, 278, 245 ] }
+{ time: Sun Jul 13 2014 20:16:25 GMT+0300 (IDT),
+  pid: 1405282583678,
+  areas: [ 271, 275, 268, 266, 273, 267, 276, 280, 272, 278, 245 ] }
+{ time: Sun Jul 13 2014 20:16:43 GMT+0300 (IDT),
+  pid: 1405282601554,
+  areas: [ 271, 268, 266, 273, 267, 276, 280, 272, 278, 245 ] }
+{ time: Sun Jul 13 2014 20:16:51 GMT+0300 (IDT),
+  pid: 1405282604304,
+  areas: [ 268, 266, 273, 267, 278, 245 ] }
+{ time: Sun Jul 13 2014 20:16:55 GMT+0300 (IDT),
+  pid: 1405282614180,
+  areas: [ 268, 266, 275, 273, 267, 278, 245 ] }
+{ time: Sun Jul 13 2014 20:17:02 GMT+0300 (IDT),
+  pid: 1405282621008,
+  areas: [ 266, 275, 267 ] }
+{ time: Sun Jul 13 2014 20:17:06 GMT+0300 (IDT),
+  pid: 1405282624196,
+  areas: [ 266, 275, 267, 273 ] }
+{ time: Sun Jul 13 2014 20:17:11 GMT+0300 (IDT),
+  pid: 1405282631509,
+  areas: [ 266, 275, 267, 220, 273 ] }
+{ time: Sun Jul 13 2014 20:17:19 GMT+0300 (IDT),
+  pid: 1405282638009,
+  areas: [ 266, 275, 220, 273 ] }
+{ time: Sun Jul 13 2014 20:17:22 GMT+0300 (IDT),
+  pid: 1405282640868,
+  areas: [ 275, 220, 273 ] }
+{ time: Sun Jul 13 2014 20:17:29 GMT+0300 (IDT),
+  pid: 1405282648869,
+  areas: [ 275, 273 ] }
+{ time: Sun Jul 13 2014 20:17:36 GMT+0300 (IDT),
+  pid: 1405282656307,
+  areas: [ 273 ] }
+{ time: Sun Jul 13 2014 20:23:22 GMT+0300 (IDT),
+  pid: 1405283003278,
+  areas: [ 217 ] }
+{ time: Sun Jul 13 2014 21:32:04 GMT+0300 (IDT),
+  pid: 1405287123941,
+  areas: [ 230, 231 ] }
+{ time: Sun Jul 13 2014 22:01:04 GMT+0300 (IDT),
+  pid: 1405288861076,
+  areas: [ 228 ] }
+{ time: Sun Jul 13 2014 22:40:57 GMT+0300 (IDT),
+  pid: 1405291258120,
+  areas: [ 224 ] }
+{ time: Sun Jul 13 2014 22:55:29 GMT+0300 (IDT),
+  pid: 1405292127804,
+  areas: [ 218 ] }
+{ time: Sun Jul 13 2014 23:53:50 GMT+0300 (IDT),
+  pid: 1405295629919,
+  areas: [ 217, 247 ] }
+{ time: Sun Jul 13 2014 23:53:52 GMT+0300 (IDT),
+  pid: 1405295632434,
+  areas: [ 217, 218, 247 ] }
+{ time: Sun Jul 13 2014 23:53:57 GMT+0300 (IDT),
+  pid: 1405295634919,
+  areas: [ 246, 217, 218, 247, 250 ] }
+{ time: Sun Jul 13 2014 23:54:09 GMT+0300 (IDT),
+  pid: 1405295646935,
+  areas: [ 246, 218, 247, 250 ] }
+{ time: Sun Jul 13 2014 23:54:12 GMT+0300 (IDT),
+  pid: 1405295649795,
+  areas: [ 246, 247, 250 ] }
+{ time: Sun Jul 13 2014 23:54:17 GMT+0300 (IDT),
+  pid: 1405295657139,
+  areas: [ 246, 250 ] }
+{ time: Sun Jul 13 2014 23:54:27 GMT+0300 (IDT),
+  pid: 1405295664639,
+  areas: [ 247 ] }
+{ time: Sun Jul 13 2014 23:54:29 GMT+0300 (IDT),
+  pid: 1405295669358,
+  areas: [ 217, 247 ] }
+{ time: Sun Jul 13 2014 23:54:31 GMT+0300 (IDT),
+  pid: 1405295671843,
+  areas: [ 246, 217, 247 ] }
+{ time: Sun Jul 13 2014 23:54:48 GMT+0300 (IDT),
+  pid: 1405295686547,
+  areas: [ 246, 247 ] }
+{ time: Sun Jul 13 2014 23:54:53 GMT+0300 (IDT),
+  pid: 1405295691609,
+  areas: [ 246 ] }
+{ time: Sun Jul 13 2014 23:54:57 GMT+0300 (IDT),
+  pid: 1405295695360,
+  areas: [ 246, 217 ] }
+{ time: Sun Jul 13 2014 23:55:06 GMT+0300 (IDT),
+  pid: 1405295704001,
+  areas: [ 217 ] }
+{ time: Mon Jul 14 2014 00:26:39 GMT+0300 (IDT),
+  pid: 1405297597737,
+  areas: [ 29, 14, 30 ] }
+{ time: Mon Jul 14 2014 01:15:48 GMT+0300 (IDT),
+  pid: 1405300546323,
+  areas: [ 232 ] }
+{ time: Mon Jul 14 2014 01:58:58 GMT+0300 (IDT),
+  pid: 1405303138829,
+  areas: [ 257 ] }
+{ time: Mon Jul 14 2014 03:03:38 GMT+0300 (IDT),
+  pid: 1405307018612,
+  areas: [ 231 ] }
+{ time: Mon Jul 14 2014 05:25:07 GMT+0300 (IDT),
+  pid: 1405315508623,
+  areas: [ 237 ] }
+{ time: Mon Jul 14 2014 05:41:06 GMT+0300 (IDT),
+  pid: 1405316464155,
+  areas: [ 230, 231 ] }
+{ time: Mon Jul 14 2014 05:53:48 GMT+0300 (IDT),
+  pid: 1405317227522,
+  areas: [ 230, 231 ] }
+{ time: Mon Jul 14 2014 06:03:17 GMT+0300 (IDT),
+  pid: 1405317796753,
+  areas: [ 220 ] }
+{ time: Mon Jul 14 2014 06:33:22 GMT+0300 (IDT),
+  pid: 1405319602579,
+  areas: [ 271 ] }
+{ time: Mon Jul 14 2014 07:10:52 GMT+0300 (IDT),
+  pid: 1405321851207,
+  areas: [ 253 ] }
+{ time: Mon Jul 14 2014 07:23:20 GMT+0300 (IDT),
+  pid: 1405322597479,
+  areas: [ 291 ] }
+{ time: Mon Jul 14 2014 07:26:43 GMT+0300 (IDT),
+  pid: 1405322802005,
+  areas: [ 224 ] }
+{ time: Mon Jul 14 2014 07:48:14 GMT+0300 (IDT),
+  pid: 1405324094007,
+  areas: [ 254 ] }
+{ time: Mon Jul 14 2014 07:49:59 GMT+0300 (IDT),
+  pid: 1405324199950,
+  areas: [ 217, 217 ] }
+{ time: Mon Jul 14 2014 08:10:02 GMT+0300 (IDT),
+  pid: 1405325400557,
+  areas: [ 217 ] }
+{ time: Mon Jul 14 2014 08:10:05 GMT+0300 (IDT),
+  pid: 1405325403370,
+  areas: [ 217, 247 ] }
+{ time: Mon Jul 14 2014 08:10:18 GMT+0300 (IDT),
+  pid: 1405325417995,
+  areas: [ 247 ] }
+{ time: Mon Jul 14 2014 08:19:32 GMT+0300 (IDT),
+  pid: 1405325972836,
+  areas: [ 217 ] }
+{ time: Mon Jul 14 2014 08:19:56 GMT+0300 (IDT),
+  pid: 1405325995462,
+  areas: [ 217 ] }
+{ time: Mon Jul 14 2014 08:24:46 GMT+0300 (IDT),
+  pid: 1405326286351,
+  areas: [ 246, 247 ] }
+{ time: Mon Jul 14 2014 08:25:23 GMT+0300 (IDT),
+  pid: 1405326322619,
+  areas: [ 271, 245 ] }
+{ time: Mon Jul 14 2014 08:27:05 GMT+0300 (IDT),
+  pid: 1405326425843,
+  areas: [ 246 ] }
+{ time: Mon Jul 14 2014 08:28:49 GMT+0300 (IDT),
+  pid: 1405326526739,
+  areas: [ 218, 217, 247 ] }
+{ time: Mon Jul 14 2014 08:29:05 GMT+0300 (IDT),
+  pid: 1405326543771,
+  areas: [ 247 ] }
+{ time: Mon Jul 14 2014 08:30:20 GMT+0300 (IDT),
+  pid: 1405326620665,
+  areas: [ 218, 217, 247 ] }
+{ time: Mon Jul 14 2014 08:30:38 GMT+0300 (IDT),
+  pid: 1405326637557,
+  areas: [ 247 ] }
+{ time: Mon Jul 14 2014 08:48:39 GMT+0300 (IDT),
+  pid: 1405327718439,
+  areas: [ 227 ] }
+{ time: Mon Jul 14 2014 10:40:15 GMT+0300 (IDT),
+  pid: 1405334414915,
+  areas: [ 275 ] }
+{ time: Mon Jul 14 2014 10:41:02 GMT+0300 (IDT),
+  pid: 1405334457949,
+  areas: [ 246, 247 ] }
+{ time: Mon Jul 14 2014 11:16:32 GMT+0300 (IDT),
+  pid: 1405336592806,
+  areas: [ 246 ] }
+{ time: Mon Jul 14 2014 11:16:35 GMT+0300 (IDT),
+  pid: 1405336595275,
+  areas: [ 246, 218, 217, 247, 250 ] }
+{ time: Mon Jul 14 2014 11:16:53 GMT+0300 (IDT),
+  pid: 1405336612370,
+  areas: [ 246, 247, 250 ] }
+{ time: Mon Jul 14 2014 11:16:59 GMT+0300 (IDT),
+  pid: 1405336619933,
+  areas: [ 247, 250 ] }
+{ time: Mon Jul 14 2014 11:17:20 GMT+0300 (IDT),
+  pid: 1405336638199,
+  areas: [ 217, 247 ] }
+{ time: Mon Jul 14 2014 11:17:36 GMT+0300 (IDT),
+  pid: 1405336654934,
+  areas: [ 247 ] }
+{ time: Mon Jul 14 2014 11:25:42 GMT+0300 (IDT),
+  pid: 1405337140724,
+  areas: [ 218 ] }
+{ time: Mon Jul 14 2014 11:37:48 GMT+0300 (IDT),
+  pid: 1405337867870,
+  areas: [ 246, 248, 250 ] }
+{ time: Mon Jul 14 2014 11:56:29 GMT+0300 (IDT),
+  pid: 1405338989473,
+  areas: [ 219 ] }
+{ time: Mon Jul 14 2014 11:57:46 GMT+0300 (IDT),
+  pid: 1405339066305,
+  areas: [ 218 ] }
+{ time: Mon Jul 14 2014 12:04:35 GMT+0300 (IDT),
+  pid: 1405339476326,
+  areas: [ 227 ] }
+{ time: Mon Jul 14 2014 12:23:23 GMT+0300 (IDT),
+  pid: 1405340600210,
+  areas: [ 271 ] }
+{ time: Mon Jul 14 2014 12:23:47 GMT+0300 (IDT),
+  pid: 1405340625352,
+  areas: [ 271, 272, 245 ] }
+{ time: Mon Jul 14 2014 12:24:03 GMT+0300 (IDT),
+  pid: 1405340642353,
+  areas: [ 272, 245 ] }
+{ time: Mon Jul 14 2014 12:26:25 GMT+0300 (IDT),
+  pid: 1405340783563,
+  areas: [ 273, 272 ] }
+{ time: Mon Jul 14 2014 12:26:28 GMT+0300 (IDT),
+  pid: 1405340788219,
+  areas: [ 271, 273, 272 ] }
+{ time: Mon Jul 14 2014 12:26:44 GMT+0300 (IDT),
+  pid: 1405340802361,
+  areas: [ 271, 273, 272, 245 ] }
+{ time: Mon Jul 14 2014 12:26:50 GMT+0300 (IDT),
+  pid: 1405340811517,
+  areas: [ 271, 275, 273, 272, 245 ] }
+{ time: Mon Jul 14 2014 12:27:06 GMT+0300 (IDT),
+  pid: 1405340825518,
+  areas: [ 271, 275, 273, 245 ] }
+{ time: Mon Jul 14 2014 12:27:13 GMT+0300 (IDT),
+  pid: 1405340830550,
+  areas: [ 275, 273, 245 ] }
+{ time: Mon Jul 14 2014 12:27:21 GMT+0300 (IDT),
+  pid: 1405340839472,
+  areas: [ 275, 273, 245, 272 ] }
+{ time: Mon Jul 14 2014 12:27:28 GMT+0300 (IDT),
+  pid: 1405340847004,
+  areas: [ 275, 272 ] }
+{ time: Mon Jul 14 2014 12:27:33 GMT+0300 (IDT),
+  pid: 1405340853832,
+  areas: [ 272 ] }
+{ time: Mon Jul 14 2014 12:53:05 GMT+0300 (IDT),
+  pid: 1405342384456,
+  areas: [ 236, 238, 238 ] }
+{ time: Mon Jul 14 2014 12:53:20 GMT+0300 (IDT),
+  pid: 1405342401550,
+  areas: [ 238, 238 ] }
+{ time: Mon Jul 14 2014 12:58:24 GMT+0300 (IDT),
+  pid: 1405342704347,
+  areas: [ 238, 238 ] }
+{ time: Mon Jul 14 2014 13:00:03 GMT+0300 (IDT),
+  pid: 1405342801492,
+  areas: [ 233 ] }
+{ time: Mon Jul 14 2014 13:11:38 GMT+0300 (IDT),
+  pid: 1405343497152,
+  areas: [ 246 ] }
+{ time: Mon Jul 14 2014 13:11:42 GMT+0300 (IDT),
+  pid: 1405343501793,
+  areas: [ 246, 247, 250 ] }
+{ time: Mon Jul 14 2014 13:12:06 GMT+0300 (IDT),
+  pid: 1405343524247,
+  areas: [ 247, 250 ] }
+{ time: Mon Jul 14 2014 14:11:00 GMT+0300 (IDT),
+  pid: 1405347058471,
+  areas: [ 230 ] }
+{ time: Mon Jul 14 2014 14:11:30 GMT+0300 (IDT),
+  pid: 1405347089098,
+  areas: [ 230 ] }
+{ time: Mon Jul 14 2014 14:17:07 GMT+0300 (IDT),
+  pid: 1405347424364,
+  areas: [ 273, 272 ] }
+{ time: Mon Jul 14 2014 14:17:48 GMT+0300 (IDT),
+  pid: 1405347466538,
+  areas: [ 273 ] }
+{ time: Mon Jul 14 2014 14:21:34 GMT+0300 (IDT),
+  pid: 1405347692800,
+  areas: [ 223 ] }
+{ time: Mon Jul 14 2014 14:21:39 GMT+0300 (IDT),
+  pid: 1405347697659,
+  areas: [ 223, 233, 232 ] }
+{ time: Mon Jul 14 2014 14:21:51 GMT+0300 (IDT),
+  pid: 1405347709894,
+  areas: [ 233, 232 ] }
+{ time: Mon Jul 14 2014 14:45:58 GMT+0300 (IDT),
+  pid: 1405349157686,
+  areas: [ 275 ] }
+{ time: Mon Jul 14 2014 14:46:31 GMT+0300 (IDT),
+  pid: 1405349189188,
+  areas: [ 275, 248, 276, 272 ] }
+{ time: Mon Jul 14 2014 14:46:39 GMT+0300 (IDT),
+  pid: 1405349199844,
+  areas: [ 248, 276, 272 ] }
+{ time: Mon Jul 14 2014 14:46:57 GMT+0300 (IDT),
+  pid: 1405349216595,
+  areas: [ 276, 272 ] }
+{ time: Mon Jul 14 2014 15:12:04 GMT+0300 (IDT),
+  pid: 1405350724045,
+  areas: [ 220, 221 ] }
+{ time: Mon Jul 14 2014 15:12:17 GMT+0300 (IDT),
+  pid: 1405350736593,
+  areas: [ 220, 221, 219 ] }
+{ time: Mon Jul 14 2014 15:12:24 GMT+0300 (IDT),
+  pid: 1405350744015,
+  areas: [ 219 ] }
+{ time: Mon Jul 14 2014 15:12:32 GMT+0300 (IDT),
+  pid: 1405350750703,
+  areas: [ 220, 219 ] }
+{ time: Mon Jul 14 2014 15:12:37 GMT+0300 (IDT),
+  pid: 1405350758000,
+  areas: [ 220 ] }
+{ time: Mon Jul 14 2014 15:36:26 GMT+0300 (IDT),
+  pid: 1405352184791,
+  areas: [ 231 ] }
+{ time: Mon Jul 14 2014 15:52:23 GMT+0300 (IDT),
+  pid: 1405353141807,
+  areas: [ 224 ] }
+{ time: Mon Jul 14 2014 15:52:26 GMT+0300 (IDT),
+  pid: 1405353144323,
+  areas: [ 224, 223 ] }
+{ time: Mon Jul 14 2014 15:52:38 GMT+0300 (IDT),
+  pid: 1405353158965,
+  areas: [ 223 ] }
+{ time: Mon Jul 14 2014 15:52:47 GMT+0300 (IDT),
+  pid: 1405353167028,
+  areas: [ 224 ] }
+{ time: Mon Jul 14 2014 15:55:36 GMT+0300 (IDT),
+  pid: 1405353335255,
+  areas: [ 231 ] }
+{ time: Mon Jul 14 2014 16:06:47 GMT+0300 (IDT),
+  pid: 1405354005460,
+  areas: [ 236, 238, 238 ] }
+{ time: Mon Jul 14 2014 16:07:05 GMT+0300 (IDT),
+  pid: 1405354022539,
+  areas: [ 238, 238 ] }
+{ time: Mon Jul 14 2014 16:46:22 GMT+0300 (IDT),
+  pid: 1405356380016,
+  areas: [ 246, 245 ] }
+{ time: Mon Jul 14 2014 16:46:30 GMT+0300 (IDT),
+  pid: 1405356389141,
+  areas: [ 271, 246, 245 ] }
+{ time: Mon Jul 14 2014 16:46:42 GMT+0300 (IDT),
+  pid: 1405356402767,
+  areas: [ 271, 246, 217, 245 ] }
+{ time: Mon Jul 14 2014 16:46:50 GMT+0300 (IDT),
+  pid: 1405356411002,
+  areas: [ 271, 217, 245 ] }
+{ time: Mon Jul 14 2014 16:46:59 GMT+0300 (IDT),
+  pid: 1405356419987,
+  areas: [ 271, 245 ] }
+{ time: Mon Jul 14 2014 16:47:02 GMT+0300 (IDT),
+  pid: 1405356422362,
+  areas: [ 271 ] }
+{ time: Mon Jul 14 2014 16:56:31 GMT+0300 (IDT),
+  pid: 1405356991078,
+  areas: [ 224 ] }
+{ time: Mon Jul 14 2014 16:59:03 GMT+0300 (IDT),
+  pid: 1405357141742,
+  areas: [ 157, 155, 160, 168 ] }
+{ time: Mon Jul 14 2014 17:25:33 GMT+0300 (IDT),
+  pid: 1405358730509,
+  areas: [ 218 ] }
+{ time: Mon Jul 14 2014 17:25:46 GMT+0300 (IDT),
+  pid: 1405358744197,
+  areas: [ 218, 219 ] }
+{ time: Mon Jul 14 2014 17:25:53 GMT+0300 (IDT),
+  pid: 1405358754010,
+  areas: [ 219 ] }
+{ time: Mon Jul 14 2014 17:35:44 GMT+0300 (IDT),
+  pid: 1405359345118,
+  areas: [ 224 ] }
+{ time: Mon Jul 14 2014 17:50:16 GMT+0300 (IDT),
+  pid: 1405360216349,
+  areas: [ 216 ] }
+{ time: Mon Jul 14 2014 17:50:33 GMT+0300 (IDT),
+  pid: 1405360226552,
+  areas: [ 254, 216 ] }
+{ time: Mon Jul 14 2014 17:50:35 GMT+0300 (IDT),
+  pid: 1405360235006,
+  areas: [ 254 ] }
+{ time: Mon Jul 14 2014 17:52:10 GMT+0300 (IDT),
+  pid: 1405360329151,
+  areas: [ 292, 297 ] }
+{ time: Mon Jul 14 2014 17:52:19 GMT+0300 (IDT),
+  pid: 1405360338511,
+  areas: [ 292, 297, 296 ] }
+{ time: Mon Jul 14 2014 17:52:34 GMT+0300 (IDT),
+  pid: 1405360343152,
+  areas: [ 292, 1, 297, 296 ] }
+{ time: Mon Jul 14 2014 17:52:48 GMT+0300 (IDT),
+  pid: 1405360360169,
+  areas: [ 292, 297, 296 ] }
+{ time: Mon Jul 14 2014 17:53:08 GMT+0300 (IDT),
+  pid: 1405360386279,
+  areas: [ 297, 296 ] }
+{ time: Mon Jul 14 2014 17:53:36 GMT+0300 (IDT),
+  pid: 1405360416203,
+  areas: [ 296 ] }
+{ time: Mon Jul 14 2014 18:45:39 GMT+0300 (IDT),
+  pid: 1405363538750,
+  areas: [ 230 ] }
+{ time: Mon Jul 14 2014 18:49:00 GMT+0300 (IDT),
+  pid: 1405363738244,
+  areas: [ 218 ] }
+{ time: Mon Jul 14 2014 18:49:12 GMT+0300 (IDT),
+  pid: 1405363751854,
+  areas: [ 218, 217 ] }
+{ time: Mon Jul 14 2014 18:49:21 GMT+0300 (IDT),
+  pid: 1405363760011,
+  areas: [ 217 ] }
+{ time: Mon Jul 14 2014 18:49:50 GMT+0300 (IDT),
+  pid: 1405363790575,
+  areas: [ 217 ] }
+{ time: Mon Jul 14 2014 18:54:29 GMT+0300 (IDT),
+  pid: 1405364069839,
+  areas: [ 221 ] }
+{ time: Mon Jul 14 2014 18:54:46 GMT+0300 (IDT),
+  pid: 1405364083902,
+  areas: [ 221, 218, 219 ] }
+{ time: Mon Jul 14 2014 18:54:53 GMT+0300 (IDT),
+  pid: 1405364093012,
+  areas: [ 218, 219 ] }
+{ time: Mon Jul 14 2014 19:07:49 GMT+0300 (IDT),
+  pid: 1405364869270,
+  areas: [ 301 ] }
+{ time: Mon Jul 14 2014 20:05:51 GMT+0300 (IDT),
+  pid: 1405368350975,
+  areas: [ 231 ] }
+{ time: Mon Jul 14 2014 21:00:51 GMT+0300 (IDT),
+  pid: 1405371649219,
+  areas: [ 218 ] }
+{ time: Mon Jul 14 2014 21:26:49 GMT+0300 (IDT),
+  pid: 1405373209047,
+  areas: [ 218 ] }
+{ time: Mon Jul 14 2014 21:30:22 GMT+0300 (IDT),
+  pid: 1405373419260,
+  areas: [ 292, 297 ] }
+{ time: Mon Jul 14 2014 21:30:30 GMT+0300 (IDT),
+  pid: 1405373428823,
+  areas: [ 292, 297, 296 ] }
+{ time: Mon Jul 14 2014 21:31:18 GMT+0300 (IDT),
+  pid: 1405373476294,
+  areas: [ 297, 296 ] }
+{ time: Mon Jul 14 2014 21:31:47 GMT+0300 (IDT),
+  pid: 1405373506405,
+  areas: [ 296 ] }
+{ time: Mon Jul 14 2014 22:30:15 GMT+0300 (IDT),
+  pid: 1405377013003,
+  areas: [ 14 ] }
+{ time: Mon Jul 14 2014 22:46:00 GMT+0300 (IDT),
+  pid: 1405377958207,
+  areas: [ 234, 234 ] }
+{ time: Mon Jul 14 2014 23:19:24 GMT+0300 (IDT),
+  pid: 1405379961260,
+  areas: [ 223 ] }
+{ time: Tue Jul 15 2014 00:28:50 GMT+0300 (IDT),
+  pid: 1405384129703,
+  areas: [ 225 ] }
+{ time: Tue Jul 15 2014 01:27:08 GMT+0300 (IDT),
+  pid: 1405387627816,
+  areas: [ 311 ] }
+{ time: Tue Jul 15 2014 03:46:21 GMT+0300 (IDT),
+  pid: 1405395979397,
+  areas: [ 228 ] }
+{ time: Tue Jul 15 2014 06:32:16 GMT+0300 (IDT),
+  pid: 1405405933631,
+  areas: [ 217 ] }
+{ time: Tue Jul 15 2014 06:32:36 GMT+0300 (IDT),
+  pid: 1405405956866,
+  areas: [ 217 ] }
+{ time: Tue Jul 15 2014 07:32:39 GMT+0300 (IDT),
+  pid: 1405409558728,
+  areas: [ 237 ] }
+{ time: Tue Jul 15 2014 08:32:56 GMT+0300 (IDT),
+  pid: 1405413173924,
+  areas: [ 217 ] }
+{ time: Tue Jul 15 2014 08:33:18 GMT+0300 (IDT),
+  pid: 1405413197128,
+  areas: [ 218, 217, 247 ] }
+{ time: Tue Jul 15 2014 08:33:33 GMT+0300 (IDT),
+  pid: 1405413213941,
+  areas: [ 247 ] }
+{ time: Tue Jul 15 2014 08:51:36 GMT+0300 (IDT),
+  pid: 1405414296433,
+  areas: [ 232 ] }
+{ time: Tue Jul 15 2014 09:57:16 GMT+0300 (IDT),
+  pid: 1405418234693,
+  areas: [ 234, 234 ] }
+{ time: Tue Jul 15 2014 10:35:37 GMT+0300 (IDT),
+  pid: 1405420538043,
+  areas: [ 237 ] }
+{ time: Tue Jul 15 2014 11:16:43 GMT+0300 (IDT),
+  pid: 1405423002822,
+  areas: [ 220 ] }
+{ time: Tue Jul 15 2014 11:16:50 GMT+0300 (IDT),
+  pid: 1405423010182,
+  areas: [ 220, 252 ] }
+{ time: Tue Jul 15 2014 11:17:00 GMT+0300 (IDT),
+  pid: 1405423019839,
+  areas: [ 252 ] }
+{ time: Tue Jul 15 2014 11:20:57 GMT+0300 (IDT),
+  pid: 1405423256163,
+  areas: [ 218, 217, 247 ] }
+{ time: Tue Jul 15 2014 11:21:08 GMT+0300 (IDT),
+  pid: 1405423268039,
+  areas: [ 271, 273, 218, 217, 247, 272 ] }
+{ time: Tue Jul 15 2014 11:21:15 GMT+0300 (IDT),
+  pid: 1405423275383,
+  areas: [ 271, 273, 247, 272, 245 ] }
+{ time: Tue Jul 15 2014 11:21:25 GMT+0300 (IDT),
+  pid: 1405423283211,
+  areas: [ 271, 273, 272, 245 ] }
+{ time: Tue Jul 15 2014 11:21:43 GMT+0300 (IDT),
+  pid: 1405423301384,
+  areas: [ 271, 275, 273, 272, 245 ] }
+{ time: Tue Jul 15 2014 11:21:51 GMT+0300 (IDT),
+  pid: 1405423310228,
+  areas: [ 275, 273, 245 ] }
+{ time: Tue Jul 15 2014 11:21:57 GMT+0300 (IDT),
+  pid: 1405423317385,
+  areas: [ 275, 273 ] }
+{ time: Tue Jul 15 2014 11:22:07 GMT+0300 (IDT),
+  pid: 1405423325463,
+  areas: [ 275 ] }
+{ time: Tue Jul 15 2014 11:22:10 GMT+0300 (IDT),
+  pid: 1405423327635,
+  areas: [ 271, 275 ] }
+{ time: Tue Jul 15 2014 11:22:22 GMT+0300 (IDT),
+  pid: 1405423341839,
+  areas: [ 271, 275, 245 ] }
+{ time: Tue Jul 15 2014 11:22:29 GMT+0300 (IDT),
+  pid: 1405423350043,
+  areas: [ 271, 245 ] }
+{ time: Tue Jul 15 2014 11:22:51 GMT+0300 (IDT),
+  pid: 1405423369575,
+  areas: [ 245 ] }
+{ time: Tue Jul 15 2014 11:43:05 GMT+0300 (IDT),
+  pid: 1405424585745,
+  areas: [ 231 ] }
+{ time: Tue Jul 15 2014 12:06:04 GMT+0300 (IDT),
+  pid: 1405425964221,
+  areas: [ 255 ] }
+{ time: Tue Jul 15 2014 12:06:09 GMT+0300 (IDT),
+  pid: 1405425968877,
+  areas: [ 254, 255 ] }
+{ time: Tue Jul 15 2014 12:06:30 GMT+0300 (IDT),
+  pid: 1405425991222,
+  areas: [ 254 ] }
+{ time: Tue Jul 15 2014 12:10:18 GMT+0300 (IDT),
+  pid: 1405426218858,
+  areas: [ 232, 232, 233 ] }
+{ time: Tue Jul 15 2014 12:17:50 GMT+0300 (IDT),
+  pid: 1405426669256,
+  areas: [ 220, 236, 238, 238 ] }
+{ time: Tue Jul 15 2014 12:18:02 GMT+0300 (IDT),
+  pid: 1405426683726,
+  areas: [ 220, 238, 238 ] }
+{ time: Tue Jul 15 2014 12:18:08 GMT+0300 (IDT),
+  pid: 1405426686820,
+  areas: [ 238, 238 ] }
+{ time: Tue Jul 15 2014 12:20:13 GMT+0300 (IDT),
+  pid: 1405426811607,
+  areas: [ 218, 217 ] }
+{ time: Tue Jul 15 2014 12:20:20 GMT+0300 (IDT),
+  pid: 1405426818639,
+  areas: [ 218, 217, 245 ] }
+{ time: Tue Jul 15 2014 12:20:23 GMT+0300 (IDT),
+  pid: 1405426821092,
+  areas: [ 246, 218, 217, 250, 245 ] }
+{ time: Tue Jul 15 2014 12:20:26 GMT+0300 (IDT),
+  pid: 1405426824139,
+  areas: [ 246, 218, 217, 250, 247, 247, 245 ] }
+{ time: Tue Jul 15 2014 12:20:28 GMT+0300 (IDT),
+  pid: 1405426829014,
+  areas: [ 246, 250, 247, 247, 245 ] }
+{ time: Tue Jul 15 2014 12:20:49 GMT+0300 (IDT),
+  pid: 1405426848297,
+  areas: [ 247, 247, 245 ] }
+{ time: Tue Jul 15 2014 12:20:53 GMT+0300 (IDT),
+  pid: 1405426851484,
+  areas: [ 245 ] }
+{ time: Tue Jul 15 2014 12:20:59 GMT+0300 (IDT),
+  pid: 1405426859047,
+  areas: [ 246, 245 ] }
+{ time: Tue Jul 15 2014 12:21:08 GMT+0300 (IDT),
+  pid: 1405426866001,
+  areas: [ 246 ] }
+{ time: Tue Jul 15 2014 12:21:32 GMT+0300 (IDT),
+  pid: 1405426891564,
+  areas: [ 182, 183 ] }
+{ time: Tue Jul 15 2014 12:22:20 GMT+0300 (IDT),
+  pid: 1405426940160,
+  areas: [ 182, 183, 267 ] }
+{ time: Tue Jul 15 2014 12:22:25 GMT+0300 (IDT),
+  pid: 1405426944832,
+  areas: [ 182, 183, 266, 267 ] }
+{ time: Tue Jul 15 2014 12:22:59 GMT+0300 (IDT),
+  pid: 1405426978662,
+  areas: [ 266, 267 ] }
+{ time: Tue Jul 15 2014 12:23:19 GMT+0300 (IDT),
+  pid: 1405426997179,
+  areas: [ 266 ] }
+{ time: Tue Jul 15 2014 12:29:49 GMT+0300 (IDT),
+  pid: 1405427390168,
+  areas: [ 102, 82, 103 ] }
+{ time: Tue Jul 15 2014 12:30:50 GMT+0300 (IDT),
+  pid: 1405427447171,
+  areas: [ 102, 103 ] }
+{ time: Tue Jul 15 2014 12:45:38 GMT+0300 (IDT),
+  pid: 1405428338277,
+  areas: [ 230 ] }
+{ time: Tue Jul 15 2014 12:54:20 GMT+0300 (IDT),
+  pid: 1405428859085,
+  areas: [ 255 ] }
+{ time: Tue Jul 15 2014 12:54:22 GMT+0300 (IDT),
+  pid: 1405428861522,
+  areas: [ 254, 255 ] }
+{ time: Tue Jul 15 2014 12:54:46 GMT+0300 (IDT),
+  pid: 1405428886117,
+  areas: [ 254 ] }
+{ time: Tue Jul 15 2014 13:08:14 GMT+0300 (IDT),
+  pid: 1405429692470,
+  areas: [ 182, 183, 184 ] }
+{ time: Tue Jul 15 2014 13:08:19 GMT+0300 (IDT),
+  pid: 1405429697251,
+  areas: [ 182, 183, 267, 184 ] }
+{ time: Tue Jul 15 2014 13:09:15 GMT+0300 (IDT),
+  pid: 1405429754411,
+  areas: [ 182, 183, 184 ] }
+{ time: Tue Jul 15 2014 13:30:26 GMT+0300 (IDT),
+  pid: 1405431025271,
+  areas: [ 175 ] }
+{ time: Tue Jul 15 2014 13:31:31 GMT+0300 (IDT),
+  pid: 1405431090025,
+  areas: [ 175, 182, 183 ] }
+{ time: Tue Jul 15 2014 13:31:53 GMT+0300 (IDT),
+  pid: 1405431112464,
+  areas: [ 182, 183 ] }
+{ time: Tue Jul 15 2014 13:57:15 GMT+0300 (IDT),
+  pid: 1405432633680,
+  areas: [ 217 ] }
+{ time: Tue Jul 15 2014 13:57:40 GMT+0300 (IDT),
+  pid: 1405432659447,
+  areas: [ 217 ] }
+{ time: Tue Jul 15 2014 14:07:06 GMT+0300 (IDT),
+  pid: 1405433225319,
+  areas: [ 228 ] }
+{ time: Tue Jul 15 2014 14:13:47 GMT+0300 (IDT),
+  pid: 1405433625526,
+  areas: [ 248 ] }
+{ time: Tue Jul 15 2014 14:16:04 GMT+0300 (IDT),
+  pid: 1405433761689,
+  areas: [ 276 ] }
+{ time: Tue Jul 15 2014 14:31:25 GMT+0300 (IDT),
+  pid: 1405434686282,
+  areas: [ 230 ] }
+{ time: Tue Jul 15 2014 14:42:37 GMT+0300 (IDT),
+  pid: 1405435354832,
+  areas: [ 217, 247 ] }
+{ time: Tue Jul 15 2014 14:42:51 GMT+0300 (IDT),
+  pid: 1405435371958,
+  areas: [ 247 ] }
+{ time: Tue Jul 15 2014 14:58:23 GMT+0300 (IDT),
+  pid: 1405436299801,
+  areas: [ 216 ] }
+{ time: Tue Jul 15 2014 14:58:27 GMT+0300 (IDT),
+  pid: 1405436305411,
+  areas: [ 254, 216, 225, 223 ] }
+{ time: Tue Jul 15 2014 14:58:36 GMT+0300 (IDT),
+  pid: 1405436316646,
+  areas: [ 254, 225, 223 ] }
+{ time: Tue Jul 15 2014 14:58:42 GMT+0300 (IDT),
+  pid: 1405436322802,
+  areas: [ 254 ] }
+{ time: Tue Jul 15 2014 15:49:01 GMT+0300 (IDT),
+  pid: 1405439341579,
+  areas: [ 234, 234 ] }
+{ time: Tue Jul 15 2014 15:49:24 GMT+0300 (IDT),
+  pid: 1405439364049,
+  areas: [ 234, 234 ] }
+{ time: Tue Jul 15 2014 15:56:05 GMT+0300 (IDT),
+  pid: 1405439762849,
+  areas: [ 246 ] }
+{ time: Tue Jul 15 2014 15:56:08 GMT+0300 (IDT),
+  pid: 1405439769647,
+  areas: [ 246, 248, 250 ] }
+{ time: Tue Jul 15 2014 15:56:30 GMT+0300 (IDT),
+  pid: 1405439790007,
+  areas: [ 248, 250 ] }
+{ time: Tue Jul 15 2014 16:00:25 GMT+0300 (IDT),
+  pid: 1405440024113,
+  areas: [ 220 ] }
+{ time: Tue Jul 15 2014 16:01:20 GMT+0300 (IDT),
+  pid: 1405440078662,
+  areas: [ 237 ] }
+{ time: Tue Jul 15 2014 16:04:00 GMT+0300 (IDT),
+  pid: 1405440239998,
+  areas: [ 231, 230 ] }
+{ time: Tue Jul 15 2014 16:20:25 GMT+0300 (IDT),
+  pid: 1405441224391,
+  areas: [ 246, 247 ] }
+{ time: Tue Jul 15 2014 16:20:34 GMT+0300 (IDT),
+  pid: 1405441231486,
+  areas: [ 246, 217, 247, 250 ] }
+{ time: Tue Jul 15 2014 16:20:48 GMT+0300 (IDT),
+  pid: 1405441248533,
+  areas: [ 246, 247, 250 ] }
+{ time: Tue Jul 15 2014 16:20:51 GMT+0300 (IDT),
+  pid: 1405441251721,
+  areas: [ 250 ] }
+{ time: Tue Jul 15 2014 16:29:30 GMT+0300 (IDT),
+  pid: 1405441771169,
+  areas: [ 232 ] }
+{ time: Tue Jul 15 2014 16:42:02 GMT+0300 (IDT),
+  pid: 1405442522550,
+  areas: [ 230 ] }
+{ time: Tue Jul 15 2014 16:44:38 GMT+0300 (IDT),
+  pid: 1405442677652,
+  areas: [ 230 ] }
+{ time: Tue Jul 15 2014 16:45:17 GMT+0300 (IDT),
+  pid: 1405442716794,
+  areas: [ 230 ] }
+{ time: Tue Jul 15 2014 17:09:06 GMT+0300 (IDT),
+  pid: 1405444146554,
+  areas: [ 221 ] }
+{ time: Tue Jul 15 2014 17:30:38 GMT+0300 (IDT),
+  pid: 1405445437650,
+  areas: [ 246, 217, 247 ] }
+{ time: Tue Jul 15 2014 17:30:46 GMT+0300 (IDT),
+  pid: 1405445444666,
+  areas: [ 246, 217, 247, 245 ] }
+{ time: Tue Jul 15 2014 17:30:57 GMT+0300 (IDT),
+  pid: 1405445454729,
+  areas: [ 246, 247, 245 ] }
+{ time: Tue Jul 15 2014 17:31:04 GMT+0300 (IDT),
+  pid: 1405445465026,
+  areas: [ 245 ] }
+{ time: Tue Jul 15 2014 17:31:06 GMT+0300 (IDT),
+  pid: 1405445466167,
+  areas: [ 217, 245 ] }
+{ time: Tue Jul 15 2014 17:31:23 GMT+0300 (IDT),
+  pid: 1405445482574,
+  areas: [ 245 ] }
+{ time: Tue Jul 15 2014 17:53:50 GMT+0300 (IDT),
+  pid: 1405446828672,
+  areas: [ 230 ] }
+{ time: Tue Jul 15 2014 17:54:56 GMT+0300 (IDT),
+  pid: 1405446894676,
+  areas: [ 254 ] }
+{ time: Tue Jul 15 2014 17:55:10 GMT+0300 (IDT),
+  pid: 1405446910801,
+  areas: [ 254, 216, 225, 224 ] }
+{ time: Tue Jul 15 2014 17:55:23 GMT+0300 (IDT),
+  pid: 1405446921458,
+  areas: [ 216, 225, 224 ] }
+{ time: Tue Jul 15 2014 18:04:25 GMT+0300 (IDT),
+  pid: 1405447465454,
+  areas: [ 218 ] }
+{ time: Tue Jul 15 2014 18:04:47 GMT+0300 (IDT),
+  pid: 1405447485877,
+  areas: [ 250 ] }
+{ time: Tue Jul 15 2014 18:04:59 GMT+0300 (IDT),
+  pid: 1405447497096,
+  areas: [ 250, 218 ] }
+{ time: Tue Jul 15 2014 18:05:13 GMT+0300 (IDT),
+  pid: 1405447512722,
+  areas: [ 218 ] }
+{ time: Tue Jul 15 2014 18:08:26 GMT+0300 (IDT),
+  pid: 1405447706950,
+  areas: [ 220 ] }
+{ time: Tue Jul 15 2014 18:19:14 GMT+0300 (IDT),
+  pid: 1405448353217,
+  areas: [ 297 ] }
+{ time: Tue Jul 15 2014 18:19:30 GMT+0300 (IDT),
+  pid: 1405448369077,
+  areas: [ 292, 297 ] }
+{ time: Tue Jul 15 2014 18:20:26 GMT+0300 (IDT),
+  pid: 1405448426533,
+  areas: [ 297 ] }
+{ time: Tue Jul 15 2014 18:34:22 GMT+0300 (IDT),
+  pid: 1405449261232,
+  areas: [ 218 ] }
+{ time: Tue Jul 15 2014 18:41:17 GMT+0300 (IDT),
+  pid: 1405449676986,
+  areas: [ 218 ] }
+{ time: Tue Jul 15 2014 18:42:54 GMT+0300 (IDT),
+  pid: 1405449774632,
+  areas: [ 218 ] }
+{ time: Tue Jul 15 2014 18:51:57 GMT+0300 (IDT),
+  pid: 1405450316722,
+  areas: [ 218, 219, 217 ] }
+{ time: Tue Jul 15 2014 18:52:08 GMT+0300 (IDT),
+  pid: 1405450326097,
+  areas: [ 218, 219, 217, 249, 248, 276 ] }
+{ time: Tue Jul 15 2014 18:52:21 GMT+0300 (IDT),
+  pid: 1405450334004,
+  areas: [ 249, 248, 276 ] }
+{ time: Tue Jul 15 2014 18:52:25 GMT+0300 (IDT),
+  pid: 1405450340207,
+  areas: [ 281, 249, 248, 218, 219, 276, 280 ] }
+{ time: Tue Jul 15 2014 18:52:34 GMT+0300 (IDT),
+  pid: 1405450353098,
+  areas: [ 281, 218, 219, 276, 280 ] }
+{ time: Tue Jul 15 2014 18:52:38 GMT+0300 (IDT),
+  pid: 1405450357661,
+  areas: [ 281, 276, 280 ] }
+{ time: Tue Jul 15 2014 18:52:50 GMT+0300 (IDT),
+  pid: 1405450368537,
+  areas: [ 281, 280 ] }
+{ time: Tue Jul 15 2014 18:55:15 GMT+0300 (IDT),
+  pid: 1405450515732,
+  areas: [ 223 ] }
+{ time: Tue Jul 15 2014 18:55:25 GMT+0300 (IDT),
+  pid: 1405450525123,
+  areas: [ 157, 162, 175, 161, 173, 174, 223 ] }
+{ time: Tue Jul 15 2014 18:55:34 GMT+0300 (IDT),
+  pid: 1405450532639,
+  areas: [ 157, 162, 175, 161, 173, 174 ] }
+{ time: Tue Jul 15 2014 18:58:10 GMT+0300 (IDT),
+  pid: 1405450689490,
+  areas: [ 246, 217, 247, 250 ] }
+{ time: Tue Jul 15 2014 18:58:27 GMT+0300 (IDT),
+  pid: 1405450706335,
+  areas: [ 246, 247, 250 ] }
+{ time: Tue Jul 15 2014 18:58:51 GMT+0300 (IDT),
+  pid: 1405450729477,
+  areas: [ 246, 247 ] }
+{ time: Tue Jul 15 2014 18:59:20 GMT+0300 (IDT),
+  pid: 1405450757400,
+  areas: [ 292, 297 ] }
+{ time: Tue Jul 15 2014 18:59:23 GMT+0300 (IDT),
+  pid: 1405450764495,
+  areas: [ 292, 288, 297 ] }
+{ time: Tue Jul 15 2014 18:59:39 GMT+0300 (IDT),
+  pid: 1405450778495,
+  areas: [ 292, 288, 289, 297 ] }
+{ time: Tue Jul 15 2014 18:59:44 GMT+0300 (IDT),
+  pid: 1405450783323,
+  areas: [ 292, 288, 255, 289, 297 ] }
+{ time: Tue Jul 15 2014 19:00:06 GMT+0300 (IDT),
+  pid: 1405450806559,
+  areas: [ 292, 255, 289, 297 ] }
+{ time: Tue Jul 15 2014 19:00:11 GMT+0300 (IDT),
+  pid: 1405450810497,
+  areas: [ 292, 289, 297 ] }
+{ time: Tue Jul 15 2014 19:00:15 GMT+0300 (IDT),
+  pid: 1405450814700,
+  areas: [ 289, 297 ] }
+{ time: Tue Jul 15 2014 19:00:23 GMT+0300 (IDT),
+  pid: 1405450821138,
+  areas: [ 297 ] }
+{ time: Tue Jul 15 2014 19:03:16 GMT+0300 (IDT),
+  pid: 1405450995443,
+  areas: [ 302 ] }
+{ time: Tue Jul 15 2014 19:03:38 GMT+0300 (IDT),
+  pid: 1405451015069,
+  areas: [ 301, 250, 302, 305 ] }
+{ time: Tue Jul 15 2014 19:03:49 GMT+0300 (IDT),
+  pid: 1405451029898,
+  areas: [ 301, 302, 305 ] }
+{ time: Tue Jul 15 2014 19:04:25 GMT+0300 (IDT),
+  pid: 1405451065931,
+  areas: [ 275, 301, 273, 302, 305, 272 ] }
+{ time: Tue Jul 15 2014 19:04:42 GMT+0300 (IDT),
+  pid: 1405451082338,
+  areas: [ 275, 301, 273, 305, 272 ] }
+{ time: Tue Jul 15 2014 19:04:52 GMT+0300 (IDT),
+  pid: 1405451092604,
+  areas: [ 275, 273, 272 ] }
+{ time: Tue Jul 15 2014 19:05:09 GMT+0300 (IDT),
+  pid: 1405451107996,
+  areas: [ 273 ] }
+{ time: Tue Jul 15 2014 19:05:13 GMT+0300 (IDT),
+  pid: 1405451112527,
+  areas: [ 273, 231 ] }
+{ time: Tue Jul 15 2014 19:05:22 GMT+0300 (IDT),
+  pid: 1405451122668,
+  areas: [ 231 ] }
+{ time: Tue Jul 15 2014 19:12:31 GMT+0300 (IDT),
+  pid: 1405451549893,
+  areas: [ 218, 217, 247 ] }
+{ time: Tue Jul 15 2014 19:12:48 GMT+0300 (IDT),
+  pid: 1405451566956,
+  areas: [ 247 ] }
+{ time: Tue Jul 15 2014 19:12:58 GMT+0300 (IDT),
+  pid: 1405451578160,
+  areas: [ 217 ] }
+{ time: Tue Jul 15 2014 19:25:59 GMT+0300 (IDT),
+  pid: 1405452356402,
+  areas: [ 219, 218 ] }
+{ time: Tue Jul 15 2014 19:30:11 GMT+0300 (IDT),
+  pid: 1405452609040,
+  areas: [ 220 ] }
+{ time: Tue Jul 15 2014 19:51:21 GMT+0300 (IDT),
+  pid: 1405453880416,
+  areas: [ 233, 232 ] }
+{ time: Tue Jul 15 2014 20:57:14 GMT+0300 (IDT),
+  pid: 1405457833802,
+  areas: [ 271, 268, 273, 267, 272 ] }
+{ time: Tue Jul 15 2014 20:57:28 GMT+0300 (IDT),
+  pid: 1405457847896,
+  areas: [ 271, 246, 268, 273, 267, 272, 245 ] }
+{ time: Tue Jul 15 2014 20:57:55 GMT+0300 (IDT),
+  pid: 1405457874913,
+  areas: [ 271, 268, 273, 267, 272, 245 ] }
+{ time: Tue Jul 15 2014 20:58:10 GMT+0300 (IDT),
+  pid: 1405457876085,
+  areas: [ 268, 273, 267, 245 ] }
+{ time: Tue Jul 15 2014 20:58:21 GMT+0300 (IDT),
+  pid: 1405457896008,
+  areas: [ 273 ] }
+{ time: Tue Jul 15 2014 21:17:13 GMT+0300 (IDT),
+  pid: 1405459031409,
+  areas: [ 188, 188, 189 ] }
+{ time: Tue Jul 15 2014 21:17:49 GMT+0300 (IDT),
+  pid: 1405459069004,
+  areas: [ 188, 188, 189, 133 ] }
+{ time: Tue Jul 15 2014 21:18:40 GMT+0300 (IDT),
+  pid: 1405459118413,
+  areas: [ 133 ] }
+{ time: Tue Jul 15 2014 21:20:37 GMT+0300 (IDT),
+  pid: 1405459235966,
+  areas: [ 217, 247 ] }
+{ time: Tue Jul 15 2014 21:20:53 GMT+0300 (IDT),
+  pid: 1405459252795,
+  areas: [ 247 ] }
+{ time: Tue Jul 15 2014 22:28:06 GMT+0300 (IDT),
+  pid: 1405463279621,
+  areas: [ 231 ] }
+{ time: Tue Jul 15 2014 22:55:30 GMT+0300 (IDT),
+  pid: 1405464929048,
+  areas: [ 281, 249 ] }
+{ time: Tue Jul 15 2014 22:55:35 GMT+0300 (IDT),
+  pid: 1405464933704,
+  areas: [ 281, 249, 251, 251 ] }
+{ time: Tue Jul 15 2014 22:55:58 GMT+0300 (IDT),
+  pid: 1405464956205,
+  areas: [ 281, 251, 251 ] }
+{ time: Tue Jul 15 2014 22:56:01 GMT+0300 (IDT),
+  pid: 1405464961096,
+  areas: [ 281 ] }
+{ time: Tue Jul 15 2014 22:56:05 GMT+0300 (IDT),
+  pid: 1405464965300,
+  areas: [ 281, 249 ] }
+{ time: Tue Jul 15 2014 22:56:14 GMT+0300 (IDT),
+  pid: 1405464974003,
+  areas: [ 249 ] }
+{ time: Tue Jul 15 2014 22:56:37 GMT+0300 (IDT),
+  pid: 1405464992957,
+  areas: [ 281 ] }
+{ time: Wed Jul 16 2014 00:09:09 GMT+0300 (IDT),
+  pid: 1405469349301,
+  areas: [ 246, 247 ] }
+{ time: Wed Jul 16 2014 04:41:12 GMT+0300 (IDT),
+  pid: 1405485671728,
+  areas: [ 233, 232 ] }
+{ time: Wed Jul 16 2014 04:41:33 GMT+0300 (IDT),
+  pid: 1405485692322,
+  areas: [ 233 ] }
+{ time: Wed Jul 16 2014 04:41:45 GMT+0300 (IDT),
+  pid: 1405485706448,
+  areas: [ 233, 232 ] }
+{ time: Wed Jul 16 2014 04:41:54 GMT+0300 (IDT),
+  pid: 1405485714011,
+  areas: [ 232 ] }
+{ time: Wed Jul 16 2014 07:24:51 GMT+0300 (IDT),
+  pid: 1405495489704,
+  areas: [ 227 ] }
+{ time: Wed Jul 16 2014 07:40:53 GMT+0300 (IDT),
+  pid: 1405496453533,
+  areas: [ 246, 248, 250, 245 ] }
+{ time: Wed Jul 16 2014 07:40:59 GMT+0300 (IDT),
+  pid: 1405496458470,
+  areas: [ 246, 248, 250, 247, 245 ] }
+{ time: Wed Jul 16 2014 07:41:23 GMT+0300 (IDT),
+  pid: 1405496480612,
+  areas: [ 247, 245 ] }
+{ time: Wed Jul 16 2014 07:41:25 GMT+0300 (IDT),
+  pid: 1405496485753,
+  areas: [ 245 ] }
+{ time: Wed Jul 16 2014 07:41:33 GMT+0300 (IDT),
+  pid: 1405496490660,
+  areas: [ 246, 245, 248 ] }
+{ time: Wed Jul 16 2014 07:41:40 GMT+0300 (IDT),
+  pid: 1405496498004,
+  areas: [ 246, 248 ] }
+{ time: Wed Jul 16 2014 07:41:43 GMT+0300 (IDT),
+  pid: 1405496504379,
+  areas: [ 246, 248, 250 ] }
+{ time: Wed Jul 16 2014 07:41:53 GMT+0300 (IDT),
+  pid: 1405496513520,
+  areas: [ 246, 248, 250, 247 ] }
+{ time: Wed Jul 16 2014 07:41:59 GMT+0300 (IDT),
+  pid: 1405496521005,
+  areas: [ 250, 247 ] }
+{ time: Wed Jul 16 2014 07:42:11 GMT+0300 (IDT),
+  pid: 1405496531459,
+  areas: [ 247 ] }
+{ time: Wed Jul 16 2014 07:56:54 GMT+0300 (IDT),
+  pid: 1405497411956,
+  areas: [ 276 ] }
+{ time: Wed Jul 16 2014 07:56:56 GMT+0300 (IDT),
+  pid: 1405497414487,
+  areas: [ 249, 248, 276 ] }
+{ time: Wed Jul 16 2014 07:57:23 GMT+0300 (IDT),
+  pid: 1405497441504,
+  areas: [ 276 ] }
+{ time: Wed Jul 16 2014 08:01:35 GMT+0300 (IDT),
+  pid: 1405497695455,
+  areas: [ 275, 276 ] }
+{ time: Wed Jul 16 2014 08:01:39 GMT+0300 (IDT),
+  pid: 1405497698142,
+  areas: [ 275, 276, 280 ] }
+{ time: Wed Jul 16 2014 08:01:44 GMT+0300 (IDT),
+  pid: 1405497703096,
+  areas: [ 275, 249, 276, 280 ] }
+{ time: Wed Jul 16 2014 08:01:57 GMT+0300 (IDT),
+  pid: 1405497705643,
+  areas: [ 275, 281, 249, 276, 280 ] }
+{ time: Wed Jul 16 2014 08:02:10 GMT+0300 (IDT),
+  pid: 1405497730253,
+  areas: [ 275, 281, 276, 280 ] }
+{ time: Wed Jul 16 2014 08:02:16 GMT+0300 (IDT),
+  pid: 1405497737660,
+  areas: [ 281, 280 ] }
+{ time: Wed Jul 16 2014 08:02:20 GMT+0300 (IDT),
+  pid: 1405497740660,
+  areas: [ 281 ] }
+{ time: Wed Jul 16 2014 09:19:32 GMT+0300 (IDT),
+  pid: 1405502371376,
+  areas: [ 257 ] }
+{ time: Wed Jul 16 2014 09:20:00 GMT+0300 (IDT),
+  pid: 1405502398768,
+  areas: [ 157, 155, 160, 140 ] }
+{ time: Wed Jul 16 2014 09:20:20 GMT+0300 (IDT),
+  pid: 1405502419332,
+  areas: [ 157, 155, 160, 140, 168, 143 ] }
+{ time: Wed Jul 16 2014 09:20:24 GMT+0300 (IDT),
+  pid: 1405502421910,
+  areas: [ 157, 271, 155, 160, 140, 168, 143 ] }
+{ time: Wed Jul 16 2014 09:20:54 GMT+0300 (IDT),
+  pid: 1405502453740,
+  areas: [ 157, 271, 155, 160, 140, 168, 162, 143 ] }
+{ time: Wed Jul 16 2014 09:21:03 GMT+0300 (IDT),
+  pid: 1405502464069,
+  areas: [ 157, 155, 160, 140, 168, 162, 143 ] }
+{ time: Wed Jul 16 2014 09:21:26 GMT+0300 (IDT),
+  pid: 1405502486054,
+  areas: [ 168, 162, 143 ] }
+{ time: Wed Jul 16 2014 09:21:45 GMT+0300 (IDT),
+  pid: 1405502504493,
+  areas: [ 157, 168, 162, 155, 143 ] }
+{ time: Wed Jul 16 2014 09:21:54 GMT+0300 (IDT),
+  pid: 1405502513009,
+  areas: [ 157, 162, 155 ] }
+{ time: Wed Jul 16 2014 09:22:20 GMT+0300 (IDT),
+  pid: 1405502540838,
+  areas: [ 157, 155 ] }
+{ time: Wed Jul 16 2014 10:13:49 GMT+0300 (IDT),
+  pid: 1405505630024,
+  areas: [ 231 ] }
+{ time: Wed Jul 16 2014 10:15:13 GMT+0300 (IDT),
+  pid: 1405505713778,
+  areas: [ 231 ] }
+{ time: Wed Jul 16 2014 10:23:44 GMT+0300 (IDT),
+  pid: 1405506222631,
+  areas: [ 228 ] }
+{ time: Wed Jul 16 2014 10:44:12 GMT+0300 (IDT),
+  pid: 1405507450459,
+  areas: [ 221 ] }
+{ time: Wed Jul 16 2014 10:51:19 GMT+0300 (IDT),
+  pid: 1405507878699,
+  areas: [ 218 ] }
+{ time: Wed Jul 16 2014 11:55:46 GMT+0300 (IDT),
+  pid: 1405511743706,
+  areas: [ 227 ] }
+{ time: Wed Jul 16 2014 12:16:02 GMT+0300 (IDT),
+  pid: 1405512963673,
+  areas: [ 291 ] }
+{ time: Wed Jul 16 2014 12:16:07 GMT+0300 (IDT),
+  pid: 1405512966329,
+  areas: [ 288, 289, 291 ] }
+{ time: Wed Jul 16 2014 12:16:27 GMT+0300 (IDT),
+  pid: 1405512984783,
+  areas: [ 288, 289, 291, 300 ] }
+{ time: Wed Jul 16 2014 12:16:49 GMT+0300 (IDT),
+  pid: 1405513008441,
+  areas: [ 291, 300 ] }
+{ time: Wed Jul 16 2014 12:16:51 GMT+0300 (IDT),
+  pid: 1405513012941,
+  areas: [ 291, 300, 291 ] }
+{ time: Wed Jul 16 2014 12:17:01 GMT+0300 (IDT),
+  pid: 1405513020613,
+  areas: [ 300, 291 ] }
+{ time: Wed Jul 16 2014 12:17:22 GMT+0300 (IDT),
+  pid: 1405513041786,
+  areas: [ 291 ] }
+{ time: Wed Jul 16 2014 12:42:33 GMT+0300 (IDT),
+  pid: 1405514551096,
+  areas: [ 225 ] }
+{ time: Wed Jul 16 2014 13:03:16 GMT+0300 (IDT),
+  pid: 1405515795392,
+  areas: [ 218 ] }
+{ time: Wed Jul 16 2014 13:25:26 GMT+0300 (IDT),
+  pid: 1405517124709,
+  areas: [ 281, 251, 251, 249 ] }
+{ time: Wed Jul 16 2014 13:25:53 GMT+0300 (IDT),
+  pid: 1405517151726,
+  areas: [ 281 ] }
+{ time: Wed Jul 16 2014 13:37:33 GMT+0300 (IDT),
+  pid: 1405517853386,
+  areas: [ 299 ] }
+{ time: Wed Jul 16 2014 13:38:18 GMT+0300 (IDT),
+  pid: 1405517862809,
+  areas: [ 299, 301 ] }
+{ time: Wed Jul 16 2014 13:39:01 GMT+0300 (IDT),
+  pid: 1405517940531,
+  areas: [ 301 ] }
+{ time: Wed Jul 16 2014 14:00:51 GMT+0300 (IDT),
+  pid: 1405519252082,
+  areas: [ 246, 217, 247 ] }
+{ time: Wed Jul 16 2014 14:01:11 GMT+0300 (IDT),
+  pid: 1405519269161,
+  areas: [ 246, 247 ] }
+{ time: Wed Jul 16 2014 14:01:27 GMT+0300 (IDT),
+  pid: 1405519288037,
+  areas: [ 246, 246 ] }
+{ time: Wed Jul 16 2014 14:01:30 GMT+0300 (IDT),
+  pid: 1405519290568,
+  areas: [ 246, 246, 217 ] }
+{ time: Wed Jul 16 2014 14:01:42 GMT+0300 (IDT),
+  pid: 1405519302334,
+  areas: [ 246, 246, 217, 218 ] }
+{ time: Wed Jul 16 2014 14:01:51 GMT+0300 (IDT),
+  pid: 1405519311007,
+  areas: [ 246, 246, 218 ] }
+{ time: Wed Jul 16 2014 14:01:55 GMT+0300 (IDT),
+  pid: 1405519314757,
+  areas: [ 218 ] }
+{ time: Wed Jul 16 2014 14:36:56 GMT+0300 (IDT),
+  pid: 1405521416409,
+  areas: [ 230, 231 ] }
+{ time: Wed Jul 16 2014 14:37:20 GMT+0300 (IDT),
+  pid: 1405521438847,
+  areas: [ 230, 231 ] }
+{ time: Wed Jul 16 2014 14:38:04 GMT+0300 (IDT),
+  pid: 1405521483787,
+  areas: [ 231, 230 ] }
+{ time: Wed Jul 16 2014 14:47:38 GMT+0300 (IDT),
+  pid: 1405522057425,
+  areas: [ 225, 224, 223 ] }
+{ time: Wed Jul 16 2014 15:17:49 GMT+0300 (IDT),
+  pid: 1405523868422,
+  areas: [ 218, 217, 247 ] }
+{ time: Wed Jul 16 2014 15:17:55 GMT+0300 (IDT),
+  pid: 1405523875641,
+  areas: [ 246, 218, 217, 247 ] }
+{ time: Wed Jul 16 2014 15:18:06 GMT+0300 (IDT),
+  pid: 1405523885423,
+  areas: [ 246, 247 ] }
+{ time: Wed Jul 16 2014 15:18:16 GMT+0300 (IDT),
+  pid: 1405523895720,
+  areas: [ 246 ] }
+{ time: Wed Jul 16 2014 15:18:26 GMT+0300 (IDT),
+  pid: 1405523905517,
+  areas: [ 247 ] }
+{ time: Wed Jul 16 2014 15:18:35 GMT+0300 (IDT),
+  pid: 1405523914799,
+  areas: [ 246, 247, 217 ] }
+{ time: Wed Jul 16 2014 15:18:52 GMT+0300 (IDT),
+  pid: 1405523932597,
+  areas: [ 246 ] }
+{ time: Wed Jul 16 2014 15:25:35 GMT+0300 (IDT),
+  pid: 1405524334664,
+  areas: [ 218 ] }
+{ time: Wed Jul 16 2014 15:28:38 GMT+0300 (IDT),
+  pid: 1405524518079,
+  areas: [ 231 ] }
+{ time: Wed Jul 16 2014 15:29:04 GMT+0300 (IDT),
+  pid: 1405524543971,
+  areas: [ 237 ] }
+{ time: Wed Jul 16 2014 15:38:36 GMT+0300 (IDT),
+  pid: 1405525115719,
+  areas: [ 227 ] }
+{ time: Wed Jul 16 2014 15:55:11 GMT+0300 (IDT),
+  pid: 1405526109440,
+  areas: [ 227 ] }
+{ time: Wed Jul 16 2014 15:59:15 GMT+0300 (IDT),
+  pid: 1405526352843,
+  areas: [ 234, 234 ] }
+{ time: Wed Jul 16 2014 16:15:58 GMT+0300 (IDT),
+  pid: 1405527357518,
+  areas: [ 286, 296 ] }
+{ time: Wed Jul 16 2014 16:16:41 GMT+0300 (IDT),
+  pid: 1405527401536,
+  areas: [ 286, 216, 296 ] }
+{ time: Wed Jul 16 2014 16:16:56 GMT+0300 (IDT),
+  pid: 1405527414662,
+  areas: [ 216, 296 ] }
+{ time: Wed Jul 16 2014 16:16:58 GMT+0300 (IDT),
+  pid: 1405527418834,
+  areas: [ 296 ] }
+{ time: Wed Jul 16 2014 16:17:07 GMT+0300 (IDT),
+  pid: 1405527427209,
+  areas: [ 216, 296, 253 ] }
+{ time: Wed Jul 16 2014 16:17:22 GMT+0300 (IDT),
+  pid: 1405527443929,
+  areas: [ 296, 253 ] }
+{ time: Wed Jul 16 2014 16:17:28 GMT+0300 (IDT),
+  pid: 1405527444976,
+  areas: [ 253 ] }
+{ time: Wed Jul 16 2014 17:13:51 GMT+0300 (IDT),
+  pid: 1405530830911,
+  areas: [ 254 ] }
+{ time: Wed Jul 16 2014 17:13:55 GMT+0300 (IDT),
+  pid: 1405530833521,
+  areas: [ 254, 225 ] }
+{ time: Wed Jul 16 2014 17:13:59 GMT+0300 (IDT),
+  pid: 1405530838287,
+  areas: [ 254, 225, 255 ] }
+{ time: Wed Jul 16 2014 17:14:11 GMT+0300 (IDT),
+  pid: 1405530850678,
+  areas: [ 254, 255 ] }
+{ time: Wed Jul 16 2014 17:14:18 GMT+0300 (IDT),
+  pid: 1405530858288,
+  areas: [ 255 ] }
+{ time: Wed Jul 16 2014 17:14:19 GMT+0300 (IDT),
+  pid: 1405530858960,
+  areas: [ 255, 216, 225 ] }
+{ time: Wed Jul 16 2014 17:14:26 GMT+0300 (IDT),
+  pid: 1405530867007,
+  areas: [ 216, 225 ] }
+{ time: Wed Jul 16 2014 17:20:41 GMT+0300 (IDT),
+  pid: 1405531239729,
+  areas: [ 227 ] }
+{ time: Wed Jul 16 2014 18:09:27 GMT+0300 (IDT),
+  pid: 1405534165454,
+  areas: [ 237 ] }
+{ time: Wed Jul 16 2014 18:09:50 GMT+0300 (IDT),
+  pid: 1405534188798,
+  areas: [ 237, 237 ] }
+{ time: Wed Jul 16 2014 18:09:58 GMT+0300 (IDT),
+  pid: 1405534195971,
+  areas: [ 237, 237, 236 ] }
+{ time: Wed Jul 16 2014 18:10:08 GMT+0300 (IDT),
+  pid: 1405534205831,
+  areas: [ 236 ] }
+{ time: Wed Jul 16 2014 18:22:02 GMT+0300 (IDT),
+  pid: 1405534922507,
+  areas: [ 218, 219 ] }
+{ time: Wed Jul 16 2014 18:31:56 GMT+0300 (IDT),
+  pid: 1405535515474,
+  areas: [ 217, 247 ] }
+{ time: Wed Jul 16 2014 18:31:57 GMT+0300 (IDT),
+  pid: 1405535518537,
+  areas: [ 217, 218, 247 ] }
+{ time: Wed Jul 16 2014 18:32:13 GMT+0300 (IDT),
+  pid: 1405535532475,
+  areas: [ 218, 247 ] }
+{ time: Wed Jul 16 2014 18:32:14 GMT+0300 (IDT),
+  pid: 1405535535460,
+  areas: [ 218, 247, 217 ] }
+{ time: Wed Jul 16 2014 18:37:36 GMT+0300 (IDT),
+  pid: 1405535855866,
+  areas: [ 236, 238, 238 ] }
+{ time: Wed Jul 16 2014 18:37:54 GMT+0300 (IDT),
+  pid: 1405535872930,
+  areas: [ 238, 238 ] }
+{ time: Wed Jul 16 2014 20:16:18 GMT+0300 (IDT),
+  pid: 1405541776066,
+  areas: [ 246, 247 ] }
+{ time: Wed Jul 16 2014 20:16:25 GMT+0300 (IDT),
+  pid: 1405541785238,
+  areas: [ 271, 246, 247, 245 ] }
+{ time: Wed Jul 16 2014 20:16:43 GMT+0300 (IDT),
+  pid: 1405541803127,
+  areas: [ 271, 245 ] }
+{ time: Wed Jul 16 2014 20:16:47 GMT+0300 (IDT),
+  pid: 1405541806674,
+  areas: [ 271, 245, 272 ] }
+{ time: Wed Jul 16 2014 20:17:07 GMT+0300 (IDT),
+  pid: 1405541827424,
+  areas: [ 272 ] }
+{ time: Wed Jul 16 2014 21:00:19 GMT+0300 (IDT),
+  pid: 1405544419112,
+  areas: [ 224 ] }
+{ time: Wed Jul 16 2014 21:15:37 GMT+0300 (IDT),
+  pid: 1405545336314,
+  areas: [ 275, 272, 276 ] }
+{ time: Wed Jul 16 2014 21:15:44 GMT+0300 (IDT),
+  pid: 1405545341158,
+  areas: [ 275, 273, 272, 276 ] }
+{ time: Wed Jul 16 2014 21:16:11 GMT+0300 (IDT),
+  pid: 1405545371316,
+  areas: [ 275, 273, 272, 276, 280 ] }
+{ time: Wed Jul 16 2014 21:16:23 GMT+0300 (IDT),
+  pid: 1405545380004,
+  areas: [ 273, 280 ] }
+{ time: Wed Jul 16 2014 21:16:40 GMT+0300 (IDT),
+  pid: 1405545398333,
+  areas: [ 280 ] }
+{ time: Wed Jul 16 2014 21:16:52 GMT+0300 (IDT),
+  pid: 1405545411302,
+  areas: [ 275, 280, 276 ] }
+{ time: Wed Jul 16 2014 21:17:01 GMT+0300 (IDT),
+  pid: 1405545420006,
+  areas: [ 275, 276 ] }
+{ time: Wed Jul 16 2014 21:35:49 GMT+0300 (IDT),
+  pid: 1405546547187,
+  areas: [ 271, 272, 245 ] }
+{ time: Wed Jul 16 2014 21:36:14 GMT+0300 (IDT),
+  pid: 1405546573922,
+  areas: [ 271, 273, 272, 245 ] }
+{ time: Wed Jul 16 2014 21:36:30 GMT+0300 (IDT),
+  pid: 1405546589298,
+  areas: [ 273 ] }
+{ time: Wed Jul 16 2014 21:59:11 GMT+0300 (IDT),
+  pid: 1405547951507,
+  areas: [ 230, 231 ] }
+{ time: Wed Jul 16 2014 22:38:31 GMT+0300 (IDT),
+  pid: 1405550309591,
+  areas: [ 237, 238, 238 ] }
+{ time: Wed Jul 16 2014 22:38:47 GMT+0300 (IDT),
+  pid: 1405550326732,
+  areas: [ 238, 238 ] }
+{ time: Thu Jul 17 2014 01:22:54 GMT+0300 (IDT),
+  pid: 1405560173034,
+  areas: [ 218, 248, 250 ] }
+{ time: Thu Jul 17 2014 01:23:11 GMT+0300 (IDT),
+  pid: 1405560190113,
+  areas: [ 248, 250 ] }
+{ time: Thu Jul 17 2014 01:36:58 GMT+0300 (IDT),
+  pid: 1405561018248,
+  areas: [ 233 ] }
+{ time: Thu Jul 17 2014 01:50:38 GMT+0300 (IDT),
+  pid: 1405561836678,
+  areas: [ 278 ] }
+{ time: Thu Jul 17 2014 01:50:50 GMT+0300 (IDT),
+  pid: 1405561848273,
+  areas: [ 188, 188, 278 ] }
+{ time: Thu Jul 17 2014 01:50:54 GMT+0300 (IDT),
+  pid: 1405561852992,
+  areas: [ 275, 188, 188, 278, 276, 280 ] }
+{ time: Thu Jul 17 2014 01:51:35 GMT+0300 (IDT),
+  pid: 1405561895118,
+  areas: [ 188, 188 ] }
+{ time: Thu Jul 17 2014 01:51:58 GMT+0300 (IDT),
+  pid: 1405561917713,
+  areas: [ 188, 188, 281 ] }
+{ time: Thu Jul 17 2014 01:52:18 GMT+0300 (IDT),
+  pid: 1405561935355,
+  areas: [ 281 ] }
+{ time: Thu Jul 17 2014 07:41:34 GMT+0300 (IDT),
+  pid: 1405582891370,
+  areas: [ 292, 289 ] }
+{ time: Thu Jul 17 2014 07:42:15 GMT+0300 (IDT),
+  pid: 1405582933372,
+  areas: [ 292 ] }
+{ time: Thu Jul 17 2014 07:42:22 GMT+0300 (IDT),
+  pid: 1405582939528,
+  areas: [ 292, 289 ] }
+{ time: Thu Jul 17 2014 07:42:30 GMT+0300 (IDT),
+  pid: 1405582948435,
+  areas: [ 289 ] }
+{ time: Thu Jul 17 2014 08:41:10 GMT+0300 (IDT),
+  pid: 1405586470434,
+  areas: [ 246, 247 ] }
+{ time: Thu Jul 17 2014 08:42:01 GMT+0300 (IDT),
+  pid: 1405586518796,
+  areas: [ 140, 168, 141, 139, 142 ] }
+{ time: Thu Jul 17 2014 08:42:57 GMT+0300 (IDT),
+  pid: 1405586577815,
+  areas: [ 140, 168, 160, 161, 141, 139, 169, 170, 142 ] }
+{ time: Thu Jul 17 2014 08:43:27 GMT+0300 (IDT),
+  pid: 1405586605691,
+  areas: [ 160, 161, 169, 170 ] }
+{ time: Thu Jul 17 2014 09:30:35 GMT+0300 (IDT),
+  pid: 1405589434235,
+  areas: [ 292, 289 ] }
+{ time: Thu Jul 17 2014 09:31:18 GMT+0300 (IDT),
+  pid: 1405589476721,
+  areas: [ 292 ] }
+{ time: Thu Jul 17 2014 09:52:55 GMT+0300 (IDT),
+  pid: 1405590774081,
+  areas: [ 236 ] }
+{ time: Thu Jul 17 2014 14:59:14 GMT+0300 (IDT),
+  pid: 1405609152148,
+  areas: [ 217, 247 ] }
+{ time: Thu Jul 17 2014 14:59:31 GMT+0300 (IDT),
+  pid: 1405609169445,
+  areas: [ 247 ] }
+{ time: Thu Jul 17 2014 15:17:35 GMT+0300 (IDT),
+  pid: 1405610250062,
+  areas: [ 217 ] }
+{ time: Thu Jul 17 2014 15:38:11 GMT+0300 (IDT),
+  pid: 1405611490155,
+  areas: [ 292 ] }
+{ time: Thu Jul 17 2014 15:43:44 GMT+0300 (IDT),
+  pid: 1405611822812,
+  areas: [ 218 ] }
+{ time: Thu Jul 17 2014 15:47:24 GMT+0300 (IDT),
+  pid: 1405612032761,
+  areas: [ 220 ] }
+{ time: Thu Jul 17 2014 15:48:37 GMT+0300 (IDT),
+  pid: 1405612114562,
+  areas: [ 220 ] }
+{ time: Thu Jul 17 2014 15:55:10 GMT+0300 (IDT),
+  pid: 1405612499190,
+  areas: [ 218, 219 ] }
+{ time: Thu Jul 17 2014 16:10:01 GMT+0300 (IDT),
+  pid: 1405613399016,
+  areas: [ 218 ] }
+{ time: Thu Jul 17 2014 16:11:37 GMT+0300 (IDT),
+  pid: 1405613495537,
+  areas: [ 218 ] }
+{ time: Thu Jul 17 2014 16:32:31 GMT+0300 (IDT),
+  pid: 1405614743802,
+  areas: [ 234, 234 ] }
+{ time: Thu Jul 17 2014 16:32:54 GMT+0300 (IDT),
+  pid: 1405614773335,
+  areas: [ 234, 234 ] }
+{ time: Thu Jul 17 2014 16:51:33 GMT+0300 (IDT),
+  pid: 1405615892312,
+  areas: [ 231 ] }
+{ time: Thu Jul 17 2014 16:52:22 GMT+0300 (IDT),
+  pid: 1405615942096,
+  areas: [ 231 ] }
+{ time: Thu Jul 17 2014 16:53:04 GMT+0300 (IDT),
+  pid: 1405615984035,
+  areas: [ 237 ] }
+{ time: Thu Jul 17 2014 16:54:38 GMT+0300 (IDT),
+  pid: 1405616078446,
+  areas: [ 246 ] }
+{ time: Thu Jul 17 2014 16:54:41 GMT+0300 (IDT),
+  pid: 1405616080931,
+  areas: [ 246, 218, 217, 247, 250 ] }
+{ time: Thu Jul 17 2014 16:55:18 GMT+0300 (IDT),
+  pid: 1405616115698,
+  areas: [ 228 ] }
+{ time: Thu Jul 17 2014 16:55:43 GMT+0300 (IDT),
+  pid: 1405616132527,
+  areas: [ 246 ] }
+{ time: Thu Jul 17 2014 17:01:27 GMT+0300 (IDT),
+  pid: 1405616485404,
+  areas: [ 246 ] }
+{ time: Thu Jul 17 2014 17:01:30 GMT+0300 (IDT),
+  pid: 1405616487935,
+  areas: [ 246, 247 ] }
+{ time: Thu Jul 17 2014 17:01:52 GMT+0300 (IDT),
+  pid: 1405616512437,
+  areas: [ 247 ] }
+{ time: Thu Jul 17 2014 17:02:04 GMT+0300 (IDT),
+  pid: 1405616522218,
+  areas: [ 246 ] }
+{ time: Thu Jul 17 2014 17:14:20 GMT+0300 (IDT),
+  pid: 1405617260802,
+  areas: [ 231 ] }
+{ time: Thu Jul 17 2014 17:15:00 GMT+0300 (IDT),
+  pid: 1405617290647,
+  areas: [ 231 ] }
+{ time: Thu Jul 17 2014 17:16:22 GMT+0300 (IDT),
+  pid: 1405617382464,
+  areas: [ 221 ] }
+{ time: Thu Jul 17 2014 17:21:25 GMT+0300 (IDT),
+  pid: 1405617684683,
+  areas: [ 217, 218 ] }
+{ time: Thu Jul 17 2014 17:24:49 GMT+0300 (IDT),
+  pid: 1405617886724,
+  areas: [ 231 ] }
+{ time: Thu Jul 17 2014 17:27:28 GMT+0300 (IDT),
+  pid: 1405618048263,
+  areas: [ 221 ] }
+{ time: Thu Jul 17 2014 17:28:19 GMT+0300 (IDT),
+  pid: 1405618098297,
+  areas: [ 231 ] }
+{ time: Thu Jul 17 2014 17:30:23 GMT+0300 (IDT),
+  pid: 1405618222210,
+  areas: [ 218 ] }
+{ time: Thu Jul 17 2014 17:30:55 GMT+0300 (IDT),
+  pid: 1405618256227,
+  areas: [ 218 ] }
+{ time: Thu Jul 17 2014 17:41:02 GMT+0300 (IDT),
+  pid: 1405618862209,
+  areas: [ 218 ] }
+{ time: Thu Jul 17 2014 17:41:08 GMT+0300 (IDT),
+  pid: 1405618867022,
+  areas: [ 218, 217 ] }
+{ time: Thu Jul 17 2014 17:41:20 GMT+0300 (IDT),
+  pid: 1405618879241,
+  areas: [ 217 ] }
+{ time: Thu Jul 17 2014 17:49:26 GMT+0300 (IDT),
+  pid: 1405619363875,
+  areas: [ 218 ] }
+{ time: Thu Jul 17 2014 17:52:04 GMT+0300 (IDT),
+  pid: 1405619522899,
+  areas: [ 255 ] }
+{ time: Thu Jul 17 2014 17:52:20 GMT+0300 (IDT),
+  pid: 1405619540946,
+  areas: [ 254, 255 ] }
+{ time: Thu Jul 17 2014 17:52:33 GMT+0300 (IDT),
+  pid: 1405619551009,
+  areas: [ 254 ] }
+{ time: Thu Jul 17 2014 17:57:21 GMT+0300 (IDT),
+  pid: 1405619836664,
+  areas: [ 221 ] }
+{ time: Thu Jul 17 2014 17:59:05 GMT+0300 (IDT),
+  pid: 1405619944935,
+  areas: [ 161, 170, 169, 173, 174 ] }
+{ time: Thu Jul 17 2014 17:59:10 GMT+0300 (IDT),
+  pid: 1405619948029,
+  areas: [ 161, 168, 170, 169, 173, 174 ] }
+{ time: Thu Jul 17 2014 17:59:23 GMT+0300 (IDT),
+  pid: 1405619960358,
+  areas: [ 161, 168, 155, 140, 170, 169, 141, 139, 143, 173, 174, 142 ] }
+{ time: Thu Jul 17 2014 18:00:32 GMT+0300 (IDT),
+  pid: 1405620032080,
+  areas: [ 168, 155, 140, 141, 139, 143, 142 ] }
+{ time: Thu Jul 17 2014 18:00:38 GMT+0300 (IDT),
+  pid: 1405620035284,
+  areas: [ 155, 140, 141, 139, 143, 142 ] }
+{ time: Thu Jul 17 2014 18:00:47 GMT+0300 (IDT),
+  pid: 1405620046034,
+  areas: [ 155, 140, 141, 139, 143, 142, 237 ] }
+{ time: Thu Jul 17 2014 18:00:54 GMT+0300 (IDT),
+  pid: 1405620050144,
+  areas: [ 237 ] }
+{ time: Thu Jul 17 2014 18:02:39 GMT+0300 (IDT),
+  pid: 1405620157399,
+  areas: [ 218 ] }
+{ time: Thu Jul 17 2014 18:03:00 GMT+0300 (IDT),
+  pid: 1405620179587,
+  areas: [ 224 ] }
+{ time: Thu Jul 17 2014 18:08:45 GMT+0300 (IDT),
+  pid: 1405620524885,
+  areas: [ 237 ] }
+{ time: Thu Jul 17 2014 18:10:03 GMT+0300 (IDT),
+  pid: 1405620601592,
+  areas: [ 218 ] }
+{ time: Thu Jul 17 2014 18:10:32 GMT+0300 (IDT),
+  pid: 1405620629594,
+  areas: [ 218 ] }
+{ time: Thu Jul 17 2014 18:10:55 GMT+0300 (IDT),
+  pid: 1405620654626,
+  areas: [ 218 ] }
+{ time: Thu Jul 17 2014 18:18:24 GMT+0300 (IDT),
+  pid: 1405621104944,
+  areas: [ 273, 267 ] }
+{ time: Thu Jul 17 2014 18:18:57 GMT+0300 (IDT),
+  pid: 1405621134274,
+  areas: [ 271, 273, 267, 272 ] }
+{ time: Thu Jul 17 2014 18:19:24 GMT+0300 (IDT),
+  pid: 1405621161994,
+  areas: [ 271, 272 ] }
+{ time: Thu Jul 17 2014 18:23:46 GMT+0300 (IDT),
+  pid: 1405621421507,
+  areas: [ 231 ] }
+{ time: Thu Jul 17 2014 18:25:50 GMT+0300 (IDT),
+  pid: 1405621546607,
+  areas: [ 236, 238, 238 ] }
+{ time: Thu Jul 17 2014 18:45:32 GMT+0300 (IDT),
+  pid: 1405622731946,
+  areas: [ 182, 266, 183 ] }
+{ time: Thu Jul 17 2014 18:45:56 GMT+0300 (IDT),
+  pid: 1405622744415,
+  areas: [ 271, 182, 275, 266, 268, 183, 267, 273, 248, 276, 272, 245 ] }
+{ time: Thu Jul 17 2014 18:46:05 GMT+0300 (IDT),
+  pid: 1405622760588,
+  areas: [ 271, 182, 275, 246, 266, 268, 183, 267, 273, 248, 276, 272, 245 ] }
+{ time: Thu Jul 17 2014 18:46:17 GMT+0300 (IDT),
+  pid: 1405622765010,
+  areas: [ 271, 182, 275, 246, 266, 268, 183, 267, 273, 276, 272, 245 ] }
+{ time: Thu Jul 17 2014 18:46:24 GMT+0300 (IDT),
+  pid: 1405622779167,
+  areas: [ 271, 182, 246, 266, 268, 183, 267, 273 ] }
+{ time: Thu Jul 17 2014 18:46:50 GMT+0300 (IDT),
+  pid: 1405622802590,
+  areas: [ 182, 271, 183, 275, 268, 273, 267, 272 ] }
+{ time: Thu Jul 17 2014 18:47:00 GMT+0300 (IDT),
+  pid: 1405622819044,
+  areas: [ 271, 275, 268, 273, 267, 272 ] }
+{ time: Thu Jul 17 2014 18:47:13 GMT+0300 (IDT),
+  pid: 1405622832763,
+  areas: [ 268, 273, 267 ] }
+{ time: Thu Jul 17 2014 18:47:26 GMT+0300 (IDT),
+  pid: 1405622846810,
+  areas: [ 271, 268, 267, 273, 272 ] }
+{ time: Thu Jul 17 2014 18:48:15 GMT+0300 (IDT),
+  pid: 1405622888968,
+  areas: [ 273 ] }
+{ time: Thu Jul 17 2014 18:48:54 GMT+0300 (IDT),
+  pid: 1405622932314,
+  areas: [ 246, 247 ] }
+{ time: Thu Jul 17 2014 18:49:33 GMT+0300 (IDT),
+  pid: 1405622971363,
+  areas: [ 246 ] }
+{ time: Thu Jul 17 2014 19:01:33 GMT+0300 (IDT),
+  pid: 1405623692554,
+  areas: [ 282 ] }
+{ time: Thu Jul 17 2014 19:01:38 GMT+0300 (IDT),
+  pid: 1405623694992,
+  areas: [ 281, 282 ] }
+{ time: Thu Jul 17 2014 19:02:24 GMT+0300 (IDT),
+  pid: 1405623737010,
+  areas: [ 282 ] }
+{ time: Thu Jul 17 2014 19:02:52 GMT+0300 (IDT),
+  pid: 1405623767370,
+  areas: [ 278, 282 ] }
+{ time: Thu Jul 17 2014 19:20:21 GMT+0300 (IDT),
+  pid: 1405624819468,
+  areas: [ 218 ] }
+{ time: Thu Jul 17 2014 19:30:23 GMT+0300 (IDT),
+  pid: 1405625424185,
+  areas: [ 254 ] }
+{ time: Thu Jul 17 2014 19:30:27 GMT+0300 (IDT),
+  pid: 1405625427044,
+  areas: [ 254, 216, 225 ] }
+{ time: Thu Jul 17 2014 19:30:33 GMT+0300 (IDT),
+  pid: 1405625431701,
+  areas: [ 254, 216, 225, 255 ] }
+{ time: Thu Jul 17 2014 19:30:43 GMT+0300 (IDT),
+  pid: 1405625443982,
+  areas: [ 254, 255 ] }
+{ time: Thu Jul 17 2014 19:30:52 GMT+0300 (IDT),
+  pid: 1405625451342,
+  areas: [ 255 ] }
+{ time: Thu Jul 17 2014 20:05:06 GMT+0300 (IDT),
+  pid: 1405627506471,
+  areas: [ 275, 248, 276, 272, 245 ] }
+{ time: Thu Jul 17 2014 20:05:22 GMT+0300 (IDT),
+  pid: 1405627515534,
+  areas: [ 271, 275, 248, 276, 272, 245 ] }
+{ time: Thu Jul 17 2014 20:05:33 GMT+0300 (IDT),
+  pid: 1405627533488,
+  areas: [ 271, 275, 276, 272, 245 ] }
+{ time: Thu Jul 17 2014 20:05:47 GMT+0300 (IDT),
+  pid: 1405627548630,
+  areas: [ 271 ] }
+{ time: Thu Jul 17 2014 20:06:51 GMT+0300 (IDT),
+  pid: 1405627610133,
+  areas: [ 246, 247, 248, 250, 276, 272, 245 ] }
+{ time: Thu Jul 17 2014 20:07:20 GMT+0300 (IDT),
+  pid: 1405627637150,
+  areas: [ 276, 272, 245 ] }
+{ time: Thu Jul 17 2014 21:15:55 GMT+0300 (IDT),
+  pid: 1405631753019,
+  areas: [ 246, 247 ] }
+{ time: Thu Jul 17 2014 21:15:58 GMT+0300 (IDT),
+  pid: 1405631755894,
+  areas: [ 246, 218, 217, 247, 250 ] }
+{ time: Thu Jul 17 2014 21:16:14 GMT+0300 (IDT),
+  pid: 1405631772973,
+  areas: [ 246, 247, 250 ] }
+{ time: Thu Jul 17 2014 21:16:20 GMT+0300 (IDT),
+  pid: 1405631780255,
+  areas: [ 250 ] }
+{ time: Thu Jul 17 2014 21:29:46 GMT+0300 (IDT),
+  pid: 1405632586950,
+  areas: [ 231 ] }
+{ time: Thu Jul 17 2014 21:31:21 GMT+0300 (IDT),
+  pid: 1405632681095,
+  areas: [ 220 ] }
+{ time: Thu Jul 17 2014 22:00:10 GMT+0300 (IDT),
+  pid: 1405634409336,
+  areas: [ 271, 246, 245 ] }
+{ time: Thu Jul 17 2014 22:00:16 GMT+0300 (IDT),
+  pid: 1405634414227,
+  areas: [ 271, 246, 281, 249, 245 ] }
+{ time: Thu Jul 17 2014 22:00:20 GMT+0300 (IDT),
+  pid: 1405634419711,
+  areas: [ 271, 246, 281, 249, 251, 251, 245 ] }
+{ time: Thu Jul 17 2014 22:00:36 GMT+0300 (IDT),
+  pid: 1405634436525,
+  areas: [ 271, 281, 249, 251, 251, 245 ] }
+{ time: Thu Jul 17 2014 22:00:39 GMT+0300 (IDT),
+  pid: 1405634438681,
+  areas: 
+   [ 157,
+     271,
+     162,
+     175,
+     182,
+     160,
+     161,
+     281,
+     266,
+     183,
+     173,
+     174,
+     249,
+     251,
+     251,
+     245 ] }
+{ time: Thu Jul 17 2014 22:00:46 GMT+0300 (IDT),
+  pid: 1405634443666,
+  areas: [ 157, 271, 162, 175, 182, 160, 161, 281, 266, 183, 173, 174, 251, 251, 245 ] }
+{ time: Thu Jul 17 2014 22:00:54 GMT+0300 (IDT),
+  pid: 1405634451885,
+  areas: [ 157, 162, 175, 182, 160, 161, 281, 266, 183, 173, 174 ] }
+{ time: Thu Jul 17 2014 22:01:01 GMT+0300 (IDT),
+  pid: 1405634456901,
+  areas: [ 157, 162, 175, 182, 160, 161, 266, 183, 173, 174 ] }
+{ time: Thu Jul 17 2014 22:01:37 GMT+0300 (IDT),
+  pid: 1405634495793,
+  areas: [ 157, 162, 175, 182, 160, 161, 183, 173, 174 ] }
+{ time: Thu Jul 17 2014 22:25:07 GMT+0300 (IDT),
+  pid: 1405635905113,
+  areas: [ 218 ] }
+{ time: Thu Jul 17 2014 22:29:06 GMT+0300 (IDT),
+  pid: 1405636146390,
+  areas: [ 217 ] }
+{ time: Thu Jul 17 2014 22:47:59 GMT+0300 (IDT),
+  pid: 1405637279227,
+  areas: [ 1 ] }
+{ time: Thu Jul 17 2014 23:00:19 GMT+0300 (IDT),
+  pid: 1405638017265,
+  areas: [ 220 ] }
+{ time: Thu Jul 17 2014 23:19:04 GMT+0300 (IDT),
+  pid: 1405639141900,
+  areas: [ 217 ] }
+{ time: Thu Jul 17 2014 23:19:10 GMT+0300 (IDT),
+  pid: 1405639149119,
+  areas: [ 217, 218 ] }
+{ time: Thu Jul 17 2014 23:19:19 GMT+0300 (IDT),
+  pid: 1405639159057,
+  areas: [ 218 ] }
+{ time: Thu Jul 17 2014 23:35:48 GMT+0300 (IDT),
+  pid: 1405640146874,
+  areas: [ 217 ] }
+{ time: Thu Jul 17 2014 23:39:57 GMT+0300 (IDT),
+  pid: 1405640396903,
+  areas: [ 217 ] }
+{ time: Fri Jul 18 2014 00:55:58 GMT+0300 (IDT),
+  pid: 1405644955748,
+  areas: [ 288, 256 ] }
+{ time: Fri Jul 18 2014 00:56:01 GMT+0300 (IDT),
+  pid: 1405644958591,
+  areas: [ 288, 256, 289 ] }
+{ time: Fri Jul 18 2014 00:56:26 GMT+0300 (IDT),
+  pid: 1405644982921,
+  areas: [ 288, 289 ] }
+{ time: Fri Jul 18 2014 00:56:38 GMT+0300 (IDT),
+  pid: 1405644997843,
+  areas: [ 289 ] }
+{ time: Fri Jul 18 2014 00:56:45 GMT+0300 (IDT),
+  pid: 1405645003078,
+  areas: [ 288 ] }
+{ time: Fri Jul 18 2014 01:45:40 GMT+0300 (IDT),
+  pid: 1405647941166,
+  areas: [ 271 ] }
+{ time: Fri Jul 18 2014 01:45:45 GMT+0300 (IDT),
+  pid: 1405647943744,
+  areas: [ 271, 245 ] }
+{ time: Fri Jul 18 2014 01:45:47 GMT+0300 (IDT),
+  pid: 1405647946244,
+  areas: [ 271, 273, 245, 272 ] }
+{ time: Fri Jul 18 2014 01:46:25 GMT+0300 (IDT),
+  pid: 1405647983340,
+  areas: [ 273, 245, 272 ] }
+{ time: Fri Jul 18 2014 01:46:31 GMT+0300 (IDT),
+  pid: 1405647988637,
+  areas: [ 273 ] }
+{ time: Fri Jul 18 2014 01:46:39 GMT+0300 (IDT),
+  pid: 1405647997981,
+  areas: [ 271, 273, 272, 245 ] }
+{ time: Fri Jul 18 2014 01:46:45 GMT+0300 (IDT),
+  pid: 1405648003434,
+  areas: [ 271, 272, 245 ] }
+{ time: Fri Jul 18 2014 02:01:25 GMT+0300 (IDT),
+  pid: 1405648883979,
+  areas: [ 218 ] }
+{ time: Fri Jul 18 2014 02:15:34 GMT+0300 (IDT),
+  pid: 1405649732364,
+  areas: [ 254, 225 ] }
+{ time: Fri Jul 18 2014 02:15:40 GMT+0300 (IDT),
+  pid: 1405649737193,
+  areas: [ 254, 225, 224 ] }
+{ time: Fri Jul 18 2014 02:15:51 GMT+0300 (IDT),
+  pid: 1405649749475,
+  areas: [ 254, 224 ] }
+{ time: Fri Jul 18 2014 02:15:56 GMT+0300 (IDT),
+  pid: 1405649754600,
+  areas: [ 254 ] }
+{ time: Fri Jul 18 2014 02:47:03 GMT+0300 (IDT),
+  pid: 1405651621520,
+  areas: [ 217, 247 ] }
+{ time: Fri Jul 18 2014 02:47:05 GMT+0300 (IDT),
+  pid: 1405651624145,
+  areas: [ 217, 218, 247 ] }
+{ time: Fri Jul 18 2014 02:47:18 GMT+0300 (IDT),
+  pid: 1405651638708,
+  areas: [ 218, 247 ] }
+{ time: Fri Jul 18 2014 02:47:22 GMT+0300 (IDT),
+  pid: 1405651641271,
+  areas: [ 247 ] }
+{ time: Fri Jul 18 2014 04:34:30 GMT+0300 (IDT),
+  pid: 1405658069199,
+  areas: [ 218, 217 ] }
+{ time: Fri Jul 18 2014 04:37:33 GMT+0300 (IDT),
+  pid: 1405658252879,
+  areas: [ 217 ] }
+{ time: Fri Jul 18 2014 04:37:48 GMT+0300 (IDT),
+  pid: 1405658266786,
+  areas: [ 217, 218 ] }
+{ time: Fri Jul 18 2014 04:37:55 GMT+0300 (IDT),
+  pid: 1405658275005,
+  areas: [ 218 ] }
+{ time: Fri Jul 18 2014 04:38:03 GMT+0300 (IDT),
+  pid: 1405658281083,
+  areas: [ 218, 217 ] }
+{ time: Fri Jul 18 2014 04:38:09 GMT+0300 (IDT),
+  pid: 1405658287006,
+  areas: [ 217 ] }
+{ time: Fri Jul 18 2014 06:00:19 GMT+0300 (IDT),
+  pid: 1405663217333,
+  areas: [ 218 ] }
+{ time: Fri Jul 18 2014 06:37:08 GMT+0300 (IDT),
+  pid: 1405665427502,
+  areas: [ 236, 238, 238 ] }
+{ time: Fri Jul 18 2014 06:37:25 GMT+0300 (IDT),
+  pid: 1405665444612,
+  areas: [ 238, 238 ] }
+{ time: Fri Jul 18 2014 07:15:57 GMT+0300 (IDT),
+  pid: 1405667757117,
+  areas: [ 218 ] }
+{ time: Fri Jul 18 2014 07:33:50 GMT+0300 (IDT),
+  pid: 1405668830718,
+  areas: [ 233 ] }
+{ time: Fri Jul 18 2014 08:07:07 GMT+0300 (IDT),
+  pid: 1405670824272,
+  areas: [ 292, 300, 291 ] }
+{ time: Fri Jul 18 2014 08:07:16 GMT+0300 (IDT),
+  pid: 1405670836413,
+  areas: [ 292, 301, 299, 300, 291 ] }
+{ time: Fri Jul 18 2014 08:07:28 GMT+0300 (IDT),
+  pid: 1405670841382,
+  areas: [ 292, 301, 299, 257, 300, 291 ] }
+{ time: Fri Jul 18 2014 08:07:48 GMT+0300 (IDT),
+  pid: 1405670868571,
+  areas: [ 292, 301, 299, 300, 291 ] }
+{ time: Fri Jul 18 2014 08:08:09 GMT+0300 (IDT),
+  pid: 1405670881431,
+  areas: [ 301, 299 ] }
+{ time: Fri Jul 18 2014 08:08:31 GMT+0300 (IDT),
+  pid: 1405670909666,
+  areas: [ 301, 299, 297 ] }
+{ time: Fri Jul 18 2014 08:08:43 GMT+0300 (IDT),
+  pid: 1405670923542,
+  areas: [ 297 ] }
+{ time: Fri Jul 18 2014 08:08:51 GMT+0300 (IDT),
+  pid: 1405670930949,
+  areas: [ 292, 297 ] }
+{ time: Fri Jul 18 2014 08:09:48 GMT+0300 (IDT),
+  pid: 1405670987889,
+  areas: [ 297 ] }
+{ time: Fri Jul 18 2014 08:24:28 GMT+0300 (IDT),
+  pid: 1405671867059,
+  areas: [ 275, 268, 273, 267, 272, 278 ] }
+{ time: Fri Jul 18 2014 08:24:49 GMT+0300 (IDT),
+  pid: 1405671888497,
+  areas: [ 271, 275, 268, 273, 267, 272, 276, 248, 278, 245 ] }
+{ time: Fri Jul 18 2014 08:25:15 GMT+0300 (IDT),
+  pid: 1405671915702,
+  areas: [ 271, 268, 273, 267, 276, 278, 245 ] }
+{ time: Fri Jul 18 2014 08:43:06 GMT+0300 (IDT),
+  pid: 1405672983569,
+  areas: [ 218 ] }
+{ time: Fri Jul 18 2014 10:04:21 GMT+0300 (IDT),
+  pid: 1405677859914,
+  areas: [ 271, 245 ] }
+{ time: Fri Jul 18 2014 10:04:34 GMT+0300 (IDT),
+  pid: 1405677871696,
+  areas: [ 271, 245, 272 ] }
+{ time: Fri Jul 18 2014 10:05:16 GMT+0300 (IDT),
+  pid: 1405677911651,
+  areas: [ 271, 272, 245 ] }
+{ time: Fri Jul 18 2014 10:05:43 GMT+0300 (IDT),
+  pid: 1405677917011,
+  areas: [ 271, 245 ] }
+{ time: Fri Jul 18 2014 10:22:21 GMT+0300 (IDT),
+  pid: 1405678941126,
+  areas: [ 220 ] }
+{ time: Fri Jul 18 2014 10:50:35 GMT+0300 (IDT),
+  pid: 1405680634713,
+  areas: [ 218, 217 ] }
+{ time: Fri Jul 18 2014 10:50:58 GMT+0300 (IDT),
+  pid: 1405680658042,
+  areas: [ 218, 217 ] }
+{ time: Fri Jul 18 2014 10:55:56 GMT+0300 (IDT),
+  pid: 1405680955744,
+  areas: [ 246 ] }
+{ time: Fri Jul 18 2014 10:55:58 GMT+0300 (IDT),
+  pid: 1405680958369,
+  areas: [ 246, 247 ] }
+{ time: Fri Jul 18 2014 10:56:24 GMT+0300 (IDT),
+  pid: 1405680982933,
+  areas: [ 247 ] }
+{ time: Fri Jul 18 2014 10:56:31 GMT+0300 (IDT),
+  pid: 1405680991215,
+  areas: [ 246 ] }
+{ time: Fri Jul 18 2014 11:04:41 GMT+0300 (IDT),
+  pid: 1405681479755,
+  areas: [ 223 ] }
+{ time: Fri Jul 18 2014 11:06:03 GMT+0300 (IDT),
+  pid: 1405681562103,
+  areas: [ 220 ] }
+{ time: Fri Jul 18 2014 12:26:04 GMT+0300 (IDT),
+  pid: 1405686363577,
+  areas: [ 288 ] }
+{ time: Fri Jul 18 2014 12:26:38 GMT+0300 (IDT),
+  pid: 1405686386140,
+  areas: [ 288, 291 ] }
+{ time: Fri Jul 18 2014 12:26:45 GMT+0300 (IDT),
+  pid: 1405686405719,
+  areas: [ 291 ] }
+{ time: Fri Jul 18 2014 12:46:05 GMT+0300 (IDT),
+  pid: 1405687564152,
+  areas: [ 218 ] }
+{ time: Fri Jul 18 2014 12:47:50 GMT+0300 (IDT),
+  pid: 1405687671766,
+  areas: [ 217, 247 ] }
+{ time: Fri Jul 18 2014 12:48:08 GMT+0300 (IDT),
+  pid: 1405687688954,
+  areas: [ 247 ] }
+{ time: Fri Jul 18 2014 13:46:42 GMT+0300 (IDT),
+  pid: 1405691199859,
+  areas: [ 217, 247 ] }
+{ time: Fri Jul 18 2014 13:46:58 GMT+0300 (IDT),
+  pid: 1405691216953,
+  areas: [ 247 ] }
+{ time: Fri Jul 18 2014 13:58:20 GMT+0300 (IDT),
+  pid: 1405691898548,
+  areas: [ 224 ] }
+{ time: Fri Jul 18 2014 14:14:31 GMT+0300 (IDT),
+  pid: 1405692868203,
+  areas: [ 292, 297 ] }
+{ time: Fri Jul 18 2014 14:14:44 GMT+0300 (IDT),
+  pid: 1405692884641,
+  areas: [ 292, 297, 296 ] }
+{ time: Fri Jul 18 2014 14:15:25 GMT+0300 (IDT),
+  pid: 1405692924127,
+  areas: [ 292, 297, 289, 296 ] }
+{ time: Fri Jul 18 2014 14:15:33 GMT+0300 (IDT),
+  pid: 1405692933612,
+  areas: [ 292, 297, 289, 296 ] }
+{ time: Fri Jul 18 2014 14:15:55 GMT+0300 (IDT),
+  pid: 1405692955254,
+  areas: [ 292, 289, 296 ] }
+{ time: Fri Jul 18 2014 14:16:09 GMT+0300 (IDT),
+  pid: 1405692966442,
+  areas: [ 292, 296 ] }
+{ time: Fri Jul 18 2014 14:16:13 GMT+0300 (IDT),
+  pid: 1405692972036,
+  areas: [ 292 ] }
+{ time: Fri Jul 18 2014 14:16:18 GMT+0300 (IDT),
+  pid: 1405692977505,
+  areas: [ 292, 296 ] }
+{ time: Fri Jul 18 2014 14:16:30 GMT+0300 (IDT),
+  pid: 1405692990725,
+  areas: [ 296 ] }
+{ time: Fri Jul 18 2014 14:30:18 GMT+0300 (IDT),
+  pid: 1405693818044,
+  areas: [ 219 ] }
+{ time: Fri Jul 18 2014 14:43:56 GMT+0300 (IDT),
+  pid: 1405694635958,
+  areas: [ 225, 223 ] }
+{ time: Fri Jul 18 2014 14:44:02 GMT+0300 (IDT),
+  pid: 1405694638427,
+  areas: [ 225, 223, 224 ] }
+{ time: Fri Jul 18 2014 14:44:13 GMT+0300 (IDT),
+  pid: 1405694653100,
+  areas: [ 224 ] }
+{ time: Fri Jul 18 2014 15:12:23 GMT+0300 (IDT),
+  pid: 1405696343476,
+  areas: [ 236 ] }
+{ time: Fri Jul 18 2014 15:19:35 GMT+0300 (IDT),
+  pid: 1405696772590,
+  areas: [ 231 ] }
+{ time: Fri Jul 18 2014 15:56:52 GMT+0300 (IDT),
+  pid: 1405699011071,
+  areas: [ 225, 227 ] }
+{ time: Fri Jul 18 2014 15:56:57 GMT+0300 (IDT),
+  pid: 1405699015946,
+  areas: [ 225, 227, 228 ] }
+{ time: Fri Jul 18 2014 15:57:09 GMT+0300 (IDT),
+  pid: 1405699028119,
+  areas: [ 228 ] }
+{ time: Fri Jul 18 2014 16:38:38 GMT+0300 (IDT),
+  pid: 1405701516614,
+  areas: [ 223 ] }
+{ time: Fri Jul 18 2014 16:55:08 GMT+0300 (IDT),
+  pid: 1405702506771,
+  areas: [ 254, 225, 255 ] }
+{ time: Fri Jul 18 2014 16:55:13 GMT+0300 (IDT),
+  pid: 1405702509490,
+  areas: [ 254, 225, 224, 255 ] }
+{ time: Fri Jul 18 2014 16:55:17 GMT+0300 (IDT),
+  pid: 1405702514474,
+  areas: [ 254, 225, 224, 227, 255 ] }
+{ time: Fri Jul 18 2014 16:55:24 GMT+0300 (IDT),
+  pid: 1405702523897,
+  areas: [ 254, 224, 227, 255 ] }
+{ time: Fri Jul 18 2014 16:55:27 GMT+0300 (IDT),
+  pid: 1405702526741,
+  areas: [ 254, 227, 255 ] }
+{ time: Fri Jul 18 2014 16:55:33 GMT+0300 (IDT),
+  pid: 1405702531944,
+  areas: [ 254, 255 ] }
+{ time: Fri Jul 18 2014 17:16:11 GMT+0300 (IDT),
+  pid: 1405703770240,
+  areas: [ 254 ] }
+{ time: Fri Jul 18 2014 17:16:17 GMT+0300 (IDT),
+  pid: 1405703775599,
+  areas: [ 254, 216, 225 ] }
+{ time: Fri Jul 18 2014 17:16:33 GMT+0300 (IDT),
+  pid: 1405703792616,
+  areas: [ 254 ] }
+{ time: Fri Jul 18 2014 17:23:43 GMT+0300 (IDT),
+  pid: 1405704222933,
+  areas: [ 218 ] }
+{ time: Fri Jul 18 2014 17:37:58 GMT+0300 (IDT),
+  pid: 1405705076132,
+  areas: [ 218 ] }
+{ time: Fri Jul 18 2014 17:56:31 GMT+0300 (IDT),
+  pid: 1405706190360,
+  areas: [ 218 ] }
+{ time: Fri Jul 18 2014 17:56:47 GMT+0300 (IDT),
+  pid: 1405706206767,
+  areas: [ 157, 155, 160, 140, 168, 161, 143, 141, 218 ] }
+{ time: Fri Jul 18 2014 17:57:04 GMT+0300 (IDT),
+  pid: 1405706216001,
+  areas: [ 157, 155, 160, 140, 168, 161, 143, 141 ] }
+{ time: Fri Jul 18 2014 17:57:12 GMT+0300 (IDT),
+  pid: 1405706230205,
+  areas: [ 157, 155, 160, 140, 168, 161, 162, 143, 141 ] }
+{ time: Fri Jul 18 2014 17:58:14 GMT+0300 (IDT),
+  pid: 1405706293958,
+  areas: [ 162 ] }
+{ time: Fri Jul 18 2014 17:58:30 GMT+0300 (IDT),
+  pid: 1405706307318,
+  areas: [ 157, 162, 160 ] }
+{ time: Fri Jul 18 2014 17:58:38 GMT+0300 (IDT),
+  pid: 1405706317100,
+  areas: [ 157, 160 ] }
+{ time: Fri Jul 18 2014 17:59:40 GMT+0300 (IDT),
+  pid: 1405706379244,
+  areas: [ 157, 160, 223 ] }
+{ time: Fri Jul 18 2014 18:02:38 GMT+0300 (IDT),
+  pid: 1405706557628,
+  areas: [ 218 ] }
+{ time: Fri Jul 18 2014 18:04:05 GMT+0300 (IDT),
+  pid: 1405706642585,
+  areas: [ 271, 273, 272, 245 ] }
+{ time: Fri Jul 18 2014 18:04:44 GMT+0300 (IDT),
+  pid: 1405706684572,
+  areas: [ 273 ] }
+{ time: Fri Jul 18 2014 18:04:51 GMT+0300 (IDT),
+  pid: 1405706690713,
+  areas: [ 271, 273, 273, 272 ] }
+{ time: Fri Jul 18 2014 18:04:59 GMT+0300 (IDT),
+  pid: 1405706699494,
+  areas: [ 271, 273, 272 ] }
+{ time: Fri Jul 18 2014 18:05:32 GMT+0300 (IDT),
+  pid: 1405706732699,
+  areas: [ 273 ] }
+{ time: Fri Jul 18 2014 19:13:30 GMT+0300 (IDT),
+  pid: 1405710809750,
+  areas: [ 236, 238, 238 ] }
+{ time: Fri Jul 18 2014 19:13:48 GMT+0300 (IDT),
+  pid: 1405710826922,
+  areas: [ 238, 238 ] }
+{ time: Fri Jul 18 2014 19:18:10 GMT+0300 (IDT),
+  pid: 1405711087967,
+  areas: [ 230, 231 ] }
+{ time: Fri Jul 18 2014 19:24:36 GMT+0300 (IDT),
+  pid: 1405711473612,
+  areas: [ 236 ] }
+{ time: Fri Jul 18 2014 19:24:57 GMT+0300 (IDT),
+  pid: 1405711496425,
+  areas: [ 236 ] }
+{ time: Fri Jul 18 2014 20:24:44 GMT+0300 (IDT),
+  pid: 1405715081828,
+  areas: [ 217 ] }
+{ time: Fri Jul 18 2014 20:25:01 GMT+0300 (IDT),
+  pid: 1405715098438,
+  areas: [ 217, 218 ] }
+{ time: Fri Jul 18 2014 20:25:04 GMT+0300 (IDT),
+  pid: 1405715103001,
+  areas: [ 218 ] }
+{ time: Fri Jul 18 2014 20:25:07 GMT+0300 (IDT),
+  pid: 1405715105720,
+  areas: [ 218, 217 ] }
+{ time: Fri Jul 18 2014 20:25:16 GMT+0300 (IDT),
+  pid: 1405715115439,
+  areas: [ 217 ] }
+{ time: Fri Jul 18 2014 20:46:57 GMT+0300 (IDT),
+  pid: 1405716415802,
+  areas: [ 230 ] }
+{ time: Fri Jul 18 2014 21:14:01 GMT+0300 (IDT),
+  pid: 1405718040274,
+  areas: [ 162, 175, 182, 183, 179, 178 ] }
+{ time: Fri Jul 18 2014 21:14:14 GMT+0300 (IDT),
+  pid: 1405718052353,
+  areas: 
+   [ 157,
+     271,
+     162,
+     175,
+     182,
+     160,
+     161,
+     246,
+     183,
+     179,
+     178,
+     173,
+     174,
+     217,
+     247,
+     248,
+     245 ] }
+{ time: Fri Jul 18 2014 21:14:30 GMT+0300 (IDT),
+  pid: 1405718069478,
+  areas: 
+   [ 157,
+     271,
+     162,
+     175,
+     182,
+     160,
+     161,
+     246,
+     183,
+     179,
+     178,
+     173,
+     174,
+     247,
+     248,
+     245 ] }
+{ time: Fri Jul 18 2014 21:14:41 GMT+0300 (IDT),
+  pid: 1405718079729,
+  areas: [ 157, 271, 162, 175, 182, 160, 161, 183, 179, 178, 173, 174, 245 ] }
+{ time: Fri Jul 18 2014 21:14:54 GMT+0300 (IDT),
+  pid: 1405718094808,
+  areas: [ 157, 162, 175, 182, 160, 161, 183, 179, 178, 173, 174 ] }
+{ time: Fri Jul 18 2014 21:15:28 GMT+0300 (IDT),
+  pid: 1405718127716,
+  areas: [ 157, 160, 161, 173, 174 ] }
+{ time: Fri Jul 18 2014 21:15:35 GMT+0300 (IDT),
+  pid: 1405718135138,
+  areas: [ 175, 182, 179, 178, 183 ] }
+{ time: Fri Jul 18 2014 21:23:05 GMT+0300 (IDT),
+  pid: 1405718585988,
+  areas: [ 223 ] }
+{ time: Fri Jul 18 2014 21:36:17 GMT+0300 (IDT),
+  pid: 1405719374778,
+  areas: [ 230 ] }
+{ time: Fri Jul 18 2014 21:43:48 GMT+0300 (IDT),
+  pid: 1405719826847,
+  areas: [ 246, 217, 247, 250 ] }
+{ time: Fri Jul 18 2014 21:44:04 GMT+0300 (IDT),
+  pid: 1405719843941,
+  areas: [ 246, 247, 250 ] }
+{ time: Fri Jul 18 2014 22:04:29 GMT+0300 (IDT),
+  pid: 1405721068548,
+  areas: [ 230 ] }
+{ time: Fri Jul 18 2014 23:47:25 GMT+0300 (IDT),
+  pid: 1405727242503,
+  areas: [ 218, 217 ] }
+{ time: Sat Jul 19 2014 00:32:10 GMT+0300 (IDT),
+  pid: 1405729931008,
+  areas: [ 224 ] }
+{ time: Sat Jul 19 2014 02:55:59 GMT+0300 (IDT),
+  pid: 1405738558887,
+  areas: [ 271, 245 ] }
+{ time: Sat Jul 19 2014 02:56:39 GMT+0300 (IDT),
+  pid: 1405738598483,
+  areas: [ 245 ] }
+{ time: Sat Jul 19 2014 11:54:15 GMT+0300 (IDT),
+  pid: 1405770853702,
+  areas: [ 218, 217 ] }
+{ time: Sat Jul 19 2014 11:54:17 GMT+0300 (IDT),
+  pid: 1405770856389,
+  areas: [ 218, 217, 247 ] }
+{ time: Sat Jul 19 2014 11:54:27 GMT+0300 (IDT),
+  pid: 1405770865890,
+  areas: [ 217, 247 ] }
+{ time: Sat Jul 19 2014 11:54:34 GMT+0300 (IDT),
+  pid: 1405770870828,
+  areas: [ 247 ] }
+{ time: Sat Jul 19 2014 11:54:42 GMT+0300 (IDT),
+  pid: 1405770880297,
+  areas: [ 247, 218 ] }
+{ time: Sat Jul 19 2014 11:54:45 GMT+0300 (IDT),
+  pid: 1405770884000,
+  areas: [ 218 ] }
+{ time: Sat Jul 19 2014 12:07:44 GMT+0300 (IDT),
+  pid: 1405771661979,
+  areas: [ 224 ] }
+{ time: Sat Jul 19 2014 12:11:48 GMT+0300 (IDT),
+  pid: 1405771906585,
+  areas: [ 301 ] }
+{ time: Sat Jul 19 2014 12:25:57 GMT+0300 (IDT),
+  pid: 1405772755364,
+  areas: [ 217 ] }
+{ time: Sat Jul 19 2014 12:27:08 GMT+0300 (IDT),
+  pid: 1405772827681,
+  areas: [ 217 ] }
+{ time: Sat Jul 19 2014 12:40:48 GMT+0300 (IDT),
+  pid: 1405773649222,
+  areas: [ 227 ] }
+{ time: Sat Jul 19 2014 12:47:01 GMT+0300 (IDT),
+  pid: 1405774020944,
+  areas: [ 275, 276 ] }
+{ time: Sat Jul 19 2014 12:47:24 GMT+0300 (IDT),
+  pid: 1405774042070,
+  areas: [ 275, 276, 249 ] }
+{ time: Sat Jul 19 2014 12:47:37 GMT+0300 (IDT),
+  pid: 1405774049680,
+  areas: [ 275, 276, 249, 272 ] }
+{ time: Sat Jul 19 2014 12:47:44 GMT+0300 (IDT),
+  pid: 1405774063087,
+  areas: [ 249, 272 ] }
+{ time: Sat Jul 19 2014 12:47:53 GMT+0300 (IDT),
+  pid: 1405774069525,
+  areas: [ 272 ] }
+{ time: Sat Jul 19 2014 12:55:59 GMT+0300 (IDT),
+  pid: 1405774557831,
+  areas: [ 275, 280 ] }
+{ time: Sat Jul 19 2014 12:56:08 GMT+0300 (IDT),
+  pid: 1405774566956,
+  areas: [ 275, 249, 280 ] }
+{ time: Sat Jul 19 2014 12:56:25 GMT+0300 (IDT),
+  pid: 1405774569597,
+  areas: [ 275, 281, 249, 280 ] }
+{ time: Sat Jul 19 2014 12:56:43 GMT+0300 (IDT),
+  pid: 1405774600004,
+  areas: [ 281 ] }
+{ time: Sat Jul 19 2014 12:57:01 GMT+0300 (IDT),
+  pid: 1405774621412,
+  areas: [ 281, 249, 280 ] }
+{ time: Sat Jul 19 2014 12:57:29 GMT+0300 (IDT),
+  pid: 1405774648116,
+  areas: [ 281, 280 ] }
+{ time: Sat Jul 19 2014 12:57:46 GMT+0300 (IDT),
+  pid: 1405774665758,
+  areas: [ 237 ] }
+{ time: Sat Jul 19 2014 12:59:31 GMT+0300 (IDT),
+  pid: 1405774769263,
+  areas: [ 233 ] }
+{ time: Sat Jul 19 2014 13:11:01 GMT+0300 (IDT),
+  pid: 1405775459250,
+  areas: [ 217 ] }
+{ time: Sat Jul 19 2014 13:43:07 GMT+0300 (IDT),
+  pid: 1405777377733,
+  areas: [ 230 ] }
+{ time: Sat Jul 19 2014 14:58:32 GMT+0300 (IDT),
+  pid: 1405781910786,
+  areas: [ 217 ] }
+{ time: Sat Jul 19 2014 15:02:04 GMT+0300 (IDT),
+  pid: 1405782122250,
+  areas: [ 231 ] }
+{ time: Sat Jul 19 2014 15:02:29 GMT+0300 (IDT),
+  pid: 1405782147861,
+  areas: [ 231, 231 ] }
+{ time: Sat Jul 19 2014 15:05:28 GMT+0300 (IDT),
+  pid: 1405782328399,
+  areas: [ 217 ] }
+{ time: Sat Jul 19 2014 15:05:52 GMT+0300 (IDT),
+  pid: 1405782351384,
+  areas: [ 217 ] }
+{ time: Sat Jul 19 2014 15:06:44 GMT+0300 (IDT),
+  pid: 1405782403152,
+  areas: [ 227 ] }
+{ time: Sat Jul 19 2014 15:17:01 GMT+0300 (IDT),
+  pid: 1405783020134,
+  areas: [ 231 ] }
+{ time: Sat Jul 19 2014 15:27:45 GMT+0300 (IDT),
+  pid: 1405783664274,
+  areas: [ 231 ] }
+{ time: Sat Jul 19 2014 15:28:38 GMT+0300 (IDT),
+  pid: 1405783711385,
+  areas: [ 231 ] }
+{ time: Sat Jul 19 2014 15:33:42 GMT+0300 (IDT),
+  pid: 1405784021681,
+  areas: [ 225 ] }
+{ time: Sat Jul 19 2014 15:37:47 GMT+0300 (IDT),
+  pid: 1405784265723,
+  areas: [ 225 ] }
+{ time: Sat Jul 19 2014 16:13:42 GMT+0300 (IDT),
+  pid: 1405786421059,
+  areas: [ 230 ] }
+{ time: Sat Jul 19 2014 16:57:30 GMT+0300 (IDT),
+  pid: 1405789050891,
+  areas: [ 254 ] }
+{ time: Sat Jul 19 2014 16:57:33 GMT+0300 (IDT),
+  pid: 1405789053297,
+  areas: [ 254, 216 ] }
+{ time: Sat Jul 19 2014 16:57:50 GMT+0300 (IDT),
+  pid: 1405789070376,
+  areas: [ 254 ] }
+{ time: Sat Jul 19 2014 18:04:53 GMT+0300 (IDT),
+  pid: 1405793092501,
+  areas: [ 246 ] }
+{ time: Sat Jul 19 2014 18:04:59 GMT+0300 (IDT),
+  pid: 1405793097423,
+  areas: [ 246, 247, 250 ] }
+{ time: Sat Jul 19 2014 18:05:22 GMT+0300 (IDT),
+  pid: 1405793119596,
+  areas: [ 247, 250 ] }
+{ time: Sat Jul 19 2014 18:12:34 GMT+0300 (IDT),
+  pid: 1405793552461,
+  areas: [ 292, 289 ] }
+{ time: Sat Jul 19 2014 18:12:37 GMT+0300 (IDT),
+  pid: 1405793554946,
+  areas: [ 292, 289, 291 ] }
+{ time: Sat Jul 19 2014 18:13:15 GMT+0300 (IDT),
+  pid: 1405793594557,
+  areas: [ 292, 291 ] }
+{ time: Sat Jul 19 2014 18:13:23 GMT+0300 (IDT),
+  pid: 1405793601948,
+  areas: [ 292, 291, 289, 289 ] }
+{ time: Sat Jul 19 2014 18:13:30 GMT+0300 (IDT),
+  pid: 1405793609636,
+  areas: [ 291, 289, 289 ] }
+{ time: Sat Jul 19 2014 18:13:33 GMT+0300 (IDT),
+  pid: 1405793612449,
+  areas: [ 289, 289 ] }
+{ time: Sat Jul 19 2014 18:13:42 GMT+0300 (IDT),
+  pid: 1405793620809,
+  areas: [ 292, 289, 289, 291 ] }
+{ time: Sat Jul 19 2014 18:14:03 GMT+0300 (IDT),
+  pid: 1405793644013,
+  areas: [ 292, 291 ] }
+{ time: Sat Jul 19 2014 18:18:42 GMT+0300 (IDT),
+  pid: 1405793920371,
+  areas: [ 218 ] }
+{ time: Sat Jul 19 2014 18:30:25 GMT+0300 (IDT),
+  pid: 1405794623235,
+  areas: [ 286, 253 ] }
+{ time: Sat Jul 19 2014 18:30:52 GMT+0300 (IDT),
+  pid: 1405794650659,
+  areas: [ 286 ] }
+{ time: Sat Jul 19 2014 18:31:06 GMT+0300 (IDT),
+  pid: 1405794664269,
+  areas: [ 286, 289 ] }
+{ time: Sat Jul 19 2014 18:31:19 GMT+0300 (IDT),
+  pid: 1405794680238,
+  areas: [ 289 ] }
+{ time: Sat Jul 19 2014 18:51:34 GMT+0300 (IDT),
+  pid: 1405795891566,
+  areas: [ 237 ] }
+{ time: Sat Jul 19 2014 18:54:21 GMT+0300 (IDT),
+  pid: 1405796061262,
+  areas: [ 267 ] }
+{ time: Sat Jul 19 2014 18:54:35 GMT+0300 (IDT),
+  pid: 1405796073919,
+  areas: [ 246, 267, 218, 217, 247, 250 ] }
+{ time: Sat Jul 19 2014 18:54:42 GMT+0300 (IDT),
+  pid: 1405796080826,
+  areas: [ 175, 182, 246, 266, 178, 183, 179, 267, 218, 217, 247, 250 ] }
+{ time: Sat Jul 19 2014 18:54:52 GMT+0300 (IDT),
+  pid: 1405796091061,
+  areas: [ 175, 182, 246, 266, 178, 183, 179, 267, 247, 250 ] }
+{ time: Sat Jul 19 2014 18:55:02 GMT+0300 (IDT),
+  pid: 1405796101014,
+  areas: [ 175, 182, 266, 178, 183, 179, 267 ] }
+{ time: Sat Jul 19 2014 18:55:20 GMT+0300 (IDT),
+  pid: 1405796118875,
+  areas: [ 175, 182, 266, 178, 183, 179 ] }
+{ time: Sat Jul 19 2014 18:55:39 GMT+0300 (IDT),
+  pid: 1405796138141,
+  areas: [ 175, 182, 178, 183, 179 ] }
+{ time: Sat Jul 19 2014 20:42:20 GMT+0300 (IDT),
+  pid: 1405802537527,
+  areas: [ 237 ] }
+{ time: Sat Jul 19 2014 20:51:50 GMT+0300 (IDT),
+  pid: 1405803108071,
+  areas: [ 291 ] }
+{ time: Sat Jul 19 2014 20:52:02 GMT+0300 (IDT),
+  pid: 1405803119774,
+  areas: [ 292, 291 ] }
+{ time: Sat Jul 19 2014 20:52:31 GMT+0300 (IDT),
+  pid: 1405803147776,
+  areas: [ 292, 286, 291 ] }
+{ time: Sat Jul 19 2014 20:52:48 GMT+0300 (IDT),
+  pid: 1405803165199,
+  areas: [ 292, 286 ] }
+{ time: Sat Jul 19 2014 20:52:59 GMT+0300 (IDT),
+  pid: 1405803176855,
+  areas: [ 286 ] }
+{ time: Sat Jul 19 2014 20:53:16 GMT+0300 (IDT),
+  pid: 1405803196200,
+  areas: [ 286, 286 ] }
+{ time: Sat Jul 19 2014 20:53:25 GMT+0300 (IDT),
+  pid: 1405803204873,
+  areas: [ 286 ] }
+{ time: Sat Jul 19 2014 20:55:17 GMT+0300 (IDT),
+  pid: 1405803316878,
+  areas: [ 281, 249, 282 ] }
+{ time: Sat Jul 19 2014 20:55:27 GMT+0300 (IDT),
+  pid: 1405803324691,
+  areas: [ 281, 249, 251, 251, 282 ] }
+{ time: Sat Jul 19 2014 20:55:45 GMT+0300 (IDT),
+  pid: 1405803343614,
+  areas: [ 281, 251, 251, 282 ] }
+{ time: Sat Jul 19 2014 20:55:54 GMT+0300 (IDT),
+  pid: 1405803351942,
+  areas: [ 281, 282 ] }
+{ time: Sat Jul 19 2014 20:55:59 GMT+0300 (IDT),
+  pid: 1405803359443,
+  areas: [ 282, 249 ] }
+{ time: Sat Jul 19 2014 20:56:15 GMT+0300 (IDT),
+  pid: 1405803373756,
+  areas: [ 249 ] }
+{ time: Sat Jul 19 2014 21:15:23 GMT+0300 (IDT),
+  pid: 1405804524015,
+  areas: [ 292 ] }
+{ time: Sat Jul 19 2014 21:15:56 GMT+0300 (IDT),
+  pid: 1405804556220,
+  areas: [ 292, 289 ] }
+{ time: Sat Jul 19 2014 21:16:20 GMT+0300 (IDT),
+  pid: 1405804581081,
+  areas: [ 289 ] }
+{ time: Sat Jul 19 2014 21:22:58 GMT+0300 (IDT),
+  pid: 1405804976522,
+  areas: [ 224 ] }
+{ time: Sat Jul 19 2014 21:24:37 GMT+0300 (IDT),
+  pid: 1405805074589,
+  areas: [ 224 ] }
+{ time: Sat Jul 19 2014 21:25:25 GMT+0300 (IDT),
+  pid: 1405805125060,
+  areas: [ 224 ] }
+{ time: Sat Jul 19 2014 21:30:44 GMT+0300 (IDT),
+  pid: 1405805441826,
+  areas: [ 221 ] }
+{ time: Sat Jul 19 2014 21:31:16 GMT+0300 (IDT),
+  pid: 1405805473968,
+  areas: [ 223 ] }
+{ time: Sat Jul 19 2014 21:48:34 GMT+0300 (IDT),
+  pid: 1405806512143,
+  areas: [ 231 ] }
+{ time: Sat Jul 19 2014 22:01:19 GMT+0300 (IDT),
+  pid: 1405807277899,
+  areas: [ 224 ] }
+{ time: Sat Jul 19 2014 22:01:26 GMT+0300 (IDT),
+  pid: 1405807285962,
+  areas: [ 224, 223 ] }
+{ time: Sat Jul 19 2014 22:01:38 GMT+0300 (IDT),
+  pid: 1405807296009,
+  areas: [ 223 ] }
+{ time: Sat Jul 19 2014 22:19:22 GMT+0300 (IDT),
+  pid: 1405808361389,
+  areas: [ 238, 238 ] }
+{ time: Sat Jul 19 2014 22:19:41 GMT+0300 (IDT),
+  pid: 1405808378765,
+  areas: [ 238, 238, 236 ] }
+{ time: Sat Jul 19 2014 22:19:49 GMT+0300 (IDT),
+  pid: 1405808388421,
+  areas: [ 236 ] }
+{ time: Sat Jul 19 2014 23:15:28 GMT+0300 (IDT),
+  pid: 1405811729051,
+  areas: [ 218 ] }
+{ time: Sun Jul 20 2014 00:09:34 GMT+0300 (IDT),
+  pid: 1405814973178,
+  areas: [ 225, 223 ] }
+{ time: Sun Jul 20 2014 00:56:23 GMT+0300 (IDT),
+  pid: 1405817784005,
+  areas: [ 218 ] }
+{ time: Sun Jul 20 2014 02:22:11 GMT+0300 (IDT),
+  pid: 1405822931601,
+  areas: [ 224 ] }
+{ time: Sun Jul 20 2014 02:22:18 GMT+0300 (IDT),
+  pid: 1405822939195,
+  areas: [ 224, 223 ] }
+{ time: Sun Jul 20 2014 02:22:30 GMT+0300 (IDT),
+  pid: 1405822948790,
+  areas: [ 223 ] }
+{ time: Sun Jul 20 2014 02:34:56 GMT+0300 (IDT),
+  pid: 1405823694483,
+  areas: [ 218 ] }
+{ time: Sun Jul 20 2014 02:47:04 GMT+0300 (IDT),
+  pid: 1405824421831,
+  areas: [ 218 ] }
+{ time: Sun Jul 20 2014 03:15:48 GMT+0300 (IDT),
+  pid: 1405826146369,
+  areas: [ 224 ] }
+{ time: Sun Jul 20 2014 05:17:09 GMT+0300 (IDT),
+  pid: 1405833429698,
+  areas: [ 225, 224, 227 ] }
+{ time: Sun Jul 20 2014 05:17:24 GMT+0300 (IDT),
+  pid: 1405833444339,
+  areas: [ 227 ] }
+{ time: Sun Jul 20 2014 06:12:23 GMT+0300 (IDT),
+  pid: 1405836743970,
+  areas: [ 223 ] }
+{ time: Sun Jul 20 2014 06:50:58 GMT+0300 (IDT),
+  pid: 1405839057099,
+  areas: [ 224 ] }
+{ time: Sun Jul 20 2014 07:16:24 GMT+0300 (IDT),
+  pid: 1405840580700,
+  areas: [ 224 ] }
+{ time: Sun Jul 20 2014 07:32:40 GMT+0300 (IDT),
+  pid: 1405841560299,
+  areas: [ 224 ] }
+{ time: Sun Jul 20 2014 07:40:56 GMT+0300 (IDT),
+  pid: 1405842052010,
+  areas: [ 224 ] }
+{ time: Sun Jul 20 2014 07:41:10 GMT+0300 (IDT),
+  pid: 1405842070823,
+  areas: [ 288, 289 ] }
+{ time: Sun Jul 20 2014 07:52:01 GMT+0300 (IDT),
+  pid: 1405842720152,
+  areas: [ 224 ] }
+{ time: Sun Jul 20 2014 08:20:04 GMT+0300 (IDT),
+  pid: 1405844389920,
+  areas: [ 224 ] }
+{ time: Sun Jul 20 2014 08:51:08 GMT+0300 (IDT),
+  pid: 1405846266339,
+  areas: [ 291, 291 ] }
+{ time: Sun Jul 20 2014 08:51:35 GMT+0300 (IDT),
+  pid: 1405846278058,
+  areas: [ 292, 291, 291 ] }
+{ time: Sun Jul 20 2014 08:52:08 GMT+0300 (IDT),
+  pid: 1405846323436,
+  areas: [ 292 ] }
+{ time: Sun Jul 20 2014 08:59:18 GMT+0300 (IDT),
+  pid: 1405846755910,
+  areas: [ 246, 247, 248, 245 ] }
+{ time: Sun Jul 20 2014 08:59:24 GMT+0300 (IDT),
+  pid: 1405846764020,
+  areas: [ 248, 245 ] }
+{ time: Sun Jul 20 2014 08:59:47 GMT+0300 (IDT),
+  pid: 1405846782771,
+  areas: [ 245 ] }
+{ time: Sun Jul 20 2014 08:59:58 GMT+0300 (IDT),
+  pid: 1405846795928,
+  areas: [ 155, 140 ] }
+{ time: Sun Jul 20 2014 09:12:47 GMT+0300 (IDT),
+  pid: 1405847566840,
+  areas: [ 218 ] }
+{ time: Sun Jul 20 2014 09:16:42 GMT+0300 (IDT),
+  pid: 1405847790897,
+  areas: [ 292, 289 ] }
+{ time: Sun Jul 20 2014 09:17:20 GMT+0300 (IDT),
+  pid: 1405847832977,
+  areas: [ 292 ] }
+{ time: Sun Jul 20 2014 09:19:37 GMT+0300 (IDT),
+  pid: 1405847975297,
+  areas: [ 246, 247, 245 ] }
+{ time: Sun Jul 20 2014 09:20:04 GMT+0300 (IDT),
+  pid: 1405848002439,
+  areas: [ 245 ] }
+{ time: Sun Jul 20 2014 09:34:09 GMT+0300 (IDT),
+  pid: 1405848844465,
+  areas: [ 218 ] }
+{ time: Sun Jul 20 2014 10:24:22 GMT+0300 (IDT),
+  pid: 1405851861410,
+  areas: [ 224 ] }
+{ time: Sun Jul 20 2014 10:24:47 GMT+0300 (IDT),
+  pid: 1405851886411,
+  areas: [ 224 ] }
+{ time: Sun Jul 20 2014 10:25:33 GMT+0300 (IDT),
+  pid: 1405851930398,
+  areas: [ 224 ] }
+{ time: Sun Jul 20 2014 10:25:56 GMT+0300 (IDT),
+  pid: 1405851956197,
+  areas: [ 224 ] }
+{ time: Sun Jul 20 2014 10:26:52 GMT+0300 (IDT),
+  pid: 1405852011918,
+  areas: [ 217, 247 ] }
+{ time: Sun Jul 20 2014 10:26:58 GMT+0300 (IDT),
+  pid: 1405852016918,
+  areas: [ 217, 218, 247 ] }
+{ time: Sun Jul 20 2014 10:27:09 GMT+0300 (IDT),
+  pid: 1405852028950,
+  areas: [ 218, 247 ] }
+{ time: Sun Jul 20 2014 10:27:15 GMT+0300 (IDT),
+  pid: 1405852034200,
+  areas: [ 247 ] }
+{ time: Sun Jul 20 2014 12:26:21 GMT+0300 (IDT),
+  pid: 1405859180027,
+  areas: [ 224 ] }
+{ time: Sun Jul 20 2014 12:41:02 GMT+0300 (IDT),
+  pid: 1405860061354,
+  areas: [ 231 ] }
+{ time: Sun Jul 20 2014 13:12:34 GMT+0300 (IDT),
+  pid: 1405861954074,
+  areas: [ 218 ] }
+{ time: Sun Jul 20 2014 13:14:01 GMT+0300 (IDT),
+  pid: 1405862041062,
+  areas: [ 224 ] }
+{ time: Sun Jul 20 2014 14:19:51 GMT+0300 (IDT),
+  pid: 1405865989582,
+  areas: [ 236, 238, 238 ] }
+{ time: Sun Jul 20 2014 14:20:08 GMT+0300 (IDT),
+  pid: 1405866006630,
+  areas: [ 238, 238 ] }
+{ time: Sun Jul 20 2014 15:14:00 GMT+0300 (IDT),
+  pid: 1405869238268,
+  areas: [ 230, 231 ] }
+{ time: Sun Jul 20 2014 16:54:50 GMT+0300 (IDT),
+  pid: 1405875289255,
+  areas: [ 217, 247 ] }
+{ time: Sun Jul 20 2014 16:55:02 GMT+0300 (IDT),
+  pid: 1405875302896,
+  areas: [ 246, 217, 247, 250 ] }
+{ time: Sun Jul 20 2014 16:55:13 GMT+0300 (IDT),
+  pid: 1405875311022,
+  areas: [ 246, 247, 250 ] }
+{ time: Sun Jul 20 2014 16:55:18 GMT+0300 (IDT),
+  pid: 1405875316334,
+  areas: [ 246, 250 ] }
+{ time: Sun Jul 20 2014 16:59:44 GMT+0300 (IDT),
+  pid: 1405875582191,
+  areas: [ 297 ] }
+{ time: Sun Jul 20 2014 16:59:48 GMT+0300 (IDT),
+  pid: 1405875586988,
+  areas: [ 292, 297 ] }
+{ time: Sun Jul 20 2014 16:59:53 GMT+0300 (IDT),
+  pid: 1405875591754,
+  areas: [ 292, 297, 296 ] }
+{ time: Sun Jul 20 2014 17:00:33 GMT+0300 (IDT),
+  pid: 1405875631974,
+  areas: [ 292, 254, 297, 296 ] }
+{ time: Sun Jul 20 2014 17:00:44 GMT+0300 (IDT),
+  pid: 1405875637397,
+  areas: [ 292, 254, 225, 224, 216, 297, 296 ] }
+{ time: Sun Jul 20 2014 17:00:48 GMT+0300 (IDT),
+  pid: 1405875644006,
+  areas: [ 254, 225, 224, 216, 297, 296 ] }
+{ time: Sun Jul 20 2014 17:00:53 GMT+0300 (IDT),
+  pid: 1405875651507,
+  areas: [ 254, 225, 224, 216, 297, 296, 255 ] }
+{ time: Sun Jul 20 2014 17:00:57 GMT+0300 (IDT),
+  pid: 1405875654319,
+  areas: [ 292, 254, 216, 297, 296, 255 ] }
+{ time: Sun Jul 20 2014 17:01:00 GMT+0300 (IDT),
+  pid: 1405875659382,
+  areas: [ 292, 297, 225, 216, 296, 255 ] }
+{ time: Sun Jul 20 2014 17:01:10 GMT+0300 (IDT),
+  pid: 1405875669258,
+  areas: [ 292, 225, 216, 296, 255 ] }
+{ time: Sun Jul 20 2014 17:01:18 GMT+0300 (IDT),
+  pid: 1405875676320,
+  areas: [ 292, 296, 255 ] }
+{ time: Sun Jul 20 2014 17:01:21 GMT+0300 (IDT),
+  pid: 1405875679227,
+  areas: [ 292 ] }
+{ time: Sun Jul 20 2014 17:20:40 GMT+0300 (IDT),
+  pid: 1405876838391,
+  areas: [ 292, 297 ] }
+{ time: Sun Jul 20 2014 17:21:37 GMT+0300 (IDT),
+  pid: 1405876895519,
+  areas: [ 297 ] }
+{ time: Sun Jul 20 2014 17:30:50 GMT+0300 (IDT),
+  pid: 1405877448529,
+  areas: [ 234, 234 ] }
+{ time: Sun Jul 20 2014 18:09:41 GMT+0300 (IDT),
+  pid: 1405879782799,
+  areas: [ 224 ] }
+{ time: Sun Jul 20 2014 18:32:45 GMT+0300 (IDT),
+  pid: 1405881163554,
+  areas: [ 224 ] }
+{ time: Sun Jul 20 2014 18:40:04 GMT+0300 (IDT),
+  pid: 1405881604294,
+  areas: [ 217 ] }
+{ time: Sun Jul 20 2014 18:40:36 GMT+0300 (IDT),
+  pid: 1405881634952,
+  areas: [ 220 ] }
+{ time: Sun Jul 20 2014 18:41:32 GMT+0300 (IDT),
+  pid: 1405881692815,
+  areas: [ 220 ] }
+{ time: Sun Jul 20 2014 19:40:31 GMT+0300 (IDT),
+  pid: 1405885229478,
+  areas: [ 220 ] }
+{ time: Sun Jul 20 2014 19:54:50 GMT+0300 (IDT),
+  pid: 1405886088866,
+  areas: [ 217 ] }
+{ time: Sun Jul 20 2014 20:50:49 GMT+0300 (IDT),
+  pid: 1405889448554,
+  areas: [ 271 ] }
+{ time: Sun Jul 20 2014 20:51:33 GMT+0300 (IDT),
+  pid: 1405889490962,
+  areas: [ 266 ] }
+{ time: Sun Jul 20 2014 23:00:34 GMT+0300 (IDT),
+  pid: 1405897233739,
+  areas: [ 220 ] }
+{ time: Sun Jul 20 2014 23:47:00 GMT+0300 (IDT),
+  pid: 1405900018844,
+  areas: [ 220 ] }
+{ time: Mon Jul 21 2014 00:16:17 GMT+0300 (IDT),
+  pid: 1405901774617,
+  areas: [ 221 ] }
+{ time: Mon Jul 21 2014 00:30:42 GMT+0300 (IDT),
+  pid: 1405902640284,
+  areas: [ 219 ] }
+{ time: Mon Jul 21 2014 00:55:41 GMT+0300 (IDT),
+  pid: 1405904141404,
+  areas: [ 281, 249 ] }
+{ time: Mon Jul 21 2014 00:56:10 GMT+0300 (IDT),
+  pid: 1405904168420,
+  areas: [ 281 ] }
+{ time: Mon Jul 21 2014 01:00:37 GMT+0300 (IDT),
+  pid: 1405904435371,
+  areas: [ 291 ] }
+{ time: Mon Jul 21 2014 01:31:08 GMT+0300 (IDT),
+  pid: 1405906267912,
+  areas: [ 221 ] }
+{ time: Mon Jul 21 2014 02:26:31 GMT+0300 (IDT),
+  pid: 1405909591214,
+  areas: [ 220 ] }
+{ time: Mon Jul 21 2014 02:38:33 GMT+0300 (IDT),
+  pid: 1405910309264,
+  areas: [ 219 ] }
+{ time: Mon Jul 21 2014 02:38:55 GMT+0300 (IDT),
+  pid: 1405910334520,
+  areas: [ 220 ] }
+{ time: Mon Jul 21 2014 03:28:36 GMT+0300 (IDT),
+  pid: 1405913316456,
+  areas: [ 218, 219 ] }
+{ time: Mon Jul 21 2014 03:38:15 GMT+0300 (IDT),
+  pid: 1405913895062,
+  areas: [ 220 ] }
+{ time: Mon Jul 21 2014 07:19:40 GMT+0300 (IDT),
+  pid: 1405927063639,
+  areas: [ 218, 219 ] }
+{ time: Mon Jul 21 2014 07:22:36 GMT+0300 (IDT),
+  pid: 1405927356904,
+  areas: [ 220 ] }
+{ time: Mon Jul 21 2014 07:51:18 GMT+0300 (IDT),
+  pid: 1405929059552,
+  areas: [ 230 ] }
+{ time: Mon Jul 21 2014 09:06:28 GMT+0300 (IDT),
+  pid: 1405933585732,
+  areas: [ 218 ] }
+{ time: Mon Jul 21 2014 09:06:34 GMT+0300 (IDT),
+  pid: 1405933593373,
+  areas: [ 218, 219 ] }
+{ time: Mon Jul 21 2014 09:33:43 GMT+0300 (IDT),
+  pid: 1405935223377,
+  areas: [ 230 ] }
+{ time: Mon Jul 21 2014 09:36:13 GMT+0300 (IDT),
+  pid: 1405935371369,
+  areas: [ 220 ] }
+{ time: Mon Jul 21 2014 09:36:39 GMT+0300 (IDT),
+  pid: 1405935399823,
+  areas: [ 220 ] }
+{ time: Mon Jul 21 2014 09:37:03 GMT+0300 (IDT),
+  pid: 1405935421559,
+  areas: [ 220 ] }
+{ time: Mon Jul 21 2014 09:37:17 GMT+0300 (IDT),
+  pid: 1405935435294,
+  areas: [ 220, 221 ] }
+{ time: Mon Jul 21 2014 09:37:21 GMT+0300 (IDT),
+  pid: 1405935441013,
+  areas: [ 221 ] }
+{ time: Mon Jul 21 2014 09:37:24 GMT+0300 (IDT),
+  pid: 1405935442623,
+  areas: [ 220, 221 ] }
+{ time: Mon Jul 21 2014 09:37:36 GMT+0300 (IDT),
+  pid: 1405935452467,
+  areas: [ 220 ] }
+{ time: Mon Jul 21 2014 09:42:54 GMT+0300 (IDT),
+  pid: 1405935772749,
+  areas: [ 220 ] }
+{ time: Mon Jul 21 2014 11:07:20 GMT+0300 (IDT),
+  pid: 1405940825392,
+  areas: [ 224 ] }
+{ time: Mon Jul 21 2014 11:33:11 GMT+0300 (IDT),
+  pid: 1405942389292,
+  areas: [ 275, 278 ] }
+{ time: Mon Jul 21 2014 11:33:20 GMT+0300 (IDT),
+  pid: 1405942398698,
+  areas: [ 271, 275, 273, 267, 278 ] }
+{ time: Mon Jul 21 2014 11:33:39 GMT+0300 (IDT),
+  pid: 1405942417480,
+  areas: [ 271, 275, 246, 273, 267, 278, 247 ] }
+{ time: Mon Jul 21 2014 11:33:43 GMT+0300 (IDT),
+  pid: 1405942419949,
+  areas: [ 271, 275, 246, 268, 273, 267, 278, 247 ] }
+{ time: Mon Jul 21 2014 11:33:49 GMT+0300 (IDT),
+  pid: 1405942429387,
+  areas: [ 271, 275, 246, 268, 266, 273, 267, 278, 247, 272, 245 ] }
+{ time: Mon Jul 21 2014 11:33:58 GMT+0300 (IDT),
+  pid: 1405942436637,
+  areas: [ 271, 246, 268, 275, 266, 273, 267, 278, 247, 248, 272, 245, 280 ] }
+{ time: Mon Jul 21 2014 11:34:06 GMT+0300 (IDT),
+  pid: 1405942446997,
+  areas: [ 271, 268, 275, 266, 273, 267, 248, 272, 245, 280 ] }
+{ time: Mon Jul 21 2014 11:34:13 GMT+0300 (IDT),
+  pid: 1405942449622,
+  areas: [ 271, 271, 268, 275, 266, 273, 267, 273, 248, 272, 245, 280 ] }
+{ time: Mon Jul 21 2014 11:34:21 GMT+0300 (IDT),
+  pid: 1405942459279,
+  areas: [ 271, 271, 268, 275, 266, 246, 273, 248, 272, 245, 280, 247 ] }
+{ time: Mon Jul 21 2014 11:34:27 GMT+0300 (IDT),
+  pid: 1405942464670,
+  areas: [ 271, 271, 268, 275, 266, 246, 273, 267, 272, 245, 280, 247 ] }
+{ time: Mon Jul 21 2014 11:34:37 GMT+0300 (IDT),
+  pid: 1405942477311,
+  areas: [ 271, 271, 275, 266, 246, 273, 267, 280, 247, 276 ] }
+{ time: Mon Jul 21 2014 11:34:44 GMT+0300 (IDT),
+  pid: 1405942481858,
+  areas: [ 271, 271, 266, 246, 273, 267, 247, 248, 276, 272, 245 ] }
+{ time: Mon Jul 21 2014 11:34:51 GMT+0300 (IDT),
+  pid: 1405942490015,
+  areas: [ 271, 273, 267, 248, 276, 272, 245 ] }
+{ time: Mon Jul 21 2014 11:34:55 GMT+0300 (IDT),
+  pid: 1405942491780,
+  areas: [ 273, 267, 248, 276, 272, 245 ] }
+{ time: Mon Jul 21 2014 11:35:00 GMT+0300 (IDT),
+  pid: 1405942499749,
+  areas: [ 271, 275, 273, 267, 248, 276, 272, 249, 245 ] }
+{ time: Mon Jul 21 2014 11:35:07 GMT+0300 (IDT),
+  pid: 1405942507000,
+  areas: [ 271, 275, 267, 248, 276, 272, 249, 245 ] }
+{ time: Mon Jul 21 2014 11:35:11 GMT+0300 (IDT),
+  pid: 1405942509094,
+  areas: [ 271, 275, 267, 276, 272, 249, 245 ] }
+{ time: Mon Jul 21 2014 11:35:30 GMT+0300 (IDT),
+  pid: 1405942524329,
+  areas: [ 271, 275 ] }
+{ time: Mon Jul 21 2014 11:39:37 GMT+0300 (IDT),
+  pid: 1405942775371,
+  areas: [ 278 ] }
+{ time: Mon Jul 21 2014 11:40:03 GMT+0300 (IDT),
+  pid: 1405942799373,
+  areas: [ 188, 188, 278 ] }
+{ time: Mon Jul 21 2014 11:40:30 GMT+0300 (IDT),
+  pid: 1405942822983,
+  areas: [ 157, 175, 162, 160, 161, 188, 188, 178, 179, 174, 173, 278 ] }
+{ time: Mon Jul 21 2014 11:40:39 GMT+0300 (IDT),
+  pid: 1405942832452,
+  areas: [ 157, 175, 162, 160, 161, 188, 188, 178, 179, 174, 173 ] }
+{ time: Mon Jul 21 2014 11:40:56 GMT+0300 (IDT),
+  pid: 1405942854610,
+  areas: [ 157, 175, 162, 160, 161, 182, 188, 188, 178, 179, 266, 183, 174, 173 ] }
+{ time: Mon Jul 21 2014 11:41:07 GMT+0300 (IDT),
+  pid: 1405942861797,
+  areas: 
+   [ 157,
+     175,
+     162,
+     160,
+     161,
+     182,
+     188,
+     188,
+     178,
+     179,
+     266,
+     183,
+     174,
+     173,
+     217,
+     247 ] }
+{ time: Mon Jul 21 2014 11:41:19 GMT+0300 (IDT),
+  pid: 1405942878830,
+  areas: [ 157, 175, 162, 160, 161, 182, 188, 188, 178, 179, 266, 183, 174, 173, 247 ] }
+{ time: Mon Jul 21 2014 11:41:29 GMT+0300 (IDT),
+  pid: 1405942886658,
+  areas: [ 157, 175, 162, 160, 161, 182, 178, 179, 266, 183, 174, 173, 247 ] }
+{ time: Mon Jul 21 2014 11:41:40 GMT+0300 (IDT),
+  pid: 1405942895784,
+  areas: [ 157, 162, 160, 161, 182, 178, 179, 266, 183, 174, 173, 217 ] }
+{ time: Mon Jul 21 2014 11:41:47 GMT+0300 (IDT),
+  pid: 1405942905222,
+  areas: [ 157, 162, 160, 161, 182, 178, 179, 266, 183, 174, 173 ] }
+{ time: Mon Jul 21 2014 11:41:54 GMT+0300 (IDT),
+  pid: 1405942911988,
+  areas: [ 182, 183 ] }
+{ time: Mon Jul 21 2014 12:50:10 GMT+0300 (IDT),
+  pid: 1405947002487,
+  areas: [ 223 ] }
+{ time: Mon Jul 21 2014 12:59:14 GMT+0300 (IDT),
+  pid: 1405947545558,
+  areas: [ 217 ] }
+{ time: Mon Jul 21 2014 13:09:22 GMT+0300 (IDT),
+  pid: 1405948159462,
+  areas: [ 271, 272, 245 ] }
+{ time: Mon Jul 21 2014 13:17:36 GMT+0300 (IDT),
+  pid: 1405948651485,
+  areas: [ 246, 217, 218, 247, 250 ] }
+{ time: Mon Jul 21 2014 13:17:45 GMT+0300 (IDT),
+  pid: 1405948663485,
+  areas: [ 246, 218, 247, 250 ] }
+{ time: Mon Jul 21 2014 13:17:55 GMT+0300 (IDT),
+  pid: 1405948673955,
+  areas: [ 246 ] }
+{ time: Mon Jul 21 2014 13:18:05 GMT+0300 (IDT),
+  pid: 1405948685783,
+  areas: [ 246, 247 ] }
+{ time: Mon Jul 21 2014 13:25:49 GMT+0300 (IDT),
+  pid: 1405949148415,
+  areas: [ 224 ] }
+{ time: Mon Jul 21 2014 13:26:21 GMT+0300 (IDT),
+  pid: 1405949179635,
+  areas: [ 224 ] }
+{ time: Mon Jul 21 2014 13:34:26 GMT+0300 (IDT),
+  pid: 1405949665549,
+  areas: [ 224 ] }
+{ time: Mon Jul 21 2014 13:45:26 GMT+0300 (IDT),
+  pid: 1405950322268,
+  areas: [ 237 ] }
+{ time: Mon Jul 21 2014 13:50:20 GMT+0300 (IDT),
+  pid: 1405950615142,
+  areas: [ 237 ] }
+{ time: Mon Jul 21 2014 14:05:17 GMT+0300 (IDT),
+  pid: 1405951515735,
+  areas: [ 246, 217, 247 ] }
+{ time: Mon Jul 21 2014 14:09:11 GMT+0300 (IDT),
+  pid: 1405951745949,
+  areas: [ 223 ] }
+{ time: Mon Jul 21 2014 15:16:44 GMT+0300 (IDT),
+  pid: 1405955803300,
+  areas: [ 224 ] }
+{ time: Mon Jul 21 2014 16:59:41 GMT+0300 (IDT),
+  pid: 1405961978922,
+  areas: [ 217 ] }
+{ time: Mon Jul 21 2014 16:59:46 GMT+0300 (IDT),
+  pid: 1405961981437,
+  areas: [ 246, 217, 247, 250 ] }
+{ time: Mon Jul 21 2014 16:59:55 GMT+0300 (IDT),
+  pid: 1405961996141,
+  areas: [ 246, 247, 250 ] }
+{ time: Mon Jul 21 2014 17:08:35 GMT+0300 (IDT),
+  pid: 1405962503527,
+  areas: [ 268, 273, 278 ] }
+{ time: Mon Jul 21 2014 17:08:51 GMT+0300 (IDT),
+  pid: 1405962530138,
+  areas: [ 268, 275, 273, 267, 278 ] }
+{ time: Mon Jul 21 2014 17:09:13 GMT+0300 (IDT),
+  pid: 1405962553249,
+  areas: [ 275, 267, 278 ] }
+{ time: Mon Jul 21 2014 17:09:37 GMT+0300 (IDT),
+  pid: 1405962572531,
+  areas: [ 267 ] }
+{ time: Mon Jul 21 2014 17:42:42 GMT+0300 (IDT),
+  pid: 1405964558947,
+  areas: [ 217, 247 ] }
+{ time: Mon Jul 21 2014 17:43:14 GMT+0300 (IDT),
+  pid: 1405964586104,
+  areas: [ 246 ] }
+{ time: Mon Jul 21 2014 17:43:21 GMT+0300 (IDT),
+  pid: 1405964600558,
+  areas: [ 217, 247 ] }
+{ time: Mon Jul 21 2014 17:43:31 GMT+0300 (IDT),
+  pid: 1405964609949,
+  areas: [ 246, 217, 247 ] }
+{ time: Mon Jul 21 2014 17:43:39 GMT+0300 (IDT),
+  pid: 1405964617278,
+  areas: [ 246, 247 ] }
+{ time: Mon Jul 21 2014 17:43:48 GMT+0300 (IDT),
+  pid: 1405964627591,
+  areas: [ 246 ] }
+{ time: Mon Jul 21 2014 17:55:13 GMT+0300 (IDT),
+  pid: 1405965311531,
+  areas: [ 238, 238 ] }
+{ time: Mon Jul 21 2014 18:24:24 GMT+0300 (IDT),
+  pid: 1405967062398,
+  areas: [ 217 ] }
+{ time: Mon Jul 21 2014 18:37:08 GMT+0300 (IDT),
+  pid: 1405967814782,
+  areas: [ 217 ] }
+{ time: Mon Jul 21 2014 18:39:25 GMT+0300 (IDT),
+  pid: 1405967962863,
+  areas: [ 237 ] }
+{ time: Mon Jul 21 2014 18:47:20 GMT+0300 (IDT),
+  pid: 1405968437494,
+  areas: [ 224 ] }
+{ time: Mon Jul 21 2014 18:49:16 GMT+0300 (IDT),
+  pid: 1405968541280,
+  areas: [ 182, 183 ] }
+{ time: Mon Jul 21 2014 18:49:33 GMT+0300 (IDT),
+  pid: 1405968572157,
+  areas: [ 182, 183, 178, 179 ] }
+{ time: Mon Jul 21 2014 18:49:42 GMT+0300 (IDT),
+  pid: 1405968579657,
+  areas: [ 182, 175, 183, 178, 179, 173, 174 ] }
+{ time: Mon Jul 21 2014 18:50:21 GMT+0300 (IDT),
+  pid: 1405968619503,
+  areas: [ 182, 175, 183, 178, 179, 173, 174, 267 ] }
+{ time: Mon Jul 21 2014 18:50:33 GMT+0300 (IDT),
+  pid: 1405968628378,
+  areas: [ 175, 178, 179, 173, 174, 267 ] }
+{ time: Mon Jul 21 2014 18:50:47 GMT+0300 (IDT),
+  pid: 1405968646098,
+  areas: [ 175, 182, 178, 179, 183, 173, 174, 267 ] }
+{ time: Mon Jul 21 2014 18:50:56 GMT+0300 (IDT),
+  pid: 1405968653411,
+  areas: [ 175, 271, 182, 178, 179, 183, 173, 174, 267 ] }
+{ time: Mon Jul 21 2014 18:51:04 GMT+0300 (IDT),
+  pid: 1405968659239,
+  areas: [ 175, 271, 182, 183, 173, 174, 267 ] }
+{ time: Mon Jul 21 2014 18:51:12 GMT+0300 (IDT),
+  pid: 1405968667068,
+  areas: [ 271, 182, 183, 267 ] }
+{ time: Mon Jul 21 2014 18:51:20 GMT+0300 (IDT),
+  pid: 1405968676959,
+  areas: [ 271, 182, 183 ] }
+{ time: Mon Jul 21 2014 18:51:36 GMT+0300 (IDT),
+  pid: 1405968695804,
+  areas: [ 182, 183 ] }
+{ time: Mon Jul 21 2014 18:56:16 GMT+0300 (IDT),
+  pid: 1405968962956,
+  areas: [ 224 ] }
+{ time: Mon Jul 21 2014 18:56:57 GMT+0300 (IDT),
+  pid: 1405969001365,
+  areas: [ 162, 175 ] }
+{ time: Mon Jul 21 2014 19:03:43 GMT+0300 (IDT),
+  pid: 1405969422791,
+  areas: [ 224 ] }
+{ time: Mon Jul 21 2014 19:23:44 GMT+0300 (IDT),
+  pid: 1405970621317,
+  areas: [ 221 ] }
+{ time: Mon Jul 21 2014 19:28:36 GMT+0300 (IDT),
+  pid: 1405970913550,
+  areas: [ 218 ] }
+{ time: Mon Jul 21 2014 19:50:57 GMT+0300 (IDT),
+  pid: 1405972257519,
+  areas: [ 223 ] }
+{ time: Mon Jul 21 2014 19:51:25 GMT+0300 (IDT),
+  pid: 1405972284708,
+  areas: [ 223 ] }
+{ time: Mon Jul 21 2014 20:21:27 GMT+0300 (IDT),
+  pid: 1405974086168,
+  areas: [ 223, 225 ] }
+{ time: Mon Jul 21 2014 22:21:02 GMT+0300 (IDT),
+  pid: 1405976803719,
+  areas: [] }
+{ time: Mon Jul 21 2014 22:44:24 GMT+0300 (IDT),
+  pid: 1405982663305,
+  areas: [ 292 ] }
+{ time: Mon Jul 21 2014 22:59:29 GMT+0300 (IDT),
+  pid: 1405983568694,
+  areas: [ 231 ] }
+{ time: Mon Jul 21 2014 23:04:03 GMT+0300 (IDT),
+  pid: 1405983842801,
+  areas: [ 271, 272, 248, 245 ] }
+{ time: Tue Jul 22 2014 02:58:11 GMT+0300 (IDT),
+  pid: 1405997873745,
+  areas: [ 292, 289, 291 ] }
+{ time: Tue Jul 22 2014 02:58:33 GMT+0300 (IDT),
+  pid: 1405997913012,
+  areas: [ 292, 291 ] }
+{ time: Tue Jul 22 2014 02:58:47 GMT+0300 (IDT),
+  pid: 1405997928263,
+  areas: [ 291 ] }
+{ time: Tue Jul 22 2014 06:00:21 GMT+0300 (IDT),
+  pid: 1406008820476,
+  areas: [ 224 ] }
+{ time: Tue Jul 22 2014 06:08:07 GMT+0300 (IDT),
+  pid: 1406009286859,
+  areas: [ 230 ] }
+{ time: Tue Jul 22 2014 09:11:00 GMT+0300 (IDT),
+  pid: 1406020259178,
+  areas: [ 271, 272, 245 ] }
+{ time: Tue Jul 22 2014 09:11:56 GMT+0300 (IDT),
+  pid: 1406020316587,
+  areas: [ 271 ] }
+{ time: Tue Jul 22 2014 09:34:27 GMT+0300 (IDT),
+  pid: 1406021665088,
+  areas: [ 230 ] }
+{ time: Tue Jul 22 2014 09:54:43 GMT+0300 (IDT),
+  pid: 1406022883270,
+  areas: [ 230 ] }
+{ time: Tue Jul 22 2014 10:01:22 GMT+0300 (IDT),
+  pid: 1406023282101,
+  areas: [ 175, 160, 168, 161, 178, 169, 179, 170, 173, 174 ] }
+{ time: Tue Jul 22 2014 10:01:50 GMT+0300 (IDT),
+  pid: 1406023308274,
+  areas: [ 157, 175, 160, 168, 161, 178, 169, 179, 170, 173, 174 ] }
+{ time: Tue Jul 22 2014 10:02:51 GMT+0300 (IDT),
+  pid: 1406023369261,
+  areas: [ 157 ] }
+{ time: Tue Jul 22 2014 10:02:57 GMT+0300 (IDT),
+  pid: 1406023377605,
+  areas: [ 157, 160 ] }
+{ time: Tue Jul 22 2014 10:03:15 GMT+0300 (IDT),
+  pid: 1406023395387,
+  areas: [ 160 ] }
+{ time: Tue Jul 22 2014 11:05:43 GMT+0300 (IDT),
+  pid: 1406027140595,
+  areas: [ 271, 246, 245 ] }
+{ time: Tue Jul 22 2014 11:06:08 GMT+0300 (IDT),
+  pid: 1406027167722,
+  areas: [ 271, 245 ] }
+{ time: Tue Jul 22 2014 12:27:18 GMT+0300 (IDT),
+  pid: 1406032037195,
+  areas: [ 302 ] }
+{ time: Tue Jul 22 2014 12:28:19 GMT+0300 (IDT),
+  pid: 1406032099778,
+  areas: [ 302, 302 ] }
+{ time: Tue Jul 22 2014 12:28:46 GMT+0300 (IDT),
+  pid: 1406032124547,
+  areas: [ 302 ] }
+{ time: Tue Jul 22 2014 12:29:22 GMT+0300 (IDT),
+  pid: 1406032162534,
+  areas: [ 302, 302 ] }
+{ time: Tue Jul 22 2014 12:29:46 GMT+0300 (IDT),
+  pid: 1406032186909,
+  areas: [ 302 ] }
+{ time: Tue Jul 22 2014 13:51:28 GMT+0300 (IDT),
+  pid: 1406037088942,
+  areas: [ 224 ] }
+{ time: Tue Jul 22 2014 13:59:46 GMT+0300 (IDT),
+  pid: 1406037584702,
+  areas: [ 217 ] }
+{ time: Tue Jul 22 2014 14:31:00 GMT+0300 (IDT),
+  pid: 1406039460034,
+  areas: [ 291 ] }
+{ time: Tue Jul 22 2014 14:31:03 GMT+0300 (IDT),
+  pid: 1406039462362,
+  areas: [ 292, 291 ] }
+{ time: Tue Jul 22 2014 14:31:57 GMT+0300 (IDT),
+  pid: 1406039517193,
+  areas: [ 292 ] }
+{ time: Tue Jul 22 2014 15:29:39 GMT+0300 (IDT),
+  pid: 1406042979027,
+  areas: [ 217 ] }
+{ time: Tue Jul 22 2014 15:39:18 GMT+0300 (IDT),
+  pid: 1406043559153,
+  areas: [ 217 ] }
+{ time: Tue Jul 22 2014 15:41:45 GMT+0300 (IDT),
+  pid: 1406043704866,
+  areas: [ 218, 217 ] }
+{ time: Tue Jul 22 2014 15:59:10 GMT+0300 (IDT),
+  pid: 1406044749381,
+  areas: [ 292, 291, 297 ] }
+{ time: Tue Jul 22 2014 15:59:21 GMT+0300 (IDT),
+  pid: 1406044760632,
+  areas: [ 292, 291, 297 ] }
+{ time: Tue Jul 22 2014 15:59:25 GMT+0300 (IDT),
+  pid: 1406044765210,
+  areas: [ 292, 291, 297 ] }
+{ time: Tue Jul 22 2014 16:00:06 GMT+0300 (IDT),
+  pid: 1406044806415,
+  areas: [ 297 ] }
+{ time: Tue Jul 22 2014 16:00:21 GMT+0300 (IDT),
+  pid: 1406044817399,
+  areas: [ 297, 289, 291 ] }
+{ time: Tue Jul 22 2014 16:00:24 GMT+0300 (IDT),
+  pid: 1406044824009,
+  areas: [ 297, 289, 291 ] }
+{ time: Tue Jul 22 2014 16:00:28 GMT+0300 (IDT),
+  pid: 1406044827447,
+  areas: [ 286, 297, 289, 291, 296 ] }
+{ time: Tue Jul 22 2014 16:00:39 GMT+0300 (IDT),
+  pid: 1406044836510,
+  areas: [ 286, 289, 291, 296 ] }
+{ time: Tue Jul 22 2014 16:00:58 GMT+0300 (IDT),
+  pid: 1406044857058,
+  areas: [ 286, 289, 291, 296 ] }
+{ time: Tue Jul 22 2014 16:01:03 GMT+0300 (IDT),
+  pid: 1406044859542,
+  areas: [ 286, 291, 296 ] }
+{ time: Tue Jul 22 2014 16:01:16 GMT+0300 (IDT),
+  pid: 1406044874324,
+  areas: [ 286, 289, 296 ] }
+{ time: Tue Jul 22 2014 16:01:25 GMT+0300 (IDT),
+  pid: 1406044884293,
+  areas: [ 289, 296 ] }
+{ time: Tue Jul 22 2014 16:01:43 GMT+0300 (IDT),
+  pid: 1406044904107,
+  areas: [ 296 ] }
+{ time: Tue Jul 22 2014 16:01:59 GMT+0300 (IDT),
+  pid: 1406044914373,
+  areas: [ 296 ] }
+{ time: Tue Jul 22 2014 16:21:17 GMT+0300 (IDT),
+  pid: 1406046078181,
+  areas: [ 237 ] }
+{ time: Tue Jul 22 2014 16:22:51 GMT+0300 (IDT),
+  pid: 1406046170138,
+  areas: [ 217 ] }
+{ time: Tue Jul 22 2014 16:23:16 GMT+0300 (IDT),
+  pid: 1406046196905,
+  areas: [ 217 ] }
+{ time: Tue Jul 22 2014 16:41:49 GMT+0300 (IDT),
+  pid: 1406047309273,
+  areas: [ 225 ] }
+{ time: Tue Jul 22 2014 16:41:52 GMT+0300 (IDT),
+  pid: 1406047311617,
+  areas: [ 225, 224, 227 ] }
+{ time: Tue Jul 22 2014 16:42:06 GMT+0300 (IDT),
+  pid: 1406047326336,
+  areas: [ 224, 227 ] }
+{ time: Tue Jul 22 2014 16:46:59 GMT+0300 (IDT),
+  pid: 1406047620241,
+  areas: [ 223 ] }
+{ time: Tue Jul 22 2014 17:25:46 GMT+0300 (IDT),
+  pid: 1406049943538,
+  areas: [ 288, 256 ] }
+{ time: Tue Jul 22 2014 17:26:12 GMT+0300 (IDT),
+  pid: 1406049970977,
+  areas: [ 288 ] }
+{ time: Tue Jul 22 2014 17:26:14 GMT+0300 (IDT),
+  pid: 1406049975165,
+  areas: [ 288, 256 ] }
+{ time: Tue Jul 22 2014 17:26:26 GMT+0300 (IDT),
+  pid: 1406049985665,
+  areas: [ 256 ] }
+{ time: Tue Jul 22 2014 17:48:18 GMT+0300 (IDT),
+  pid: 1406051298131,
+  areas: [ 291 ] }
+{ time: Tue Jul 22 2014 18:36:47 GMT+0300 (IDT),
+  pid: 1406054207203,
+  areas: [ 217 ] }
+{ time: Tue Jul 22 2014 18:36:50 GMT+0300 (IDT),
+  pid: 1406054209687,
+  areas: [ 217, 218 ] }
+{ time: Tue Jul 22 2014 18:37:05 GMT+0300 (IDT),
+  pid: 1406054224328,
+  areas: [ 218 ] }
+{ time: Tue Jul 22 2014 18:37:14 GMT+0300 (IDT),
+  pid: 1406054233047,
+  areas: [ 218, 217 ] }
+{ time: Tue Jul 22 2014 18:58:40 GMT+0300 (IDT),
+  pid: 1406055520029,
+  areas: [ 218 ] }
+{ time: Tue Jul 22 2014 19:21:22 GMT+0300 (IDT),
+  pid: 1406056882422,
+  areas: [ 217 ] }
+{ time: Tue Jul 22 2014 20:22:00 GMT+0300 (IDT),
+  pid: 1406060521020,
+  areas: [ 266, 218 ] }
+{ time: Tue Jul 22 2014 20:22:17 GMT+0300 (IDT),
+  pid: 1406060538177,
+  areas: [ 266 ] }
+{ time: Tue Jul 22 2014 20:22:29 GMT+0300 (IDT),
+  pid: 1406060548552,
+  areas: [ 271, 266 ] }
+{ time: Tue Jul 22 2014 20:22:58 GMT+0300 (IDT),
+  pid: 1406060578195,
+  areas: [ 271 ] }
+{ time: Tue Jul 22 2014 20:35:23 GMT+0300 (IDT),
+  pid: 1406061322622,
+  areas: [ 232, 231 ] }
+{ time: Tue Jul 22 2014 20:55:52 GMT+0300 (IDT),
+  pid: 1406062550167,
+  areas: [ 221 ] }
+{ time: Tue Jul 22 2014 20:57:06 GMT+0300 (IDT),
+  pid: 1406062624609,
+  areas: [ 219 ] }
+{ time: Tue Jul 22 2014 20:57:15 GMT+0300 (IDT),
+  pid: 1406062634125,
+  areas: [ 219, 218 ] }
+{ time: Tue Jul 22 2014 20:57:22 GMT+0300 (IDT),
+  pid: 1406062642000,
+  areas: [ 218 ] }
+{ time: Tue Jul 22 2014 20:57:45 GMT+0300 (IDT),
+  pid: 1406062664314,
+  areas: [ 162, 175, 182, 181, 178, 183, 179, 173, 184, 174 ] }
+{ time: Tue Jul 22 2014 20:58:01 GMT+0300 (IDT),
+  pid: 1406062673533,
+  areas: [ 162, 175, 182, 181, 178, 183, 179, 169, 170, 173, 184, 174, 126, 124, 123 ] }
+{ time: Tue Jul 22 2014 20:59:16 GMT+0300 (IDT),
+  pid: 1406062757631,
+  areas: [ 162, 175, 182, 169, 170, 266, 183, 126, 124, 123 ] }
+{ time: Tue Jul 22 2014 20:59:39 GMT+0300 (IDT),
+  pid: 1406062765007,
+  areas: [ 162, 175, 182, 266, 183 ] }
+{ time: Tue Jul 22 2014 21:00:09 GMT+0300 (IDT),
+  pid: 1406062807383,
+  areas: [ 162, 175, 182, 183 ] }
+{ time: Tue Jul 22 2014 21:16:45 GMT+0300 (IDT),
+  pid: 1406063804216,
+  areas: [ 268, 266, 273, 267 ] }
+{ time: Tue Jul 22 2014 21:16:49 GMT+0300 (IDT),
+  pid: 1406063807200,
+  areas: [ 268, 266, 178, 179, 273, 267, 184 ] }
+{ time: Tue Jul 22 2014 21:17:03 GMT+0300 (IDT),
+  pid: 1406063821388,
+  areas: [ 268, 266, 178, 179, 273, 267, 184, 272 ] }
+{ time: Tue Jul 22 2014 21:17:31 GMT+0300 (IDT),
+  pid: 1406063852437,
+  areas: [ 271, 268, 266, 275, 178, 179, 273, 267, 184, 272 ] }
+{ time: Tue Jul 22 2014 21:17:40 GMT+0300 (IDT),
+  pid: 1406063861266,
+  areas: [ 271, 275, 178, 179, 184, 272 ] }
+{ time: Tue Jul 22 2014 21:17:45 GMT+0300 (IDT),
+  pid: 1406063864453,
+  areas: [ 271, 275, 178, 179, 184, 273 ] }
+{ time: Tue Jul 22 2014 21:18:13 GMT+0300 (IDT),
+  pid: 1406063894189,
+  areas: [ 271, 275, 273 ] }
+{ time: Tue Jul 22 2014 21:18:20 GMT+0300 (IDT),
+  pid: 1406063894877,
+  areas: [ 273 ] }
+{ time: Tue Jul 22 2014 21:56:12 GMT+0300 (IDT),
+  pid: 1406066170072,
+  areas: [ 292, 289, 297, 296 ] }
+{ time: Tue Jul 22 2014 21:56:33 GMT+0300 (IDT),
+  pid: 1406066193824,
+  areas: [ 292, 289, 297, 296 ] }
+{ time: Tue Jul 22 2014 21:56:46 GMT+0300 (IDT),
+  pid: 1406066206137,
+  areas: [ 292, 289, 297, 296, 291 ] }
+{ time: Tue Jul 22 2014 21:56:53 GMT+0300 (IDT),
+  pid: 1406066212231,
+  areas: [ 292, 297, 296, 291 ] }
+{ time: Tue Jul 22 2014 21:57:07 GMT+0300 (IDT),
+  pid: 1406066227091,
+  areas: [ 297, 296, 291 ] }
+{ time: Tue Jul 22 2014 21:57:15 GMT+0300 (IDT),
+  pid: 1406066234826,
+  areas: [ 292, 297, 296, 291 ] }
+{ time: Tue Jul 22 2014 21:57:32 GMT+0300 (IDT),
+  pid: 1406066250998,
+  areas: [ 292, 297, 296, 291 ] }
+{ time: Tue Jul 22 2014 21:57:38 GMT+0300 (IDT),
+  pid: 1406066257327,
+  areas: [ 292, 291 ] }
+{ time: Tue Jul 22 2014 21:57:42 GMT+0300 (IDT),
+  pid: 1406066260905,
+  areas: [ 292 ] }
+{ time: Tue Jul 22 2014 21:57:45 GMT+0300 (IDT),
+  pid: 1406066263468,
+  areas: [ 292 ] }
+{ time: Tue Jul 22 2014 21:57:47 GMT+0300 (IDT),
+  pid: 1406066266405,
+  areas: [ 292, 297 ] }
+{ time: Tue Jul 22 2014 21:57:59 GMT+0300 (IDT),
+  pid: 1406066278531,
+  areas: [ 292, 291, 297 ] }
+{ time: Tue Jul 22 2014 21:58:13 GMT+0300 (IDT),
+  pid: 1406066291500,
+  areas: [ 291, 297 ] }
+{ time: Tue Jul 22 2014 21:58:56 GMT+0300 (IDT),
+  pid: 1406066335612,
+  areas: [ 297 ] }
+{ time: Tue Jul 22 2014 22:27:28 GMT+0300 (IDT),
+  pid: 1406068046357,
+  areas: [ 292 ] }
+{ time: Tue Jul 22 2014 22:27:44 GMT+0300 (IDT),
+  pid: 1406068062467,
+  areas: [ 292, 286 ] }
+{ time: Tue Jul 22 2014 22:28:04 GMT+0300 (IDT),
+  pid: 1406068083578,
+  areas: [ 292, 286, 289 ] }
+{ time: Tue Jul 22 2014 22:28:25 GMT+0300 (IDT),
+  pid: 1406068103438,
+  areas: [ 286, 289 ] }
+{ time: Tue Jul 22 2014 22:28:40 GMT+0300 (IDT),
+  pid: 1406068119751,
+  areas: [ 289 ] }
+{ time: Wed Jul 23 2014 06:52:17 GMT+0300 (IDT),
+  pid: 1406098335473,
+  areas: [ 218, 217 ] }
+{ time: Wed Jul 23 2014 06:52:47 GMT+0300 (IDT),
+  pid: 1406098367881,
+  areas: [ 231 ] }
+{ time: Wed Jul 23 2014 06:53:14 GMT+0300 (IDT),
+  pid: 1406098393320,
+  areas: [ 231 ] }
+{ time: Wed Jul 23 2014 07:09:35 GMT+0300 (IDT),
+  pid: 1406099374777,
+  areas: [ 231 ] }
+{ time: Wed Jul 23 2014 08:56:35 GMT+0300 (IDT),
+  pid: 1406105795157,
+  areas: [ 225 ] }
+{ time: Wed Jul 23 2014 09:28:53 GMT+0300 (IDT),
+  pid: 1406107731615,
+  areas: [ 223 ] }
+{ time: Wed Jul 23 2014 09:29:02 GMT+0300 (IDT),
+  pid: 1406107740694,
+  areas: [ 223, 225 ] }
+{ time: Wed Jul 23 2014 09:29:12 GMT+0300 (IDT),
+  pid: 1406107750007,
+  areas: [ 225 ] }
+{ time: Wed Jul 23 2014 10:22:11 GMT+0300 (IDT),
+  pid: 1406110930212,
+  areas: [ 230, 231 ] }
+{ time: Wed Jul 23 2014 10:55:24 GMT+0300 (IDT),
+  pid: 1406112923747,
+  areas: [ 218, 217, 247 ] }
+{ time: Wed Jul 23 2014 10:55:29 GMT+0300 (IDT),
+  pid: 1406112930841,
+  areas: [ 246, 218, 217, 247 ] }
+{ time: Wed Jul 23 2014 10:55:42 GMT+0300 (IDT),
+  pid: 1406112940841,
+  areas: [ 246, 247 ] }
+{ time: Wed Jul 23 2014 10:55:51 GMT+0300 (IDT),
+  pid: 1406112950810,
+  areas: [ 246 ] }
+{ time: Wed Jul 23 2014 10:56:09 GMT+0300 (IDT),
+  pid: 1406112969546,
+  areas: [ 246, 247 ] }
+{ time: Wed Jul 23 2014 11:13:27 GMT+0300 (IDT),
+  pid: 1406114007516,
+  areas: [ 220 ] }
+{ time: Wed Jul 23 2014 11:14:00 GMT+0300 (IDT),
+  pid: 1406114040659,
+  areas: [ 221 ] }
+{ time: Wed Jul 23 2014 11:31:16 GMT+0300 (IDT),
+  pid: 1406115076285,
+  areas: [ 218 ] }
+{ time: Wed Jul 23 2014 11:31:40 GMT+0300 (IDT),
+  pid: 1406115099317,
+  areas: [ 218 ] }
+{ time: Wed Jul 23 2014 11:35:13 GMT+0300 (IDT),
+  pid: 1406115312795,
+  areas: [ 230 ] }
+{ time: Wed Jul 23 2014 12:20:27 GMT+0300 (IDT),
+  pid: 1406118027762,
+  areas: [ 217 ] }
+{ time: Wed Jul 23 2014 12:36:06 GMT+0300 (IDT),
+  pid: 1406118966929,
+  areas: [ 246, 247 ] }
+{ time: Wed Jul 23 2014 12:36:10 GMT+0300 (IDT),
+  pid: 1406118969445,
+  areas: [ 246, 218, 247 ] }
+{ time: Wed Jul 23 2014 12:36:25 GMT+0300 (IDT),
+  pid: 1406118986570,
+  areas: [ 246, 247 ] }
+{ time: Wed Jul 23 2014 12:37:16 GMT+0300 (IDT),
+  pid: 1406119036370,
+  areas: [ 217 ] }
+{ time: Wed Jul 23 2014 12:41:27 GMT+0300 (IDT),
+  pid: 1406119287334,
+  areas: [ 217 ] }
+{ time: Wed Jul 23 2014 12:44:57 GMT+0300 (IDT),
+  pid: 1406119495984,
+  areas: [ 217 ] }
+{ time: Wed Jul 23 2014 12:56:20 GMT+0300 (IDT),
+  pid: 1406120180312,
+  areas: [ 292 ] }
+{ time: Wed Jul 23 2014 12:56:29 GMT+0300 (IDT),
+  pid: 1406120185343,
+  areas: [ 292, 289 ] }
+{ time: Wed Jul 23 2014 12:56:59 GMT+0300 (IDT),
+  pid: 1406120219454,
+  areas: [ 292, 289, 291 ] }
+{ time: Wed Jul 23 2014 12:57:09 GMT+0300 (IDT),
+  pid: 1406120227408,
+  areas: [ 292, 291 ] }
+{ time: Wed Jul 23 2014 12:57:18 GMT+0300 (IDT),
+  pid: 1406120237470,
+  areas: [ 291 ] }
+{ time: Wed Jul 23 2014 13:18:29 GMT+0300 (IDT),
+  pid: 1406121507497,
+  areas: [ 231 ] }
+{ time: Wed Jul 23 2014 13:32:29 GMT+0300 (IDT),
+  pid: 1406122347942,
+  areas: [ 246, 247 ] }
+{ time: Wed Jul 23 2014 13:32:34 GMT+0300 (IDT),
+  pid: 1406122352989,
+  areas: [ 246, 217, 247 ] }
+{ time: Wed Jul 23 2014 13:32:53 GMT+0300 (IDT),
+  pid: 1406122370162,
+  areas: [ 246, 247 ] }
+{ time: Wed Jul 23 2014 13:39:49 GMT+0300 (IDT),
+  pid: 1406122787040,
+  areas: [ 271 ] }
+{ time: Wed Jul 23 2014 13:40:06 GMT+0300 (IDT),
+  pid: 1406122807213,
+  areas: [ 271, 272, 245 ] }
+{ time: Wed Jul 23 2014 13:40:29 GMT+0300 (IDT),
+  pid: 1406122829120,
+  areas: [ 272, 245 ] }
+{ time: Wed Jul 23 2014 14:32:28 GMT+0300 (IDT),
+  pid: 1406125947005,
+  areas: [ 220, 219, 249, 248, 250, 251, 251 ] }
+{ time: Wed Jul 23 2014 14:32:47 GMT+0300 (IDT),
+  pid: 1406125964162,
+  areas: [ 249, 248, 250, 251, 251 ] }
+{ time: Wed Jul 23 2014 14:32:59 GMT+0300 (IDT),
+  pid: 1406125976507,
+  areas: [ 175, 182, 178, 183, 179 ] }
+{ time: Wed Jul 23 2014 14:33:14 GMT+0300 (IDT),
+  pid: 1406125991382,
+  areas: [ 175, 182, 266, 268, 178, 183, 179, 267, 273, 184 ] }
+{ time: Wed Jul 23 2014 14:33:29 GMT+0300 (IDT),
+  pid: 1406126007274,
+  areas: [ 271, 175, 182, 266, 275, 268, 178, 183, 179, 267, 273, 184, 272, 278 ] }
+{ time: Wed Jul 23 2014 14:34:06 GMT+0300 (IDT),
+  pid: 1406126046182,
+  areas: [ 271, 175, 182, 246, 178, 183, 179, 184, 278, 276, 280 ] }
+{ time: Wed Jul 23 2014 14:34:32 GMT+0300 (IDT),
+  pid: 1406126068699,
+  areas: [ 275, 268, 184, 273, 267, 272, 280 ] }
+{ time: Wed Jul 23 2014 14:34:59 GMT+0300 (IDT),
+  pid: 1406126093763,
+  areas: [ 268, 273, 267, 280 ] }
+{ time: Wed Jul 23 2014 15:08:40 GMT+0300 (IDT),
+  pid: 1406128120260,
+  areas: [ 237, 238, 238 ] }
+{ time: Wed Jul 23 2014 15:08:57 GMT+0300 (IDT),
+  pid: 1406128137354,
+  areas: [ 238, 238 ] }
+{ time: Wed Jul 23 2014 15:45:41 GMT+0300 (IDT),
+  pid: 1406130340225,
+  areas: [ 218 ] }
+{ time: Wed Jul 23 2014 15:48:43 GMT+0300 (IDT),
+  pid: 1406130524845,
+  areas: [ 236 ] }
+{ time: Wed Jul 23 2014 16:13:14 GMT+0300 (IDT),
+  pid: 1406131994768,
+  areas: [ 218 ] }
+{ time: Wed Jul 23 2014 16:13:53 GMT+0300 (IDT),
+  pid: 1406132033379,
+  areas: [ 218 ] }
+{ time: Wed Jul 23 2014 16:18:40 GMT+0300 (IDT),
+  pid: 1406132319332,
+  areas: [ 218 ] }
+{ time: Wed Jul 23 2014 16:33:27 GMT+0300 (IDT),
+  pid: 1406133207209,
+  areas: [ 217 ] }
+{ time: Wed Jul 23 2014 16:35:45 GMT+0300 (IDT),
+  pid: 1406133344810,
+  areas: [ 217 ] }
+{ time: Wed Jul 23 2014 17:01:27 GMT+0300 (IDT),
+  pid: 1406134885188,
+  areas: [ 272 ] }
+{ time: Wed Jul 23 2014 17:01:45 GMT+0300 (IDT),
+  pid: 1406134903704,
+  areas: [ 272, 245 ] }
+{ time: Wed Jul 23 2014 17:01:58 GMT+0300 (IDT),
+  pid: 1406134917392,
+  areas: [ 271, 272, 245 ] }
+{ time: Wed Jul 23 2014 17:02:07 GMT+0300 (IDT),
+  pid: 1406134927252,
+  areas: [ 271, 245 ] }
+{ time: Wed Jul 23 2014 17:02:27 GMT+0300 (IDT),
+  pid: 1406134945878,
+  areas: [ 271 ] }
+{ time: Wed Jul 23 2014 18:00:59 GMT+0300 (IDT),
+  pid: 1406138460706,
+  areas: [ 275, 268, 273, 276, 278 ] }
+{ time: Wed Jul 23 2014 18:01:43 GMT+0300 (IDT),
+  pid: 1406138502865,
+  areas: [ 268, 273, 278 ] }
+{ time: Wed Jul 23 2014 18:02:04 GMT+0300 (IDT),
+  pid: 1406138523506,
+  areas: [ 275 ] }
+{ time: Wed Jul 23 2014 18:02:08 GMT+0300 (IDT),
+  pid: 1406138525912,
+  areas: [ 275, 273 ] }
+{ time: Wed Jul 23 2014 18:02:48 GMT+0300 (IDT),
+  pid: 1406138565149,
+  areas: [ 273 ] }
+{ time: Wed Jul 23 2014 18:06:19 GMT+0300 (IDT),
+  pid: 1406138778346,
+  areas: [ 271 ] }
+{ time: Wed Jul 23 2014 18:06:34 GMT+0300 (IDT),
+  pid: 1406138794034,
+  areas: [ 271, 272, 245 ] }
+{ time: Wed Jul 23 2014 18:07:01 GMT+0300 (IDT),
+  pid: 1406138820301,
+  areas: [ 272, 245 ] }
+{ time: Wed Jul 23 2014 18:07:10 GMT+0300 (IDT),
+  pid: 1406138830192,
+  areas: [ 271, 272, 245 ] }
+{ time: Wed Jul 23 2014 18:07:19 GMT+0300 (IDT),
+  pid: 1406138837005,
+  areas: [ 271 ] }
+{ time: Wed Jul 23 2014 18:10:37 GMT+0300 (IDT),
+  pid: 1406139036654,
+  areas: [ 291 ] }
+{ time: Wed Jul 23 2014 18:10:45 GMT+0300 (IDT),
+  pid: 1406139045686,
+  areas: [ 292, 291 ] }
+{ time: Wed Jul 23 2014 18:11:35 GMT+0300 (IDT),
+  pid: 1406139093829,
+  areas: [ 292 ] }
+{ time: Wed Jul 23 2014 18:15:25 GMT+0300 (IDT),
+  pid: 1406139325653,
+  areas: [ 292 ] }
+{ time: Wed Jul 23 2014 18:24:17 GMT+0300 (IDT),
+  pid: 1406139856615,
+  areas: [ 231 ] }
+{ time: Wed Jul 23 2014 18:44:50 GMT+0300 (IDT),
+  pid: 1406141090812,
+  areas: [ 271, 272, 245 ] }
+{ time: Wed Jul 23 2014 19:54:37 GMT+0300 (IDT),
+  pid: 1406145277311,
+  areas: [ 217 ] }
+{ time: Wed Jul 23 2014 19:55:42 GMT+0300 (IDT),
+  pid: 1406145341689,
+  areas: [ 254, 225 ] }
+{ time: Wed Jul 23 2014 19:56:01 GMT+0300 (IDT),
+  pid: 1406145358736,
+  areas: [ 254 ] }
+{ time: Wed Jul 23 2014 19:56:09 GMT+0300 (IDT),
+  pid: 1406145366284,
+  areas: [ 254, 225 ] }
+{ time: Wed Jul 23 2014 19:56:21 GMT+0300 (IDT),
+  pid: 1406145371190,
+  areas: [ 225, 255 ] }
+{ time: Wed Jul 23 2014 19:56:25 GMT+0300 (IDT),
+  pid: 1406145383331,
+  areas: [ 255 ] }
+{ time: Wed Jul 23 2014 19:57:26 GMT+0300 (IDT),
+  pid: 1406145446662,
+  areas: [ 236 ] }
+{ time: Wed Jul 23 2014 20:27:25 GMT+0300 (IDT),
+  pid: 1406147246166,
+  areas: [ 217 ] }
+{ time: Wed Jul 23 2014 21:00:07 GMT+0300 (IDT),
+  pid: 1406149206539,
+  areas: [ 271, 266, 267 ] }
+{ time: Wed Jul 23 2014 21:00:13 GMT+0300 (IDT),
+  pid: 1406149211430,
+  areas: [ 271, 266, 267, 273 ] }
+{ time: Wed Jul 23 2014 21:00:16 GMT+0300 (IDT),
+  pid: 1406149213883,
+  areas: [ 271, 275, 266, 268, 267, 273, 272 ] }
+{ time: Wed Jul 23 2014 21:00:35 GMT+0300 (IDT),
+  pid: 1406149235181,
+  areas: [ 271, 162, 175, 275, 266, 268, 267, 273, 272 ] }
+{ time: Wed Jul 23 2014 21:00:41 GMT+0300 (IDT),
+  pid: 1406149237634,
+  areas: [ 271, 162, 175, 182, 275, 266, 268, 178, 183, 179, 267, 273, 173, 174, 272 ] }
+{ time: Wed Jul 23 2014 21:00:57 GMT+0300 (IDT),
+  pid: 1406149256166,
+  areas: [ 162, 175, 182, 266, 268, 178, 183, 179, 267, 273, 173, 174, 245 ] }
+{ time: Wed Jul 23 2014 21:01:05 GMT+0300 (IDT),
+  pid: 1406149259151,
+  areas: [ 271, 162, 175, 182, 266, 268, 178, 183, 179, 267, 273, 173, 174, 245 ] }
+{ time: Wed Jul 23 2014 21:01:12 GMT+0300 (IDT),
+  pid: 1406149271198,
+  areas: [ 271, 162, 175, 182, 178, 183, 179, 173, 174, 245 ] }
+{ time: Wed Jul 23 2014 21:01:28 GMT+0300 (IDT),
+  pid: 1406149287105,
+  areas: [ 271, 162, 175, 182, 178, 183, 179, 173, 174 ] }
+{ time: Wed Jul 23 2014 21:01:41 GMT+0300 (IDT),
+  pid: 1406149301231,
+  areas: [ 162, 175, 182, 178, 183, 179, 173, 174 ] }
+{ time: Wed Jul 23 2014 21:02:06 GMT+0300 (IDT),
+  pid: 1406149322748,
+  areas: [ 182, 178, 183, 179, 173, 174 ] }
+{ time: Thu Jul 24 2014 08:01:27 GMT+0300 (IDT),
+  pid: 1406188887105,
+  areas: [ 218, 219 ] }
+{ time: Thu Jul 24 2014 10:57:14 GMT+0300 (IDT),
+  pid: 1406199433173,
+  areas: [ 162, 155, 175, 140, 141, 139, 142 ] }
+{ time: Thu Jul 24 2014 10:57:49 GMT+0300 (IDT),
+  pid: 1406199464596,
+  areas: [ 162, 155, 175, 140, 168, 161, 141, 139, 169, 143, 170, 142 ] }
+{ time: Thu Jul 24 2014 10:58:42 GMT+0300 (IDT),
+  pid: 1406199520318,
+  areas: [ 168, 161, 169, 143, 170 ] }
+{ time: Thu Jul 24 2014 10:59:12 GMT+0300 (IDT),
+  pid: 1406199551601,
+  areas: [ 160 ] }
+{ time: Thu Jul 24 2014 11:17:19 GMT+0300 (IDT),
+  pid: 1406200638766,
+  areas: [ 157, 155 ] }
+{ time: Thu Jul 24 2014 11:33:57 GMT+0300 (IDT),
+  pid: 1406201637187,
+  areas: [ 220 ] }
+{ time: Thu Jul 24 2014 15:34:22 GMT+0300 (IDT),
+  pid: 1406216060350,
+  areas: [ 218 ] }
+{ time: Thu Jul 24 2014 16:13:57 GMT+0300 (IDT),
+  pid: 1406218437580,
+  areas: [ 237 ] }
+{ time: Thu Jul 24 2014 16:27:17 GMT+0300 (IDT),
+  pid: 1406219237308,
+  areas: [ 246, 245 ] }
+{ time: Thu Jul 24 2014 16:27:34 GMT+0300 (IDT),
+  pid: 1406219252919,
+  areas: [ 246, 245, 247 ] }
+{ time: Thu Jul 24 2014 16:27:44 GMT+0300 (IDT),
+  pid: 1406219264482,
+  areas: [ 245, 247 ] }
+{ time: Thu Jul 24 2014 16:28:00 GMT+0300 (IDT),
+  pid: 1406219279389,
+  areas: [ 247 ] }
+{ time: Thu Jul 24 2014 16:29:08 GMT+0300 (IDT),
+  pid: 1406219348283,
+  areas: [ 218, 217, 247 ] }
+{ time: Thu Jul 24 2014 16:29:12 GMT+0300 (IDT),
+  pid: 1406219352799,
+  areas: [ 246, 218, 217, 247 ] }
+{ time: Thu Jul 24 2014 16:29:26 GMT+0300 (IDT),
+  pid: 1406219365268,
+  areas: [ 246, 247 ] }
+{ time: Thu Jul 24 2014 16:29:34 GMT+0300 (IDT),
+  pid: 1406219375269,
+  areas: [ 246 ] }
+{ time: Thu Jul 24 2014 16:49:17 GMT+0300 (IDT),
+  pid: 1406220557990,
+  areas: [ 271 ] }
+{ time: Thu Jul 24 2014 17:05:17 GMT+0300 (IDT),
+  pid: 1406221517060,
+  areas: [ 288, 291 ] }
+{ time: Thu Jul 24 2014 17:05:26 GMT+0300 (IDT),
+  pid: 1406221526341,
+  areas: [ 288, 289, 291 ] }
+{ time: Thu Jul 24 2014 17:05:35 GMT+0300 (IDT),
+  pid: 1406221535529,
+  areas: [ 288, 256, 289, 291 ] }
+{ time: Thu Jul 24 2014 17:05:59 GMT+0300 (IDT),
+  pid: 1406221559062,
+  areas: [ 256, 289, 291 ] }
+{ time: Thu Jul 24 2014 17:06:02 GMT+0300 (IDT),
+  pid: 1406221562750,
+  areas: [ 289, 291 ] }
+{ time: Thu Jul 24 2014 17:06:08 GMT+0300 (IDT),
+  pid: 1406221568000,
+  areas: [ 288, 289, 291 ] }
+{ time: Thu Jul 24 2014 17:06:10 GMT+0300 (IDT),
+  pid: 1406221571000,
+  areas: [ 288, 291 ] }
+{ time: Thu Jul 24 2014 17:06:15 GMT+0300 (IDT),
+  pid: 1406221575281,
+  areas: [ 288, 289 ] }
+{ time: Thu Jul 24 2014 17:06:50 GMT+0300 (IDT),
+  pid: 1406221609846,
+  areas: [ 289 ] }
+{ time: Thu Jul 24 2014 17:25:25 GMT+0300 (IDT),
+  pid: 1406222723503,
+  areas: [ 275, 268, 273, 276 ] }
+{ time: Thu Jul 24 2014 17:25:46 GMT+0300 (IDT),
+  pid: 1406222746770,
+  areas: [ 275, 268, 273, 276, 272 ] }
+{ time: Thu Jul 24 2014 17:26:07 GMT+0300 (IDT),
+  pid: 1406222765677,
+  areas: [ 268, 273, 272 ] }
+{ time: Thu Jul 24 2014 17:26:17 GMT+0300 (IDT),
+  pid: 1406222776584,
+  areas: [ 268, 273, 272, 276 ] }
+{ time: Thu Jul 24 2014 17:26:26 GMT+0300 (IDT),
+  pid: 1406222784006,
+  areas: [ 272, 276 ] }
+{ time: Thu Jul 24 2014 17:26:30 GMT+0300 (IDT),
+  pid: 1406222788772,
+  areas: [ 276 ] }
+{ time: Thu Jul 24 2014 18:02:59 GMT+0300 (IDT),
+  pid: 1406224978430,
+  areas: [ 218 ] }
+{ time: Thu Jul 24 2014 19:00:26 GMT+0300 (IDT),
+  pid: 1406228425064,
+  areas: [ 237 ] }
+{ time: Thu Jul 24 2014 19:03:14 GMT+0300 (IDT),
+  pid: 1406228595527,
+  areas: [ 224 ] }
+{ time: Thu Jul 24 2014 19:13:34 GMT+0300 (IDT),
+  pid: 1406229212217,
+  areas: [ 231 ] }
+{ time: Thu Jul 24 2014 19:18:05 GMT+0300 (IDT),
+  pid: 1406229485998,
+  areas: [ 231 ] }
+{ time: Thu Jul 24 2014 19:22:37 GMT+0300 (IDT),
+  pid: 1406229754215,
+  areas: [ 231 ] }
+{ time: Thu Jul 24 2014 19:27:01 GMT+0300 (IDT),
+  pid: 1406230020855,
+  areas: [ 292 ] }
+{ time: Thu Jul 24 2014 19:27:08 GMT+0300 (IDT),
+  pid: 1406230027777,
+  areas: [ 292, 291 ] }
+{ time: Thu Jul 24 2014 19:27:44 GMT+0300 (IDT),
+  pid: 1406230063935,
+  areas: [ 292, 217, 291 ] }
+{ time: Thu Jul 24 2014 19:27:59 GMT+0300 (IDT),
+  pid: 1406230080014,
+  areas: [ 217, 291, 218 ] }
+{ time: Thu Jul 24 2014 19:28:00 GMT+0300 (IDT),
+  pid: 1406230081139,
+  areas: [ 291, 218 ] }
+{ time: Thu Jul 24 2014 19:28:06 GMT+0300 (IDT),
+  pid: 1406230085124,
+  areas: [ 218 ] }
+{ time: Thu Jul 24 2014 19:47:50 GMT+0300 (IDT),
+  pid: 1406231268220,
+  areas: [ 237 ] }
+{ time: Thu Jul 24 2014 20:01:11 GMT+0300 (IDT),
+  pid: 1406232071980,
+  areas: [ 236, 238, 238 ] }
+{ time: Thu Jul 24 2014 20:01:29 GMT+0300 (IDT),
+  pid: 1406232089074,
+  areas: [ 238, 238 ] }
+{ time: Thu Jul 24 2014 21:21:38 GMT+0300 (IDT),
+  pid: 1406236896841,
+  areas: [ 236, 238, 238 ] }
+{ time: Thu Jul 24 2014 21:21:41 GMT+0300 (IDT),
+  pid: 1406236901356,
+  areas: [ 236, 237, 238, 238 ] }
+{ time: Thu Jul 24 2014 21:21:54 GMT+0300 (IDT),
+  pid: 1406236913982,
+  areas: [ 237, 238, 238 ] }
+{ time: Thu Jul 24 2014 21:22:01 GMT+0300 (IDT),
+  pid: 1406236918576,
+  areas: [ 238, 238 ] }
+{ time: Thu Jul 24 2014 22:09:28 GMT+0300 (IDT),
+  pid: 1406239768987,
+  areas: [ 237 ] }
+{ time: Thu Jul 24 2014 22:10:01 GMT+0300 (IDT),
+  pid: 1406239801458,
+  areas: [ 311 ] }
+{ time: Fri Jul 25 2014 06:20:23 GMT+0300 (IDT),
+  pid: 1406269222924,
+  areas: [ 232 ] }
+{ time: Fri Jul 25 2014 07:52:29 GMT+0300 (IDT),
+  pid: 1406274750024,
+  areas: [ 246, 247 ] }
+{ time: Fri Jul 25 2014 07:52:40 GMT+0300 (IDT),
+  pid: 1406274759134,
+  areas: [ 246, 217, 247, 250 ] }
+{ time: Fri Jul 25 2014 07:52:57 GMT+0300 (IDT),
+  pid: 1406274776166,
+  areas: [ 246, 247, 250 ] }
+{ time: Fri Jul 25 2014 07:52:59 GMT+0300 (IDT),
+  pid: 1406274777338,
+  areas: [ 250 ] }
+{ time: Fri Jul 25 2014 11:03:21 GMT+0300 (IDT),
+  pid: 1406286199956,
+  areas: [ 218, 217, 217, 247 ] }
+{ time: Fri Jul 25 2014 11:03:38 GMT+0300 (IDT),
+  pid: 1406286217176,
+  areas: [ 247 ] }
+{ time: Fri Jul 25 2014 11:08:45 GMT+0300 (IDT),
+  pid: 1406286526658,
+  areas: [ 218, 217, 247 ] }
+{ time: Fri Jul 25 2014 11:08:51 GMT+0300 (IDT),
+  pid: 1406286531346,
+  areas: [ 246, 218, 217, 247 ] }
+{ time: Fri Jul 25 2014 11:09:02 GMT+0300 (IDT),
+  pid: 1406286540362,
+  areas: [ 155, 140, 246, 139, 141, 142, 218, 217, 247 ] }
+{ time: Fri Jul 25 2014 11:09:20 GMT+0300 (IDT),
+  pid: 1406286560925,
+  areas: [ 155, 140, 139, 141, 142, 217 ] }
+{ time: Fri Jul 25 2014 11:09:35 GMT+0300 (IDT),
+  pid: 1406286572785,
+  areas: [ 155, 140, 246, 139, 141, 142, 217, 247 ] }
+{ time: Fri Jul 25 2014 11:09:54 GMT+0300 (IDT),
+  pid: 1406286577926,
+  areas: [ 155, 140, 246, 139, 141, 142, 247 ] }
+{ time: Fri Jul 25 2014 11:45:22 GMT+0300 (IDT),
+  pid: 1406288722827,
+  areas: [ 248, 272, 245 ] }
+{ time: Fri Jul 25 2014 11:45:40 GMT+0300 (IDT),
+  pid: 1406288740999,
+  areas: [ 266, 248, 272, 245 ] }
+{ time: Fri Jul 25 2014 11:45:44 GMT+0300 (IDT),
+  pid: 1406288743406,
+  areas: [ 175, 182, 266, 183, 248, 272, 245 ] }
+{ time: Fri Jul 25 2014 11:45:53 GMT+0300 (IDT),
+  pid: 1406288752000,
+  areas: [ 175, 182, 266, 183, 272, 245 ] }
+{ time: Fri Jul 25 2014 11:46:07 GMT+0300 (IDT),
+  pid: 1406288765157,
+  areas: [ 175, 182, 266, 183 ] }
+{ time: Fri Jul 25 2014 11:46:23 GMT+0300 (IDT),
+  pid: 1406288782455,
+  areas: [ 157, 175, 182, 162, 160, 168, 161, 266, 183, 169, 170, 173, 174 ] }
+{ time: Fri Jul 25 2014 11:46:40 GMT+0300 (IDT),
+  pid: 1406288798112,
+  areas: [ 157, 175, 182, 162, 160, 168, 161, 183, 169, 170, 173, 174 ] }
+{ time: Fri Jul 25 2014 11:47:04 GMT+0300 (IDT),
+  pid: 1406288824754,
+  areas: [ 157, 175, 182, 162, 160, 168, 161, 183, 169, 170, 178, 179, 173, 174 ] }
+{ time: Fri Jul 25 2014 11:47:28 GMT+0300 (IDT),
+  pid: 1406288831004,
+  areas: [ 157, 162, 160, 168, 161, 169, 170, 178, 179, 173, 174 ] }
+{ time: Fri Jul 25 2014 11:47:57 GMT+0300 (IDT),
+  pid: 1406288869443,
+  areas: [ 178, 179 ] }
+{ time: Fri Jul 25 2014 12:17:23 GMT+0300 (IDT),
+  pid: 1406290643657,
+  areas: [ 230 ] }
+{ time: Fri Jul 25 2014 13:28:13 GMT+0300 (IDT),
+  pid: 1406294892173,
+  areas: [ 217 ] }
+{ time: Fri Jul 25 2014 13:56:49 GMT+0300 (IDT),
+  pid: 1406296609176,
+  areas: [ 224 ] }
+{ time: Fri Jul 25 2014 14:00:43 GMT+0300 (IDT),
+  pid: 1406296842345,
+  areas: [ 217 ] }
+{ time: Fri Jul 25 2014 14:00:52 GMT+0300 (IDT),
+  pid: 1406296851674,
+  areas: [ 217, 247 ] }
+{ time: Fri Jul 25 2014 14:00:55 GMT+0300 (IDT),
+  pid: 1406296854330,
+  areas: [ 246, 217, 247 ] }
+{ time: Fri Jul 25 2014 14:01:03 GMT+0300 (IDT),
+  pid: 1406296864002,
+  areas: [ 246, 247, 250 ] }
+{ time: Fri Jul 25 2014 14:01:10 GMT+0300 (IDT),
+  pid: 1406296866127,
+  areas: [ 246, 247, 217, 250 ] }
+{ time: Fri Jul 25 2014 14:01:19 GMT+0300 (IDT),
+  pid: 1406296878550,
+  areas: [ 246, 217, 250 ] }
+{ time: Fri Jul 25 2014 14:01:31 GMT+0300 (IDT),
+  pid: 1406296891160,
+  areas: [ 246 ] }
+{ time: Fri Jul 25 2014 14:01:44 GMT+0300 (IDT),
+  pid: 1406296902551,
+  areas: [ 246, 247 ] }
+{ time: Fri Jul 25 2014 14:02:00 GMT+0300 (IDT),
+  pid: 1406296917818,
+  areas: [ 247 ] }
+{ time: Fri Jul 25 2014 14:09:46 GMT+0300 (IDT),
+  pid: 1406297385110,
+  areas: [ 275 ] }
+{ time: Fri Jul 25 2014 14:27:21 GMT+0300 (IDT),
+  pid: 1406298438230,
+  areas: [ 217 ] }
+{ time: Fri Jul 25 2014 14:43:34 GMT+0300 (IDT),
+  pid: 1406299412127,
+  areas: [ 218, 217 ] }
+{ time: Fri Jul 25 2014 14:53:17 GMT+0300 (IDT),
+  pid: 1406299997862,
+  areas: [ 217 ] }
+{ time: Fri Jul 25 2014 14:57:03 GMT+0300 (IDT),
+  pid: 1406300222187,
+  areas: [ 236, 238, 238 ] }
+{ time: Fri Jul 25 2014 14:57:24 GMT+0300 (IDT),
+  pid: 1406300239172,
+  areas: [ 238, 238 ] }
+{ time: Fri Jul 25 2014 15:58:52 GMT+0300 (IDT),
+  pid: 1406303931693,
+  areas: [ 271 ] }
+{ time: Fri Jul 25 2014 15:59:10 GMT+0300 (IDT),
+  pid: 1406303949741,
+  areas: [ 271, 245 ] }
+{ time: Fri Jul 25 2014 15:59:34 GMT+0300 (IDT),
+  pid: 1406303973820,
+  areas: [ 245 ] }
+{ time: Fri Jul 25 2014 16:34:56 GMT+0300 (IDT),
+  pid: 1406306096239,
+  areas: [ 221 ] }
+{ time: Fri Jul 25 2014 16:39:15 GMT+0300 (IDT),
+  pid: 1406306354111,
+  areas: [ 225, 223 ] }
+{ time: Fri Jul 25 2014 16:56:05 GMT+0300 (IDT),
+  pid: 1406307365565,
+  areas: [ 230, 231 ] }
+{ time: Fri Jul 25 2014 17:27:57 GMT+0300 (IDT),
+  pid: 1406309277246,
+  areas: [ 218, 219 ] }
+{ time: Fri Jul 25 2014 17:29:02 GMT+0300 (IDT),
+  pid: 1406309340311,
+  areas: [ 218 ] }
+{ time: Fri Jul 25 2014 17:53:02 GMT+0300 (IDT),
+  pid: 1406310781000,
+  areas: [ 218, 217 ] }
+{ time: Fri Jul 25 2014 18:06:29 GMT+0300 (IDT),
+  pid: 1406311589503,
+  areas: [ 220 ] }
+{ time: Fri Jul 25 2014 18:07:23 GMT+0300 (IDT),
+  pid: 1406311642802,
+  areas: [ 219, 221 ] }
+{ time: Fri Jul 25 2014 18:24:11 GMT+0300 (IDT),
+  pid: 1406312650845,
+  areas: [ 236 ] }
+{ time: Fri Jul 25 2014 18:53:46 GMT+0300 (IDT),
+  pid: 1406314426310,
+  areas: [ 271 ] }
+{ time: Fri Jul 25 2014 18:54:10 GMT+0300 (IDT),
+  pid: 1406314448780,
+  areas: [ 271, 245 ] }
+{ time: Fri Jul 25 2014 18:54:14 GMT+0300 (IDT),
+  pid: 1406314453311,
+  areas: [ 271, 245, 272 ] }
+{ time: Fri Jul 25 2014 18:54:30 GMT+0300 (IDT),
+  pid: 1406314468718,
+  areas: [ 245, 272 ] }
+{ time: Fri Jul 25 2014 18:54:51 GMT+0300 (IDT),
+  pid: 1406314491188,
+  areas: [ 272 ] }
+{ time: Fri Jul 25 2014 19:06:36 GMT+0300 (IDT),
+  pid: 1406315195608,
+  areas: [ 246 ] }
+{ time: Fri Jul 25 2014 19:06:45 GMT+0300 (IDT),
+  pid: 1406315204686,
+  areas: [ 246, 247, 250 ] }
+{ time: Fri Jul 25 2014 19:07:02 GMT+0300 (IDT),
+  pid: 1406315222781,
+  areas: [ 247, 250 ] }
+{ time: Fri Jul 25 2014 19:11:46 GMT+0300 (IDT),
+  pid: 1406315503996,
+  areas: [ 217 ] }
+{ time: Fri Jul 25 2014 19:11:56 GMT+0300 (IDT),
+  pid: 1406315517934,
+  areas: [ 217, 218 ] }
+{ time: Fri Jul 25 2014 19:12:03 GMT+0300 (IDT),
+  pid: 1406315524012,
+  areas: [ 218 ] }
+{ time: Fri Jul 25 2014 19:16:57 GMT+0300 (IDT),
+  pid: 1406315817931,
+  areas: [ 227 ] }
+{ time: Fri Jul 25 2014 19:18:02 GMT+0300 (IDT),
+  pid: 1406315883137,
+  areas: [ 254, 225, 255 ] }
+{ time: Fri Jul 25 2014 19:18:21 GMT+0300 (IDT),
+  pid: 1406315900216,
+  areas: [ 254, 255 ] }
+{ time: Fri Jul 25 2014 20:19:08 GMT+0300 (IDT),
+  pid: 1406319546301,
+  areas: [ 217, 247 ] }
+{ time: Fri Jul 25 2014 20:19:11 GMT+0300 (IDT),
+  pid: 1406319548630,
+  areas: [ 246, 217, 247 ] }
+{ time: Fri Jul 25 2014 20:19:15 GMT+0300 (IDT),
+  pid: 1406319553161,
+  areas: [ 271, 246, 217, 247, 245 ] }
+{ time: Fri Jul 25 2014 20:19:23 GMT+0300 (IDT),
+  pid: 1406319563333,
+  areas: [ 271, 246, 247, 245 ] }
+{ time: Fri Jul 25 2014 20:19:35 GMT+0300 (IDT),
+  pid: 1406319576053,
+  areas: [ 271, 245 ] }
+{ time: Fri Jul 25 2014 20:19:45 GMT+0300 (IDT),
+  pid: 1406319584913,
+  areas: [ 271, 246, 245, 247 ] }
+{ time: Fri Jul 25 2014 20:19:56 GMT+0300 (IDT),
+  pid: 1406319595241,
+  areas: [ 246, 247 ] }
+{ time: Fri Jul 25 2014 20:35:59 GMT+0300 (IDT),
+  pid: 1406320558648,
+  areas: [ 217, 247 ] }
+{ time: Fri Jul 25 2014 20:36:06 GMT+0300 (IDT),
+  pid: 1406320564398,
+  areas: [ 275, 217, 247 ] }
+{ time: Fri Jul 25 2014 20:36:09 GMT+0300 (IDT),
+  pid: 1406320567258,
+  areas: [ 275, 273, 217, 247, 272 ] }
+{ time: Fri Jul 25 2014 20:36:17 GMT+0300 (IDT),
+  pid: 1406320575649,
+  areas: [ 275, 273, 247, 272 ] }
+{ time: Fri Jul 25 2014 20:36:24 GMT+0300 (IDT),
+  pid: 1406320583305,
+  areas: [ 275, 273, 247, 217, 272 ] }
+{ time: Fri Jul 25 2014 20:36:28 GMT+0300 (IDT),
+  pid: 1406320585821,
+  areas: [ 275, 273, 217, 272 ] }
+{ time: Fri Jul 25 2014 20:36:32 GMT+0300 (IDT),
+  pid: 1406320592634,
+  areas: [ 155, 140, 168, 275, 143, 141, 139, 169, 170, 273, 142, 121, 217, 272 ] }
+{ time: Fri Jul 25 2014 20:37:38 GMT+0300 (IDT),
+  pid: 1406320637402,
+  areas: [ 155, 140, 168, 143, 141, 139, 169, 170, 142, 121 ] }
+{ time: Fri Jul 25 2014 20:37:59 GMT+0300 (IDT),
+  pid: 1406320677341,
+  areas: [ 139, 169, 170, 142, 121 ] }
+{ time: Fri Jul 25 2014 23:32:42 GMT+0300 (IDT),
+  pid: 1406331163496,
+  areas: [ 236 ] }
+{ time: Fri Jul 25 2014 23:33:08 GMT+0300 (IDT),
+  pid: 1406331188903,
+  areas: [ 236, 238, 238 ] }
+{ time: Fri Jul 25 2014 23:33:26 GMT+0300 (IDT),
+  pid: 1406331205967,
+  areas: [ 238, 238 ] }
+{ time: Sat Jul 26 2014 01:56:40 GMT+0300 (IDT),
+  pid: 1406339800483,
+  areas: [ 246 ] }
+{ time: Sat Jul 26 2014 02:43:27 GMT+0300 (IDT),
+  pid: 1406342607557,
+  areas: [ 218 ] }
+{ time: Sat Jul 26 2014 03:23:19 GMT+0300 (IDT),
+  pid: 1406345000207,
+  areas: [ 218 ] }
+{ time: Sat Jul 26 2014 04:51:05 GMT+0300 (IDT),
+  pid: 1406350266216,
+  areas: [ 224 ] }
