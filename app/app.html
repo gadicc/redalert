@@ -3,15 +3,96 @@
 </head>
 
 <body>
-  {{> hello}}
-  <p>
-  	Connected: {{redalert.connected}}<br />
-  	Latency: {{redalert.latency}}
-  </p>
 </body>
 
-<template name="hello">
-  <h1>Hello World!</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
+<template name="layout">
+	<div id="screen">
+		<div id="header"
+			><a class="pageIcon" href="/">{{redalert.area.name}}</a
+			><a class="pageIcon" href="/all"></a
+			><a class="pageIcon" href="/map"></a
+			><a class="pageIcon" href="/settings"></a
+		></div>
+		<div id="page">
+			{{> yield}}
+		</div>
+	</div>
+</template>
+
+<template name="home">
+	<div class="alert">
+	sdfsdfs
+	</div>
+	{{#each alerts}}
+		{{> alert}}
+	{{/each}}
+</template>
+
+
+<template name="alert">
+	<div class="alert">
+		<table><tr><td>
+			{{time createdAt}}<br />{{ago createdAt}}
+		</td><td>
+			{{#each areas}}
+				{{#with area this}}
+					<span>{{name}}</span>
+				{{/with}}
+			{{/each}}
+		</td></tr></table>
+	</div>
+</template>
+
+<template name="famous_layout">
+	{{#HeaderFooterLayout headerSize="50" footerSize="0"}}
+		{{>View target='header' template='header' translate="[0,0,100]"}}
+		{{#View target='content' size="[undefined,undefined]"}}
+			{{> yield}}
+		{{/View}}
+	{{/HeaderFooterLayout}}
+</template>
+
+<template name="famous_header">
+	{{#GridLayout size="[undefined,75]" dimensions="[4,1]"}}
+		{{#Surface size="[undefined,undefined]"}}
+			<a class="pageIcon" href="/"></a>
+		{{/Surface}}
+		{{#Surface size="[undefined,undefined]"}}
+			<a class="pageIcon" href="/all"></a>
+		{{/Surface}}
+		{{#Surface size="[undefined,undefined]"}}
+			<a class="pageIcon" href="/map"></a>
+		{{/Surface}}
+		{{#Surface size="[undefined,undefined]"}}
+			<a class="pageIcon" href="/settings">
+			  <p>
+			  	Connected: {{redalert.connected}}<br />
+  				Latency: {{redalert.latency}}
+				</p>
+			</a>
+		{{/Surface}}
+	{{/GridLayout}}
+</template>
+
+<template name="famous_home">
+  {{#Scrollview size="[undefined,undefined]"}}
+  	{{#Surface size="[undefined,80]" class='alert'}}
+  		hello
+  	{{/Surface}}
+  	{{#each alerts}}
+	  	{{>Surface size="[undefined,80]" template='alert' class='alert'}}
+	  {{/each}}
+	{{/Scrollview}}
+</template>
+
+<template name="famous_alert">
+	{{#with ..}}
+		{{createdAt}}
+		<br />
+		{{#each areas}}
+			{{#with area this}}
+				{{name}}
+			{{/with}}
+		{{/each}}
+	{{/with}}
 </template>

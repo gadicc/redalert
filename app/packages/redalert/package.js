@@ -3,7 +3,7 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
-	api.use(['reactive-dict', 'jquery', 'ui'], 'client');
+	api.use(['reactive-dict', 'jquery', 'ui', 'livedata', 'deps'], 'client');
   api.add_files('redalert.js', 'client');
   api.export('redalert', 'client');
 });

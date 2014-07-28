@@ -2,13 +2,47 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "googlemaps": {}
+      "googlemaps": {},
+      "iron-router": {},
+      "famous-components": {},
+      "famono": {},
+      "moment": {}
     },
     "packages": {
       "googlemaps": {
         "git": "https://github.com/drewjw81/meteor-googlemaps.git",
         "tag": "v0.0.2",
         "commit": "da8785c82cfd7de0111f898ef10728e7ed24e361"
+      },
+      "iron-router": {
+        "git": "https://github.com/EventedMind/iron-router.git",
+        "tag": "v0.7.1",
+        "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
+      },
+      "famous-components": {
+        "git": "https://github.com/gadicc/meteor-famous-components.git",
+        "tag": "v0.0.15",
+        "commit": "371bb247a45ee3c446202b38680be53d5229118d"
+      },
+      "famono": {
+        "git": "https://github.com/raix/Meteor-famono.git",
+        "tag": "v0.4.6",
+        "commit": "71d87155f75851b8e34f522df7bc261a4c2973c4"
+      },
+      "moment": {
+        "git": "https://github.com/acreeger/meteor-moment.git",
+        "tag": "v2.6.0",
+        "commit": "26156df681750fd6e6ed77043eef32b6653ebbdf"
+      },
+      "blaze-layout": {
+        "git": "https://github.com/EventedMind/blaze-layout.git",
+        "tag": "v0.2.4",
+        "commit": "b40e9b0612329288d75cf52ad14a7da64bb8618f"
+      },
+      "pince": {
+        "git": "https://github.com/mad-eye/pince.git",
+        "tag": "v0.0.5",
+        "commit": "4524ecc0bdf043c49dc62e91bbd8a99c661081ed"
       }
     }
   }

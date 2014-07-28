@@ -100,7 +100,6 @@ function raInsert(doc) {
 	return doc;
 }
 
-
 function sleep(ms) {
   var fiber = Fiber.current;
   setTimeout(function() {

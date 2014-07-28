@@ -10,3 +10,5 @@ googlemaps
 reactive-dict
 redalert
 http
+iron-router
+moment

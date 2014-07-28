@@ -1,5 +1,9 @@
 {
   "packages": {
-    "googlemaps": {}
+    "googlemaps": {},
+    "iron-router": {},
+    "famous-components": {},
+    "famono": {},
+    "moment": {}
   }
 }
