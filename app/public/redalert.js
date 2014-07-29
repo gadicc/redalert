@@ -8,7 +8,7 @@ RedAlert = {
   areas: {},
   locations: {},
   serials: {
-    desired: { areas: 1, locations: 1 },
+    desired: { areas: 3, locations: 3 },
     stored: { areas: 0, locations: 0 }
   },
 	lastMessage: { },
@@ -274,6 +274,9 @@ window.setInterval(function() {
 	if (RedAlert.status != 'connecting' && new Date() - RedAlert.lastMessage.receivedAt > 5000
 		|| RedAlert.status == 'connecting' && new Date() - RedAlert.initConnect > 8000) {
 		console.log('attempting reconnect...');
-		RedAlert.connect();
+    RedAlert.iframe.src = '';
+    window.setTimeout(function() {
+      RedAlert.connect();
+    }, 500);
 	}
 }, 1000);  

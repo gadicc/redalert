@@ -19,14 +19,13 @@ if (Meteor.isClient) {
 		$('a.pageIcon[href="' + path + '"]').addClass('active');
 	}
 
-	Router.after(markActive);
+	Router.onAfterAction(markActive);
 	Template.layout.rendered = markActive;
 
 	/*
-	Template.header.rendered = function() {
+	Template.famousHeader.rendered = function() {
 		Meteor.setTimeout(markActive, 200);
 	};
-
 	famousCmp.ready(function(require) {
 		famousCmp.registerView('GridLayout', famous.views.GridLayout);
 	});
@@ -36,7 +35,7 @@ if (Meteor.isClient) {
 		if (redalert.reactive.get('ready'))
 			return redalert.messages.find({ type: 'alert'}, {
 				sort: { createdAt: -1 },
-				limit: 25,
+				limit: 80,
 			});
 		else
 			return [];
@@ -52,8 +51,18 @@ if (Meteor.isClient) {
 		},
 		ago: function(time) {
 			return moment(time).fromNow();
+		},
+		rawTime: function(time) {
+			return time && time.getTime();
 		}
 	});
+
+	Meteor.setInterval(function() {
+		$('.timeAgo').each(function() {
+			var $this = $(this);
+			$this.html(moment(parseInt($this.attr('data-time'))).fromNow());
+		});
+	}, 3000);
 }
 
 if (Meteor.isServer) {

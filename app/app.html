@@ -1,5 +1,6 @@
 <head>
-  <title>app</title>
+  <title>tzeva-adom.com v2</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 </head>
 
 <body>
@@ -11,7 +12,12 @@
 			><a class="pageIcon" href="/">{{redalert.area.name}}</a
 			><a class="pageIcon" href="/all"></a
 			><a class="pageIcon" href="/map"></a
-			><a class="pageIcon" href="/settings"></a
+			><a class="pageIcon con-{{redalert.connected}}" href="/settings">
+			  <p>
+			  	{{redalert.connected}}<br />
+  				{{redalert.latency}}ms
+				</p>
+			</a
 		></div>
 		<div id="page">
 			{{> yield}}
@@ -28,31 +34,16 @@
 	{{/each}}
 </template>
 
-
-<template name="alert">
-	<div class="alert">
-		<table><tr><td>
-			{{time createdAt}}<br />{{ago createdAt}}
-		</td><td>
-			{{#each areas}}
-				{{#with area this}}
-					<span>{{name}}</span>
-				{{/with}}
-			{{/each}}
-		</td></tr></table>
-	</div>
-</template>
-
-<template name="famous_layout">
+<template name="famousLayout">
 	{{#HeaderFooterLayout headerSize="50" footerSize="0"}}
-		{{>View target='header' template='header' translate="[0,0,100]"}}
+		{{>View target='header' template='famousHeader' translate="[0,0,100]"}}
 		{{#View target='content' size="[undefined,undefined]"}}
 			{{> yield}}
 		{{/View}}
 	{{/HeaderFooterLayout}}
 </template>
 
-<template name="famous_header">
+<template name="famousHeader">
 	{{#GridLayout size="[undefined,75]" dimensions="[4,1]"}}
 		{{#Surface size="[undefined,undefined]"}}
 			<a class="pageIcon" href="/"></a>
@@ -64,17 +55,17 @@
 			<a class="pageIcon" href="/map"></a>
 		{{/Surface}}
 		{{#Surface size="[undefined,undefined]"}}
-			<a class="pageIcon" href="/settings">
+			<a class="pageIcon con-{{connected}}" href="/settings">
 			  <p>
-			  	Connected: {{redalert.connected}}<br />
-  				Latency: {{redalert.latency}}
+			  	{{redalert.connected}}<br />
+  				{{redalert.latency}}ms
 				</p>
 			</a>
 		{{/Surface}}
 	{{/GridLayout}}
 </template>
 
-<template name="famous_home">
+<template name="famousHome">
   {{#Scrollview size="[undefined,undefined]"}}
   	{{#Surface size="[undefined,80]" class='alert'}}
   		hello
@@ -85,14 +76,20 @@
 	{{/Scrollview}}
 </template>
 
-<template name="famous_alert">
-	{{#with ..}}
-		{{createdAt}}
-		<br />
-		{{#each areas}}
-			{{#with area this}}
-				{{name}}
-			{{/with}}
-		{{/each}}
-	{{/with}}
+<template name="alert">
+	{{! #with ..}}
+	<div class="alert">
+		<table><tr><td>
+			<nobr>{{time createdAt}}</nobr>
+			<br />
+			<nobr><span class="timeAgo" data-time="{{rawTime createdAt}}">{{ago createdAt}}</span></nobr>
+		</td><td>
+			{{#each areas}}
+				{{#with area this}}
+					<span>{{name}}</span>
+				{{/with}}
+			{{/each}}
+		</td></tr></table>
+	</div>
+	{{! /with}}
 </template>

@@ -3,7 +3,10 @@
     "googlemaps": {},
     "iron-router": {},
     "famous-components": {},
-    "famono": {},
+    "famono": {
+		"git": "https://github.com/raix/Meteor-famono.git",
+		"tag": "v0.4.5"
+	},
     "moment": {}
   }
 }

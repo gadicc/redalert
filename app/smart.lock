@@ -5,7 +5,10 @@
       "googlemaps": {},
       "iron-router": {},
       "famous-components": {},
-      "famono": {},
+      "famono": {
+        "git": "https://github.com/raix/Meteor-famono.git",
+        "tag": "v0.4.5"
+      },
       "moment": {}
     },
     "packages": {
@@ -26,8 +29,8 @@
       },
       "famono": {
         "git": "https://github.com/raix/Meteor-famono.git",
-        "tag": "v0.4.6",
-        "commit": "71d87155f75851b8e34f522df7bc261a4c2973c4"
+        "tag": "v0.4.5",
+        "commit": "4b7d9b9061a58e48b970b91906406a494000becb"
       },
       "moment": {
         "git": "https://github.com/acreeger/meteor-moment.git",

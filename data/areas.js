@@ -1,6 +1,6 @@
 var AREAS_JSON = './areas.json';
 var LOCATIONS_JSON = './locations.json';
-var FORCE_REGEN = true;
+var FORCE_REGEN = false;
 
 var fs = require('fs');
 var http = require('http');
@@ -84,11 +84,12 @@ Fiber(function() {
 	if (1)
 	for (key in locations) {
 		i++;
-		if (!locations[key].geodata) {
+		if (!locations[key].geodata || !locations[key].geodata.length) {
 			added++;
 	 		console.log(i + '/' + length + ': ' + locations[key].name + ' ('
 	 			+ Math.round(i / length * 100) + '%)');
 			locations[key].geodata = get_geodata(locations[key].name);
+			console.log(locations[key].geodata);
 	 		sleep(50);
 	 		if (added % 10 == 0) {
 	 			console.log('sync');
@@ -106,6 +107,8 @@ Fiber(function() {
 		if (areas[key].locations)
 		for (var i=0; i < areas[key].locations.length; i++) {
 			var loc = locations[areas[key].locations[i]].geodata[0];
+
+			console.log(locations[areas[key].locations[i]].geodata);
 
 			if (!loc)
 				continue;
