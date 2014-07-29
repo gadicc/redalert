@@ -9,14 +9,18 @@
 <template name="layout">
 	<div id="screen">
 		<div id="header"
-			><a class="pageIcon" href="/">{{redalert.area.name}}</a
-			><a class="pageIcon" href="/all"></a
-			><a class="pageIcon" href="/map"></a
+			><a class="pageIcon" href="/">
+				{{#if redalert.area}}
+					{{langObj redalert.area.name}}<br>
+					{{redalert.area.coverTime}}s cover
+				{{else}}
+					Finding<br>location...
+				{{/if}}</a
+			><a class="pageIcon" href="/all">All<br>Israel</a
+			><a class="pageIcon" href="/map">Map<br>(soon)</a
 			><a class="pageIcon con-{{redalert.connected}}" href="/settings">
-			  <p>
-			  	{{redalert.connected}}<br />
-  				{{redalert.latency}}ms
-				</p>
+		  	{{redalert.connected}}<br />
+				{{redalert.latency}}ms
 			</a
 		></div>
 		<div id="page">
@@ -26,8 +30,13 @@
 </template>
 
 <template name="home">
-	<div class="alert">
-	sdfsdfs
+
+</template>
+
+<template name="all">
+	<div class="alert" style="line-height: 2.5em; text-align: center">
+		<span class="duration" data-since="{{lastTime}}"></span>
+		rocket free
 	</div>
 	{{#each alerts}}
 		{{> alert}}
@@ -86,7 +95,7 @@
 		</td><td>
 			{{#each areas}}
 				{{#with area this}}
-					<span>{{name}}</span>
+					<span>{{langObj name}}</span>
 				{{/with}}
 			{{/each}}
 		</td></tr></table>

@@ -63,7 +63,7 @@ jQuery.ajax({
 					else
 						return;
 
-					var newArea = RedAlert.areaFromPos(pos);
+					var newArea = RedAlert.areas.fromPos(pos);
 					var oldArea = redalert.reactive.get('area');
 					if (!oldArea || oldArea.id != newArea.id) {
 						redalert.reactive.set('area', newArea);
@@ -98,19 +98,14 @@ Deps.autorun(function() {
 	lastInsert = new Date();
 });
 
-
-function checkLocation() {
-	if (navigator.geolocation) {
- 	 	navigator.geolocation.getCurrentPosition(function(pos) {
- 	 		var rpos = redalert.reactive.get('position');
- 	 		if (!rpos || !rpos.coords
-	 	 			|| rpos.coords.latitude !== pos.coords.latitude
- 		 			|| rpos.coords.longitude !== pos.coords.longitude)
- 	 			redalert.reactive.set('position', pos);
- 	 		Meteor.setTimeout(checkLocation, 5000);
- 	 	}, function(err) {
- 	 		console.log(err);
- 	 	});
- 	}
+if (navigator.geolocation) {
+	redalert.geowatchId = navigator.geolocation.watchPosition(function(pos) {
+ 		var rpos = redalert.reactive.get('position');
+		if (!rpos || !rpos.coords
+	 			|| rpos.coords.latitude !== pos.coords.latitude
+	 			|| rpos.coords.longitude !== pos.coords.longitude)
+ 			redalert.reactive.set('position', pos);
+	}, function(err) {
+		console.log(err);
+	});
 }
-checkLocation();

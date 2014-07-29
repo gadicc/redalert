@@ -4,9 +4,11 @@
     "iron-router": {},
     "famous-components": {},
     "famono": {
-		"git": "https://github.com/raix/Meteor-famono.git",
-		"tag": "v0.4.5"
-	},
-    "moment": {}
+      "git": "https://github.com/raix/Meteor-famono.git",
+      "tag": "v0.4.5"
+    },
+    "moment": {},
+    "highcharts": {},
+    "moment-duration-format": {}
   }
 }

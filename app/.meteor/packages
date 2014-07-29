@@ -13,3 +13,5 @@ http
 iron-router
 moment
 jquery
+highcharts
+moment-duration-format

@@ -5,10 +5,10 @@ RedAlert = {
 
 	iframe: null,
   messages: [],
-  areas: {},
-  locations: {},
+  areas: { data: {} },
+  locations: { data: {} },
   serials: {
-    desired: { areas: 3, locations: 3 },
+    desired: { areas: 4, locations: 4 },
     stored: { areas: 0, locations: 0 }
   },
 	lastMessage: { },
@@ -62,26 +62,34 @@ RedAlert = {
 
     var d = R * c;
     return d;
-  },
-
-  areaFromPos: function(pos) {
-    var area, bounds, distance, shortest, shortestId = null;
-    for (key in RedAlert.areas) {
-      area = RedAlert.areas[key];
-      if (!(area && area.geometry && area.geometry.location
-          && area.geometry.location.lat && area.geometry.location.lng))
-        continue;
-
-      distance = RedAlert.distance(pos, area.geometry.location);
-
-      if (!shortest || distance < shortest) {
-        shortest = distance;
-        shortestId = key;
-      }
-    }
-    return RedAlert.areas[shortestId];
   }
 };
+
+RedAlert.areas.byId = RedAlert.locations.byId = function(id) {
+  return this.data[id];
+};
+RedAlert.areas.byName = RedAlert.locations.byName = function(name) {
+  for (key in this.data)
+    if (this.data[key].name.match(name))
+      return this.data[key];
+};
+RedAlert.areas.fromPos = function(pos) {
+  var area, bounds, distance, shortest, shortestId = null;
+  for (key in RedAlert.areas.data) {
+    area = RedAlert.areas.data[key];
+    if (!(area && area.geometry && area.geometry.location
+        && area.geometry.location.lat && area.geometry.location.lng))
+      continue;
+
+    distance = RedAlert.distance(pos, area.geometry.location);
+
+    if (!shortest || distance < shortest) {
+      shortest = distance;
+      shortestId = key;
+    }
+  }
+  return RedAlert.areas.data[shortestId];
+}
 
 // attach the .equals method to Array's prototype to call it on any array
 // http://stackoverflow.com/questions/7837456/comparing-two-arrays-in-javascript
@@ -213,8 +221,8 @@ jQuery(document).ready(function() {
     var tmp;
     RedAlert.lastId = parseInt(localStorage.getItem('ra_lastId')) || 0;
     RedAlert.messages = JSON.parse(localStorage.getItem('ra_messages')) || [];
-    RedAlert.areas = JSON.parse(localStorage.getItem('ra_areas'));
-    RedAlert.locations = JSON.parse(localStorage.getItem('ra_locations'));
+    RedAlert.areas.data = JSON.parse(localStorage.getItem('ra_areas'));
+    RedAlert.locations.data = JSON.parse(localStorage.getItem('ra_locations'));
     tmp = JSON.parse(localStorage.getItem('ra_serials'));
     if (tmp) RedAlert.serials.stored = tmp;
 
@@ -231,11 +239,11 @@ jQuery(document).ready(function() {
     url = '/areas.json?serial=' + RedAlert.serials.desired.areas;
     console.log('Fetching ' + url);
     jQuery.getJSON(url, function(data) {
-      RedAlert.areas = data;
+      RedAlert.areas.data = data;
       RedAlert.serials.stored.areas = RedAlert.serials.desired.areas;
       if (localStorage) {
         localStorage.setItem('ra_serials', JSON.stringify(RedAlert.serials.stored));
-        localStorage.setItem('ra_areas', JSON.stringify(RedAlert.areas));
+        localStorage.setItem('ra_areas', JSON.stringify(RedAlert.areas.data));
       }
     });
   }
@@ -243,11 +251,11 @@ jQuery(document).ready(function() {
     url = '/locations.json?serial=' + RedAlert.serials.desired.locations;
     console.log('Fetching ' + url);
     jQuery.getJSON(url, function(data) {
-      RedAlert.locations = data;
+      RedAlert.locations.data = data;
       RedAlert.serials.stored.locations = RedAlert.serials.desired.locations;
       if (localStorage) {
         localStorage.setItem('ra_serials', JSON.stringify(RedAlert.serials.stored));
-        localStorage.setItem('ra_locations', JSON.stringify(RedAlert.locations));
+        localStorage.setItem('ra_locations', JSON.stringify(RedAlert.locations.data));
       }
     });
   }

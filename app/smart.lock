@@ -9,7 +9,9 @@
         "git": "https://github.com/raix/Meteor-famono.git",
         "tag": "v0.4.5"
       },
-      "moment": {}
+      "moment": {},
+      "highcharts": {},
+      "moment-duration-format": {}
     },
     "packages": {
       "googlemaps": {
@@ -36,6 +38,16 @@
         "git": "https://github.com/acreeger/meteor-moment.git",
         "tag": "v2.6.0",
         "commit": "26156df681750fd6e6ed77043eef32b6653ebbdf"
+      },
+      "highcharts": {
+        "git": "https://github.com/mikeschaekermann/meteor-highcharts.git",
+        "tag": "v0.1.0",
+        "commit": "eca115ee55e1cc083e389171717760dbaa727534"
+      },
+      "moment-duration-format": {
+        "git": "https://github.com/wizonesolutions/meteor-moment-duration-format.git",
+        "tag": "v1.2.1",
+        "commit": "69f0fcd214205157e750d0b33069b4b66e275b45"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

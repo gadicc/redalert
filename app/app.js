@@ -1,4 +1,6 @@
 if (Meteor.isClient) {
+	var native = 'he';
+	Session.set('lang', 'en');
 
 	Router.configure({
 		layoutTemplate: 'layout'
@@ -6,10 +8,12 @@ if (Meteor.isClient) {
 
 	Router.map(function() {
 		this.route('home', {
-			path: '/'
+			path: '/',
+			template: 'all'
 		});
-		this.route('home', {
-			path: '/all'
+		this.route('all', {
+			path: '/all',
+			template: 'all'
 		});
 	});
 
@@ -31,9 +35,24 @@ if (Meteor.isClient) {
 	});
 	*/
 
+	function areaQuery(query) {
+		if (Router.current().path == '/') {
+			query.areas = redalert.reactive.get('area');
+			if (query.areas)
+				query.areas = query.areas.id;
+			else
+				return null;
+		}
+		return true;
+	}
+
 	UI.registerHelper('alerts', function() {
+		var query = { type: 'alert' };
+		if (!areaQuery(query))
+			return [];
+
 		if (redalert.reactive.get('ready'))
-			return redalert.messages.find({ type: 'alert'}, {
+			return redalert.messages.find(query, {
 				sort: { createdAt: -1 },
 				limit: 80,
 			});
@@ -41,10 +60,28 @@ if (Meteor.isClient) {
 			return [];
 	});
 
+	UI.registerHelper('lastTime', function() {
+		var query = {};
+		if (!areaQuery(query))
+			return null;
+		
+		var options = {
+			sort: { createdAt: -1 },
+			limit: 1
+		};
+		console.log(query, options);
+		var mostRecent = redalert.messages.findOne(query, options);
+		return mostRecent ? mostRecent.createdAt.getTime() : null;
+	});
+
+	UI.registerHelper('langObj', function(obj) {
+		return obj[Session.get('lang')] || obj.native;
+	});
+
 	Template.alert.helpers({
 		area: function() {
 			var id = this.valueOf();
-			return RedAlert.areas[id];
+			return RedAlert.areas.byId(id);
 		},
 		time: function(time) {
 			return moment(time).format('DD/MM HH:mm:ss');
@@ -63,6 +100,17 @@ if (Meteor.isClient) {
 			$this.html(moment(parseInt($this.attr('data-time'))).fromNow());
 		});
 	}, 3000);
+
+	Meteor.setInterval(function() {
+		$('.duration').each(function() {
+			var $this = $(this);
+			var since = $this.attr('data-since');
+			if (since)
+			$this.html(moment
+				.duration(new Date() - parseInt(since))
+				.format("d [day], h [hr], m [min], s [sec]"));
+		});
+	}, 1000);
 }
 
 if (Meteor.isServer) {

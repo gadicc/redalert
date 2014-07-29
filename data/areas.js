@@ -84,7 +84,7 @@ Fiber(function() {
 	if (1)
 	for (key in locations) {
 		i++;
-		if (!locations[key].geodata || !locations[key].geodata.length) {
+		if (!locations[key].geodata || 0 && !locations[key].geodata.length) {
 			added++;
 	 		console.log(i + '/' + length + ': ' + locations[key].name + ' ('
 	 			+ Math.round(i / length * 100) + '%)');
@@ -107,8 +107,6 @@ Fiber(function() {
 		if (areas[key].locations)
 		for (var i=0; i < areas[key].locations.length; i++) {
 			var loc = locations[areas[key].locations[i]].geodata[0];
-
-			console.log(locations[areas[key].locations[i]].geodata);
 
 			if (!loc)
 				continue;
@@ -147,6 +145,141 @@ Fiber(function() {
 			areas[key].geometry.bounds.northeast.lng +
 				(areas[key].geometry.bounds.southwest.lng
 					- areas[key].geometry.bounds.northeast.lng) / 2;
+	}
+
+	// Arava 120, Yam Hamelech 90
+
+	if (1)
+	var area;
+	for (key in areas) {
+		area = areas[key];
+		if (typeof area.region !== 'object')
+			area.region = { he: area.region };
+		if (typeof area.name !== 'object')
+		area.name = { he: area.name };
+
+		switch(area.region.he) {
+			case 'אילת':
+				area.region.en = 'Eilat';
+				area.coverTime = 30;
+				break;
+			case 'ערבה':  // MISSING
+				area.region.en = 'Arava';
+				area.coverTime = 180;
+			case 'נגב':
+				area.region.en = 'Negev';
+				area.coverTime = 90;
+				break;
+			case 'באר שבע':
+				area.region.en = 'Beersheba';
+				area.coverTime = 45;   // TODO, 60
+				break;
+			case 'אשקלון':
+				area.region.en = 'Ashkelon';
+				area.coverTime = 30;
+				break;
+			case 'עוטף עזה':
+				area.region.en = 'Gaza Perimeter';
+				area.coverTime = 15;
+				break;
+			case 'ים המלח': // MISSING
+				area.regione.en = 'Dead Sea';
+				area.coverTime = 90;
+			case 'יהודה':
+				area.region.en = 'Yehuda';
+				area.coverTime = 90;
+				break;
+			case 'אשדוד':
+				area.region.en = 'Ashdod';
+				area.coverTime = 45;  // TODO, 60
+				break;
+			case 'מעלה אדומים':
+				area.region.en = 'Maaleh Adumim';
+				area.coverTime = 90;
+				break;
+			case 'ירושלים':
+				area.region.en = 'Jerusalem';
+				area.coverTime = 90;
+				break;
+			case 'בית שמש':
+				area.region.en = 'Beit Shemesh';
+				area.coverTime = 90;
+				break;
+			case 'בקעה':
+				area.region.en = 'Bik\'a';
+				area.coverTime = 90;
+				break;
+			case 'שומרון':
+				area.region.en = 'Shomron';
+				area.coverTime = 90;
+				break;
+			case 'שפלה':
+				area.region.en = 'Shfela';
+				area.coverTime = 90;
+				break;
+			case 'דן':
+				area.region.en = 'Dan';
+				area.coverTime = 90;
+				break;
+			case 'שרון':
+				area.region.en = 'Sharon';
+				area.coverTime = 90;
+				break;
+			case 'עמק חפר':
+				area.region.en = 'Hefer Valley';
+				area.coverTime = 90;
+				break;
+			case 'עירון': // MISSING
+				area.region.en = 'Iron';
+				area.coverTime = 90;
+			case 'מנשה':
+				area.region.en = 'Menashe';
+				area.coverTime = 90;
+				break;
+			case 'בקעץ בית שאן': // MISSING
+				area.region.en = 'Beit She\'an Valley';
+				area.coverTime = 60;
+			case 'עמק יזרעאל': // MISSING
+				area.region.en = 'Jezreel Valley';
+				area.coverTime = 60;
+			case 'כרמל':
+				area.region.en = 'Carmel';
+				area.coverTime = 60;
+				break;
+			case 'תבור': // MISSING
+				area.region.en = 'Tavor';
+				area.coverTime = 60;
+			case 'הקריות': // MISSING
+				area.region.en = "Kiriyot";
+				area.coverTime = 60;
+			case 'חיפה': // MISSING
+				area.region.en = "Haifa";
+				area.coverTime = 60;
+			case 'גליל תחתון': // MISSING
+				area.region.en = "Lower Galilee";
+				area.coverTime = 60;
+			case 'גליל עליון': // MISSING
+				area.region.en = "Upper Galilee";
+				area.coverTime = 30;
+			case 'קצרין': // MISSING
+				area.region.en = "Kazrin";
+				area.coverTime = 15;
+			case 'גולן':
+				area.region.en = 'Golan';
+				area.coverTime = 0;
+				break;			
+			case 'קו העימות':
+				area.region.en = 'Frontline';
+				area.coverTime = 0;
+				break;
+			case 'undefined':
+				break;
+			default:
+				console.log(areas[key].region);
+		}
+		if (area.region.en)
+			area.name.en = area.region.en + ' ' + area.id;
+		console.log(area);
 	}
 
 	console.log("Areas: " + Object.keys(areas).length);

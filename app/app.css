@@ -7,7 +7,6 @@ body > .famous-container {
 
 body, html {
 	margin: 0;
-	text-align: center;
 	height: 100%;
 }
 
@@ -32,17 +31,36 @@ body, html {
 
 .pageIcon {
 	width: 25%; height: 100%;
-	border: 1px solid black;
-	background: #888;
+	text-align: center;
+	border-top: 1px solid #4d5e6c;
+	border-bottom: 1px solid #324554;
+	border-left: 1px solid #112535;
+	border-right: 1px solid #112535;
+	background: #264055;
 	display: inline-block;
 	vertical-align: top;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
+	color: white;
+	text-shadow: 0px 1px 3px rgba(0,0,0,.5);
+	text-decoration: none;
 }
 
-.pageIcon.con-connected { background: #5f5; }
-.pageIcon.con-connecting { background: #ff5; }
+.pageIcon:hover {
+	background: #aaa;
+}
+
+.pageIcon.active {
+	background: #427ba6;
+	border-top: 1px solid #94b6d2;
+	border-left: 1px solid #366586;
+	border-right: 1px solid #366689;
+	border-bottom: 1px solid #3d5d76;
+}
+
+.pageIcon.con-connected { background: #2F6D2F; }
+.pageIcon.con-connecting { background: #550; }
 
 
 .famous-pageIcon {
@@ -56,14 +74,6 @@ body, html {
 	border: 1px solid black;
 }
 
-.pageIcon:hover {
-	background: #aaa;
-}
-
-.pageIcon.active {
-	background: white;
-}
-
 .alert {
 	color: black;
 	background: white;
@@ -71,4 +81,4 @@ body, html {
 }
 
 .alert table td { padding: 10px; } 
-.alert span:not(:last-child):after { content: ", "; }
+.alert td:nth-child(2) span:not(:last-child):after { content: ", "; }
