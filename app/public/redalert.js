@@ -201,16 +201,14 @@ function receiveMessage(event) {
     }
     // Only insert if last record was not in reduce threshold
     if (!RedAlert.reduce || index == 0 || !data.areas.equals(RedAlert.messages[index-1].areas)
-        || data.time - RedAlert.messages[index-1].time > RedAlert.reduce)
-        RedAlert.messages.splice(index, remove, data);
+        || data.time - RedAlert.messages[index-1].time > RedAlert.reduce) {
+      RedAlert.messages.splice(index, remove, data);
+      for (var i=0; i < RedAlert.hooks.msg.length; i++)
+        RedAlert.hooks.msg[i].call(this, data);  
+    }
 
-    //RedAlert.messages.push(data);
     RedAlert.saveData();
-    //RedAlert.lastMessage.sentAt =     
   }
-
-  for (var i=0; i < RedAlert.hooks.msg.length; i++)
-    RedAlert.hooks.msg[i].call(this, data);
 }
 
 jQuery(document).ready(function() {

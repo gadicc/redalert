@@ -15,3 +15,5 @@ moment
 jquery
 highcharts
 moment-duration-format
+d3
+reactive-window

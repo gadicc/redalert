@@ -98,14 +98,23 @@ Deps.autorun(function() {
 	lastInsert = new Date();
 });
 
-if (navigator.geolocation) {
-	redalert.geowatchId = navigator.geolocation.watchPosition(function(pos) {
- 		var rpos = redalert.reactive.get('position');
-		if (!rpos || !rpos.coords
-	 			|| rpos.coords.latitude !== pos.coords.latitude
-	 			|| rpos.coords.longitude !== pos.coords.longitude)
- 			redalert.reactive.set('position', pos);
-	}, function(err) {
-		console.log(err);
-	});
+function geoWatch() {
+	console.log(1);
+	redalert.geowatchId = navigator.geolocation.watchPosition(
+		function(pos) {
+	 		var rpos = redalert.reactive.get('position');
+			if (!rpos || !rpos.coords
+		 			|| rpos.coords.latitude !== pos.coords.latitude
+		 			|| rpos.coords.longitude !== pos.coords.longitude)
+	 			redalert.reactive.set('position', pos);
+		}, function(err) {
+			console.log(err);
+			geoWatch();
+		}, {
+			timeout: 5000
+		});	
 }
+
+// This works much better when the document is ready
+if (navigator.geolocation)
+	$(document).ready(geoWatch);

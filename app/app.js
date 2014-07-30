@@ -6,14 +6,83 @@ if (Meteor.isClient) {
 		layoutTemplate: 'layout'
 	});
 
+	function chart() {
+		$('#chart').html('');
+
+		var dataset = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
+                11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
+    var barPadding = 1;
+
+    var w = $(window).innerWidth(), h = 100, barPadding = 1, scaleY = 2;
+
+		var svg = d3.select('#chart').append('svg')
+			.attr("width", w).attr("height", h);
+
+		svg.selectAll("rect")
+		  .data(dataset)
+		  .enter()
+		  .append("rect")
+			.attr("x", function(d, i) {
+			  return i * (w / dataset.length);
+			})
+			.attr("y", function(d) {
+			    return h - (d * scaleY) - 15;
+			})
+			.attr("width", w / dataset.length - barPadding)
+			.attr("height", function(d) {
+			    return d * scaleY;
+			})
+			.attr("fill", function(d) {
+			    return "rgb(" + (d * 10) + ", 0, 0)";
+			});
+
+		var texts = svg.selectAll("text")
+		  .data(dataset)
+		  .enter();
+
+		texts.append("text")
+		  .text(function(d) {
+        return d;
+   		})
+			.attr("x", function(d, i) {
+        return i * (w / dataset.length) + (w / dataset.length - barPadding) / 2;
+    	})
+ 		  .attr("y", function(d) {
+        return h - (d * scaleY) - 20;
+  	  })
+			.attr("text-anchor", "middle")
+			.attr("font-family", "sans-serif")
+   		.attr("font-size", "11px");
+   		//.attr("fill", "white");
+
+		texts.append("text")
+		  .text(function(d) {
+        return 'd';
+   		})
+			.attr("x", function(d, i) {
+        return i * (w / dataset.length) + (w / dataset.length - barPadding) / 2;
+    	})
+ 		  .attr("y", function(d) {
+        return h - 2;
+  	  })
+			.attr("text-anchor", "middle")
+			.attr("font-family", "sans-serif")
+   		.attr("font-size", "11px");
+   		//.attr("fill", "white");
+
+	}
+
 	Router.map(function() {
 		this.route('home', {
 			path: '/',
-			template: 'all'
+			template: 'all',
+			onAfterAction: chart
 		});
+
 		this.route('all', {
 			path: '/all',
-			template: 'all'
+			template: 'all',
+			onAfterAction: chart
 		});
 	});
 
@@ -22,9 +91,9 @@ if (Meteor.isClient) {
 		$('a.pageIcon').removeClass('active');
 		$('a.pageIcon[href="' + path + '"]').addClass('active');
 	}
-
 	Router.onAfterAction(markActive);
 	Template.layout.rendered = markActive;
+
 
 	/*
 	Template.famousHeader.rendered = function() {
