@@ -20,7 +20,7 @@
 			><a class="pageIcon" href="/map">Map<br>(soon)</a
 			><a class="pageIcon con-{{redalert.connected}}" href="/settings">
 		  	{{redalert.connected}}<br />
-				{{redalert.latency}}ms
+				{{redalert.lastMsgDiff}}s
 			</a
 		></div>
 		<div id="page">
@@ -69,7 +69,7 @@
 			<a class="pageIcon con-{{connected}}" href="/settings">
 			  <p>
 			  	{{redalert.connected}}<br />
-  				{{redalert.latency}}ms
+  				{{redalert.lastMsgDiff}}s
 				</p>
 			</a>
 		{{/Surface}}

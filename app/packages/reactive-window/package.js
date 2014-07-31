@@ -4,5 +4,6 @@ Package.describe({
 
 Package.on_use(function (api) {
   api.export('rwindow');
+  api.use('reactive-dict', 'client');
   api.add_files('reactive-window.js', 'client');
 });

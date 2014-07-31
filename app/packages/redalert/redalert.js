@@ -18,6 +18,9 @@ UI.registerHelper('redalert', {
   latency: function() {
     return redalert.reactive.get('latency');
   },
+  lastMsgDiff: function() {
+  	return redalert.reactive.get('lastMsgDiff');
+  },
   area: function() {
   	return redalert.reactive.get('area');
   }
