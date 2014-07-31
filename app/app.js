@@ -181,7 +181,7 @@ if (Meteor.isClient) {
 
 			texts.append("text")
 			  .text(function(d, i) {
-			  	return chart.labels[i];
+			  	// return chart.labels[i];
 	        return i % 2 == 1 ? chart.labels[i] : '';
 	   		})
 				.attr("x", function(d, i) {
