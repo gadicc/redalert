@@ -538,7 +538,7 @@ int main (int argc, char *argv[]) {
 	   						// TODO, null by default unless limit specified
 	   						// TODO, need to differentiate between NULL and 0,
 	   						// and retroactively update if clients connect b4 1st msg
-	   						eventClient->msgTailDest = message_end;
+	   						eventClient->msgTailDest = NULL;
 	   						eventClient->msgTailWriteCount = 0;
 
 		   					if (query)

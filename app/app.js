@@ -119,15 +119,20 @@ if (Meteor.isClient) {
 		var data = [], labels = [], count = 0, max = 0, hour = null;
 		var lastHour = new Date().getHours() + 1;
 
-		var now = new Date();
-		redalert.messages.find({
+		var query = {
 			type: 'alert',
 			createdAt: {
 				//$gt: new Date(new Date() - 604800000) // 1 week
 				//$gt: new Date(new Date() - 88200000)  // 1 day + 30 mins
 				$gt: new Date(now - 86400000 + 3600000)	// 1 day 
 			}
-		}, {
+		};
+		if (!areaQuery(query))
+			return null;
+		console.log(query);
+
+		var now = new Date();
+		redalert.messages.find(query, {
 			sort : { createdAt: 1 }
 		}).forEach(function(alert) {
 			hour = hourFromTime(alert.createdAt);
@@ -170,6 +175,8 @@ if (Meteor.isClient) {
 	};
 
 	var currentChart = null;
+	Session.setDefault('chartCoverage', 'day');
+	var chartToggle = true;
 	function unchart() {
 		if (currentChart && currentChart.stop)
 			currentChart.stop();		
@@ -179,7 +186,8 @@ if (Meteor.isClient) {
 			unchart();
 			$('#chart').html('');
 
-			var chart = monthChart();
+			var chart = Session.get('chartCoverage') == 'day'
+				? dayChart() : monthChart();
 			console.log(chart);
 //			var dataset = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
 //	                11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
@@ -354,6 +362,14 @@ if (Meteor.isClient) {
 				.format("d [day], h [hr], m [min], s [sec]"));
 		});
 	}, 1000);
+
+	Template.chart.events({
+		'click': function(event, tpl) {
+			Session.set('chartCoverage',
+				Session.get('chartCoverage') == 'day'
+					? 'month' : 'day');
+		}
+	});
 }
 
 if (Meteor.isServer) {

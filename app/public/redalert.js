@@ -29,6 +29,8 @@ RedAlert = {
   	var url = 'http://'+RedAlert.host+':8080/redalert?ts=' + new Date().getTime();
     if (RedAlert.lastId)
       url += '&lastId=' + RedAlert.lastId;
+    else
+      url += '&limit=100000';
     RedAlert.iframe[0].src = url;
   	RedAlert.setStatus('connecting');
   	RedAlert.initConnect = new Date();
