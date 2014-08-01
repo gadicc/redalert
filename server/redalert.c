@@ -182,9 +182,15 @@ static void sendToClients(client *client_list, char *buf) {
 	client *client_cur;
 	int count = strlen(buf);
 
+	printf("Full list: ");
+  for (client_cur = client_list; client_cur != NULL; client_cur=client_cur->next)
+  	printf("%d ", client_cur->fd);
+  printf("\n");
+
   for (client_cur = client_list; client_cur != NULL; client_cur=client_cur->next)
   	// TODO, for head too, and figure out what to do if a ping doesn't finish
   	// maybe write to a static buffer the incomplete request, check first
+
   	if (client_cur->type == CLIENT) {
   		if (!client_cur->msgTailWriteCount) {
   			printf("Sending to %d\n", client_cur->fd);
