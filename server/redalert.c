@@ -176,7 +176,6 @@ static char *msgToText(message *msg) {
 	static char buf[8192];
 	sprintf(buf, "%x\r\n<script>a(%s);</script>\r\n",
 		strlen(msg->data) + 21, msg->data);
-	printf(buf);
 	return buf;
 }
 
@@ -510,7 +509,11 @@ int main (int argc, char *argv[]) {
 
 	   						eventClient->msgHeadCur = message_list;
 	   						eventClient->msgTailCur = message_list;
-	   						eventClient->msgTailDest = NULL;
+
+	   						// TODO, null by default unless limit specified
+	   						// TODO, need to differentiate between NULL and 0,
+	   						// and retroactively update if clients connect b4 1st msg
+	   						eventClient->msgTailDest = message_end;
 
 		   					if (query)
 		   					for (query=strtok_r(query, "&", &query_r); query != NULL; query=strtok_r(NULL, "&", &query_r)) {
@@ -545,7 +548,7 @@ Transfer-Encoding: chunked\r\n\
 <html><body>\n\
 <script>function a(a){window.top.postMessage('redalert ' + JSON.stringify(a), '*');}</script>\r\n";
 			          write(eventClient->fd, buf, strlen(buf));
-			          sendPastMessages(eventClient, message_list, lastId);
+			          //sendPastMessages(eventClient, message_list, lastId);
 			        }
 	   				}
 
@@ -583,18 +586,27 @@ Transfer-Encoding: chunked\r\n\
     }
 
     // main send loop
-    if (0)
     for (client_cur = client_list; client_cur != NULL; client_cur=client_cur->next) {
     	if (client_cur->type != CLIENT)
     		continue;
 
     	char *buf;
+    	ssize_t writeCount;
 
     	// send to tail
-    	if (client_cur->msgTailDest && client_cur->msgTailCur != client_cur->msgTailDest)
-			for (message_cur=message_list; message_cur != NULL; message_cur=message_cur->next) {
-	    	buf = msgToText(message_cur);
-				write(client_cur->fd, buf, strlen(buf));
+    	if (client_cur->msgTailDest && client_cur->msgTailCur != client_cur->msgTailDest) {
+    		printf("i have to send\n");
+				for (message_cur=client_cur->msgTailCur; message_cur != NULL; message_cur=message_cur->next) {
+		    	buf = msgToText(message_cur);
+					writeCount = write(client_cur->fd, buf, strlen(buf));
+					if (writeCount != strlen(buf))
+					printf("writeCount %d, expected %d\n", writeCount, strlen(buf));
+					if (message_cur == client_cur->msgTailDest) {
+						printf("reached end\n");
+						break;
+					}
+				}
+				client_cur->msgTailCur = message_cur;
 			}
     } /* main send loop */
 
