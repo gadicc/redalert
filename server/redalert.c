@@ -212,19 +212,6 @@ static char *msgToText(message *msg) {
 	return buf;
 }
 
-static void sendPastMessages(client *c, message *message_list, int lastId) {
-	message *msg;
-	char *buf;
-
-	for (msg = message_list; msg != NULL; msg = msg->next) {
-		if (msg->id > lastId) {
-			buf = msgToText(msg);
-			//printf("%s\n", buf);
-			write(c->fd, buf, strlen(buf));
-		}
-	}
-}
-
 int main (int argc, char *argv[]) {
   int sfd, sfd2, s;
   int efd;
@@ -501,10 +488,6 @@ int main (int argc, char *argv[]) {
 						client *client_cur;
 						int count = strlen(buf);
 
-					  for (client_cur = client_list; client_cur != NULL; client_cur=client_cur->next)
-					  	if (client_cur->type == CLIENT)
-								write(client_cur->fd, buf, count);
-
 				    sendToClients(client_list, toSend);
 
 					  time(&time_end);
@@ -589,7 +572,6 @@ Transfer-Encoding: chunked\r\n\
 <html><body>\n\
 <script>function a(a){window.top.postMessage('redalert ' + JSON.stringify(a), '*');}</script>\r\n";
 			          write(eventClient->fd, buf, strlen(buf));
-			          //sendPastMessages(eventClient, message_list, lastId);
 			        }
 	   				}
 
