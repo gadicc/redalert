@@ -622,6 +622,8 @@ Transfer-Encoding: chunked\r\n\
 				for (message_cur=client_cur->msgTailCur; message_cur != NULL; message_cur=message_cur->next) {
 		    	buf = msgToText(message_cur);
 		    	if (eventClient->msgTailWriteCount) {
+		    		printf("Sending remaining %d bytes to %d\n",
+		    			eventClient->msgTailWriteCount, eventClient->fd);
 		    		buf += eventClient->msgTailWriteCount;
 		    		eventClient->msgTailWriteCount = 0;
 		    	}
