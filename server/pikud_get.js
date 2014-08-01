@@ -6,11 +6,15 @@ var request = require('request');
 var Fiber = require('fibers');
 var Server = require("mongo-sync").Server;
 
-//var MONGO_HOST = '127.0.0.1:3001';
-var MONGO_HOST = "188.226.253.94:6009";
-var MONGO_DB = "meteor";
-var MONGO_USER = "meteor";
-var MONGO_PASSWORD = "yGgCiKsc8o4jRj3Fw";
+var debug = true;
+if (debug) {
+	var MONGO_HOST = '127.0.0.1:3001';
+} else {
+	var MONGO_HOST = "188.226.253.94:6009";
+	var MONGO_DB = "meteor";
+	var MONGO_USER = "meteor";
+	var MONGO_PASSWORD = "yGgCiKsc8o4jRj3Fw";
+}
 
 var RELAY_HOST = '127.0.0.1';
 var RELAY_PORT = 8081;
@@ -66,8 +70,11 @@ function process(data) {
 		var multi = data.data[i].split(', ');
 		for (var j=0; j < multi.length; j++) {
 			var match = multi[j].match(/ ([0-9]+)$/);
-			if (match)
-				out.areas.push(parseInt(match[1]));
+			if (match) {
+				var area = parseInt(match[1]);
+				if (out.areas.indexOf(area) == -1)
+					out.areas.push(area);
+			}
 			/*
 			else
 				console.log('nomatch',multi[j]);
@@ -163,10 +170,11 @@ Fiber(function() {
 	sendHistory(data);
 
 	// pikud_get loop
-	var res;
+	var res, lastId;
 	while(1) {
 		res = pikud_get();
-		if (res.data.length) {
+		if (res.data.length && res.id !== lastId) {
+			lastId = res.id;
 			console.log(res);
 			var data = process(res);
 			console.log(data);

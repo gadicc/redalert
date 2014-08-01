@@ -31,16 +31,6 @@
 // note this is max waiting events, not max open connections
 #define MAXEVENTS 512
 
-typedef enum {UNKNOWN, CLIENT, CLIENT_LISTEN, RELAY_LISTEN, RELAY} client_type;
-struct client_el {
-  int fd;
-  client_type type;
-
-  struct client_el *prev;
-  struct client_el *next;
-};
-typedef struct client_el client;
-
 typedef enum {MSG_ALERT} message_type;
 struct message_el {
 	int id;
@@ -49,6 +39,21 @@ struct message_el {
 	struct message_el *next;
 };
 typedef struct message_el message;
+
+typedef enum {UNKNOWN, CLIENT, CLIENT_LISTEN, RELAY_LISTEN, RELAY} client_type;
+struct client_el {
+  int fd;
+  client_type type;
+  struct client_el *prev;
+  struct client_el *next;
+  
+  message *msgHeadCur;
+  int msgHeadLastSend;
+  message *msgTailCur;
+  int msgTailLastSend;
+  message *msgTailDest;
+};
+typedef struct client_el client;
 
 static int keepRunning = 1;
 
@@ -205,7 +210,8 @@ int main (int argc, char *argv[]) {
 
   int message_count = 0;
   int lastId = 0;
-  message *message_list = NULL, *message_cur = NULL, *message_tmp = NULL;
+  message *message_list = NULL, *message_end = NULL,
+  	*message_cur = NULL, *message_tmp = NULL;
 
   relay.type = RELAY;
   relayListen.type = RELAY_LISTEN;
@@ -450,6 +456,8 @@ int main (int argc, char *argv[]) {
 
 	   				msg->next = message_list;
 	   				message_list = msg;
+	   				if (!message_end)
+	   					message_end = msg;
 	   				if (msg->id > lastId)
 	   					lastId = msg->id;
 
@@ -476,6 +484,8 @@ int main (int argc, char *argv[]) {
 	   				char *tok, *page, *query, *key, *value;
 	   				char *query_r;
 	   				int lastId = 0;
+	   				int count;
+						message *msg;
 
 	   				// [ASSUMPTION] 1st line is GET URL PROTO
 	   				line = strtok(buf, "\n");
@@ -496,6 +506,10 @@ int main (int argc, char *argv[]) {
 
 	   					} else {
 
+	   						eventClient->msgHeadCur = message_list;
+	   						eventClient->msgTailCur = message_list;
+	   						eventClient->msgTailDest = NULL;
+
 		   					if (query)
 		   					for (query=strtok_r(query, "&", &query_r); query != NULL; query=strtok_r(NULL, "&", &query_r)) {
 									key = strtok(query, "=");
@@ -504,6 +518,18 @@ int main (int argc, char *argv[]) {
 
 									if (strcmp(key,"lastId") == 0)
 										lastId = atoi(value);
+
+									// msgTailDest
+									if (strcmp(key,"limit") == 0) {
+										lastId = atoi(value);
+										for (msg = message_list, count=0;
+													msg != NULL && count < lastId;
+													msg = msg->next, count++);
+										if (msg)
+											eventClient->msgTailDest = msg;
+										else
+											eventClient->msgTailDest = message_end;
+									}
 		   					}
 
 								client_count++;
@@ -515,7 +541,7 @@ Content-Type: text/html; charset=utf-8\n\
 <html><body>\n\
 <script>function a(a){window.top.postMessage('redalert ' + JSON.stringify(a), '*');}</script>\n";
 			          write(eventClient->fd, buf, strlen(buf));
-			          sendPastMessages(eventClient, message_list, lastId);
+//			          sendPastMessages(eventClient, message_list, lastId);
 			        }
 	   				}
 
@@ -534,6 +560,7 @@ Content-Type: text/html; charset=utf-8\n\
       }
     } /* epoll loop */
 
+    // TODO, move to main send loop
     if (sendPing) {
     	char buf[8192];
     	int count;
@@ -549,6 +576,22 @@ Content-Type: text/html; charset=utf-8\n\
 
     	alarm(1);
     }
+
+    // main send loop
+    for (client_cur = client_list; client_cur != NULL; client_cur=client_cur->next) {
+    	if (client_cur->type != CLIENT)
+    		continue;
+
+    	char *buf;
+
+    	// send to tail
+    	if (client_cur->msgTailDest && client_cur->msgTailCur != client_cur->msgTailDest)
+			for (message_cur=message_list; message_cur != NULL; message_cur=message_cur->next) {
+	    	buf = msgToText(message_cur);
+				write(client_cur->fd, buf, strlen(buf));
+			}
+    } /* main send loop */
+
   } /* while keepRunning */
 
   printf("Closing open sockets and connections...\n");

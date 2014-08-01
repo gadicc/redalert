@@ -1,5 +1,6 @@
 RedAlert = {
-  host: 'api1.tzeva-adom.com',
+  //host: 'api1.tzeva-adom.com',
+  host: window.location.hostname,
   initted: false,
   reduce: 15000,
 
@@ -25,7 +26,6 @@ RedAlert = {
 
 	connect: function() {
 		console.log('RedAlert connecting...');
-		//var host = window.location.hostname;
   	var url = 'http://'+RedAlert.host+':8080/redalert?ts=' + new Date().getTime();
     if (RedAlert.lastId)
       url += '&lastId=' + RedAlert.lastId;
@@ -73,6 +73,12 @@ RedAlert.areas.byName = RedAlert.locations.byName = function(name) {
     if (this.data[key].name.match(name))
       return this.data[key];
 };
+RedAlert.locations.byAreaId = function(id) {
+  var locs = RedAlert.areas.byId(id).locations;
+  return _.map(locs, function(id) {
+    return RedAlert.locations.byId(id);
+  });
+}
 RedAlert.areas.fromPos = function(pos) {
   var area, bounds, distance, shortest, shortestId = null;
   for (key in RedAlert.areas.data) {

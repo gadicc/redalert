@@ -50,6 +50,71 @@ if (Meteor.isClient) {
 	}
 	*/
 
+	function fillGaps(data, labels, last, current, rollover) {
+		var gap = current - last;
+//		console.log(last, current, gap);
+		if (gap < 0) {
+			for (var i=1; i < -gap && last+i < rollover+1; i++) {
+//				console.log('- inserting ' + (last + i));
+				labels.push(last + i);
+				data.push(0);
+			}
+			last = 0;
+			gap = current - last;
+//			console.log(last, current, gap);
+		}
+		for (var i=1; i < gap; i++) {
+			labels.push(last + i);
+			data.push(0);
+//			console.log('+ inserting ' + (last + i));
+		}
+		return last;
+	}
+
+	function monthChart() {
+		var data = [], labels = [], count = 0, max = 0, day = null;
+
+		var now = new Date();
+		var daysInMonth = new Date(now.getFullYear(), now.getMonth()+1, 0).getDate();
+		var daysLastMonth = new Date(now.getFullYear(), now.getMonth(), 0).getDate();
+		var lastDay = new Date().getDate() + 1;
+		if (lastDay > daysLastMonth) lastDay -= daysLastMonth;
+
+		redalert.messages.find({
+			type: 'alert',
+			createdAt: {
+				$gt: new Date(now.getFullYear(), now.getMonth(), lastDay)	// 1 month 
+			}
+		}, {
+			sort : { createdAt: 1 }
+		}).forEach(function(alert) {
+			day = alert.createdAt.getDate();
+			if (day !== lastDay) {
+				labels.push(lastDay);
+				data.push(count);
+				if (count > max)
+					max = count;
+				count = 0;
+
+				fillGaps(data, labels, lastDay, day, daysLastMonth);
+				lastDay = day;
+			}
+			count++;
+		});
+		if (count) {
+			labels.push(day);
+			data.push(count);
+		}
+
+		var length = data.length;
+		for (var i=length; i < daysInMonth; i++) {
+			data.push(0);
+			labels.push(lastDay + i - length + 1);
+		}
+
+		return { data: data, labels: labels, max: max, length: data.length };
+	}
+
 	function dayChart() {
 		var data = [], labels = [], count = 0, max = 0, hour = null;
 		var lastHour = new Date().getHours() + 1;
@@ -60,7 +125,7 @@ if (Meteor.isClient) {
 			createdAt: {
 				//$gt: new Date(new Date() - 604800000) // 1 week
 				//$gt: new Date(new Date() - 88200000)  // 1 day + 30 mins
-				$gt: new Date(now - 86400000 + (now.getMinutes()*60*1000))	// 1 day 
+				$gt: new Date(now - 86400000 + 3600000)	// 1 day 
 			}
 		}, {
 			sort : { createdAt: 1 }
@@ -73,24 +138,7 @@ if (Meteor.isClient) {
 					max = count;
 				count = 0;
 
-				var gap = hour - lastHour;
-				console.log(lastHour, hour, gap);
-				if (gap < 0) {
-					for (var i=1; i < -gap && lastHour+i < 25; i++) {
-						console.log('- inserting ' + (lastHour + i));
-						labels.push(lastHour + i);
-						data.push(0);
-					}
-					lastHour = 0;
-					gap = hour - lastHour;
-					console.log(lastHour, hour, gap);
-				}
-				for (var i=1; i < gap; i++) {
-					labels.push(lastHour + i);
-					data.push(0);
-					console.log('+ inserting ' + (lastHour + i));
-				}
-
+				fillGaps(data, labels, lastHour, hour, 24);
 				lastHour = hour;
 			}
 			count++;
@@ -131,12 +179,12 @@ if (Meteor.isClient) {
 			unchart();
 			$('#chart').html('');
 
-			var chart = dayChart();
+			var chart = monthChart();
 			console.log(chart);
 //			var dataset = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
 //	                11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
 
-	    var barPadding = 1, scaleY = 2
+	    var barPadding = 1, scaleY = chart.max < 30 ? 2 : chart.max < 60 ? 1 : .5;
 	    var w = $(window).innerWidth(), h = chart.max*scaleY + 35;
 
 			var svg = d3.select('#chart').append('svg')
