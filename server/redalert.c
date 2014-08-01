@@ -163,12 +163,30 @@ static void closeClient(client **client_list, int *client_count, client *eventCl
 	}
 }
 
+/*
+static void sendToClient(client *client, char *buf, int size) {
+	ssize_t writeCount;
+
+	// send to tail
+	if (client_cur->msgTailDest && client_cur->msgTailCur != client_cur->msgTailDest) {
+		printf("i have to send\n");
+		for (message_cur=client_cur->msgTailCur; message_cur != NULL; message_cur=message_cur->next) {
+    	buf = msgToText(message_cur);
+    	if (eventClient->msgTailWriteCount)
+    		buf += eventClient->msgTailWriteCount;
+			writeCount = write(client_cur->fd, buf, strlen(buf));
+}
+*/
+
 static void sendToClients(client *client_list, char *buf) {
 	client *client_cur;
 	int count = strlen(buf);
 
   for (client_cur = client_list; client_cur != NULL; client_cur=client_cur->next)
-  	if (client_cur->type == CLIENT)
+  	// TODO, for head too, and figure out what to do if a ping doesn't finish
+  	// maybe write to a static buffer the incomplete request, check first
+  	if (client_cur->type == CLIENT
+  			&& !client_cur->msgTailWriteCount)
 			write(client_cur->fd, buf, count);
 }
 
@@ -465,6 +483,13 @@ int main (int argc, char *argv[]) {
 		   	    clock_start = clock();
 				    time(&time_start);
 
+						client *client_cur;
+						int count = strlen(buf);
+
+					  for (client_cur = client_list; client_cur != NULL; client_cur=client_cur->next)
+					  	if (client_cur->type == CLIENT)
+								write(client_cur->fd, buf, count);
+
 				    sendToClients(client_list, toSend);
 
 					  time(&time_end);
@@ -595,7 +620,7 @@ Transfer-Encoding: chunked\r\n\
 
     	// send to tail
     	if (client_cur->msgTailDest && client_cur->msgTailCur != client_cur->msgTailDest) {
-    		printf("i have to send\n");
+    		//printf("i have to send\n");
 				for (message_cur=client_cur->msgTailCur; message_cur != NULL; message_cur=message_cur->next) {
 		    	buf = msgToText(message_cur);
 		    	if (eventClient->msgTailWriteCount)
@@ -603,13 +628,13 @@ Transfer-Encoding: chunked\r\n\
 					writeCount = write(client_cur->fd, buf, strlen(buf));
 					if (writeCount != strlen(buf)) {
 						client_cur->msgTailWriteCount = writeCount;
-						printf("msg %d fd %d, writeCount %d, expected %d\n",
-							message_cur->id, client_cur->fd, writeCount, strlen(buf));
-						printf("%d %s\n", errno, strerror(errno));
+						//printf("msg %d fd %d, writeCount %d, expected %d\n",
+						//	message_cur->id, client_cur->fd, writeCount, strlen(buf));
+						//printf("%d %s\n", errno, strerror(errno));
 						break;
 					}
 					if (message_cur == client_cur->msgTailDest) {
-						printf("reached end\n");
+						//printf("reached end\n");
 						client_cur->msgTailWriteCount = 0;
 						break;
 					}
