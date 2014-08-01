@@ -232,6 +232,7 @@ static int clearClientMsgQueue(client *c) {
 		c->msgCur = NULL;  // necessary?
 		return 1;
 	}
+	printf("Failed to clear queue, will try again later\n");
 	return 0;
 }
 

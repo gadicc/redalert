@@ -83,6 +83,8 @@ RedAlert.locations.byAreaId = function(id) {
 }
 RedAlert.areas.fromPos = function(pos) {
   var area, bounds, distance, shortest, shortestId = null;
+  if (!RedAlert.areas.data)
+    return null;
   for (key in RedAlert.areas.data) {
     area = RedAlert.areas.data[key];
     if (!(area && area.geometry && area.geometry.location
