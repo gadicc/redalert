@@ -311,7 +311,7 @@ int main (int argc, char *argv[]) {
   while (keepRunning) {
     int n, i, j;
 
-    n = epoll_wait (efd, events, MAXEVENTS, 100);
+    n = epoll_wait (efd, events, MAXEVENTS, 200);
     for (i = 0; i < n; i++) {
 			eventClient = (client *)events[i].data.ptr;
 
@@ -626,6 +626,7 @@ Transfer-Encoding: chunked\r\n\
 		    			eventClient->msgTailWriteCount, message_cur->id, eventClient->fd);
 		    		buf += eventClient->msgTailWriteCount;
 		    		eventClient->msgTailWriteCount = 0;
+		    		break;  // Give it a chance, TODO, better :/  Or move to catch-up section
 		    	}
 					writeCount = write(client_cur->fd, buf, strlen(buf));
 					if (writeCount != strlen(buf)) {
