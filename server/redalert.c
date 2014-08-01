@@ -147,7 +147,7 @@ static void closeClient(client **client_list, int *client_count, client *eventCl
   /* Closing the descriptor will make epoll remove it
      from the set of descriptors which are monitored. */
   close (eventClient->fd);
-//  printf ("Closed connection on descriptor %d\n", eventClient->fd);
+  printf ("Closed connection on descriptor %d\n", eventClient->fd);
 
   if (eventClient->type == CLIENT) {
 	  if (eventClient->prev) {
@@ -600,7 +600,8 @@ Transfer-Encoding: chunked\r\n\
 		    	buf = msgToText(message_cur);
 					writeCount = write(client_cur->fd, buf, strlen(buf));
 					if (writeCount != strlen(buf)) {
-						printf("writeCount %d, expected %d\n", writeCount, strlen(buf));
+						printf("fd %d, writeCount %d, expected %d\n",
+							client_cur->fd, writeCount, strlen(buf));
 						printf("%d %s\n", errno, strerror(errno));
 					}
 					if (message_cur == client_cur->msgTailDest) {
