@@ -629,7 +629,8 @@ Transfer-Encoding: chunked\r\n\
 		    	}
 					writeCount = write(client_cur->fd, buf, strlen(buf));
 					if (writeCount != strlen(buf)) {
-						client_cur->msgTailWriteCount = writeCount;
+						client_cur->msgTailWriteCount
+							= writeCount == -1 ? strlen(buf) : writeCount;
 						printf("msg %d fd %d, writeCount %d, expected %d\n",
 							message_cur->id, client_cur->fd, writeCount, strlen(buf));
 						printf("%d %s\n", errno, strerror(errno));
