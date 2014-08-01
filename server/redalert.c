@@ -599,8 +599,10 @@ Transfer-Encoding: chunked\r\n\
 				for (message_cur=client_cur->msgTailCur; message_cur != NULL; message_cur=message_cur->next) {
 		    	buf = msgToText(message_cur);
 					writeCount = write(client_cur->fd, buf, strlen(buf));
-					if (writeCount != strlen(buf))
-					printf("writeCount %d, expected %d\n", writeCount, strlen(buf));
+					if (writeCount != strlen(buf)) {
+						printf("writeCount %d, expected %d\n", writeCount, strlen(buf));
+						printf("%d %s\n", errno, strerror(errno));
+					}
 					if (message_cur == client_cur->msgTailDest) {
 						printf("reached end\n");
 						break;
