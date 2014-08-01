@@ -147,13 +147,13 @@ static void closeClient(client **client_list, int *client_count, client *eventCl
   /* Closing the descriptor will make epoll remove it
      from the set of descriptors which are monitored. */
   close (eventClient->fd);
-  printf ("Closed connection on descriptor %d\n", eventClient->fd);
+//  printf ("Closed connection on descriptor %d\n", eventClient->fd);
 
   if (eventClient->type == CLIENT) {
 	  if (eventClient->prev) {
 	  	eventClient->prev->next = eventClient->next;
 	  } else {
-	  	*client_list = NULL;
+	  	*client_list = eventClient->next;
 	  }
 	  if (eventClient->next) {
 	    eventClient->next->prev = eventClient->prev;
@@ -182,10 +182,12 @@ static void sendToClients(client *client_list, char *buf) {
 	client *client_cur;
 	int count = strlen(buf);
 
+	/*
 	printf("Full list: ");
   for (client_cur = client_list; client_cur != NULL; client_cur=client_cur->next)
   	printf("%d ", client_cur->fd);
   printf("\n");
+  */
 
   for (client_cur = client_list; client_cur != NULL; client_cur=client_cur->next)
   	// TODO, for head too, and figure out what to do if a ping doesn't finish
@@ -193,7 +195,7 @@ static void sendToClients(client *client_list, char *buf) {
 
   	if (client_cur->type == CLIENT) {
   		if (!client_cur->msgTailWriteCount) {
-  			printf("Sending to %d\n", client_cur->fd);
+//  			printf("Sending to %d\n", client_cur->fd);
 				write(client_cur->fd, buf, count);
   		}
 			else
@@ -401,8 +403,8 @@ int main (int argc, char *argv[]) {
           	sbuf, sizeof sbuf, NI_NUMERICHOST | NI_NUMERICSERV);
 
           if (s == 0) {
-            printf("Accepted connection on descriptor %d "
-                   "(host=%s, port=%s)\n", infd, hbuf, sbuf);
+//            printf("Accepted connection on descriptor %d "
+//                   "(host=%s, port=%s)\n", infd, hbuf, sbuf);
           }
 
           /* Make the incoming socket non-blocking and add it to the
