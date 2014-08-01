@@ -2,7 +2,7 @@
 
 include('gadi_db.php');
 
-$SQL = 'SELECT *,UNIX_TIMESTAMP(time) AS time FROM pikud2';
+$SQL = 'SELECT *,UNIX_TIMESTAMP(time) AS time FROM pikud2 ORDER BY id ASC';
 $results = $dbh->getAll($SQL);
 
 /*
@@ -27,10 +27,14 @@ echo $out;
 */
 
 $out = "[\n";
+$lastId = null;
 foreach($results as $row) {
 	$data = json_decode($row['response']);
-	$data->time = intval($row['time']) * 1000;
-	$out .= json_encode($data) . ', ';
+	if ($data->id != $lastId) {
+		$data->time = intval($row['time']) * 1000;
+		$out .= json_encode($data) . ', ';
+		$lastId = $data->id;
+	}
 }
 $out = substr($out, 0, -2) . "\n]\n";
 
