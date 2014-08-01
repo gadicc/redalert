@@ -622,17 +622,17 @@ Transfer-Encoding: chunked\r\n\
 				for (message_cur=client_cur->msgTailCur; message_cur != NULL; message_cur=message_cur->next) {
 		    	buf = msgToText(message_cur);
 		    	if (eventClient->msgTailWriteCount) {
-		    		printf("Sending remaining %d bytes to %d\n",
-		    			eventClient->msgTailWriteCount, eventClient->fd);
+		    		printf("Sending remaining %d bytes of msg %d to %d\n",
+		    			eventClient->msgTailWriteCount, message_cur->id, eventClient->fd);
 		    		buf += eventClient->msgTailWriteCount;
 		    		eventClient->msgTailWriteCount = 0;
 		    	}
 					writeCount = write(client_cur->fd, buf, strlen(buf));
 					if (writeCount != strlen(buf)) {
 						client_cur->msgTailWriteCount = writeCount;
-						//printf("msg %d fd %d, writeCount %d, expected %d\n",
-						//	message_cur->id, client_cur->fd, writeCount, strlen(buf));
-						//printf("%d %s\n", errno, strerror(errno));
+						printf("msg %d fd %d, writeCount %d, expected %d\n",
+							message_cur->id, client_cur->fd, writeCount, strlen(buf));
+						printf("%d %s\n", errno, strerror(errno));
 						break;
 					}
 					if (message_cur == client_cur->msgTailDest) {
