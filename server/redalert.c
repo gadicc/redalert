@@ -539,7 +539,7 @@ int main (int argc, char *argv[]) {
 	   						// TODO, need to differentiate between NULL and 0,
 	   						// and retroactively update if clients connect b4 1st msg
 	   						eventClient->msgTailDest = message_end;
-	   						eventCleint->msgTailWriteCount = 0;
+	   						eventClient->msgTailWriteCount = 0;
 
 		   					if (query)
 		   					for (query=strtok_r(query, "&", &query_r); query != NULL; query=strtok_r(NULL, "&", &query_r)) {
