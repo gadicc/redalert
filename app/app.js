@@ -80,12 +80,16 @@ if (Meteor.isClient) {
 		var lastDay = new Date().getDate() + 1;
 		if (lastDay > daysLastMonth) lastDay -= daysLastMonth;
 
-		redalert.messages.find({
+		var query = {
 			type: 'alert',
 			createdAt: {
-				$gt: new Date(now.getFullYear(), now.getMonth(), lastDay)	// 1 month 
+				$gt: new Date(now.getFullYear(), now.getMonth()-1, lastDay)	// 1 month 
 			}
-		}, {
+		};
+		if (!areaQuery(query))
+			return null;
+
+		redalert.messages.find(query, {
 			sort : { createdAt: 1 }
 		}).forEach(function(alert) {
 			day = alert.createdAt.getDate();
@@ -119,19 +123,16 @@ if (Meteor.isClient) {
 		var data = [], labels = [], count = 0, max = 0, hour = null;
 		var lastHour = new Date().getHours() + 1;
 
+		var now = new Date();
 		var query = {
 			type: 'alert',
 			createdAt: {
-				//$gt: new Date(new Date() - 604800000) // 1 week
-				//$gt: new Date(new Date() - 88200000)  // 1 day + 30 mins
 				$gt: new Date(now - 86400000 + 3600000)	// 1 day 
 			}
 		};
 		if (!areaQuery(query))
 			return null;
-		console.log(query);
 
-		var now = new Date();
 		redalert.messages.find(query, {
 			sort : { createdAt: 1 }
 		}).forEach(function(alert) {
@@ -192,8 +193,10 @@ if (Meteor.isClient) {
 //			var dataset = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
 //	                11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
 
-	    var barPadding = 1, scaleY = chart.max < 30 ? 2 : chart.max < 60 ? 1 : .5;
-	    var w = $(window).innerWidth(), h = chart.max*scaleY + 35;
+			if (!chart) return null;
+		  if (!chart.max) chart.max = 1;
+	    var w = $(window).innerWidth(), h = 80;
+	    var barPadding = 1, scaleY = (h-35)/chart.max;
 
 			var svg = d3.select('#chart').append('svg')
 				.attr("width", w).attr("height", h);
@@ -213,7 +216,7 @@ if (Meteor.isClient) {
 				    return d * scaleY;
 				})
 				.attr("fill", function(d) {
-				    return "rgb(" + (d * 10) + ", 0, 0)";
+				    return "rgb(" + Math.round(d/chart.max*255) + ", 0, 0)";
 				});
 
 			var texts = svg.selectAll("text")
