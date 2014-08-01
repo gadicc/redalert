@@ -211,7 +211,10 @@ static int sendMsgToClient(message *msg, client *c) {
 	if (writeCount == count)
 		return 1;
 	c->msgCur = msg;
-	c->msgCurWriteCount = writeCount == -1 ? count : writeCount;
+	c->msgCurWriteCount
+		= writeCount == -1
+		? c->msgCurWriteCount + count
+		: c->msgCurWriteCount + writeCount;
 
 	printf("msg %d fd %d, writeCount %d, expected %d\n",
 		msg->id, c->fd, writeCount, count);
