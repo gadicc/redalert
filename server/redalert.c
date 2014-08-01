@@ -48,10 +48,10 @@ struct client_el {
   struct client_el *next;
   
   message *msgHeadCur;
-  int msgHeadWriteCount;
   message *msgTailCur;
-  int msgTailWriteCount;
   message *msgTailDest;
+  message *msgCur;
+  int msgCurWriteCount;
 };
 typedef struct client_el client;
 
@@ -163,21 +163,6 @@ static void closeClient(client **client_list, int *client_count, client *eventCl
 	}
 }
 
-/*
-static void sendToClient(client *client, char *buf, int size) {
-	ssize_t writeCount;
-
-	// send to tail
-	if (client_cur->msgTailDest && client_cur->msgTailCur != client_cur->msgTailDest) {
-		printf("i have to send\n");
-		for (message_cur=client_cur->msgTailCur; message_cur != NULL; message_cur=message_cur->next) {
-    	buf = msgToText(message_cur);
-    	if (eventClient->msgTailWriteCount)
-    		buf += eventClient->msgTailWriteCount;
-			writeCount = write(client_cur->fd, buf, strlen(buf));
-}
-*/
-
 static void sendToClients(client *client_list, char *buf) {
 	client *client_cur;
 	int count = strlen(buf);
@@ -194,13 +179,13 @@ static void sendToClients(client *client_list, char *buf) {
   	// maybe write to a static buffer the incomplete request, check first
 
   	if (client_cur->type == CLIENT) {
-  		if (!client_cur->msgTailWriteCount) {
+  		if (!client_cur->msgCurWriteCount) {
 //  			printf("Sending to %d\n", client_cur->fd);
 				write(client_cur->fd, buf, count);
   		}
 			else
 				printf("Not writing to fd %d with writeCount %d\n",
-					client_cur->fd, client_cur->msgTailWriteCount);
+					client_cur->fd, client_cur->msgCurWriteCount);
   	}
   			
 }
@@ -210,6 +195,44 @@ static char *msgToText(message *msg) {
 	sprintf(buf, "%x\r\n<script>a(%s);</script>\r\n",
 		strlen(msg->data) + 21, msg->data);
 	return buf;
+}
+
+static int sendMsgToClient(message *msg, client *c) {
+	char *buf;
+	int count;
+	ssize_t writeCount;
+
+	buf = msgToText(msg);
+	// NB: Assumes loop logic will only call this on current queue
+	if (c->msgCurWriteCount)
+		buf += c->msgCurWriteCount;
+	count = strlen(buf);
+	writeCount = write(c->fd, buf, count);
+	if (writeCount == count)
+		return 1;
+	c->msgCur = msg;
+	c->msgCurWriteCount = writeCount == -1 ? count : writeCount;
+
+	printf("msg %d fd %d, writeCount %d, expected %d\n",
+		msg->id, c->fd, writeCount, count);
+	printf("%d %s\n", errno, strerror(errno));	
+	return 0;
+}
+
+static int clearClientMsgQueue(client *c) {
+	if (!c->msgCurWriteCount)
+		return 1;
+
+	printf("Sending remaining %d bytes of msg %d to %d\n",
+		c->msgCurWriteCount, c->msgCur, c->fd);
+
+	if (sendMsgToClient(c->msgCur, c)) {
+		printf("Queue clear success\n");
+		c->msgCurWriteCount = 0;
+		c->msgCur = NULL;  // necessary?
+		return 1;
+	}
+	return 0;
 }
 
 int main (int argc, char *argv[]) {
@@ -537,7 +560,7 @@ int main (int argc, char *argv[]) {
 	   						// TODO, need to differentiate between NULL and 0,
 	   						// and retroactively update if clients connect b4 1st msg
 	   						eventClient->msgTailDest = NULL;
-	   						eventClient->msgTailWriteCount = 0;
+	   						eventClient->msgCurWriteCount = 0;
 
 		   					if (query)
 		   					for (query=strtok_r(query, "&", &query_r); query != NULL; query=strtok_r(NULL, "&", &query_r)) {
@@ -613,33 +636,17 @@ Transfer-Encoding: chunked\r\n\
     	if (client_cur->type != CLIENT)
     		continue;
 
-    	char *buf;
-    	ssize_t writeCount;
+    	// There is a queue, we tried to clear it, it's still busy; continue
+    	if (!clearClientMsgQueue(client_cur))
+    		continue;
 
     	// send to tail
     	if (client_cur->msgTailDest && client_cur->msgTailCur != client_cur->msgTailDest) {
     		//printf("i have to send\n");
 				for (message_cur=client_cur->msgTailCur; message_cur != NULL; message_cur=message_cur->next) {
-		    	buf = msgToText(message_cur);
-		    	if (eventClient->msgTailWriteCount) {
-		    		printf("Sending remaining %d bytes of msg %d to %d\n",
-		    			eventClient->msgTailWriteCount, message_cur->id, eventClient->fd);
-		    		buf += eventClient->msgTailWriteCount;
-		    		eventClient->msgTailWriteCount = 0;
-		    		break;  // Give it a chance, TODO, better :/  Or move to catch-up section
-		    	}
-					writeCount = write(client_cur->fd, buf, strlen(buf));
-					if (writeCount != strlen(buf)) {
-						client_cur->msgTailWriteCount
-							= writeCount == -1 ? strlen(buf) : writeCount;
-						printf("msg %d fd %d, writeCount %d, expected %d\n",
-							message_cur->id, client_cur->fd, writeCount, strlen(buf));
-						printf("%d %s\n", errno, strerror(errno));
-						break;
-					}
-					if (message_cur == client_cur->msgTailDest) {
-						//printf("reached end\n");
-						//client_cur->msgTailWriteCount = 0;
+					if (!sendMsgToClient(message_cur, client_cur)) {
+						// failed msg is queued in msgCur
+						message_cur = message_cur->next;
 						break;
 					}
 				}
