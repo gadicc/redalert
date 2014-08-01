@@ -174,7 +174,9 @@ static void sendToClients(client *client_list, char *buf) {
 
 static char *msgToText(message *msg) {
 	static char buf[8192];
-	sprintf(buf, "<script>a(%s);</script>", msg->data);
+	sprintf(buf, "%x\r\n<script>a(%s);</script>\r\n",
+		strlen(msg->data) + 21, msg->data);
+	printf(buf);
 	return buf;
 }
 
@@ -535,13 +537,15 @@ int main (int argc, char *argv[]) {
 								client_count++;
 		   					eventClient->type = CLIENT;
 
-		   					char buf[1024] = "HTTP/1.1 200 OK\n\
-Content-Type: text/html; charset=utf-8\n\
-\n\
+		   					char buf[1024] = "HTTP/1.1 200 OK\r\n\
+Content-Type: text/html; charset=utf-8\r\n\
+Transfer-Encoding: chunked\r\n\
+\r\n\
+6a\r\n\
 <html><body>\n\
-<script>function a(a){window.top.postMessage('redalert ' + JSON.stringify(a), '*');}</script>\n";
+<script>function a(a){window.top.postMessage('redalert ' + JSON.stringify(a), '*');}</script>\r\n";
 			          write(eventClient->fd, buf, strlen(buf));
-//			          sendPastMessages(eventClient, message_list, lastId);
+			          sendPastMessages(eventClient, message_list, lastId);
 			        }
 	   				}
 
@@ -562,7 +566,7 @@ Content-Type: text/html; charset=utf-8\n\
 
     // TODO, move to main send loop
     if (sendPing) {
-    	char buf[8192];
+    	char buf[8192], buf2[8192 + 10];
     	int count;
     	sendPing = 0;
 
@@ -572,12 +576,14 @@ Content-Type: text/html; charset=utf-8\n\
 	    	(unsigned long long)(tv.tv_usec) / 1000;
 
 			sprintf(buf, "<script>a(%llu);</script>", msSinceEpoch);
-			sendToClients(client_list, buf);
+			sprintf(buf2, "%x\r\n%s\r\n", strlen(buf), buf);
+			sendToClients(client_list, buf2);
 
     	alarm(1);
     }
 
     // main send loop
+    if (0)
     for (client_cur = client_list; client_cur != NULL; client_cur=client_cur->next) {
     	if (client_cur->type != CLIENT)
     		continue;
