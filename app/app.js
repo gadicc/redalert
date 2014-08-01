@@ -54,7 +54,7 @@ if (Meteor.isClient) {
 		var gap = current - last;
 //		console.log(last, current, gap);
 		if (gap < 0) {
-			for (var i=1; i < -gap && last+i < rollover+1; i++) {
+			for (var i=1; i < -gap && last+i < rollover; i++) {
 //				console.log('- inserting ' + (last + i));
 				labels.push(last + i);
 				data.push(0);
@@ -90,7 +90,8 @@ if (Meteor.isClient) {
 			return null;
 
 		redalert.messages.find(query, {
-			sort : { createdAt: 1 }
+			sort : { createdAt: 1 },
+			fields: { createdAt: 1 }
 		}).forEach(function(alert) {
 			day = alert.createdAt.getDate();
 			if (day !== lastDay) {
@@ -134,7 +135,8 @@ if (Meteor.isClient) {
 			return null;
 
 		redalert.messages.find(query, {
-			sort : { createdAt: 1 }
+			sort : { createdAt: 1 },
+			fields: { createdAt: 1 }
 		}).forEach(function(alert) {
 			hour = hourFromTime(alert.createdAt);
 			if (hour !== lastHour) {
@@ -162,12 +164,12 @@ if (Meteor.isClient) {
 
 		for (var i=0; i < 24; i++) {
 			var label = labels[i];
-			if (label < 12)
+			if (label == 0)
+				labels[i] = '12am';
+			else if (label < 12)
 				labels[i] = label + 'am';
 			else if (label == 12)
 				labels[i] = '12pm';
-			else if (label == 24)
-				labels[i] = '12am';
 			else
 				labels[i] = (label-12) + 'pm';
 		}

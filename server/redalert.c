@@ -214,9 +214,11 @@ static int sendMsgToClient(message *msg, client *c) {
 	if (writeCount != -1)
 		c->msgCurWriteCount += writeCount;
 
-	printf("msg %d fd %d, writeCount %d, expected %d, remaining: %d\n",
+	/*
+	printf("msg %d fd %d, writeCount %d, expected %d, start at: %d\n",
 		msg->id, c->fd, writeCount, count, c->msgCurWriteCount);
-	printf("%d %s\n", errno, strerror(errno));	
+	printf("%d %s\n", errno, strerror(errno));
+	*/
 	return 0;
 }
 
@@ -224,16 +226,16 @@ static int clearClientMsgQueue(client *c) {
 	if (!c->msgCur)
 		return 1;
 
-	printf("msg %d to %d, sending from %d+\n",
-		c->msgCur, c->fd, c->msgCurWriteCount);
+	//printf("msg %d to %d, sending from %d+\n",
+	//	c->msgCur, c->fd, c->msgCurWriteCount);
 
 	if (sendMsgToClient(c->msgCur, c)) {
-		printf("Queue clear success\n");
+	//	printf("Queue clear success\n");
 		c->msgCurWriteCount = 0;  // necessary?
 		c->msgCur = NULL;
 		return 1;
 	}
-	printf("Failed to clear queue, will try again later\n");
+	//printf("Failed to clear queue, will try again later\n");
 	return 0;
 }
 

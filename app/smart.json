@@ -1,6 +1,5 @@
 {
   "packages": {
-    "googlemaps": {},
     "iron-router": {},
     "famous-components": {},
     "famono": {
@@ -9,6 +8,8 @@
     },
     "moment": {},
     "highcharts": {},
-    "moment-duration-format": {}
+    "moment-duration-format": {},
+    "leaflet": {},
+    "leaflet-markercluster": {}
   }
 }

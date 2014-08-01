@@ -6,7 +6,6 @@
 standard-app-packages
 autopublish
 insecure
-googlemaps
 reactive-dict
 redalert
 http
@@ -17,3 +16,5 @@ highcharts
 moment-duration-format
 d3
 reactive-window
+leaflet
+leaflet-markercluster
