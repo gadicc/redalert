@@ -179,7 +179,7 @@ static void sendToClients(client *client_list, char *buf) {
   	// maybe write to a static buffer the incomplete request, check first
 
   	if (client_cur->type == CLIENT) {
-  		if (!client_cur->msgCurWriteCount) {
+  		if (!client_cur->msgCur) {
 //  			printf("Sending to %d\n", client_cur->fd);
 				write(client_cur->fd, buf, count);
   		}
@@ -211,28 +211,26 @@ static int sendMsgToClient(message *msg, client *c) {
 	if (writeCount == count)
 		return 1;
 	c->msgCur = msg;
-	c->msgCurWriteCount
-		= writeCount == -1
-		? c->msgCurWriteCount + count
-		: c->msgCurWriteCount + writeCount;
+	if (writeCount != -1)
+		c->msgCurWriteCount += writeCount;
 
-	printf("msg %d fd %d, writeCount %d, expected %d\n",
-		msg->id, c->fd, writeCount, count);
+	printf("msg %d fd %d, writeCount %d, expected %d, remaining: %d\n",
+		msg->id, c->fd, writeCount, count, c->msgCurWriteCount);
 	printf("%d %s\n", errno, strerror(errno));	
 	return 0;
 }
 
 static int clearClientMsgQueue(client *c) {
-	if (!c->msgCurWriteCount)
+	if (!c->msgCur)
 		return 1;
 
-	printf("Sending remaining %d bytes of msg %d to %d\n",
-		c->msgCurWriteCount, c->msgCur, c->fd);
+	printf("msg %d to %d, sending from %d+\n",
+		c->msgCur, c->fd, c->msgCurWriteCount);
 
 	if (sendMsgToClient(c->msgCur, c)) {
 		printf("Queue clear success\n");
-		c->msgCurWriteCount = 0;
-		c->msgCur = NULL;  // necessary?
+		c->msgCurWriteCount = 0;  // necessary?
+		c->msgCur = NULL;
 		return 1;
 	}
 	printf("Failed to clear queue, will try again later\n");
