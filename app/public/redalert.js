@@ -1,6 +1,6 @@
 RedAlert = {
-  //host: 'api1.tzeva-adom.com',
-  host: window.location.hostname,
+  host: 'api1.tzeva-adom.com',
+  //host: window.location.hostname,
   initted: false,
   reduce: 15000,
 

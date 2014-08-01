@@ -539,6 +539,7 @@ int main (int argc, char *argv[]) {
 	   						// TODO, need to differentiate between NULL and 0,
 	   						// and retroactively update if clients connect b4 1st msg
 	   						eventClient->msgTailDest = message_end;
+	   						eventCleint->msgTailWriteCount = 0;
 
 		   					if (query)
 		   					for (query=strtok_r(query, "&", &query_r); query != NULL; query=strtok_r(NULL, "&", &query_r)) {
@@ -623,8 +624,10 @@ Transfer-Encoding: chunked\r\n\
     		//printf("i have to send\n");
 				for (message_cur=client_cur->msgTailCur; message_cur != NULL; message_cur=message_cur->next) {
 		    	buf = msgToText(message_cur);
-		    	if (eventClient->msgTailWriteCount)
+		    	if (eventClient->msgTailWriteCount) {
 		    		buf += eventClient->msgTailWriteCount;
+		    		eventClient->msgTailWriteCount = 0;
+		    	}
 					writeCount = write(client_cur->fd, buf, strlen(buf));
 					if (writeCount != strlen(buf)) {
 						client_cur->msgTailWriteCount = writeCount;
@@ -635,7 +638,7 @@ Transfer-Encoding: chunked\r\n\
 					}
 					if (message_cur == client_cur->msgTailDest) {
 						//printf("reached end\n");
-						client_cur->msgTailWriteCount = 0;
+						//client_cur->msgTailWriteCount = 0;
 						break;
 					}
 				}

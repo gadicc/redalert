@@ -6,7 +6,7 @@ var request = require('request');
 var Fiber = require('fibers');
 var Server = require("mongo-sync").Server;
 
-var debug = true;
+var debug = process.env.USER == 'dragon';
 if (debug) {
 	var MONGO_HOST = '127.0.0.1:3001';
 } else {
@@ -60,7 +60,7 @@ var data = {
 };
 */
 
-function process(data) {
+function processResponse(data) {
 	var out = {
 		time: data.time || new Date().getTime(),
 		pid: parseInt(data.id),
@@ -160,7 +160,7 @@ Fiber(function() {
 		var history = require(JSON_DUMP);
 		data = [];
 		for (var i=0; i < history.length; i++)
-			data.push(raInsert(process(history[i])));
+			data.push(raInsert(processResponse(history[i])));
 	} else
 		data = data.toArray();
 
@@ -176,7 +176,7 @@ Fiber(function() {
 		if (res.data.length && res.id !== lastId) {
 			lastId = res.id;
 			console.log(res);
-			var data = process(res);
+			var data = processResponse(res);
 			console.log(data);
 			raInsert(data);
 			sendToServer(data);
