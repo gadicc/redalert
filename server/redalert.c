@@ -187,7 +187,7 @@ static void sendToClients(client *client_list, char *buf) {
   	// maybe write to a static buffer the incomplete request, check first
   	if (client_cur->type == CLIENT) {
   		if (!client_cur->msgTailWriteCount) {
-  			printf("Sending\n");
+  			printf("Sending to %d\n", client_cur->fd);
 				write(client_cur->fd, buf, count);
   		}
 			else
@@ -395,8 +395,8 @@ int main (int argc, char *argv[]) {
           	sbuf, sizeof sbuf, NI_NUMERICHOST | NI_NUMERICSERV);
 
           if (s == 0) {
-//            printf("Accepted connection on descriptor %d "
-//                   "(host=%s, port=%s)\n", infd, hbuf, sbuf);
+            printf("Accepted connection on descriptor %d "
+                   "(host=%s, port=%s)\n", infd, hbuf, sbuf);
           }
 
           /* Make the incoming socket non-blocking and add it to the
