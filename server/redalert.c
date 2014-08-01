@@ -48,9 +48,9 @@ struct client_el {
   struct client_el *next;
   
   message *msgHeadCur;
-  int msgHeadLastSend;
+  int msgHeadWriteCount;
   message *msgTailCur;
-  int msgTailLastSend;
+  int msgTailWriteCount;
   message *msgTailDest;
 };
 typedef struct client_el client;
@@ -598,8 +598,11 @@ Transfer-Encoding: chunked\r\n\
     		printf("i have to send\n");
 				for (message_cur=client_cur->msgTailCur; message_cur != NULL; message_cur=message_cur->next) {
 		    	buf = msgToText(message_cur);
+		    	if (eventClient->msgHeadWriteCount)
+		    		buf += eventClient->msgHeadWriteCount;
 					writeCount = write(client_cur->fd, buf, strlen(buf));
 					if (writeCount != strlen(buf)) {
+						client_cur->msgTailWriteCount = writeCount;
 						printf("msg %d fd %d, writeCount %d, expected %d\n",
 							message_cur->id, client_cur->fd, writeCount, strlen(buf));
 						printf("%d %s\n", errno, strerror(errno));
@@ -607,6 +610,7 @@ Transfer-Encoding: chunked\r\n\
 					}
 					if (message_cur == client_cur->msgTailDest) {
 						printf("reached end\n");
+						client_cur->msgTailWriteCount = 0;
 						break;
 					}
 				}
