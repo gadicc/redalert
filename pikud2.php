@@ -2,7 +2,7 @@
 
 include('gadi_db.php');
 
-$SQL = 'SELECT *,UNIX_TIMESTAMP(time) AS time FROM pikud2 ORDER BY id ASC';
+$SQL = 'SELECT *,UNIX_TIMESTAMP(time) AS time FROM pikud2';
 $results = $dbh->getAll($SQL);
 
 /*
