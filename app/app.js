@@ -311,7 +311,7 @@ if (Meteor.isClient) {
 		if (redalert.reactive.get('ready'))
 			return redalert.messages.find(query, {
 				sort: { createdAt: -1 },
-				limit: 80,
+				limit: 50,
 			});
 		else
 			return [];

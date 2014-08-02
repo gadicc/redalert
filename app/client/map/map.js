@@ -4,6 +4,56 @@ Router.map(function() {
 
 L.Icon.Default.imagePath = 'packages/leaflet/images';
 
+Session.setDefault('mapRange', 'today');
+
+var mapObserve = function(markers) {
+	var now = new Date();
+	var query = {
+		type: 'alert'
+	};
+	var range = Session.get('mapRange');
+	if (range == 'today')
+		query.createdAt = {
+			$gt: new Date(now.getFullYear(), now.getMonth(), now.getDate())
+		};
+	markers.clearLayers();
+
+	var data = [];
+	var docs = redalert.messages.find(query).fetch();
+	_.each(docs, function(doc) {
+		var areas = _.map(doc.areas, function(id) {
+			return RedAlert.areas.byId(id);
+		});
+		for (var i=0; i < areas.length; i++) {
+			var geo = areas[i].geometry;
+			if (geo && geo.location && geo.location.lat)
+			data.push(new L.Marker(
+				new L.LatLng(geo.location.lat, geo.location.lng), {
+					alertId: doc._id, areaId: areas[i].id }
+			));
+		}		
+	});
+	markers.addLayers(data);
+
+	// Watch for future adds and add individually
+	query.createdAt = { $gt: docs[docs.length-1].createdAt };
+	return redalert.messages.find(query).observe({
+		added: function(doc) {
+			var areas = _.map(doc.areas, function(id) {
+				return RedAlert.areas.byId(id);
+			});
+			for (var i=0; i < areas.length; i++) {
+				var geo = areas[i].geometry;
+				if (geo && geo.location && geo.location.lat)
+				markers.addLayer(new L.Marker(
+					new L.LatLng(geo.location.lat, geo.location.lng), {
+						alertId: doc._id, areaId: areas[i].id }
+				));
+			}
+		}
+	});
+}
+
 Template.map.rendered = function() {
 	var map = L.map('map').setView([32, 35], 8);
 	//L.tileLayer.provider('HERE.satelliteDay').addTo(map);
@@ -56,48 +106,58 @@ Template.map.rendered = function() {
 			a.layer.zoomToBounds();
 		else {
 			var area = RedAlert.areas.byId(markers[0].options.areaId);
+			var bounds = area.geometry.bounds;
+			var layer = null;
+
+			if (bounds) {
+				bounds = [
+					[ bounds.northeast.lat, bounds.northeast.lng ],
+					[ bounds.southwest.lat, bounds.southwest.lng ]
+				];
+				layer = L.rectangle(bounds);
+				map.addLayer(layer);
+			}
+
 			var popup = L.popup()
 		    .setLatLng(markers[0]._latlng)
 		    .setContent('<p>'+area.name[Session.get('lang')]+'</p>')
-		    .openOn(map);
+		    .openOn(map)
+		    .on('close', function() {
+		    	if (layer)
+			    	map.removeLayer(layer);
+		    });
 		}
 	});
 
-	map.addLayer(markers);
+	this.handles = [null];
 
-	var now = new Date();
-	this.handles = [];
-
-	this.handles.push(redalert.messages.find({
-		type: 'alert',
-		createdAt: {
-			$gt: new Date(now.getFullYear(), now.getMonth(), now.getDate())
-		}
-	}).observe({
-		added: function(doc) {
-			var areas = _.map(doc.areas, function(id) {
-				return RedAlert.areas.byId(id);
-			});
-			for (var i=0; i < areas.length; i++) {
-				var geo = areas[i].geometry;
-				markers.addLayer(new L.Marker(
-					new L.LatLng(geo.location.lat, geo.location.lng), {
-						alertId: doc._id, areaId: areas[i].id }
-				));
-			}
-		}
+	this.handles.push(Deps.autorun(function() {
+		$('#map').height(rwindow.get('$height') - $('#header').height());
+		map.invalidateSize();
 	}));
+
+	var self = this;
+	this.handles.push(Deps.autorun(function() {
+		if (self.handles[0])
+			self.handles[0].stop();
+		self.handles[0] = mapObserve(markers);
+	}));
+
+	map.addLayer(markers);
 }
 
-/*
-			if (geo.bounds) {
-				var bounds = [
-					[ geo.bounds.northeast.lat, geo.bounds.northeast.lng ],
-					[ geo.bounds.southwest.lat, geo.bounds.southwest.lng ]
-				];
-				markers.addLayer(L.rectangle(bounds));
-			} else {
-*/
+Template.map.events({
+	'click #map-controls a': function() {
+		Session.set('mapRange',
+			Session.get('mapRange') == 'today' ? 'all' : 'today');
+	}
+});
+
+Template.map.helpers({
+	range: function() {
+		return Session.get('mapRange');
+	}
+})
 
 Template.map.destroyed = function() {
 	if (this.handles)

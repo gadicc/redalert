@@ -5,7 +5,7 @@ body > .famous-container {
 	display: inline-block;
 }
 
-body, html {
+html, body {
 	margin: 0;
 	height: 100%;
 }
