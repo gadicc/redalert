@@ -66,23 +66,27 @@ Template.map.rendered = function() {
 	map.addLayer(markers);
 
 	var now = new Date();
-	redalert.messages.find({
+	this.handles = [];
+
+	this.handles.push(redalert.messages.find({
 		type: 'alert',
 		createdAt: {
 			$gt: new Date(now.getFullYear(), now.getMonth(), now.getDate())
 		}
-	}).forEach(function(doc) {
-		var areas = _.map(doc.areas, function(id) {
-			return RedAlert.areas.byId(id);
-		});
-		for (var i=0; i < areas.length; i++) {
-			var geo = areas[i].geometry;
-			markers.addLayer(new L.Marker(
-				new L.LatLng(geo.location.lat, geo.location.lng), {
-					alertId: doc._id, areaId: areas[i].id }
-			));
+	}).observe({
+		added: function(doc) {
+			var areas = _.map(doc.areas, function(id) {
+				return RedAlert.areas.byId(id);
+			});
+			for (var i=0; i < areas.length; i++) {
+				var geo = areas[i].geometry;
+				markers.addLayer(new L.Marker(
+					new L.LatLng(geo.location.lat, geo.location.lng), {
+						alertId: doc._id, areaId: areas[i].id }
+				));
+			}
 		}
-	});
+	}));
 }
 
 /*
@@ -94,3 +98,10 @@ Template.map.rendered = function() {
 				markers.addLayer(L.rectangle(bounds));
 			} else {
 */
+
+Template.map.destroyed = function() {
+	if (this.handles)
+	for (var i=0; i < this.handles; i++)
+		if (this.handles[i].stop)
+			this.handles[i].stop();
+};
