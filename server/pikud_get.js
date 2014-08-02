@@ -154,10 +154,14 @@ Fiber(function() {
 	db.redalert = db.getCollection('redalert');
 
 	// Load historical data
-	var data = db.redalert.find();
+	var data = db.redalert.find().sort({_id:1});
 	if (data.count() == 0) {
 		console.log("Database is empty, populating from " + JSON_DUMP);
 		var history = require(JSON_DUMP);
+		// probably not necessary but just in case
+		history.sort(function(a,b) {
+			return a.time-b.time;
+		});
 		data = [];
 		for (var i=0; i < history.length; i++)
 			data.push(raInsert(processResponse(history[i])));

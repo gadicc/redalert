@@ -37,6 +37,7 @@ struct message_el {
 	message_type type;
 	char *data;
 	struct message_el *next;
+	struct message_el *prev;
 };
 typedef struct message_el message;
 
@@ -478,12 +479,9 @@ int main (int argc, char *argv[]) {
 
 	    		if (eventClient->type == RELAY) {
 
-	          /* Data is from relay, write it to all clients and close connections */
-
 	    			char *type;
 	    			message *msg;
 	    			char *data;
-	    			char *toSend;
 
 		    		*(buf+count) = 0;
 		    		// printf("<< %s\n", buf);
@@ -499,30 +497,14 @@ int main (int argc, char *argv[]) {
 	   				msg->data = (char *)malloc(strlen(data)+1);
 	   				strcpy(msg->data, data);
 
-	   				toSend = msgToText(msg);
-	   				// printf("%s\n", toSend);
-
+	   				if (message_list)
+	   					message_list->prev = msg;
 	   				msg->next = message_list;
 	   				message_list = msg;
 	   				if (!message_end)
 	   					message_end = msg;
 	   				if (msg->id > lastId)
 	   					lastId = msg->id;
-
-		   	    clock_start = clock();
-				    time(&time_start);
-
-						client *client_cur;
-						int count = strlen(buf);
-
-				    sendToClients(client_list, toSend);
-
-					  time(&time_end);
-					  clock_elapsed = (double)(clock() - clock_start) / CLOCKS_PER_SEC;
-					  time_elapsed = difftime(time_end, time_start);
-
-					  printf("Wrote to %d clients using %f CPU seconds and %f clock seconds\n",
-						 	client_count, clock_elapsed, time_elapsed);
 
 		      	alarm(1);
 
@@ -570,10 +552,17 @@ int main (int argc, char *argv[]) {
 		   					for (query=strtok_r(query, "&", &query_r); query != NULL; query=strtok_r(NULL, "&", &query_r)) {
 									key = strtok(query, "=");
 									value = strtok(NULL, "=");
-									//printf("key '%s' value '%s'\n", key, value);
+									// printf("key '%s' value '%s'\n", key, value);
 
-									if (strcmp(key,"lastId") == 0)
+									if (strcmp(key,"lastId") == 0) {
 										lastId = atoi(value);
+										for (msg = message_list; msg != NULL; msg = msg->next) {
+											if (msg->id == lastId) {
+												eventClient->msgHeadCur = msg;
+												break;
+											}
+										}
+									}
 
 									// msgTailDest
 									if (strcmp(key,"limit") == 0) {
@@ -635,6 +624,15 @@ Transfer-Encoding: chunked\r\n\
     	alarm(1);
     }
 
+    clock_start = clock();
+    time(&time_start);
+    int clientWriteCount;
+    int msgWriteCount;
+    int wroteToThisClient;
+    wroteToThisClient = 0;
+    clientWriteCount = 0;
+    msgWriteCount = 0;
+
     // main send loop
     for (client_cur = client_list; client_cur != NULL; client_cur=client_cur->next) {
     	if (client_cur->type != CLIENT)
@@ -644,10 +642,25 @@ Transfer-Encoding: chunked\r\n\
     	if (!clearClientMsgQueue(client_cur))
     		continue;
 
-    	// send to tail
+    	// send towards head
+    	if (client_cur->msgHeadCur->prev != NULL) {
+    		wroteToThisClient = 1;
+	    	for (message_cur=client_cur->msgHeadCur->prev; message_cur != NULL; message_cur=message_cur->prev) {
+					msgWriteCount++;
+					if (!sendMsgToClient(message_cur, client_cur)) {
+						// failed msg is queued in msgCur
+						message_cur = message_cur->prev;
+						break;
+					}
+				}
+				client_cur->msgHeadCur = message_cur ? message_cur : message_list;
+			}
+
+    	// send towards tail
     	if (client_cur->msgTailDest && client_cur->msgTailCur != client_cur->msgTailDest) {
-    		//printf("i have to send\n");
-				for (message_cur=client_cur->msgTailCur; message_cur != NULL; message_cur=message_cur->next) {
+    		wroteToThisClient = 1;
+				for (message_cur=client_cur->msgTailCur; message_cur!=NULL && message_cur!=client_cur->msgTailDest; message_cur=message_cur->next) {
+					msgWriteCount++;
 					if (!sendMsgToClient(message_cur, client_cur)) {
 						// failed msg is queued in msgCur
 						message_cur = message_cur->next;
@@ -656,7 +669,21 @@ Transfer-Encoding: chunked\r\n\
 				}
 				client_cur->msgTailCur = message_cur;
 			}
+
+			if (wroteToThisClient)
+				clientWriteCount++;
+
     } /* main send loop */
+
+
+		if (clientWriteCount || msgWriteCount) {
+		  time(&time_end);
+		  clock_elapsed = (double)(clock() - clock_start) / CLOCKS_PER_SEC;
+		  time_elapsed = difftime(time_end, time_start);
+
+		  printf("Wrote %d msg(s) to %d client(s) using %f CPU seconds and %f clock seconds\n",
+			 	msgWriteCount, clientWriteCount, clock_elapsed, time_elapsed);
+		}
 
   } /* while keepRunning */
 
