@@ -102,7 +102,6 @@ Deps.autorun(function() {
 });
 
 function geoWatch() {
-	console.log(1);
 	redalert.geowatchId = navigator.geolocation.watchPosition(
 		function(pos) {
 	 		var rpos = redalert.reactive.get('position');
