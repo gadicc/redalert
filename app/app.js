@@ -69,6 +69,8 @@ if (Meteor.isClient) {
 		if (count) {
 			labels.push(day);
 			data.push(count);
+			if (count > max)
+				max = count;
 		}
 
 		var length = data.length;
@@ -110,6 +112,8 @@ if (Meteor.isClient) {
 			count++;
 		});
 		if (count) {
+			if (count > max)
+				max = count;
 			labels.push(hour);
 			data.push(count);
 		}
@@ -265,7 +269,7 @@ if (Meteor.isClient) {
 	}
 
 	UI.registerHelper('alerts', function() {
-		var query = { type: 'alert', source: 'ui_alerts' };
+		var query = { type: 'alert' };
 		if (!areaQuery(query))
 			return [];
 

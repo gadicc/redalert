@@ -145,7 +145,7 @@ RedAlert.find = function(query, options) {
     if (query.time.$gt) {
       if (typeof query.time.$gt === 'object')
         query.time.$gt = query.time.$gt.getTime();
-      start = data.binGtProp('time', query.time.$gt);
+      start = data.binGtProp('time', query.time.$gt) + 1; // why +1 ?
     }
     if (query.time.$lt)
       if (typeof query.time.$lt === 'object')
