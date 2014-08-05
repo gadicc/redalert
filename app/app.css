@@ -81,4 +81,5 @@ html, body {
 }
 
 .alert table td { padding: 10px; } 
+.alert td:first-child { text-align: center; }
 .alert td:nth-child(2) span:not(:last-child):after { content: ", "; }

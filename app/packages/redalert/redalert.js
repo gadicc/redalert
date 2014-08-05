@@ -77,7 +77,9 @@ Cursor.prototype.observe = function(callbacks, options) {
 	var observeRecord = _.extend({query: self.query}, callbacks);
 	redalert.observes.push(observeRecord);
 
-	var data = RedAlert.find(self.query, self.options); // non reactive
+	var data = RedAlert
+		? RedAlert.find(self.query, self.options) // non reactive
+		: [];
  	observeRecord.data = data;
 
 	if (!options || !options._suppress_initial)
