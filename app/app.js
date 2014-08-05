@@ -13,43 +13,6 @@ if (Meteor.isClient) {
 			: date.getHours() + 1;
 	}
 
-	/*
-	function dayChart() {
-		var data = [], labels = [], max = 0;
-		var oneDay = 86400000;
-		var oneHour = 3600000;
-		var now = new Date().getTime();
-		var first = new Date().getHours()+1;
-
-		var label;
-		for (var i=0; i<24; i++) {
-			var count = redalert.messages.find({
-					type: 'alert',
-					createdAt: {
-						$lt: now - (24-i)*oneHour
-						$gt:
-					}
-				}).count();
-			data.push(count);
-			if (count > max)
-				max = count;
-			label = first + i;
-			if (label > 24)
-				label -= 24;
-			if (label < 12)
-				label += 'am';
-			else if (label == 12)
-				label = '12pm';
-			else if (label == 24)
-				label = '12am';
-			else
-				label = (label-12) + 'pm';
-		}
-
-		return { data: data, labels: labels, max: max, length: 24 };
-	}
-	*/
-
 	function fillGaps(data, labels, last, current, rollover) {
 		var gap = current - last;
 //		console.log(last, current, gap);
@@ -82,18 +45,15 @@ if (Meteor.isClient) {
 
 		var query = {
 			type: 'alert',
-			createdAt: {
+			time: {
 				$gt: new Date(now.getFullYear(), now.getMonth()-1, lastDay)	// 1 month 
 			}
 		};
 		if (!areaQuery(query))
 			return null;
 
-		redalert.messages.find(query, {
-			sort : { createdAt: 1 },
-			fields: { createdAt: 1 }
-		}).forEach(function(alert) {
-			day = alert.createdAt.getDate();
+		_.each(redalert.find(query).fetch(), function(alert) {
+			day = new Date(alert.time).getDate();
 			if (day !== lastDay) {
 				labels.push(lastDay);
 				data.push(count);
@@ -127,18 +87,16 @@ if (Meteor.isClient) {
 		var now = new Date();
 		var query = {
 			type: 'alert',
-			createdAt: {
-				$gt: new Date(now - 86400000 + 3600000)	// 1 day 
+			time: {
+				$gt: new Date(now - 86400000 + 3600000).getTime()	// 1 day 
 			}
 		};
 		if (!areaQuery(query))
 			return null;
 
-		redalert.messages.find(query, {
-			sort : { createdAt: 1 },
-			fields: { createdAt: 1 }
-		}).forEach(function(alert) {
-			hour = hourFromTime(alert.createdAt);
+		var results = redalert.find(query).fetch();
+		_.each(results, function(alert) {
+			hour = hourFromTime(new Date(alert.time));
 			if (hour !== lastHour) {
 				labels.push(lastHour);
 				data.push(count);
@@ -191,13 +149,10 @@ if (Meteor.isClient) {
 
 			var chart = Session.get('chartCoverage') == 'day'
 				? dayChart() : monthChart();
-			console.log(chart);
-//			var dataset = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
-//	                11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
 
 			if (!chart) return null;
 		  if (!chart.max) chart.max = 1;
-	    var w = $(window).innerWidth(), h = 80;
+	    var w = rwindow.get('$width'), h = 80;
 	    var barPadding = 1, scaleY = (h-35)/chart.max;
 
 			var svg = d3.select('#chart').append('svg')
@@ -226,8 +181,12 @@ if (Meteor.isClient) {
 			  .enter();
 
 			texts.append("text")
-			  .text(function(d) {
-	        return d || '';
+			  .text(function(d, i) {
+			  	//if (w > 500 || chart.length < 30)
+			  		return d || '';
+			  	//else {
+		      //  return i % 2 == 1 ? d || '' : '';
+			  	//}
 	   		})
 				.attr("x", function(d, i) {
 	        return i * (w / chart.length) + (w / chart.length - barPadding) / 2;
@@ -242,8 +201,10 @@ if (Meteor.isClient) {
 
 			texts.append("text")
 			  .text(function(d, i) {
-			  	// return chart.labels[i];
-	        return i % 2 == 1 ? chart.labels[i] : '';
+			  	if (w > 500)
+			  		return chart.labels[i];
+			  	else
+		        return i % 2 == 1 ? chart.labels[i] : '';
 	   		})
 				.attr("x", function(d, i) {
 	        return i * (w / chart.length) + (w / chart.length - barPadding) / 2;
@@ -304,45 +265,63 @@ if (Meteor.isClient) {
 	}
 
 	UI.registerHelper('alerts', function() {
-		var query = { type: 'alert' };
+		var query = { type: 'alert', source: 'ui_alerts' };
 		if (!areaQuery(query))
 			return [];
 
 		if (redalert.reactive.get('ready'))
-			return redalert.messages.find(query, {
-				sort: { createdAt: -1 },
-				limit: 50,
+			return redalert.find(query, {
+				sort: { time: -1 },
+				limit: 80,
 			});
 		else
 			return [];
-	});
-
-	UI.registerHelper('lastTime', function() {
-		var query = {};
-		if (!areaQuery(query))
-			return null;
-		
-		var options = {
-			sort: { createdAt: -1 },
-			limit: 1
-		};
-		var mostRecent = redalert.messages.findOne(query, options);
-		return mostRecent ? mostRecent.createdAt.getTime() : null;
 	});
 
 	UI.registerHelper('langObj', function(obj) {
 		return obj[Session.get('lang')] || obj.native;
 	});
 
+	Template.all.helpers({
+		lastTime: function() {
+			var query = {};
+			if (!areaQuery(query))
+				return null;
+			
+			var options = {
+				sort: { time: -1 },
+				limit: 1
+			};
+			var mostRecent = redalert.findOne(query, options);
+			return mostRecent ? mostRecent.time : null;
+		},
+
+		duration: function() {
+			var query = {};
+			if (!areaQuery(query))
+				return null;
+			
+			var options = {
+				sort: { time: -1 },
+				limit: 1
+			};
+			var mostRecent = redalert.findOne(query, options);
+			if (!mostRecent) return null;
+			return moment
+				.duration(new Date() - mostRecent.time)
+				.format("d [day], h [hr], m [min], s [sec]");
+		}
+	})
+
 	Template.alert.helpers({
 		area: function() {
 			var id = this.valueOf();
 			return RedAlert.areas.byId(id);
 		},
-		time: function(time) {
+		timeFmt: function(time) {
 			return moment(time).format('DD/MM HH:mm:ss');
 		},
-		ago: function(time) {
+		timeAgo: function(time) {
 			return moment(time).fromNow();
 		},
 		rawTime: function(time) {

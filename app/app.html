@@ -36,7 +36,7 @@
 <template name="all">
 	{{> chart}}
 	<div class="alert" style="line-height: 2.5em; text-align: center">
-		<span class="duration" data-since="{{lastTime}}"></span>
+		<span class="duration" data-since="{{lastTime}}">{{duration}}</span>
 		rocket free
 	</div>
 	{{#each alerts}}
@@ -95,9 +95,9 @@
 	{{! #with ..}}
 	<div class="alert">
 		<table><tr><td>
-			<nobr>{{time createdAt}}</nobr>
+			<nobr>{{timeFmt time}}</nobr>
 			<br />
-			<nobr><span class="timeAgo" data-time="{{rawTime createdAt}}">{{ago createdAt}}</span></nobr>
+			<nobr><span class="timeAgo" data-time="{{time}}">{{timeAgo time}}</span></nobr>
 		</td><td>
 			{{#each areas}}
 				{{#with area this}}

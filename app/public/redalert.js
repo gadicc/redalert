@@ -1,6 +1,6 @@
 RedAlert = {
-  host: 'api1.tzeva-adom.com',
-  //host: window.location.hostname,
+  host: 'api1.tzeva-adom.com:80',
+  //host: window.location.hostname + ':8080',
   initted: false,
   reduce: 15000,
 
@@ -26,7 +26,7 @@ RedAlert = {
 
 	connect: function() {
 		console.log('RedAlert connecting...');
-  	var url = 'http://'+RedAlert.host+':8080/redalert?ts=' + new Date().getTime();
+  	var url = 'http://'+RedAlert.host+'/redalert?ts=' + new Date().getTime();
     if (RedAlert.lastId)
       url += '&lastId=' + RedAlert.lastId;
     else
@@ -80,7 +80,7 @@ RedAlert.locations.byAreaId = function(id) {
   return _.map(locs, function(id) {
     return RedAlert.locations.byId(id);
   });
-}
+};
 RedAlert.areas.fromPos = function(pos) {
   var area, bounds, distance, shortest, shortestId = null;
   if (!RedAlert.areas.data)
@@ -99,6 +99,76 @@ RedAlert.areas.fromPos = function(pos) {
     }
   }
   return RedAlert.areas.data[shortestId];
+};
+
+// Adapted binary search, use properties, find closest value
+// http://stackoverflow.com/questions/6553970/find-the-first-element-in-an-array-that-is-greater-than-the-target
+Array.prototype.binGtProp = function(prop, val) {
+  var low = 0, high = this.length - 1, mid;
+  while (low != high) {
+    mid = Math.floor((low + high) / 2);
+    if (this[mid][prop] <= val)
+      low = mid+1;
+    else
+      high = mid;
+  }
+  return low;
+};
+Array.prototype.binLtProp = function(prop, val) {
+  var low = 0, high = this.length - 1, mid;
+  while (low != high) {
+    mid = Math.ceil((low + high) / 2);
+    if (this[mid][prop] >= val)
+      high = mid-1;
+    else
+      low = mid;
+  }
+  return low;
+};
+
+RedAlert.find = function(query, options) {
+  if (!query) query = {};
+  if (!options) options = {};
+
+  var data = RedAlert.messages;
+
+  // Queries by filter
+  if (query.areas)
+    data = _.filter(data, function(doc) {
+      return _.contains(doc.areas, query.areas);
+    });
+
+  // Queries by range
+  var start = 0;
+  var end = data.length;
+  if (query.time) {
+    if (query.time.$gt) {
+      if (typeof query.time.$gt === 'object')
+        query.time.$gt = query.time.$gt.getTime();
+      start = data.binGtProp('time', query.time.$gt);
+    }
+    if (query.time.$lt)
+      if (typeof query.time.$lt === 'object')
+        query.time.$lt = query.time.$lt.getTime();
+      if (typeof end === 'object') end = end.getTime();
+  }
+
+  // Options
+  if (options.limit) {
+    var desiredStart;
+
+    if (1) { // from end 
+      desiredStart = end - options.limit;
+      if (desiredStart > start)
+        start = desiredStart;
+    }
+  }
+
+  data = data.slice(start,end);
+  if (options.sort && options.sort.time == -1)
+    data = data.reverse();
+
+  return data;
 }
 
 // attach the .equals method to Array's prototype to call it on any array
@@ -180,6 +250,7 @@ function idSort(a, b) {
 }
 
 window.addEventListener("message", receiveMessage, false);
+// receiveMessage({data:'redalert {"_id": '+(1000+RedAlert.messages.length)+', "areas": [155], "time": '+new Date().getTime()+'}'});
 function receiveMessage(event) {
   if (event.data.substr(0, 9) != "redalert ")
     return;

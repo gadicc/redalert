@@ -1,9 +1,6 @@
 {
   "packages": {
-    "iron-router": {
-		"git": "https://github.com/EventedMind/iron-router.git",
-		"tag": "v0.7.1"
-	},
+    "iron-router": {},
     "moment": {},
     "highcharts": {},
     "moment-duration-format": {},

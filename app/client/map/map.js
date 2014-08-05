@@ -13,13 +13,13 @@ var mapObserve = function(markers) {
 	};
 	var range = Session.get('mapRange');
 	if (range == 'today')
-		query.createdAt = {
+		query.time = {
 			$gt: new Date(now.getFullYear(), now.getMonth(), now.getDate())
 		};
 	markers.clearLayers();
 
 	var data = [];
-	var docs = redalert.messages.find(query).fetch();
+	var docs = redalert.find(query).fetch();
 	_.each(docs, function(doc) {
 		var areas = _.map(doc.areas, function(id) {
 			return RedAlert.areas.byId(id);
@@ -36,8 +36,8 @@ var mapObserve = function(markers) {
 	markers.addLayers(data);
 
 	// Watch for future adds and add individually
-	query.createdAt = { $gt: docs[docs.length-1].createdAt };
-	return redalert.messages.find(query).observe({
+	query.time = { $gt: docs[docs.length-1].time };
+	return redalert.find(query).observe({
 		added: function(doc) {
 			var areas = _.map(doc.areas, function(id) {
 				return RedAlert.areas.byId(id);
