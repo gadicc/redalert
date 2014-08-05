@@ -12,12 +12,12 @@
 			><a class="pageIcon" href="/">
 				{{#if redalert.area}}
 					{{langObj redalert.area.name}}<br>
-					{{redalert.area.coverTime}}s cover
+					{{redalert.area.coverTime}}{{mf 'tab_s_cover' 's cover'}}
 				{{else}}
 					Finding<br>location...
 				{{/if}}</a
-			><a class="pageIcon" href="/all">All<br>Israel</a
-			><a class="pageIcon" href="/map">Map</a
+			><a class="pageIcon" href="/all">{{{mf 'tab_all_israel' 'All<br>Israel'}}}</a
+			><a class="pageIcon" href="/map">{{mf 'tab_map' 'Map'}}</a
 			><a class="pageIcon con-{{redalert.connected}}" href="/settings">
 		  	{{redalert.connected}}<br />
 				{{redalert.lastMsgDiff}}s

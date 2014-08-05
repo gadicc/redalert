@@ -5,6 +5,7 @@
     "highcharts": {},
     "moment-duration-format": {},
     "leaflet": {},
-    "leaflet-markercluster": {}
+    "leaflet-markercluster": {},
+    "messageformat": {}
   }
 }

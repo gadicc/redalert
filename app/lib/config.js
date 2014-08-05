@@ -1,0 +1,1 @@
+mfPkg.init('en');
