@@ -36,7 +36,8 @@ var mapObserve = function(markers) {
 	markers.addLayers(data);
 
 	// Watch for future adds and add individually
-	query.time = { $gt: docs[docs.length-1].time };
+	if (docs.length)
+		query.time = { $gt: docs[docs.length-1].time };
 	return redalert.find(query).observe({
 		added: function(doc) {
 			var areas = _.map(doc.areas, function(id) {

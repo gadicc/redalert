@@ -39,8 +39,6 @@ var Cursor = function(query, options) {
     this.reactive = (options.reactive === undefined) ? true : options.reactive;
 };
 redalert.find = function(query, options) {
-	if (typeof RedAlert === 'undefined')
-		return null;
 	return new Cursor(query, options);
 };
 redalert.findOne = function(query, options) {
@@ -60,14 +58,19 @@ Cursor.prototype.fetch = function() {
 	// observe will stop() when this computation is invalidated
 	self.observe({
 		added: function() {
-			console.log('notifyChange');
+			// console.log('notifyChange');
+			notifyChange();
+		},
+		invalidate: function() {
 			notifyChange();
 		}
 	}, {
 		_suppress_initial: true
 	});
 
-	return RedAlert.find(this.query, this.options);
+	return typeof RedAlert == 'object'
+		? RedAlert.find(this.query, this.options)
+		: [];
 };
 
 // Note, mongo observe handles options via additional function
@@ -77,7 +80,7 @@ Cursor.prototype.observe = function(callbacks, options) {
 	var observeRecord = _.extend({query: self.query}, callbacks);
 	redalert.observes.push(observeRecord);
 
-	var data = RedAlert
+	var data = typeof RedAlert !== 'undefined'
 		? RedAlert.find(self.query, self.options) // non reactive
 		: [];
  	observeRecord.data = data;
@@ -178,6 +181,12 @@ jQuery.ajax({
 					}
 				});
 			});
+
+  		for (var obs, i=0; i < redalert.observes.length; i++) {
+  			obs = redalert.observes[i];
+  			obs.invalidate && obs.invalidate();
+  		}
+
     });
 
     RedAlert.init();
