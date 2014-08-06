@@ -6,24 +6,24 @@ function hourFromTime(date) {
 }
 
 function fillGaps(data, labels, last, current, rollover) {
-	var gap = current - last;
-//		console.log(last, current, gap);
-	if (gap < 0) {
-		for (var i=1; i < -gap && last+i < rollover; i++) {
+	// Rollover in the middle
+	if (current == last-1)
+		return;
+	if (current-last < 0) {
+		for (last++; last <= rollover; last++) {
 //				console.log('- inserting ' + (last + i));
-			labels.push(last + i);
+			labels.push(last);
+			console.log(1);
 			data.push(0);
 		}
 		last = 0;
-		gap = current - last;
 //			console.log(last, current, gap);
 	}
-	for (var i=1; i < gap; i++) {
-		labels.push(last + i);
+	for (last++; last < current; last++) {
+		labels.push(last);
 		data.push(0);
 //			console.log('+ inserting ' + (last + i));
 	}
-	return last;
 }
 
 function monthChart() {
@@ -65,18 +65,13 @@ function monthChart() {
 			max = count;
 	}
 
-	var length = data.length;
-	for (var i=length; i < daysInMonth; i++) {
-		data.push(0);
-		labels.push(lastDay + i - length + 1);
-	}
-
+	fillGaps(data, labels, day, day+daysInMonth-data.length+1, daysInMonth);
 	return { data: data, labels: labels, max: max, length: data.length };
 }
 
 function dayChart() {
-	var data = [], labels = [], count = 0, max = 0, hour = null;
 	var lastHour = new Date().getHours() + 1;
+	var data = [], labels = [], count = 0, max = 0, hour = lastHour;
 
 	var now = new Date();
 	var query = {
@@ -110,11 +105,7 @@ function dayChart() {
 		data.push(count);
 	}
 
-	var length = data.length;
-	for (var i=length; i < 24; i++) {
-		data.push(0);
-		labels.push(lastHour + i - length + 1);
-	}
+	fillGaps(data, labels, hour, hour+24-data.length+1, 24);
 
 	for (var i=0; i < 24; i++) {
 		var label = labels[i];
@@ -124,6 +115,8 @@ function dayChart() {
 			labels[i] = label + 'am';
 		else if (label == 12)
 			labels[i] = '12pm';
+		else if (label == 24)
+			labels[i] = '12am';
 		else
 			labels[i] = (label-12) + 'pm';
 	}

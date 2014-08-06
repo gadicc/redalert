@@ -104,7 +104,7 @@ RedAlert.areas.fromPos = function(pos) {
 // Adapted binary search, use properties, find closest value
 // http://stackoverflow.com/questions/6553970/find-the-first-element-in-an-array-that-is-greater-than-the-target
 Array.prototype.binGtProp = function(prop, val) {
-  var low = 0, high = this.length - 1, mid;
+  var low = 0, high = this.length, mid;
   while (low != high) {
     mid = Math.floor((low + high) / 2);
     if (this[mid][prop] <= val)
@@ -115,7 +115,7 @@ Array.prototype.binGtProp = function(prop, val) {
   return low;
 };
 Array.prototype.binLtProp = function(prop, val) {
-  var low = 0, high = this.length - 1, mid;
+  var low = 0, high = this.length, mid;
   while (low != high) {
     mid = Math.ceil((low + high) / 2);
     if (this[mid][prop] >= val)
@@ -145,7 +145,7 @@ RedAlert.find = function(query, options) {
     if (query.time.$gt) {
       if (typeof query.time.$gt === 'object')
         query.time.$gt = query.time.$gt.getTime();
-      start = data.binGtProp('time', query.time.$gt) + 1; // why +1 ?
+      start = data.binGtProp('time', query.time.$gt);
     }
     if (query.time.$lt)
       if (typeof query.time.$lt === 'object')
