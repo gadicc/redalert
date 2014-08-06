@@ -9,6 +9,7 @@ function fillGaps(data, labels, last, current, rollover) {
 	// Rollover in the middle
 	if (current == last-1)
 		return;
+	console.log(last, current);
 	if (current-last < 0) {
 		for (last++; last <= rollover; last++) {
 //				console.log('- inserting ' + (last + i));
@@ -19,8 +20,11 @@ function fillGaps(data, labels, last, current, rollover) {
 		last = 0;
 //			console.log(last, current, gap);
 	}
-	for (last++; last < current; last++) {
+	if (data.length)
+		last++;
+	for (; last < current; last++) {
 		labels.push(last);
+		console.log(2);
 		data.push(0);
 //			console.log('+ inserting ' + (last + i));
 	}
