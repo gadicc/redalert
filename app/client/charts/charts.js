@@ -1,43 +1,27 @@
-function hourFromTime(date) {
-	return date.getHours();
-	return date.getMinutes() < 30
-		? date.getHours()
-		: date.getHours() + 1;
-}
-
-function fillGaps(data, labels, last, current, rollover) {
-	// Rollover in the middle
-	if (current == last-1)
-		return;
-	console.log(last, current);
-	if (current-last < 0) {
-		for (last++; last <= rollover; last++) {
-//				console.log('- inserting ' + (last + i));
-			labels.push(last);
-			console.log(1);
+function fillGaps(data, labels, prev, next, rollover, rolloverStart) {
+	if (next <= prev) {
+		for (prev++; prev <= rollover; prev++) {
+			labels.push(prev);
 			data.push(0);
 		}
-		last = 0;
-//			console.log(last, current, gap);
+		prev = rolloverStart-1;
 	}
-	if (data.length)
-		last++;
-	for (; last < current; last++) {
-		labels.push(last);
-		console.log(2);
+
+	for (prev++; prev < next; prev++) {
+		labels.push(prev);
 		data.push(0);
-//			console.log('+ inserting ' + (last + i));
 	}
+
+	return prev;
 }
 
 function monthChart() {
-	var data = [], labels = [], count = 0, max = 0, day = null;
-
 	var now = new Date();
 	var daysInMonth = new Date(now.getFullYear(), now.getMonth()+1, 0).getDate();
 	var daysLastMonth = new Date(now.getFullYear(), now.getMonth(), 0).getDate();
 	var lastDay = new Date().getDate() + 1;
-	if (lastDay > daysLastMonth) lastDay -= daysLastMonth;
+	var data = [], labels = [], count = 0, max = 0, day = lastDay;
+  // if (lastDay > daysLastMonth) lastDay -= daysLastMonth;
 
 	var query = {
 		type: 'alert',
@@ -57,8 +41,7 @@ function monthChart() {
 				max = count;
 			count = 0;
 
-			fillGaps(data, labels, lastDay, day, daysLastMonth);
-			lastDay = day;
+			lastDay = fillGaps(data, labels, lastDay, day, daysLastMonth, 1);
 		}
 		count++;
 	});
@@ -69,15 +52,20 @@ function monthChart() {
 			max = count;
 	}
 
-	fillGaps(data, labels, day, day+daysInMonth-data.length+1, daysInMonth);
+	if (!data.length) {
+		labels.push(day);
+		data.push(0);
+	}
+	fillGaps(data, labels, day, now.getDate()+1, daysInMonth, 1);
+
 	return { data: data, labels: labels, max: max, length: data.length };
 }
 
 function dayChart() {
-	var lastHour = new Date().getHours() + 1;
+	var now = new Date();
+	var lastHour = now.getHours() + 1;
 	var data = [], labels = [], count = 0, max = 0, hour = lastHour;
 
-	var now = new Date();
 	var query = {
 		type: 'alert',
 		time: {
@@ -89,7 +77,7 @@ function dayChart() {
 
 	var results = redalert.find(query).fetch();
 	_.each(results, function(alert) {
-		hour = hourFromTime(new Date(alert.time));
+		hour = new Date(alert.time).getHours();
 		if (hour !== lastHour) {
 			labels.push(lastHour);
 			data.push(count);
@@ -97,8 +85,7 @@ function dayChart() {
 				max = count;
 			count = 0;
 
-			fillGaps(data, labels, lastHour, hour, 24);
-			lastHour = hour;
+			lastHour = fillGaps(data, labels, lastHour, hour, 23, 0);
 		}
 		count++;
 	});
@@ -109,7 +96,11 @@ function dayChart() {
 		data.push(count);
 	}
 
-	fillGaps(data, labels, hour, hour+24-data.length+1, 24);
+	if (!data.length) {
+		labels.push(hour);
+		data.push(0);
+	}
+	fillGaps(data, labels, hour, now.getHours()+1, 23, 0);
 
 	for (var i=0; i < 24; i++) {
 		var label = labels[i];

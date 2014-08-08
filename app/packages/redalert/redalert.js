@@ -174,7 +174,9 @@ jQuery.ajax({
 						return;
 
 					var newArea = RedAlert.areas.fromPos(pos);
-					var oldArea = redalert.reactive.get('area');
+					var oldArea = Deps.nonreactive(function() {
+						return redalert.reactive.get('area');
+					});
 					if (!oldArea || oldArea.id != newArea.id) {
 						redalert.reactive.set('area', newArea);
 						console.log('newArea', newArea);
