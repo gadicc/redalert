@@ -32,8 +32,9 @@ function monthChart() {
 	if (!areaQuery(query))
 		return null;
 
-	_.each(redalert.find(query).fetch(), function(alert) {
-		day = new Date(alert.time).getDate();
+	var results = redalert.find(query).fetch();
+	for (var i=0; i < results.length; i++) {
+		day = new Date(results[i].time).getDate();
 		if (day !== lastDay) {
 			labels.push(lastDay);
 			data.push(count);
@@ -44,7 +45,7 @@ function monthChart() {
 			lastDay = fillGaps(data, labels, lastDay, day, daysLastMonth, 1);
 		}
 		count++;
-	});
+	};
 	if (count) {
 		labels.push(day);
 		data.push(count);
@@ -76,8 +77,8 @@ function dayChart() {
 		return null;
 
 	var results = redalert.find(query).fetch();
-	_.each(results, function(alert) {
-		hour = new Date(alert.time).getHours();
+	for (var i=0; i < results.length; i++) {
+		hour = new Date(results[i].time).getHours();
 		if (hour !== lastHour) {
 			labels.push(lastHour);
 			data.push(count);
@@ -88,7 +89,7 @@ function dayChart() {
 			lastHour = fillGaps(data, labels, lastHour, hour, 23, 0);
 		}
 		count++;
-	});
+	}
 	if (count) {
 		if (count > max)
 			max = count;

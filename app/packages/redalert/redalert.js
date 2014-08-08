@@ -57,10 +57,10 @@ Cursor.prototype.fetch = function() {
 
 	// observe will stop() when this computation is invalidated
 	self.observe({
-		added: function() {
+		added: _.debounce(function() {
 			// console.log('notifyChange');
 			notifyChange();
-		},
+		}, 100),
 		invalidate: function() {
 			notifyChange();
 		}
