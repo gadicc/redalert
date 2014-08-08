@@ -8,7 +8,7 @@ var Server = require("mongo-sync").Server;
 
 var debug = process.env.USER == 'dragon';
 if (debug) {
-	var MONGO_HOST = '127.0.0.1:3001';
+	var MONGO_HOST = '127.0.0.1:4001';
 } else {
 	var MONGO_HOST = "188.226.253.94:6009";
 	var MONGO_DB = "meteor";
@@ -41,9 +41,22 @@ function pikud_get() {
 		method: 'GET',
 		encoding: 'binary'
 	 }, function(err, res, body){
-//	 	console.log('get');
+	 	if (err) {
+	 		console.log(new Date());
+	 		console.log('pikud get error');
+	 		console.log(err);
+	 		fiber.run(null);
+	 		return;
+	 	}
 	 	if (res.statusCode == 403) {
-	 		console.log('Access Denied to oref server :(');
+	 		console.log(new Date(), "403 access denied :(");
+	 		fiber.run(null);
+	 		return;
+	 	} else if (res.statusCode != 200) {
+	 		console.log(new Date());
+	 		console.log('Unknown status code ' + res.statusCode);
+	 		console.log(res);
+	 		fiber.run(null);
 	 		return;
 	 	}
 	  body = iconv.decode(new Buffer(body, 'binary'), 'utf-16');
@@ -177,7 +190,7 @@ Fiber(function() {
 	var res, lastId;
 	while(1) {
 		res = pikud_get();
-		if (res.data.length && res.id !== lastId) {
+		if (res && res.data.length && res.id !== lastId) {
 			lastId = res.id;
 			console.log(res);
 			var data = processResponse(res);
