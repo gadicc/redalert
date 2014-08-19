@@ -33,8 +33,8 @@ var inc = function(i) {
 function pikud_get() {
 	var fiber = Fiber.current;
 	request({
-		//uri: 'http://www.oref.org.il/WarningMessages/alerts.json',
-		uri: 'http://friends.wastelands.net:5050/WarningMessages/alerts.json',
+		uri: 'http://www.oref.org.il/WarningMessages/alerts.json',
+		//uri: 'http://friends.wastelands.net:5050/WarningMessages/alerts.json',
 		headers: {
 			host: "www.oref.org.il"
 		},
@@ -52,10 +52,14 @@ function pikud_get() {
 	 		console.log(new Date(), "403 access denied :(");
 	 		fiber.run(null);
 	 		return;
+	 	} else if (res.statusCode == 404) {	 		
+	 		console.log(new Date(), "404 not found :(");
+	 		fiber.run(null);
+	 		return;
 	 	} else if (res.statusCode != 200) {
 	 		console.log(new Date());
 	 		console.log('Unknown status code ' + res.statusCode);
-	 		console.log(res);
+	 		console.log(res.body);
 	 		fiber.run(null);
 	 		return;
 	 	}
@@ -197,6 +201,10 @@ Fiber(function() {
 			console.log(data);
 			raInsert(data);
 			sendToServer(data);
+		} else if (res && res.id !== lastId) {
+			console.log('id change', lastId, res.id);
+			console.log(res);
+			lastId = res.id;
 		}
 		sleep(1000);
 	}
