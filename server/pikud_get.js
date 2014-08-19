@@ -33,8 +33,8 @@ var inc = function(i) {
 function pikud_get() {
 	var fiber = Fiber.current;
 	request({
-		uri: 'http://www.oref.org.il/WarningMessages/alerts.json',
-		//uri: 'http://friends.wastelands.net:5050/WarningMessages/alerts.json',
+		//uri: 'http://www.oref.org.il/WarningMessages/alerts.json',
+		uri: 'http://friends.wastelands.net:5050/WarningMessages/alerts.json',
 		headers: {
 			host: "www.oref.org.il"
 		},
