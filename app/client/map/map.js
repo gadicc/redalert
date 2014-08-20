@@ -16,6 +16,12 @@ var mapObserve = function(markers) {
 		query.time = {
 			$gt: new Date(now.getFullYear(), now.getMonth(), now.getDate())
 		};
+	else if (range == 'yesterday')
+		query.time = {
+			$gt: new Date(now.getFullYear(), now.getMonth(), now.getDate()-1),
+			$lt: new Date(now.getFullYear(), now.getMonth(), now.getDate())
+		};
+
 	markers.clearLayers();
 
 	var data = [];
@@ -149,8 +155,13 @@ Template.map.rendered = function() {
 
 Template.map.events({
 	'click #map-controls a': function() {
-		Session.set('mapRange',
-			Session.get('mapRange') == 'today' ? 'all' : 'today');
+		var current = Session.get('mapRange');
+		if (current == 'today')
+			Session.set('mapRange', 'yesterday');
+		else if (current == 'yesterday')
+			Session.set('mapRange', 'all');
+		else
+			Session.set('mapRange', 'today');
 	}
 });
 

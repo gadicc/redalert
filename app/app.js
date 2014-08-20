@@ -56,7 +56,7 @@ if (Meteor.isClient) {
 			return redalert.find(query, {
 				sort: { time: -1 },
 				limit: 80,
-			}).fetch();  // straight observe had bad performance
+			});//.fetch();  // straight observe had bad performance
 		else
 			return [];
 	});

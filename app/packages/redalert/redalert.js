@@ -138,10 +138,21 @@ jQuery.ajax({
       			}
     				if (obs.query.areas && !_.contains(msg.areas, obs.query.areas))
     					continue;
-    				if (1) { // if reverse sorted
-    					obs.addedAt && obs.addedAt(msg, 0, obs.data[0]._id);
-    					obs.added && obs.added(msg);
+
+    				// we only support two sort orders, time: -1 or time:1 (default)
+    				if (obs.options && obs.options.sort && obs.options.sort.time == -1) {
+    					// New messages always at head (new) or tail (cleared cache)
+    					if (msg.time > obs.data[0].time)
+	    					obs.addedAt && obs.addedAt(msg, 0, obs.data[0]._id);
+	    				else
+	    					obs.addedAt && obs.addedAt(msg, obs.data.length-1, null);
+    				} else {
+    					if (obs.data.length && msg.time < obs.data[obs.data.length-1].time)
+	    					obs.addedAt && obs.addedAt(msg, obs.data.length-1, null);
+	    				else
+	    					obs.addedAt && obs.addedAt(msg, 0, obs.data[0]._id);
     				}
+  					obs.added && obs.added(msg);
       		}
       	}
     });
