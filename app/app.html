@@ -90,9 +90,8 @@
 	{{! #with ..}}
 	<div class="alert">
 		<table><tr><td>
+			<nobr><span class="timeAgo" data-time="{{time}}">{{timeAgo time}}</span></nobr>			<br />
 			<nobr>{{timeFmt time}}</nobr>
-			<br />
-			<nobr><span class="timeAgo" data-time="{{time}}">{{timeAgo time}}</span></nobr>
 		</td><td>
 			{{#each areas}}
 				{{#with area this}}
