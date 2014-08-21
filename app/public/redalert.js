@@ -22,7 +22,7 @@ RedAlert = {
   		RedAlert.hooks.status[i].call(this, status);  		
 	},
 
-	hooks: { msg: [], status: [], ready: [], remove: [] },
+	hooks: { msg: [], status: [], ready: [], remove: [], position: [], newArea: [] },
 
 	connect: function() {
 		console.log('RedAlert connecting...');
@@ -83,8 +83,11 @@ RedAlert.locations.byAreaId = function(id) {
 };
 RedAlert.areas.fromPos = function(pos) {
   var area, bounds, distance, shortest, shortestId = null;
+  pos = pos.lat ? pos : { lat:pos.coords.latitude, lng:pos.coords.longitude };
+
   if (!RedAlert.areas.data)
     return null;
+
   for (key in RedAlert.areas.data) {
     area = RedAlert.areas.data[key];
     if (!(area && area.geometry && area.geometry.location
@@ -271,7 +274,9 @@ function receiveMessage(event) {
 
     var index = _.sortedIndex(RedAlert.messages, data, '_id');
     var remove = 0;
+
     // If the new record's time is within an older's threshold, delete older
+    /*
     if (RedAlert.reduce
         && RedAlert.messages.length !== index
         && data.areas.equals(RedAlert.messages[index].areas)
@@ -280,13 +285,25 @@ function receiveMessage(event) {
       for (var i=0; i < RedAlert.hooks.remove.length; i++)
         RedAlert.hooks.remove[i].call(this, RedAlert.messages[index]);
     }
+    */
     // Only insert if last record was not in reduce threshold
+    /*
     if (!RedAlert.reduce || index == 0 || !data.areas.equals(RedAlert.messages[index-1].areas)
         || data.time - RedAlert.messages[index-1].time > RedAlert.reduce) {
+    */
+
+      if (RedAlert.currentArea)
+      for (var i=0; i < data.areas.length; i++) {
+        if (data.areas[i] === RedAlert.currentArea.id) {
+          data.inCurrentArea = true;
+          break;
+        }
+      }
+
       RedAlert.messages.splice(index, remove, data);
       for (var i=0; i < RedAlert.hooks.msg.length; i++)
         RedAlert.hooks.msg[i].call(this, data);  
-    }
+    //}
 
     RedAlert.saveData();
   }
@@ -366,4 +383,47 @@ window.setInterval(function() {
       RedAlert.connect();
     }, 500);
 	}
-}, 1000);  
+}, 1000);
+
+RedAlert.updateCurrentArea = function() {
+  var oldArea = RedAlert.currentArea;
+  var newArea = RedAlert.areas.fromPos(RedAlert.currentPosition);
+  if (!oldArea || oldArea !== newArea) {
+    for (var i=0; i < RedAlert.hooks.newArea.length; i++)
+      RedAlert.hooks.newArea[i].call(RedAlert, newArea, oldArea);
+    RedAlert.currentArea = newArea;
+  }
+}
+
+function geoWatch() {
+  if (RedAlert.geoWatchId)
+    navigator.geolocation.clearWatch(RedAlert.geoWatchId);
+
+  RedAlert.geoWatchId = navigator.geolocation.watchPosition(
+    function(pos) {
+      var rpos = RedAlert.currentPosition;
+      if (!rpos || !rpos.coords
+          || rpos.coords.latitude !== pos.coords.latitude
+          || rpos.coords.longitude !== pos.coords.longitude)
+
+        RedAlert.currentPosition = pos;
+        for (var i=0; i < RedAlert.hooks.position.length; i++)
+          RedAlert.hooks.position[i].call(RedAlert, pos);
+
+        RedAlert.updateCurrentArea();
+
+    }, function(err) {
+      console.log(err);
+      geoWatch();
+    }, {
+      timeout: 3000
+    });
+}
+
+// This works much better when the document is ready
+var origOnLoad = window.onload;
+window.onload = function() {
+  if (origOnLoad)
+    origOnLoad.apply(this.arguments);
+  geoWatch();
+}

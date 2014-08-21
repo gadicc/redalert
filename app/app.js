@@ -137,6 +137,32 @@ if (Meteor.isClient) {
 					? 'month' : 'day');
 		}
 	});
+
+	$(document).ready(function() {
+		rocketLaunch = preloadSound('/517943_SOUNDDOGS__fi.ogg');
+		tzevaAdom = preloadSound('/tzeva-adom.ogg');
+
+		Deps.autorun(function() {
+			var now = new Date();
+			var query = {
+				type: 'alert',
+				time: {
+					$gt: new Date()
+					//$gt: new Date(now.getFullYear(), now.getMonth(), 1)
+				}
+			};
+
+			redalert.find(query).observe({
+				added: function(msg) {
+					console.log(msg);
+					if (msg.inCurrentArea)
+						tzevaAdom.play();
+					else
+						rocketLaunch.play();
+				}
+			});
+		});
+	});
 }
 
 if (Meteor.isServer) {

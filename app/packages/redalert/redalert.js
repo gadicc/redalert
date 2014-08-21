@@ -126,8 +126,9 @@ jQuery.ajax({
   success: function() {
     RedAlert.on('msg', function(msg) {
       redalert.reactive.set('latency', RedAlert.lastMessage.latency);
-      if (typeof msg !== 'number')  // ping
+      if (typeof msg !== 'number')  // i.e. not a ping
       	if (!msg.reduced) {
+
       		// redalert.messages.insert(redalert.msgToDoc(msg));
       		for (var obs, i=0; i < redalert.observes.length; i++) {
       			obs = redalert.observes[i];
@@ -165,41 +166,25 @@ jQuery.ajax({
       redalert.reactive.set('status', status);
     });
 
+		// redalert.reactive.set('position', null);
+    RedAlert.on('position', function(pos) {
+			redalert.reactive.set('position', pos);
+    });
+
+    RedAlert.on('newArea', function(newArea) {
+    	redalert.reactive.set('area', newArea);
+    });
+
     RedAlert.on('ready', function() {
     	/*
     	for (var i=0; i < RedAlert.messages.length; i++) {
     		redalert.messages.insert(redalert.msgToDoc(RedAlert.messages[i]));
     	}
     	*/
-
-			redalert.reactive.set('position', null);
-			RedAlert.on('ready', function() {
-				Deps.autorun(function() {
-					var pos = redalert.reactive.get('position');
-					if (pos)
-						pos = {
-							lat: pos.coords.latitude,
-							lng: pos.coords.longitude
-						};
-					else
-						return;
-
-					var newArea = RedAlert.areas.fromPos(pos);
-					var oldArea = Deps.nonreactive(function() {
-						return redalert.reactive.get('area');
-					});
-					if (!oldArea || oldArea.id != newArea.id) {
-						redalert.reactive.set('area', newArea);
-						console.log('newArea', newArea);
-					}
-				});
-			});
-
   		for (var obs, i=0; i < redalert.observes.length; i++) {
   			obs = redalert.observes[i];
   			obs.invalidate && obs.invalidate();
   		}
-
     });
 
     RedAlert.init();
@@ -226,30 +211,3 @@ Deps.autorun(function() {
 	var count = redalert.messages.find().count();
 	lastInsert = new Date();
 });
-
-function geoWatch() {
-	if (redalert.geoWatchId)
-		navigator.geolocation.clearWatch(redalert.geoWatchId);
-
-	redalert.geoWatchId = navigator.geolocation.watchPosition(
-		function(pos) {
-	 		var rpos = redalert.reactive.get('position');
-			if (!rpos || !rpos.coords
-		 			|| rpos.coords.latitude !== pos.coords.latitude
-		 			|| rpos.coords.longitude !== pos.coords.longitude)
-	 			redalert.reactive.set('position', pos);
-		}, function(err) {
-			console.log(err);
-			geoWatch();
-		}, {
-			timeout: 3000
-		});
-	Meteor.setTimeout(function() {
-		if (!redalert.reactive.get('position'))
-			geoWatch();
-	}, 4000);
-}
-
-// This works much better when the document is ready
-if (navigator.geolocation)
-	$(document).ready(geoWatch);

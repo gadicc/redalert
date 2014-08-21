@@ -197,4 +197,18 @@ Template.chart.rendered = function() {
    		.attr("font-size", "10px");
    		//.attr("fill", "white");
  	});
+};
+
+var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May',
+	"Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+Template.chart.chartView = function() {
+	if (Session.get('chartCoverage') == 'day')
+		return '24 hours';
+
+	var thisMonth = new Date().getMonth();
+	var lastMonth = thisMonth - 1;
+	if (lastMonth == -1) lastMonth = 12;
+
+	return months[lastMonth] + '-' + months[thisMonth];
 }

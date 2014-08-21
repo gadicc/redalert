@@ -1,0 +1,15 @@
+#chartWrapper {
+	position: relative;
+	padding: 10px 0 0 0;
+	background: white;
+}
+
+#chartLabel {
+	position: absolute; top: 5px; left: 0; text-align: center; width: 100%;
+}
+#chartLabel > span {
+	padding: 3px 5px 3px 5px;
+	color: white; background: black; opacity: 0.6;	
+	text-align: center; font-size: 70%; font-family: verdana;
+	border-radius: 5px;
+}
