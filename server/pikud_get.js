@@ -34,7 +34,7 @@ function pikud_get() {
 	var fiber = Fiber.current;
 	var start = new Date();
 	request({
-		uri: debug
+		uri: 0 && debug
 			? 'http://www.oref.org.il/WarningMessages/alerts.json'
 		  : 'http://friends.wastelands.net:5050/WarningMessages/alerts.json',
 		headers: {
@@ -45,11 +45,17 @@ function pikud_get() {
 		timeout: 1000,
 	 }, function(err, res, body){
 	 	if (err) {
-	 		console.log(new Date());
-	 		console.log('pikud get error');
-	 		console.log(err);
-	 		fiber.run(null);
-	 		return;
+	 		if (err.code == 'ETIMEDOUT') {
+	 			console.log(new Date(), 'timeout');
+	 			fiber.run({sleepTime: 0});
+	 			return;
+	 		} else {
+		 		console.log(new Date());
+		 		console.log('pikud get error');
+		 		console.log(err);	 			
+		 		fiber.run(null);
+		 		return;
+	 		}
 	 	}
 	 	if (res.statusCode == 403) {
 	 		console.log(new Date(), "403 access denied :(");
@@ -71,6 +77,10 @@ function pikud_get() {
 	 	//console.log('request took ' + time + 'ms');
 	  res = JSON.parse(iconv.decode(new Buffer(body, 'binary'), 'utf-16'));
 	  res.sleepTime = 1000 - time;
+
+	  if (res.sleepTime < 0)
+	  	res.sleepTime = 0;
+
 	  fiber.run(res);
 	});
 	return Fiber.yield();
@@ -132,6 +142,9 @@ function raInsert(doc) {
 }
 
 function sleep(ms) {
+	if (!ms)
+		return;
+
   var fiber = Fiber.current;
   setTimeout(function() {
       fiber.run();
