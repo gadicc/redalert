@@ -1,6 +1,6 @@
 RedAlert = {
-  host: 'api1.tzeva-adom.com:80',
-  //host: window.location.hostname + ':8080',
+  //host: 'api1.tzeva-adom.com:80',
+  host: window.location.hostname + ':8080',
   initted: false,
   reduce: 15000,
 
@@ -9,8 +9,8 @@ RedAlert = {
   areas: { data: {} },
   locations: { data: {} },
   serials: {
-    desired: { areas: 4, locations: 4 },
-    stored: { areas: 0, locations: 0 }
+    desired: { areas: 4, locations: 4, data: 4 },
+    stored: { areas: 0, locations: 0, data: 0 }
   },
 	lastMessage: { },
   lastId: 0,
@@ -329,6 +329,18 @@ jQuery(document).ready(function() {
           && RedAlert.messages[i].time - RedAlert.messages[i-1].time < RedAlert.reduce )
         RedAlert.messages.splice(i, 1);
       localStorage.setItem('ra_messages', JSON.stringify(RedAlert.messages));
+    }
+  }
+  if (RedAlert.serials.stored.data === undefined ||
+    RedAlert.serials.stored.data < RedAlert.serials.desired.data) {
+    console.log('Removing cached data, need rev ' + RedAlert.serials.desired.data);
+    localStorage.removeItem('ra_messages');
+    localStorage.removeItem('ra_lastId');
+    RedAlert.lastId = 0;
+    RedAlert.messages = [];
+    RedAlert.serials.stored.data = RedAlert.serials.desired.data;
+    if (localStorage) {
+      localStorage.setItem('ra_serials', JSON.stringify(RedAlert.serials.stored));
     }
   }
   if (RedAlert.serials.stored.areas < RedAlert.serials.desired.areas) {

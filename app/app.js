@@ -147,7 +147,7 @@ if (Meteor.isClient) {
 			var query = {
 				type: 'alert',
 				time: {
-					$gt: new Date()
+					$gt: new Date()  // TODO, - coverTime in current area
 					//$gt: new Date(now.getFullYear(), now.getMonth(), 1)
 				}
 			};

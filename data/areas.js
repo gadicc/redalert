@@ -57,6 +57,8 @@ if (FORCE_REGEN || !areas) {
 		locations[name_locs[name].id] = name_locs[name];
 }
 
+// 222 = otef aza 22
+
 function sleep(ms) {
   var fiber = Fiber.current;
   setTimeout(function() {

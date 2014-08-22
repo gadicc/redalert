@@ -18,3 +18,10 @@ echo "2 alert {id:2,type:\"alert\",time:1406275581644,areas:[250]}" \
 
 1 alert {id:1,type:\"alert\",time:1406275551644,areas:[248]}
 2 alert {id:2,type:\"alert\",time:1406275581644,areas:[250]}
+
+results like these??
+{ id: '1408705079080',
+  title: 'פיקוד העורף התרעה במרחב ',
+  data: [ 'עוטף עזה,מרחב אשקלון 234' ]
+}
+

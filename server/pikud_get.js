@@ -1,10 +1,9 @@
-var http = require('http');
-var net = require('net');
+var REPORT_TIME = 1000 * 60 * 5;
+var SLEEP_TIME = 1000;
 
-var iconv = require('iconv-lite');
-var request = require('request');
-var Fiber = require('fibers');
-var Server = require("mongo-sync").Server;
+var JSON_DUMP = './history.json';
+var RELAY_HOST = '127.0.0.1';
+var RELAY_PORT = 8081;
 
 var debug = process.env.USER == 'dragon';
 if (debug) {
@@ -16,19 +15,14 @@ if (debug) {
 	var MONGO_PASSWORD = "yGgCiKsc8o4jRj3Fw";
 }
 
-var RELAY_HOST = '127.0.0.1';
-var RELAY_PORT = 8081;
+var http = require('http');
+var net = require('net');
 
-var JSON_DUMP = './history.json';
+var iconv = require('iconv-lite');
+var request = require('request');
+var Fiber = require('fibers');
+var Server = require("mongo-sync").Server;
 
-var inc = function(i) {
-  var fiber = Fiber.current;
-  setTimeout(function() {
-  	i++
-    fiber.run(i);
-  }, 1000);
-  return Fiber.yield();
-}
 
 function pikud_get() {
 	var fiber = Fiber.current;
@@ -79,9 +73,17 @@ function pikud_get() {
 	 	var time = new Date() - start;
 	 	var res;
 	 	//console.log('request took ' + time + 'ms');
+	 	try {
+	  	res = JSON.parse(iconv.decode(new Buffer(body, 'binary'), 'utf-16'));
+	  } catch (err) {
+	  	console.log(new Date());
+	  	console.log(err);
+	  	stats.parseErrors++;
+	  	fiber.run({sleepTime: 500});
+	  	return;
+	  }
 	 	stats.success++;
-	  res = JSON.parse(iconv.decode(new Buffer(body, 'binary'), 'utf-16'));
-	  res.sleepTime = 1000 - time;
+	  res.sleepTime = SLEEP_TIME - time;
 
 	  if (res.sleepTime < 0)
 	  	res.sleepTime = 0;
@@ -99,10 +101,30 @@ function resetStats() {
 		success: 0,
 		errors: 0,
 		denieds: 0,
-		notfounds: 0
+		notfounds: 0,
+		parseErrors: 0
 	};
 }
 resetStats();
+
+var currentAlerts = [];
+function removeDupes(data) {
+	var out = [];
+
+	// If it's exactly the same, it must be a new alert, so don't remove
+	if (JSON.stringify(currentAlerts) !== JSON.stringify(data.areas)) {
+		for (var i=0; i < data.areas.length; i++) {
+			var area = data.areas[i];
+			// console.log('area', area);
+			// Only add the area if it wasn't in the previous alert
+			if (currentAlerts.indexOf(area) === -1)
+				out.push(area);
+		}
+		currentAlerts = data.areas;
+		data.areas = out;
+	}
+	return data;
+}
 
 /*
 var data = { 
@@ -192,8 +214,11 @@ var sendHistory = function(data) {
 
 	if (lastId == 0) {
 		for (var i=0; i < data.length; i++) {
-			sendToServer(data[i], fiber);
-			Fiber.yield();
+			var wodupes = removeDupes(data[i]);
+			if (wodupes.areas.length) {
+				sendToServer(wodupes, fiber);
+				Fiber.yield();
+			}
 		}
 	}
 };
@@ -235,28 +260,33 @@ Fiber(function() {
 		if (res) {
 			lastSuccess = new Date();
 			if (res.id && res.id !== lastId) {
-				console.log('id change', lastId, res.id);
-				lastId = res.id;
 				if (res.data && res.data.length) {
 					console.log(res);
 					var data = processResponse(res);
 					console.log(data);
 					raInsert(data);
-					sendToServer(data);				
+					data = removeDupes(data);
+					if (data.areas.length)
+						sendToServer(data);				
+				} else {
+					currentAlerts = [];
+					console.log('id change', lastId, res.id);
 				}
+				lastId = res.id;
 			}
 		}
 
-		sleep(res && res.sleepTime || 1000);
+		sleep( (res && res.sleepTime) || SLEEP_TIME );
 
 		var now = new Date();
-		if (now - stats.since > 1000 * 60 * 5) {
+		if (now - stats.since > REPORT_TIME) {
 			console.log(now);
 			console.log('success: ' + stats.success 
 				+ ', timeouts: ' + stats.timeouts
 				+ ', errors: ' + stats.errors
 				+ ', denieds: ' + stats.denieds
-				+ ', notfounds: ' + stats.notfounds);
+				+ ', notfounds: ' + stats.notfounds
+				+ ', parseErrors: ' + stats.parseErrors);
 			resetStats();
 		}
 	}
