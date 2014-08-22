@@ -34,7 +34,7 @@ function pikud_get() {
 	var fiber = Fiber.current;
 	var start = new Date();
 	request({
-		uri: 0 && debug
+		uri: debug
 			? 'http://www.oref.org.il/WarningMessages/alerts.json'
 		  : 'http://friends.wastelands.net:5050/WarningMessages/alerts.json',
 		headers: {
@@ -216,7 +216,7 @@ Fiber(function() {
 		res = pikud_get();
 		if (res) {
 			lastSuccess = new Date();
-			if (res.id !== lastId) {
+			if (res.id && res.id !== lastId) {
 				console.log('id change', lastId, res.id);
 				lastId = res.id;
 			}
