@@ -220,7 +220,7 @@ Fiber(function() {
 				console.log('id change', lastId, res.id);
 				lastId = res.id;
 			}
-			if (res.data.length) {
+			if (res.data && res.data.length) {
 				console.log(res);
 				var data = processResponse(res);
 				console.log(data);
