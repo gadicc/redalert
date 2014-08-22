@@ -9,7 +9,7 @@ RedAlert = {
   areas: { data: {} },
   locations: { data: {} },
   serials: {
-    desired: { areas: 4, locations: 4, data: 5 },
+    desired: { areas: 4, locations: 4, data: 6 },
     stored: { areas: 0, locations: 0, data: 0 }
   },
 	lastMessage: { },
