@@ -1,6 +1,6 @@
 RedAlert = {
-  //host: 'api1.tzeva-adom.com:80',
-  host: window.location.hostname + ':8080',
+  host: 'api1.tzeva-adom.com:80',
+  //host: window.location.hostname + ':8080',
   initted: false,
   reduce: 15000,
 
