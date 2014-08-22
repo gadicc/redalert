@@ -32,14 +32,17 @@ var inc = function(i) {
 
 function pikud_get() {
 	var fiber = Fiber.current;
+	var start = new Date();
 	request({
-		//uri: 'http://www.oref.org.il/WarningMessages/alerts.json',
-		uri: 'http://friends.wastelands.net:5050/WarningMessages/alerts.json',
+		uri: debug
+			? 'http://www.oref.org.il/WarningMessages/alerts.json'
+		  : 'http://friends.wastelands.net:5050/WarningMessages/alerts.json',
 		headers: {
 			host: "www.oref.org.il"
 		},
 		method: 'GET',
-		encoding: 'binary'
+		encoding: 'binary',
+		timeout: 1000,
 	 }, function(err, res, body){
 	 	if (err) {
 	 		console.log(new Date());
@@ -63,8 +66,12 @@ function pikud_get() {
 	 		fiber.run(null);
 	 		return;
 	 	}
-	  body = iconv.decode(new Buffer(body, 'binary'), 'utf-16');
-	  fiber.run(JSON.parse(body));
+	 	var time = new Date() - start;
+	 	var res;
+	 	//console.log('request took ' + time + 'ms');
+	  res = JSON.parse(iconv.decode(new Buffer(body, 'binary'), 'utf-16'));
+	  res.sleepTime = 1000 - time;
+	  fiber.run(res);
 	});
 	return Fiber.yield();
 }
@@ -191,22 +198,24 @@ Fiber(function() {
 	sendHistory(data);
 
 	// pikud_get loop
-	var res, lastId;
+	var res, lastId, lastSuccess;
 	while(1) {
 		res = pikud_get();
-		if (res && res.data.length && res.id !== lastId) {
-			lastId = res.id;
-			console.log(res);
-			var data = processResponse(res);
-			console.log(data);
-			raInsert(data);
-			sendToServer(data);
-		} else if (res && res.id !== lastId) {
-			console.log('id change', lastId, res.id);
-			console.log(res);
-			lastId = res.id;
+		if (res) {
+			lastSuccess = new Date();
+			if (res.id !== lastId) {
+				console.log('id change', lastId, res.id);
+				lastId = res.id;
+			}
+			if (res.data.length) {
+				console.log(res);
+				var data = processResponse(res);
+				console.log(data);
+				raInsert(data);
+				sendToServer(data);				
+			}
 		}
-		sleep(1000);
+		sleep(res && res.sleepTime || 1000);
 	}
 
 	server.close();
