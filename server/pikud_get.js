@@ -46,23 +46,27 @@ function pikud_get() {
 	 }, function(err, res, body){
 	 	if (err) {
 	 		if (err.code == 'ETIMEDOUT') {
-	 			console.log(new Date(), 'timeout');
+	 			stats.timeouts++;
+	 			//console.log(new Date(), 'timeout');
 	 			fiber.run({sleepTime: 0});
 	 			return;
 	 		} else {
 		 		console.log(new Date());
 		 		console.log('pikud get error');
-		 		console.log(err);	 			
+		 		console.log(err);
+		 		stats.errors++;
 		 		fiber.run(null);
 		 		return;
 	 		}
 	 	}
 	 	if (res.statusCode == 403) {
 	 		console.log(new Date(), "403 access denied :(");
+	 		stats.denieds++;
 	 		fiber.run(null);
 	 		return;
 	 	} else if (res.statusCode == 404) {	 		
 	 		console.log(new Date(), "404 not found :(");
+	 		stats.notfounds++;
 	 		fiber.run(null);
 	 		return;
 	 	} else if (res.statusCode != 200) {
@@ -75,6 +79,7 @@ function pikud_get() {
 	 	var time = new Date() - start;
 	 	var res;
 	 	//console.log('request took ' + time + 'ms');
+	 	stats.success++;
 	  res = JSON.parse(iconv.decode(new Buffer(body, 'binary'), 'utf-16'));
 	  res.sleepTime = 1000 - time;
 
@@ -85,6 +90,19 @@ function pikud_get() {
 	});
 	return Fiber.yield();
 }
+
+var stats;
+function resetStats() {
+	stats = {
+		since: new Date(),
+		timeouts: 0,
+		success: 0,
+		errors: 0,
+		denieds: 0,
+		notfounds: 0
+	};
+}
+resetStats();
 
 /*
 var data = { 
@@ -228,7 +246,19 @@ Fiber(function() {
 				sendToServer(data);				
 			}
 		}
+
 		sleep(res && res.sleepTime || 1000);
+
+		var now = new Date();
+		if (now - stats.since > 1000 * 60 * 5) {
+			console.log(now);
+			console.log('success: ' + stats.success 
+				+ ', timeouts: ' + stats.timeouts
+				+ ', errors: ' + stats.errors
+				+ ', denieds: ' + stats.denieds
+				+ ', notfounds: ' + stats.notfounds);
+			resetStats();
+		}
 	}
 
 	server.close();
