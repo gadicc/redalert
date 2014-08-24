@@ -26,19 +26,21 @@ var mapObserve = function(markers) {
 
 	var data = [];
 	var docs = redalert.find(query).fetch();
-	_.each(docs, function(doc) {
-		var areas = _.map(doc.areas, function(id) {
-			return RedAlert.areas.byId(id);
-		});
-		for (var i=0; i < areas.length; i++) {
-			var geo = areas[i].geometry;
+	for (var i=0; i < docs.length; i++) {
+		for (var j=0; j < docs[i].areas.length; j++) {
+			var area = RedAlert.areas.byId(docs[i].areas[j]);
+			if (!area) {
+				console.log("Missing data for Area " + docs[i].areas[j] + ', skipping...');
+				continue;
+			}
+			var geo = area.geometry;
 			if (geo && geo.location && geo.location.lat)
 			data.push(new L.Marker(
 				new L.LatLng(geo.location.lat, geo.location.lng), {
-					alertId: doc._id, areaId: areas[i].id }
+					alertId: docs[i]._id, areaId: area.id }
 			));
-		}		
-	});
+		}
+	}		
 	markers.addLayers(data);
 
 	// Watch for future adds and add individually

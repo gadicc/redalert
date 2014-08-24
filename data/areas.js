@@ -71,6 +71,21 @@ if (FORCE_REGEN || !areas) {
 		locations[name_locs[name].id] = name_locs[name];
 }
 
+// ???
+/*
+areas[216] = {
+	id: 216,
+	region: { he: "עוטף עזה" },
+	name: { he: "עוטף עזה 216" },
+	coverTime: 15,
+	locations: [ getLoc("יושיביה", 216), getLoc("תקומה", 216) ]
+};
+locations[getLoc("יושיביה", 216)] = locations["יושיביה"];
+locations[getLoc("תקומה", 216)] = locations["תקומה"];
+delete(locations["תקומה"]);
+delete(locations["יושיביה"]);
+*/
+
 function sleep(ms) {
   var fiber = Fiber.current;
   setTimeout(function() {
