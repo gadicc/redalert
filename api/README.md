@@ -1,9 +1,21 @@
 ## RedAlert API v2
 
+For an example app using the API, see
+http://redalert.gadi.cc/ (source is in the `app` directory of this repo).
+
 To use the API, simply include the script in your site header:
 
 ```html
 <script type="text/javascript" src="http://redalert.gadi.cc/redalert.js"></script>
+```
+
+and then:
+
+```
+<script type="text/javascript">
+	RedAlert.on('msg', ... etc ... );
+	RedAlert.init();
+</script>
 ```
 
 Or, to load asynchronously using, e.g. jQuery:
@@ -85,6 +97,7 @@ Properties
 
 Methods
 
+* `RedAlert.init()` - call after setting up your callbacks: on('...')
 * `RedAlert.resetStorage()` - clear cache
 * `RedAlert.toRad(deg)` - convert degrees to radians
 * `RedAlert.distance(pos1, pos2)`	- distance between two lat/lng pairs
