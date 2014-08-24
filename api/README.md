@@ -146,6 +146,70 @@ Other methods:
 * `RedAlert.locations.byAreaId(areaId)` - find locations in this area
 * `RedAlert.areas.fromPos(pos)` - find most likely area for lat/lng pair
 
+Area format:
+
+```js
+RedAlert.areas.byId(155);
+{
+	id: 155,
+	region: {he: "דן", en: "Dan"},
+	name: {he: "דן 155", en: "Dan 155"},
+	locations: [1111, 1112, 1113, 1114, 1115],
+	coverTime: 90,
+	geometry: {
+		bounds: {
+			northeast: { lat: 32.158889, lng: 34.86803 },
+			southwest: { lat: 32.1774249, lng: 34.7913391 }
+		},
+		location: {
+			lat: 32.16815695,
+			lng: 34.82968455
+		}
+	}
+}
+```
+
+Location format:
+```js
+RedAlert.locations.byName('תל אביב');
+{
+	id: 1116,
+	areaId: "157",
+	name: "תל אביב יפו",
+	geodata: { /* result of Google Maps geodecode query */ }
+}
+RedAlert.locations.byName('תל אביב').geodata;
+[
+	{
+		address_components: [
+			{ long_name: "Tel Aviv", short_name: "ת\"א",
+				types: [ "locality", "political"] },
+			{ long_name: "Israel", short_name: "IL",
+				types: [ "country", "political"] }
+		],
+		formatted_address: "Tel Aviv, Israel",
+		geometry: {
+			bounds: {
+				northeast: { lat: 32.1465074, lng: 34.8519761 },
+				southwest: { lat: 32.0292531, lng: 34.7425159 }
+			},
+			location: {
+				lat: 32.0852999, lng: 34.78176759999999
+			},
+			location_type: "APPROXIMATE",
+			viewport: {
+				northeast: { lat: 32.1465074, lng: 34.8519761 },
+				southwest: { lat: 32.0292531, lng: 34.7425159 }
+			}
+		}
+		types: [ "locality", "political" ]
+	},
+	{
+		/* similar for "Jaffa, Tel Aviv, Israel" */
+	}
+]
+```
+
 ## Behind the scenes
 
 The script opens a hidden iframe with a keep-alive HTML request, which
