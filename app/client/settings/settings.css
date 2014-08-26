@@ -1,1 +1,6 @@
-#settings { background: white; }
+#settings {
+	background: white;
+	padding: 20px;
+}
+
+#settings > h1:first-child { margin-top: 0; }
