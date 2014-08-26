@@ -8,10 +8,22 @@ Template.settings.events({
 		RedAlert.resetStorage();
 		window.location.reload();
 	},
-	'click button.changeLang': function(event, tpl) {
-		var lang = $(event.target).attr('data-lang');
+	'change [name=lang]': function(event, tpl) {
+		var lang = event.target.value;
 		Session.set('locale', lang);
 		Session.set('lang', lang);
 	}
 
+});
+
+Template.settings.helpers({
+	'langs': function() {
+		return [
+			{ key: 'en', value: 'English' },
+			{ key: 'he', value: 'עברית'}
+		];
+	},
+	'isCurrentLang': function(lang) {
+		return Session.get('lang') == lang;
+	}
 });

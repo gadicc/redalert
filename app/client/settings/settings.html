@@ -3,28 +3,38 @@
 
 		<h1>Tzeva-Adom.com</h1>
 
-		<p>Please note, this app tracks <b>sirens</b>, not <i>rockets</i>.  A
+		<p>{{#mf KEY='settings_intro'}}
+		Please note, this app tracks <b>sirens</b>, not <i>rockets</i>.  A
 		siren is only sounded when a rocket, or the shrapnel from a rocket
-		interception, is expected to land in a populated area.</p>
+		interception, is expected to land in a populated area.{{/mf}}</p>
 
-		<p>1) Click on the charts to switch between "day view" and
+		<p>{{#mf KEY="settings_help"}}
+		1) Click on the charts to switch between "day view" and
 		"month view".  2) Click on the "today" button on the map to switch
-		between "today", "yesterday", "all".</p>
+		between "today", "yesterday", "all".{{/mf}}</p>
 
 		<h1>{{mf 'head_settings' 'Settings'}}</h1>
 
-		<button id="clearCache">Clear Cache</button>
-
 		<p>
-			<button class="changeLang" data-lang="en">English</button>
-			<button class="changeLang" data-lang="he">עברית</button>
+			{{mf 'setting_language' 'Language'}}*:
+			<select name="lang">
+				{{#each langs}}
+					<option value="{{key}}" selected={{isCurrentLang key}}>{{value}}</option>
+				{{/each}}
+			</select>
 		</p>
+
+		<button id="clearCache">Clear Cache</button>
 
 		<h1>Developers</h1>
 
 		<p>The realtime feed and historical data used by this app is available
-		for free use, see the full API here.</p>
-
+		for free use, see the
+		<a href="https://github.com/gadicc/redalert/tree/master/api">full API</a>.
+		Note, the this
+		<a href="https://github.com/gadicc/redalert/tree/master/app">app source</a>
+		is available too, as is the server source, data processors, etc, as part
+		of the <a href="https://github.com/gadicc/redalert">RedAlert project</a>.</p>
 	</div>
 
 </template>

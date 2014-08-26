@@ -18,8 +18,8 @@
       },
       "moment": {
         "git": "https://github.com/acreeger/meteor-moment.git",
-        "tag": "v2.6.0",
-        "commit": "26156df681750fd6e6ed77043eef32b6653ebbdf"
+        "tag": "v2.8.1",
+        "commit": "722ea63783d594341023836b7d418ab2567dab8c"
       },
       "highcharts": {
         "git": "https://github.com/mikeschaekermann/meteor-highcharts.git",
@@ -43,8 +43,8 @@
       },
       "messageformat": {
         "git": "https://github.com/gadicohen/meteor-messageformat.git",
-        "tag": "v0.0.35",
-        "commit": "7d8cb06274a67df875af09a733f578055bf1932e"
+        "tag": "v0.0.39",
+        "commit": "d99f6354df65048164a5ac00265ec26fb65e6dff"
       },
       "iron-layout": {
         "git": "https://github.com/EventedMind/iron-layout.git",

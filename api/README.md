@@ -233,3 +233,18 @@ in this script (e.g.
 or with `lastId=X`) and handle
 each "data received" event (e.g. `on('data')` in node).  Strip the script
 tags, function call and process the JSON.
+
+## Data Source
+
+The data is sourced from the same Pikud Ha'oref feed used by local TV
+stations to display the alerts.  We started recording the data around
+July 12th, and probably have about 98% of every alert since then, and
+probably 100% since Aug 20th.
+
+Do recall that we track **sirens**, not *rockets*.  A siren is only sounded
+when a rocket, or the shrapnel from a rocket interception, is expected to
+land in a populated area.
+
+Also, as opposed to the Pikud Ha'oref source (for those who dealt with it
+directly), we don't create a new record for all simultaneously sounding sirens.
+We de-duplicate and only create a new alert for each new siren being sounded.

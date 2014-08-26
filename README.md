@@ -1,5 +1,9 @@
 ## RedAlert / tzeva-adom.com
 
+Copyright (c) 2012-2014 by Gadi Cohen <dragon@wastelands.net>
+
+Looking for v1?  https://github.com/gadicc/redalert/tree/v1
+
 This is an open source project with various parts:
 
 * `server` - the RedAlert Server.  Custom coded server software to constantly
