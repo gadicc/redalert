@@ -1,0 +1,23 @@
+{
+  "name": "redalert-data",
+  "version": "0.0.1",
+  "description": "Redalert core & generated data",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/gadicc/redalert",
+    "type": "git"
+  },
+  "scripts": {
+    "start": "node --harmony-async-await index.js"
+  },
+  "engines": {
+    "//": "node --harmony-async-await",
+    "node": ">= 7.0.0"
+  },
+  "author": "Gadi Cohen <dragon@wastelands.net>",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1"
+  }
+}

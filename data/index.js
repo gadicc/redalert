@@ -1,12 +1,11 @@
-var AREAS_JSON = './areas.json';
-var LOCATIONS_JSON = './locations.json';
-var FORCE_REGEN = false;
+const AREAS_JSON = './areas.json';
+const LOCATIONS_JSON = './locations.json';
+const FORCE_REGEN = true; //false;
 
-var fs = require('fs');
-var http = require('http');
+const fs = require('fs');
+const http = require('http');
 
-var request = require('request');
-var Fiber = require('fibers');
+const rp = require('request-promise');
 
 var areas = require(AREAS_JSON);
 var locations = require(LOCATIONS_JSON);
@@ -62,7 +61,7 @@ if (FORCE_REGEN || !areas) {
 		loc = getLoc(loc, areaId);
 		if (areas[areaId].locations.indexOf(loc) === -1) {
 			areas[areaId].locations.push(loc);
-		}			
+		}
 	}
 
 	var name_locs = locations;
@@ -86,29 +85,22 @@ delete(locations["תקומה"]);
 delete(locations["יושיביה"]);
 */
 
-function sleep(ms) {
-  var fiber = Fiber.current;
-  setTimeout(function() {
-      fiber.run();
-  }, ms);
-  Fiber.yield();
+async function sleep(ms) {
+	return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function get_geodata(name) {
-	var fiber = Fiber.current;
-
-	request({
+async function get_geodata(name) {
+	const body = await rp({
 		uri: 'http://maps.googleapis.com/maps/api/geocode/json?address='
-			+ name + ', ישראל',
+			+ encodeURIComponent(name + ', ישראל'),
 		method: 'GET',
 		json: true
-	 }, function(err, res, body) {
-	 		fiber.run(body.results);
 	});
-	return Fiber.yield();
+
+	return body.results;
 }
 
-Fiber(function() {
+(async function() {
 	var loc, i=0, added=0, length = Object.keys(locations).length;
 
 	if (1) // fetch geodata
@@ -118,9 +110,9 @@ Fiber(function() {
 			added++;
 	 		console.log(i + '/' + length + ': ' + locations[key].name + ' ('
 	 			+ Math.round(i / length * 100) + '%)');
-			locations[key].geodata = get_geodata(locations[key].name);
+			locations[key].geodata = await get_geodata(locations[key].name);
 			console.log(locations[key].geodata);
-	 		sleep(50);
+	 		await sleep(50);
 	 		if (added % 10 == 0) {
 	 			console.log('sync');
 				fs.writeFileSync(LOCATIONS_JSON, JSON.stringify(locations));
@@ -296,7 +288,7 @@ Fiber(function() {
 			case 'גולן':
 				area.region.en = 'Golan';
 				// area.coverTime = 0;
-				break;			
+				break;
 			case 'קו העימות':
 				area.region.en = 'Frontline';
 				// area.coverTime = 0;
@@ -317,4 +309,4 @@ Fiber(function() {
 	console.log("Locations: " + Object.keys(locations).length);
 	fs.writeFileSync(LOCATIONS_JSON, JSON.stringify(locations));
 
-}).run();
+})();
