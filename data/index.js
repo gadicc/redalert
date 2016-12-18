@@ -1,6 +1,10 @@
 const AREAS_JSON = './areas.json';
 const LOCATIONS_JSON = './locations.json';
-const FORCE_REGEN = true; //false;
+
+// Set this to true once to rebuild the data from scratch
+// If you abort midway, set back to false to continue rebuilding from
+// where you left off.
+const FORCE_REGEN = false;
 
 const fs = require('fs');
 const http = require('http');
@@ -98,11 +102,20 @@ async function sleep(ms) {
 
 const geocodeUriBase = 'http://maps.googleapis.com/maps/api/geocode/json?address=';
 async function get_geodata(locationName, regionName) {
-	const address = `${locationName}, ${regionName}, ישראל`;
-	const uri = geocodeUriBase + encodeURIComponent(address);
+	let address = `${locationName}, ${regionName}, ישראל`;
+	let uri = geocodeUriBase + encodeURIComponent(address);
+	let body = await rp({ uri, method: 'GET', json: true });
 	console.log(address);
+	await sleep(50);	// Keep in line with Google's rate-limiting
 
-	const body = await rp({ uri, method: 'GET', json: true });
+	if (body.status === 'ZERO_RESULTS') {
+		address = `${locationName}, ישראל`;
+		uri = geocodeUriBase + encodeURIComponent(address);
+		body = await rp({ uri, method: 'GET', json: true });
+		console.log(address);
+		await sleep(50);
+	}
+
 	console.log(body);
 	return body.results;
 }
@@ -123,7 +136,6 @@ async function get_geodata(locationName, regionName) {
 				areas[locations[key].areaId].region.he		// דן
 			);
 			console.log(locations[key].geodata);
-	 		await sleep(50);
 	 		if (added % 10 == 0) {
 	 			console.log('sync');
 				fs.writeFileSync(LOCATIONS_JSON, JSON.stringify(locations));
