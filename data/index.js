@@ -7,15 +7,15 @@ const http = require('http');
 
 const rp = require('request-promise');
 
-var areas = require(AREAS_JSON);
-var locations = require(LOCATIONS_JSON);
+let areas = require(AREAS_JSON);
+let locations = require(LOCATIONS_JSON);
 
-function getLoc(name, areaId) {
-	if (locations[name])
-		return locations[name].id;
+function getLoc(locationName, areaId) {
+	if (locations[locationName])
+		return locations[locationName].id;
 
-	var id = Object.keys(locations).length + 1;
-	locations[name] = { id: id, name: name, areaId: areaId };
+	const id = Object.keys(locations).length + 1;
+	locations[locationName] = { id: id, name: locationName, areaId: areaId };
 	return id;
 }
 
@@ -25,16 +25,23 @@ if (FORCE_REGEN || !areas) {
 
 	// 11 July 2014
 	// http://hospitals.clalit.co.il/Hospitals/kaplan/he-il/CustomerInfo/KaplanNews/News2014/TzukEitan/Pages/Polygon.aspx
-	var row, areaName, areaId, loc, time;
-	var locs = fs.readFileSync('pikud_areas2.csv').toString().split('\n');
-	for (var i=1; i < locs.length; i++) {
-		row = locs[i].split(',');
+	const locs = fs.readFileSync('pikud_areas2.csv').toString().split('\n');
+
+	for (let i=1; i < locs.length; i++) {
+		const row = locs[i].split(',');
 		if (row == "")
 			continue;
-		loc = row[0]; coverTime = row[1]; areaName = row[2].trim();
-		areaId = areaName.match(/([0-9]+)$/)[1];
 
-		switch(coverTime) {
+		// An "area" is the "merhav", like "שרון 138", "שרון 143", etc.
+		const locationName = row[0];												// הרצליה
+		const coverTimeText = row[1];												// דקה וחצי
+		const areaFullName = row[2].trim();									// דן 155
+		const areaComponents = areaFullName.match(/^(.*) ([0-9]+)$/);
+		const regionName = areaComponents[1];								// דן
+		const areaId = parseInt(areaComponents[2]);					// 155
+
+		let coverTime;
+		switch(coverTimeText) {
 			case "מיידי": coverTime = 0; break;
 			case "15 שניות": coverTime = 15; break;
 			case "30 שניות": coverTime = 30; break;
@@ -43,28 +50,28 @@ if (FORCE_REGEN || !areas) {
 			case "דקה וחצי": coverTime = 90; break;
 			case "3 דקות": coverTime = 180; break;
 			default:
-			console.log('Unknown covertime: ' + coverTime);
+			console.log('Unknown covertime: ' + coverTimeText);
 		}
 
-		//console.log('loc: ' + loc + ', time: ' + time + ', area:' + area);
+		// console.log(`areas[${areaId}]: { regionName: "${regionName}", coverTime: ${coverTime} }`);
 
 		if (!areas[areaId]) {
 			areas[areaId] = {
-				id: parseInt(areaId),
-				region: { he: areaName.match(/^(.*) [0-9]+$/)[1] },
-				name: { he: areaName },
+				id: areaId,
+				region: { he: regionName },
+				name: { he: areaFullName },
 				coverTime: coverTime,
 				locations: []
 			};
 		}
 
-		loc = getLoc(loc, areaId);
+		const loc = getLoc(locationName, areaId);
 		if (areas[areaId].locations.indexOf(loc) === -1) {
 			areas[areaId].locations.push(loc);
 		}
 	}
 
-	var name_locs = locations;
+	const name_locs = locations;
 	locations = {};
 	for (name in name_locs)
 		locations[name_locs[name].id] = name_locs[name];
@@ -89,28 +96,32 @@ async function sleep(ms) {
 	return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function get_geodata(name) {
-	const body = await rp({
-		uri: 'http://maps.googleapis.com/maps/api/geocode/json?address='
-			+ encodeURIComponent(name + ', ישראל'),
-		method: 'GET',
-		json: true
-	});
+const geocodeUriBase = 'http://maps.googleapis.com/maps/api/geocode/json?address=';
+async function get_geodata(locationName, regionName) {
+	const address = `${locationName}, ${regionName}, ישראל`;
+	const uri = geocodeUriBase + encodeURIComponent(address);
+	console.log(address);
 
+	const body = await rp({ uri, method: 'GET', json: true });
+	console.log(body);
 	return body.results;
 }
 
 (async function() {
-	var loc, i=0, added=0, length = Object.keys(locations).length;
+	const length = Object.keys(locations).length;
+	let i=0, added=0;
 
 	if (1) // fetch geodata
-	for (key in locations) {
+	for (let key in locations) {
 		i++;
 		if (!locations[key].geodata || 0 && !locations[key].geodata.length) {
 			added++;
 	 		console.log(i + '/' + length + ': ' + locations[key].name + ' ('
 	 			+ Math.round(i / length * 100) + '%)');
-			locations[key].geodata = await get_geodata(locations[key].name);
+			locations[key].geodata = await get_geodata(
+				locations[key].name,											// הרצליה
+				areas[locations[key].areaId].region.he		// דן
+			);
 			console.log(locations[key].geodata);
 	 		await sleep(50);
 	 		if (added % 10 == 0) {
@@ -121,14 +132,14 @@ async function get_geodata(name) {
 	}
 
 	if (1) // calculate bounds
-	for (key in areas) {
+	for (let key in areas) {
 		areas[key].geometry = {
 			bounds: { northeast: {}, southwest: {} },
 			location: {}
 		}
 		if (areas[key].locations)
-		for (var i=0; i < areas[key].locations.length; i++) {
-			var loc = locations[areas[key].locations[i]].geodata[0];
+		for (let i=0; i < areas[key].locations.length; i++) {
+			const loc = locations[areas[key].locations[i]].geodata[0];
 
 			if (!loc)
 				continue;
@@ -172,9 +183,8 @@ async function get_geodata(name) {
 	// Arava 120, Yam Hamelech 90
 
 	if (1) // do english, fill in blanks
-	var area;
 	for (key in areas) {
-		area = areas[key];
+		let area = areas[key];
 
 		if (!area.region.he)
 			area.region = { he: "מרחב " + area.id }
